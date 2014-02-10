@@ -1,8 +1,10 @@
 *.o 
 *.ps1
+*.pro
 release/*.o
 release/moc*
 documentation.aux
 documentation.out
 documentation.log
-*pro 
+Makefile*
+
