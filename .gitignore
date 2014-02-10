@@ -1,0 +1,7 @@
+*.o 
+*.ps1
+release/*.o
+release/moc*
+documentation.aux
+documentation.out
+documentation.log
