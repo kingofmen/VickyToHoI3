@@ -1,0 +1,33 @@
+debug = {
+  generic  = no  
+  30 = no # Leaders
+  31 = no # Provinces
+  32 = no # Ministers
+  33 = no # Tech teams 
+  34 = no # Resources 
+  35 = no # Techs 
+  36 = no # Buildings 
+  37 = no # Units 
+  38 = no # Stockpiles 
+  39 = no # Sliders 
+  40 = no # Ideas 
+  41 = no # Revolters 
+  42 = no # Cores 
+  43 = no # Countries 
+  44 = no # Base tax
+  45 = no # Manpower 
+  46 = no # Culture
+  47 = no # Religion 
+  48 = no # Governments 
+  49 = no # HRE 
+  50 = no # COTs
+  51 = no # Diplomacy  
+  all = no 
+}
+vicdir = .\V2_HoD\ 
+hoidir = .\HoI_Vanilla\
+logfile = logfile.txt
+
+# NOCUSTOM or delete to ignore 
+custom = custom_overrides.txt
+
