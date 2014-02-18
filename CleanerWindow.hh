@@ -86,7 +86,8 @@ private:
 
   // Conversion processes
   bool convertProvinceOwners (); 
-  bool moveCapitals (); 
+  bool moveCapitals ();
+  bool moveResources (); 
   
   // Infrastructure 
   void loadFile (string fname); 
@@ -105,9 +106,12 @@ private:
   
   // Helpers:
   void assignCountries (Object* vicCountry, Object* hoiCountry);
+  double calculateVicProduction (Object* vicProvince, string resource); 
   void cleanUp (); 
   Object* loadTextFile (string fname);
+  Object* selectHoiProvince (Object* vicProv);
   void setPointersFromHoiCountry (Object* hc);
+  void setPointersFromVicProvince (Object* vp);
   
   // Maps
   map<Object*, Object*> vicCountryToHoiCountryMap;

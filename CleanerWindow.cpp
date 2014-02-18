@@ -16,6 +16,16 @@
 
 using namespace std; 
 
+/* TODOs
+ * Resources
+ * IC
+ * Orders of battle
+ * Governments
+ * Techs
+ * Officers
+ * Buildings 
+ */
+
 char stringbuffer[10000];
 CleanerWindow* parentWindow;
 ofstream* debugFile = 0; 
@@ -256,12 +266,30 @@ string nameAndNumber (Object* eu3prov) {
   return eu3prov->getKey() + " (" + remQuotes(eu3prov->safeGetString("name", "\"could not find name\"")) + ")";
 }
 
+Object* WorkerThread::selectHoiProvince (Object* vicProv) {
+  Object* hoiProv = 0;
+  for (objiter hp = vicProvToHoiProvsMap[vicProv].begin(); hp != vicProvToHoiProvsMap[vicProv].end(); ++hp) {
+    if (remQuotes((*hp)->safeGetString("owner")) != hoiTag) continue;
+    hoiProv = (*hp);
+    if ((*hp)->safeGetString("name") == vicProv->safeGetString("name")) break;
+  }
+  return hoiProv; 
+}
+
 void WorkerThread::setPointersFromHoiCountry (Object* hc) {
   hoiCountry = hc;
   vicCountry = hoiCountryToVicCountryMap[hoiCountry];
   hoiTag = hoiCountry->getKey();
   vicTag = vicCountry->getKey();
 }
+
+void WorkerThread::setPointersFromVicProvince (Object* vp) {
+  vicTag = remQuotes(vp->safeGetString("owner", NO_OWNER));
+  hoiTag = vicTagToHoiTagMap[vicTag];
+  hoiCountry = hoiTagToHoiCountryMap[hoiTag];
+  vicCountry = hoiCountryToVicCountryMap[hoiCountry];
+}
+
 
 /********************************  End helpers  **********************/
 
@@ -589,12 +617,7 @@ bool WorkerThread::moveCapitals () {
       continue; 
     }
 
-    Object* hoiCap = 0;
-    for (objiter hp = vicProvToHoiProvsMap[vicCap].begin(); hp != vicProvToHoiProvsMap[vicCap].end(); ++hp) {
-      if (remQuotes((*hp)->safeGetString("owner")) != hoiTag) continue;
-      hoiCap = (*hp);
-      if ((*hp)->safeGetString("name") == vicCap->safeGetString("name")) break;
-    }
+    Object* hoiCap = selectHoiProvince(vicCap);
     if (!hoiCap) {
       Logger::logStream(Logger::Warning) << "Warning: " << hoiTag
 					 << " does not own any provinces matching its Vic capital "
@@ -609,6 +632,106 @@ bool WorkerThread::moveCapitals () {
   }
   
   return true; 
+}
+
+bool WorkerThread::moveResources () {
+  // Check that we have needed information.
+  vector<string> objects;
+  objects.push_back("fightingClasses");
+  objects.push_back("officerClasses");
+  for (vector<string>::iterator o = objects.begin(); o != objects.end(); ++o) {
+    Object* fightingClasses = configObject->safeGetObject(*o);
+    if (!fightingClasses) {
+      Logger::logStream(Logger::Error) << "Error: No " << (*o) << " object in config.txt.\n";
+      return false;
+    }
+    objvec classes = fightingClasses->getValue("class");
+    if (0 == classes.size()) {
+      Logger::logStream(Logger::Error) << "Error: " << (*o) << " object in config.txt is empty - should include at least one POP type.\n"; 
+      return false;
+    }
+  }
+  
+  map<string, double> hoiWorldTotals;
+  for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
+    hoiWorldTotals["manpower"]       += (*hp)->safeGetFloat("manpower");
+    hoiWorldTotals["leadership"]     += (*hp)->safeGetFloat("leadership");
+    (*hp)->unsetValue("manpower");
+    (*hp)->unsetValue("leadership");
+    Object* production = (*hp)->safeGetObject("max_producing");
+    if (!production) continue;
+    hoiWorldTotals["energy"]         += production->safeGetFloat("energy");
+    hoiWorldTotals["metal"]          += production->safeGetFloat("metal");
+    hoiWorldTotals["crude_oil"]      += production->safeGetFloat("crude_oil");
+    hoiWorldTotals["rare_materials"] += production->safeGetFloat("rare_materials");
+    production->unsetValue("energy");
+    production->unsetValue("metal");
+    production->unsetValue("crude_oil");
+    production->unsetValue("rare_materials");
+  }
+
+  map<string, double> vicWorldTotals;
+  for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+    for (map<string, double>::iterator r = hoiWorldTotals.begin(); r != hoiWorldTotals.end(); ++r) {
+      string resName = (*r).first; 
+      vicWorldTotals[resName]       += calculateVicProduction((*vp), resName);
+    }
+  }
+
+  Logger::logStream(Logger::Debug) << "Resource totals:\n"; 
+  for (map<string, double>::iterator r = hoiWorldTotals.begin(); r != hoiWorldTotals.end(); ++r) {
+    string resName = (*r).first;
+    Logger::logStream(Logger::Debug) << "  " << resName << " Vic: " << vicWorldTotals[resName] << " HoI: " << (*r).second << "\n"; 
+  }
+  
+  map<string, map<string, double> > overflows; 
+  for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+    string vicTag = (*vp)->safeGetString("owner", NO_OWNER);
+    if (NO_OWNER == vicTag) continue;
+    setPointersFromVicProvince(*vp); 
+    Object* hoiProv = selectHoiProvince(*vp);
+    for (map<string, double>::iterator r = hoiWorldTotals.begin(); r != hoiWorldTotals.end(); ++r) {
+      string resName = (*r).first;
+      double curr = calculateVicProduction((*vp), resName);
+      if (0 >= curr) continue;
+      curr /= vicWorldTotals[resName];
+      curr *= hoiWorldTotals[resName]; 
+      
+      if (!hoiProv) {
+	overflows[vicTag][resName] += curr;
+	continue;
+      }
+      Object* target = 0;
+      if ((resName == "manpower") || (resName == "leadership")) target = hoiProv;
+      else target = hoiProv->getNeededObject("max_producing");
+      
+      curr += overflows[vicTag][resName];
+      curr += target->safeGetFloat(resName);
+      overflows[vicTag][resName] = curr - floor(curr);
+      curr = floor(curr);
+      if (0.5 > curr) continue; 
+
+      target->resetLeaf(resName, curr);
+    }
+  }
+
+  for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
+    Object* production = (*hp)->safeGetObject("max_producing");
+    if ((!production) || (0 == production->getLeaves().size())) {
+      (*hp)->unsetValue("max_producing");
+      (*hp)->unsetValue("current_producing"); 
+      continue;
+    }
+    Object* curr = (*hp)->getNeededObject("current_producing");
+    curr->clear();
+    objvec leaves = production->getLeaves();
+    for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
+      curr->setValue(*leaf); 
+    }
+  }  
+  
+
+  return true;
 }
 
 /******************************* End conversions ********************************/
@@ -680,6 +803,52 @@ double calculateDistance (Object* one, Object* two) {
   return sqrt(xdist*xdist + ydist*ydist); 
 }
 
+
+double WorkerThread::calculateVicProduction (Object* vicProvince, string resource) {
+  double cached = vicProvince->safeGetFloat(resource, -1);
+  if (0 <= cached) return cached;
+
+  double ret = 0;  
+  Object* rgo = vicProvince->safeGetObject("rgo");
+  Object* resourceConversion = configObject->safeGetObject(resource);
+  if ((rgo) && (resourceConversion)) {
+    string goods = remQuotes(rgo->safeGetString("goods_type"));
+    ret = rgo->safeGetFloat("last_income") * resourceConversion->safeGetFloat(goods, -1);
+    if (ret >= 0) {
+      vicProvince->setLeaf(resource, ret);
+      return ret;
+    }
+  }
+
+  if (resource == "manpower") {
+    static Object* fightingClasses = configObject->getNeededObject("fightingClasses");
+    static objvec classes = fightingClasses->getValue("class");
+    for (objiter poptype = classes.begin(); poptype != classes.end(); ++poptype) {
+      objvec pops = vicProvince->getValue((*poptype)->getLeaf());
+      for (objiter pop = pops.begin(); pop != pops.end(); ++pop) {
+	ret += (*pop)->safeGetFloat("size");
+      }
+    }
+    vicProvince->setLeaf(resource, ret);
+    return ret; 
+  }
+
+  if (resource == "leadership") {
+    static Object* officerClasses = configObject->getNeededObject("officerClasses");
+    static objvec classes = officerClasses->getValue("class");
+    for (objiter poptype = classes.begin(); poptype != classes.end(); ++poptype) {
+      objvec pops = vicProvince->getValue((*poptype)->getLeaf());
+      for (objiter pop = pops.begin(); pop != pops.end(); ++pop) {
+	ret += (*pop)->safeGetFloat("size");
+      }
+    }
+    vicProvince->setLeaf(resource, ret);
+    return ret; 
+  }
+
+  vicProvince->setLeaf(resource, 0);
+  return 0; 
+}
 
 /******************************* End calculators ********************************/
 
@@ -859,9 +1028,10 @@ void WorkerThread::convert () {
   if (!createCountryMap()) return;
   initialiseVicSummaries(); 
   if (!convertProvinceOwners()) return;
-  if (!moveCapitals()) return; 
+  if (!moveCapitals()) return;
+  if (!moveResources()) return; 
   cleanUp(); 
- 
+  
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";
  
   ofstream writer;
