@@ -1,5 +1,5 @@
 debug = {
-  generic  = no  
+  generic  = yes 
   30 = no # Leaders
   31 = no # Provinces
   32 = no # Ministers
@@ -31,3 +31,51 @@ logfile = logfile.txt
 # NOCUSTOM or delete to ignore 
 custom = custom_overrides.txt
 
+minimumProfitRate = 0.0005 
+
+crude_oil = {
+  oil = 1.0
+  coal = 0.1
+}
+
+metal = {
+  iron = 1.0
+}
+
+energy = {
+  coal = 0.9
+  timber = 0.1
+}
+
+rare_materials = {
+  rubber = 1.0
+  opium = 0.75
+  precious_metal = 0.75
+  dye = 0.75
+}
+
+manpower = {
+  oil = 0
+  coal = 0
+  iron = 0
+  coal = 0
+  timber = 0
+  rubber = 0
+  opium = 0
+  precious_metal = 0
+  dye = 0
+}
+
+fightingClasses = {
+  class = artisans
+  class = labourers
+  class = farmers
+  class = clerks
+  class = craftsmen
+}
+
+officerClasses = {
+  class = officers
+  class = soldiers
+  class = aristocrats
+}

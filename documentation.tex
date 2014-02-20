@@ -7,4 +7,39 @@
 
 \begin{document}
 
+\section{Resources}
+
+Resources convert from Vicky RGOs. In particular, the
+\texttt{crude\_oil}, \texttt{metal}, \texttt{rare\_materials}, and
+\texttt{energy} fields of \texttt{config.txt} regulate how much weight
+each Vicky resource has for the eponymous HoI resource; each RGO then
+has this weight (if not listed, it is zero) times its
+\texttt{last\_income} field. 
+
+\section{Manpower and leadership}
+
+All POPs listed in the \texttt{fightingClasses} object have a
+redistribution weight for manpower equal to their size, \emph{unless}
+they work in an RGO type listed in the \texttt{manpower} object, in
+which case their weight is calculated as for a resource. Notice that
+by default the \texttt{manpower} object contains RGOs that have
+nonzero weights for resource, and the weights in it are all zero. The
+effect is that labourers who work in resource-giving RGOs do not give
+manpower. 
+
+Leadership is redistributed according to the size of the POP types
+listed in the \texttt{officerClasses} object. 
+
+\section{Industry} 
+
+Vicky factories convert to HoI industrial capacity with a weight
+proportional to their profit; the world total of IC remains what it
+is in the input file. Unemployed and subsidised workers count as
+making \texttt{minimumProfitRate} for weighting purposes, but the IC
+they create starts damaged. Employed workers who make a positive
+profit less than \texttt{minimumProfitRate} count as making it; this
+means that it is never useful to close a profitable factory, though
+there is some advantage to having factories that are only just barely
+profitable. 
+
 \end{document}

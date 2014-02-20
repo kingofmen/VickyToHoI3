@@ -63,6 +63,8 @@ public:
 private:
 };
 
+double calcAvg (Object* ofthis); 
+
 class WorkerThread : public QThread {
   Q_OBJECT
 public:
@@ -87,7 +89,8 @@ private:
   // Conversion processes
   bool convertProvinceOwners (); 
   bool moveCapitals ();
-  bool moveResources (); 
+  bool moveIndustry ();
+  bool moveResources ();   
   
   // Infrastructure 
   void loadFile (string fname); 
@@ -111,6 +114,7 @@ private:
   Object* loadTextFile (string fname);
   Object* selectHoiProvince (Object* vicProv);
   void setPointersFromHoiCountry (Object* hc);
+  void setPointersFromVicCountry (Object* vc);
   void setPointersFromVicProvince (Object* vp);
   
   // Maps
@@ -127,8 +131,9 @@ private:
 
   // Lists
   objvec vicProvinces;
+  objvec vicCountries;  
   objvec hoiProvinces;
-  objvec hoiCountries; 
+  objvec hoiCountries;
   
   // Input info
   Object* provinceMapObject;

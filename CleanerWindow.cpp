@@ -17,13 +17,12 @@
 using namespace std; 
 
 /* TODOs
- * Resources
- * IC
- * Orders of battle
  * Governments
+ * Officers 
+ * Orders of battle
  * Techs
- * Officers
- * Buildings 
+ * Buildings
+ * National unity 
  */
 
 char stringbuffer[10000];
@@ -221,13 +220,16 @@ void WorkerThread::assignCountries (Object* vicCountry, Object* hoiCountry) {
   vicTagToHoiTagMap[vicTag] = hoiTag;
   hoiTagToVicTagMap[hoiTag] = vicTag;
   if (find(hoiCountries.begin(), hoiCountries.end(), hoiCountry) == hoiCountries.end()) hoiCountries.push_back(hoiCountry);
+  if (find(vicCountries.begin(), vicCountries.end(), vicCountry) == vicCountries.end()) vicCountries.push_back(vicCountry);
   hoiTagToHoiCountryMap[hoiTag] = hoiCountry; 
   Logger::logStream(Logger::Game) << "Assigning Vic country " << vicTag << " <-> HoI " << hoiTag << "\n"; 
 }
 
 void WorkerThread::cleanUp () {
   for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
-    (*hp)->unsetValue("name"); 
+    (*hp)->unsetValue("name");
+    (*hp)->unsetValue("vicIndustry");
+    (*hp)->unsetValue("vicUnemployed"); 
   }
 }
 
@@ -279,6 +281,13 @@ Object* WorkerThread::selectHoiProvince (Object* vicProv) {
 void WorkerThread::setPointersFromHoiCountry (Object* hc) {
   hoiCountry = hc;
   vicCountry = hoiCountryToVicCountryMap[hoiCountry];
+  hoiTag = hoiCountry->getKey();
+  vicTag = vicCountry->getKey();
+}
+
+void WorkerThread::setPointersFromVicCountry (Object* vc) {
+  vicCountry = vc;
+  hoiCountry = vicCountryToHoiCountryMap[vicCountry];
   hoiTag = hoiCountry->getKey();
   vicTag = vicCountry->getKey();
 }
@@ -628,9 +637,120 @@ bool WorkerThread::moveCapitals () {
 
     Logger::logStream(Logger::Game) << nameAndNumber(hoiCap) << " is capital of " << hoiTag << ".\n";
     hoiCountry->resetLeaf("capital", hoiCap->getKey());
+    hoiCountry->resetLeaf("acting_capital", hoiCap->getKey());
     hoiCap->resetLeaf("capital", "yes"); 
   }
   
+  return true; 
+}
+
+bool WorkerThread::moveIndustry () {
+  double minimumProfitRate = configObject->safeGetFloat("minimumProfitRate", 0.001);
+
+  double totalVicIndustry = 0;
+  for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
+    setPointersFromVicCountry(*vc); 
+    objvec states = (*vc)->getValue("state");
+    for (objiter state = states.begin(); state != states.end(); ++state) {
+      objvec buildings = (*state)->getValue("state_buildings");
+      int unemployed = 0;
+      int inFactories = 0; 
+      double stateWeight = 0;
+      // Weight is given by profit. If less than minimum rate, counts as minimum rate times number of workers.
+      // If less than zero, the workers count as unemployed; unemployed workers have the minimum rate, but
+      // start 'damaged'. 
+
+      
+      for (objiter f = buildings.begin(); f != buildings.end(); ++f) {
+	if (0 >= (*f)->safeGetInt("level")) continue;
+	double profit = calcAvg((*f)->safeGetObject("profit_history_entry"));
+	Object* employment = (*f)->safeGetObject("employment");
+	if (!employment) continue;
+	employment = employment->safeGetObject("employees");
+	if (!employment) continue;
+	objvec employees = employment->getLeaves();
+	int workers = 0; 
+	for (objiter emp = employees.begin(); emp != employees.end(); ++emp) {
+	  workers += (*emp)->safeGetInt("count");
+	}
+	double profitPerWorker = profit / workers;
+	Logger::logStream(Logger::Debug) << "Profit per worker in "
+					 << (*f)->safeGetString("building") << " in state "
+					 << (*state)->safeGetObject("id")->safeGetString("id")
+					 << " is " << profitPerWorker << ".\n"; 
+	if (profitPerWorker < minimumProfitRate) profitPerWorker = minimumProfitRate;
+	if (0 > profit) unemployed += workers;
+	else stateWeight += profitPerWorker * workers;
+	inFactories += workers;
+      }
+      Object* provs = (*state)->getNeededObject("provinces");
+      int totalWorkers = 0;
+      Object* hoiProv = 0;
+      bool foundName = false;
+      int bestSize = 0;
+      for (int i = 0; i < provs->numTokens(); ++i) {
+	Object* vicProv = vicProvIdToVicProvMap[provs->getToken(i)];
+	if (!vicProv) continue;
+	int currWorkers = 0; 
+	objvec craftsmen = vicProv->getValue("craftsmen");
+	for (objiter pop = craftsmen.begin(); pop != craftsmen.end(); ++pop) currWorkers += (*pop)->safeGetInt("size");
+	craftsmen = vicProv->getValue("clerks");
+	for (objiter pop = craftsmen.begin(); pop != craftsmen.end(); ++pop) currWorkers += (*pop)->safeGetInt("size");
+	totalWorkers += currWorkers; 
+	if (foundName) continue;
+	Object* hoiCand = selectHoiProvince(vicProv);
+	if (!hoiCand) continue; 
+	if (hoiCand->safeGetString("name") == vicProv->safeGetString("name")) {
+	  hoiProv = hoiCand;
+	  foundName = true;
+	  continue;
+	}
+	if (currWorkers < bestSize) continue;
+	bestSize = currWorkers;
+	hoiProv = hoiCand; 
+      }
+      if (!hoiProv) continue; 
+      unemployed += (totalWorkers - inFactories);
+      unemployed *= minimumProfitRate; 
+      stateWeight += unemployed;
+      totalVicIndustry += stateWeight;
+      hoiProv->resetLeaf("vicIndustry", stateWeight + hoiProv->safeGetFloat("vicIndustry"));
+      hoiProv->resetLeaf("vicUnemployed", unemployed + hoiProv->safeGetFloat("vicUnemployed")); 
+    }
+  }
+
+  double totalHoiIndustry = 0;
+  for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
+    Object* ind = (*hp)->safeGetObject("industry");
+    if (!ind) continue; 
+    totalHoiIndustry += ind->tokenAsFloat(0);
+    (*hp)->unsetValue("industry");
+  }
+
+  double hoiICperVicIndustry = totalHoiIndustry / totalVicIndustry;
+  map<string, pair<double, double> > tagToIcMap; 
+  for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
+    double vicInd = (*hp)->safeGetFloat("vicIndustry", -1);
+    if (0 > vicInd) continue;
+    double hoiMaxInd = vicInd * hoiICperVicIndustry;
+    if (0.01 > hoiMaxInd) continue;
+    Object* industry = new Object("industry");
+    (*hp)->setValue(industry);
+    vicInd -= (*hp)->safeGetFloat("vicUnemployed");
+    double hoiCurrInd = vicInd * hoiICperVicIndustry;
+    sprintf(stringbuffer, "%.2f", hoiCurrInd);
+    industry->addToList(stringbuffer);
+    sprintf(stringbuffer, "%.2f", hoiMaxInd);
+    industry->addToList(stringbuffer);
+    tagToIcMap[(*hp)->safeGetString("owner")].first += hoiCurrInd;
+    tagToIcMap[(*hp)->safeGetString("owner")].second += hoiMaxInd;
+  }
+
+  Logger::logStream(Logger::Game) << "Industry totals: \n";
+  for (map<string, pair<double, double> >::iterator hc = tagToIcMap.begin(); hc != tagToIcMap.end(); ++hc) {
+    Logger::logStream(Logger::Game) << (*hc).first << ": " << (*hc).second.first << " / " << (*hc).second.second << "\n"; 
+  }
+
   return true; 
 }
 
@@ -803,6 +923,17 @@ double calculateDistance (Object* one, Object* two) {
   return sqrt(xdist*xdist + ydist*ydist); 
 }
 
+double calcAvg (Object* ofthis) {
+  if (!ofthis) return 0; 
+  int num = ofthis->numTokens();
+  if (0 == num) return 0;
+  double ret = 0;
+  for (int i = 0; i < num; ++i) {
+    ret += ofthis->tokenAsFloat(i);
+  }
+  ret /= num;
+  return ret; 
+}
 
 double WorkerThread::calculateVicProduction (Object* vicProvince, string resource) {
   double cached = vicProvince->safeGetFloat(resource, -1);
@@ -1029,7 +1160,8 @@ void WorkerThread::convert () {
   initialiseVicSummaries(); 
   if (!convertProvinceOwners()) return;
   if (!moveCapitals()) return;
-  if (!moveResources()) return; 
+  if (!moveResources()) return;
+  if (!moveIndustry()) return; 
   cleanUp(); 
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";
