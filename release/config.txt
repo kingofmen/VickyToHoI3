@@ -31,6 +31,8 @@ logfile = logfile.txt
 # NOCUSTOM or delete to ignore 
 custom = custom_overrides.txt
 
+debugInt = 780
+
 minimumProfitRate = 0.0005 
 
 crude_oil = {

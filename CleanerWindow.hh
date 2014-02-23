@@ -87,6 +87,8 @@ private:
   TaskType autoTask;
 
   // Conversion processes
+  bool convertDiplomacy (); 
+  bool convertOoBs (); 
   bool convertProvinceOwners (); 
   bool moveCapitals ();
   bool moveIndustry ();
@@ -103,7 +105,8 @@ private:
   bool createCountryMap ();
   bool createOutputDir ();
   bool createProvinceMap ();
-  void initialiseVicSummaries (); 
+  void initialiseHoiSummaries ();
+  void initialiseVicSummaries ();   
   void loadFiles (); 
   void setupDebugLog ();
   
@@ -134,6 +137,7 @@ private:
   objvec vicCountries;  
   objvec hoiProvinces;
   objvec hoiCountries;
+  objvec allHoiCountries; // Includes the ones with no provinces after conversion. 
   
   // Input info
   Object* provinceMapObject;

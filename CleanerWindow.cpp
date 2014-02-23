@@ -231,6 +231,51 @@ void WorkerThread::cleanUp () {
     (*hp)->unsetValue("vicIndustry");
     (*hp)->unsetValue("vicUnemployed"); 
   }
+
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    (*hc)->unsetValue("convoy"); 
+    
+    Object* spy_mission    = (*hc)->getNeededObject("spy_mission");
+    Object* spy_date       = (*hc)->getNeededObject("spy_date");
+    Object* spy_allocation = (*hc)->getNeededObject("spy_allocation");
+    Object* spy_priority   = (*hc)->getNeededObject("spy_priority");
+    
+    spy_mission->clear();
+    spy_date->clear();
+    spy_allocation->clear();
+    spy_priority->clear();
+    for (unsigned int i = 0; i < hoiCountries.size(); ++i) {
+      spy_mission->addToList("0"); 
+      spy_date->addToList("1.1.1.0");
+      spy_allocation->addToList("0.000");
+      spy_priority->addToList("0"); 
+    }
+    
+    if (0 < hoiCountryToHoiProvsMap[*hc].size()) continue;
+    hoiGame->unsetValue((*hc)->getKey());
+    /*
+    (*hc)->unsetValue("capital");
+    (*hc)->unsetValue("acting_capital");
+    (*hc)->unsetValue("modifier");
+    (*hc)->unsetValue("active_leaders");
+    //(*hc)->unsetValue("");
+
+    Object* temp = 0;
+    temp = (*hc)->safeGetObject("usage"); if (temp) temp->clear();
+    temp = (*hc)->safeGetObject("home"); if (temp) temp->clear();
+    temp = (*hc)->safeGetObject("flags"); if (temp) temp->clear();
+    temp = (*hc)->safeGetObject("variables"); if (temp) temp->clear();
+    temp = (*hc)->safeGetObject("to"); if (temp) temp->clear();
+    temp = (*hc)->safeGetObject("back"); if (temp) temp->clear();
+    temp = (*hc)->safeGetObject("convoyed_out"); if (temp) temp->clear();
+    temp = (*hc)->safeGetObject("traded_away"); if (temp) temp->clear();
+    temp = (*hc)->safeGetObject("traded_for"); if (temp) temp->clear();
+    */ 
+    
+    
+  }
+  
+  hoiGame->unsetValue("active_war"); 
 }
 
 void WorkerThread::configure () {
@@ -392,6 +437,7 @@ bool WorkerThread::createCountryMap () {
   for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
     if (!(*leaf)->safeGetObject("technology")) continue;
     if (hoiCountryToVicCountryMap[*leaf]) continue;
+    if ((*leaf)->getKey() == "REB") continue;
     hoiUnassigned.push_back(*leaf);
   }
 
@@ -484,12 +530,20 @@ bool WorkerThread::createProvinceMap () {
     if ((*leaf)->safeGetString("owner", "NONE") == "NONE") continue;
     hoiProvinces.push_back(*leaf);
     (*leaf)->resetLeaf("name", provinceNamesObject->safeGetString((*leaf)->getKey(), "NO_NAME"));
-    (*leaf)->resetLeaf("capital", "no"); 
+    (*leaf)->unsetValue("capital"); 
     if (0 < hoiProvToVicProvsMap[*leaf].size()) continue; 
     Logger::logStream(Logger::Warning) << "Warning: Hoi province " << (*leaf)->getKey() << " has no assigned Vicky province.\n"; 
   }
 
   return true; 
+}
+
+void WorkerThread::initialiseHoiSummaries () {
+  objvec leaves = hoiGame->getLeaves();
+  for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
+    if (!(*leaf)->safeGetObject("flags")) continue;
+    allHoiCountries.push_back(*leaf); 
+  }
 }
 
 void WorkerThread::initialiseVicSummaries () {
@@ -534,6 +588,30 @@ void WorkerThread::setupDebugLog () {
 
 /******************************* Begin conversions ********************************/
 
+bool WorkerThread::convertDiplomacy () {
+  Object* hoiDip = hoiGame->getNeededObject("diplomacy");
+  hoiDip->clear();
+
+  for (objiter hc1 = allHoiCountries.begin(); hc1 != allHoiCountries.end(); ++hc1) {
+    for (objiter hc2 = allHoiCountries.begin(); hc2 != allHoiCountries.end(); ++hc2) {
+      if ((*hc1) == (*hc2)) continue;
+      if (0 == hoiCountryToHoiProvsMap[*hc2].size()) {
+	(*hc1)->unsetValue((*hc2)->getKey());
+	continue; 
+      }
+    }
+  }
+  
+  return true; 
+}
+
+bool WorkerThread::convertOoBs () {
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    (*hc)->unsetValue("theatre");
+  }
+  return true; 
+}
+
 bool WorkerThread::convertProvinceOwners () {
   for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
     if ((*hp)->safeGetString("owner", NO_OWNER) == NO_OWNER) continue; // Ocean province.
@@ -563,14 +641,17 @@ bool WorkerThread::convertProvinceOwners () {
       vicTag = remQuotes((*vp)->safeGetString("controller", NO_OWNER));
       popControllerMap[vicTag] += currVicPop;      
       if (popControllerMap[vicTag] > popControllerMap[bestControllerTag]) bestControllerTag = vicTag; 
-
     }
 
-    (*hp)->unsetValue("core");
+    objvec inputCores = (*hp)->getValue("core");
+    vector<string> inputCoreTags;
+    for (objiter ic = inputCores.begin(); ic != inputCores.end(); ++ic) inputCoreTags.push_back(remQuotes((*ic)->getLeaf()));
     for (set<string>::iterator vct = vicCoreTags.begin(); vct != vicCoreTags.end(); ++vct) {
       string hoiCoreTag = vicTagToHoiTagMap[*vct];
-      (*hp)->setLeaf("core", addQuotes(hoiCoreTag));
       Logger::logStream(Logger::Game) << nameAndNumber(*hp) << " is core of Vic " << (*vct) << " and hence HoI " << hoiCoreTag << "\n"; 
+      if (find(inputCoreTags.begin(), inputCoreTags.end(), hoiCoreTag) != inputCoreTags.end()) continue;
+      (*hp)->setLeaf("core", addQuotes(hoiCoreTag));
+      inputCoreTags.push_back(hoiCoreTag); 
     }
 
     
@@ -1154,14 +1235,17 @@ void WorkerThread::convert () {
   Logger::logStream(Logger::Game) << "Loading HoI source file.\n";
   hoiGame = loadTextFile(targetVersion + "input.hoi3");
 
-  loadFiles(); 
+  loadFiles();
+  initialiseHoiSummaries();
   if (!createProvinceMap()) return; 
   if (!createCountryMap()) return;
-  initialiseVicSummaries(); 
+  initialiseVicSummaries();     
   if (!convertProvinceOwners()) return;
+  if (!convertOoBs()) return; 
   if (!moveCapitals()) return;
   if (!moveResources()) return;
-  if (!moveIndustry()) return; 
+  if (!moveIndustry()) return;
+  if (!convertDiplomacy()) return; 
   cleanUp(); 
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";
