@@ -87,7 +87,8 @@ private:
   TaskType autoTask;
 
   // Conversion processes
-  bool convertDiplomacy (); 
+  bool convertDiplomacy ();
+  bool convertGovernments (); 
   bool convertOoBs (); 
   bool convertProvinceOwners (); 
   bool moveCapitals ();
@@ -112,6 +113,7 @@ private:
   
   // Helpers:
   void assignCountries (Object* vicCountry, Object* hoiCountry);
+  double calculateGovResemblance (Object* vicCountry, Object* hoiCountry);
   double calculateVicProduction (Object* vicProvince, string resource); 
   void cleanUp (); 
   Object* loadTextFile (string fname);
@@ -119,6 +121,7 @@ private:
   void setPointersFromHoiCountry (Object* hc);
   void setPointersFromVicCountry (Object* vc);
   void setPointersFromVicProvince (Object* vp);
+  bool swap (Object* one, Object* two, string key); 
   
   // Maps
   map<Object*, Object*> vicCountryToHoiCountryMap;

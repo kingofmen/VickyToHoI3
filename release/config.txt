@@ -18,14 +18,15 @@ debug = {
   45 = no # Manpower 
   46 = no # Culture
   47 = no # Religion 
-  48 = no # Governments 
+  48 = yes # Governments 
   49 = no # HRE 
   50 = no # COTs
   51 = no # Diplomacy  
   all = no 
 }
-vicdir = .\V2_HoD\ 
-hoidir = .\HoI_Vanilla\
+vicdir = .\V2_HoD\
+# Allowed values: HoI_Vanilla, HoI_TFH 
+hoidir = .\HoI_TFH\
 logfile = logfile.txt
 
 # NOCUSTOM or delete to ignore 
@@ -80,4 +81,269 @@ officerClasses = {
   class = officers
   class = soldiers
   class = aristocrats
+}
+
+govResemblance = {
+  humanFactor = 0.1 
+  GER = {
+    government = {
+      fascist_dictatorship = 1
+      proletarian_dictatorship = 0.5
+      presidential_dictatorship = 0.25
+      bourgeois_dictatorship = 0.025
+      absolute_monarchy = 0.1 
+      prussian_constitutionalism = 0.1
+      hms_government = -0.1
+      democracy = -0.2
+    }
+    revanchism = {
+      numerical = yes
+      value = 2
+    }
+    press_rights = {
+      free_press = -0.1
+      state_press = 0.05
+    }
+    fascist = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
+    reactionary = {
+      target = upper_house
+      numerical = yes
+      value = 0.33
+    }
+  }
+  ENG = {
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0
+      bourgeois_dictatorship = 0.05
+      absolute_monarchy = 0.05
+      prussian_constitutionalism = 0
+      hms_government = 1 
+      democracy = 0.1
+    }
+    voting_system = {
+      first_past_the_post = 0.2
+    }
+    press_rights = {
+      free_press = 0.1
+    }
+    conservative = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
+  }
+  USA = {
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0.05
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0
+      prussian_constitutionalism = 0
+      hms_government = 0.25
+      democracy = 1
+    }
+    plurality = {
+      numerical = yes
+      value = 0.01
+    }
+    press_rights = {
+      free_press = 0.1
+      state_press = -0.05
+    }
+  }
+  FRA = {
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0.25
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0.0
+      prussian_constitutionalism = 0.1
+      hms_government = 0 
+      democracy = 1
+    }
+    press_rights = {
+      free_press = 0.1
+    }
+    socialist = {
+      target = upper_house
+      numerical = yes
+      value = 0.25
+    }
+  }
+  ITA = {
+    government = {
+      fascist_dictatorship = 1
+      proletarian_dictatorship = 0.5
+      presidential_dictatorship = 0.9
+      bourgeois_dictatorship = 0.1
+      absolute_monarchy = 0
+      prussian_constitutionalism = 0
+      hms_government = 0.01 
+      democracy = 0
+    }
+    fascist = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
+  }
+  SOV = {
+    government = {
+      fascist_dictatorship = 0.5
+      proletarian_dictatorship = 1 
+      presidential_dictatorship = 0.8
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0.1
+      prussian_constitutionalism = 0
+      hms_government = 0 
+      democracy = 0
+    }
+    press_rights = {
+      free_press = -0.1
+      state_press = 0.01
+    }
+    communist = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
+  }
+  JAP = {
+    government = {
+      fascist_dictatorship = 0.25
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0.2
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0.66
+      prussian_constitutionalism = 0.8
+      hms_government = 0.1 
+      democracy = 0
+    }
+    reactionary = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
+  }
+  CHI = {
+    government = {
+      fascist_dictatorship = 0.5
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 1
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0.1
+      prussian_constitutionalism = 0
+      hms_government = 0 
+      democracy = 0
+    }
+    plurality = {
+      numerical = yes
+      value = -0.005
+    }
+    reactionary = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
+  }
+  CHC = {
+    government = {
+      fascist_dictatorship = 0.5
+      proletarian_dictatorship = 1
+      presidential_dictatorship = 0.33
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0.1
+      prussian_constitutionalism = 0
+      hms_government = 0 
+      democracy = 0
+    }
+    communist = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
+  }
+  TUR = {
+    scale = 0.75
+    government = {
+      fascist_dictatorship = 0.1
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 1
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0
+      prussian_constitutionalism = 0.05
+      hms_government = 0.2 
+      democracy = 0.05
+    }
+  }
+  SWE = {
+    scale = 0.5
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0.1
+      prussian_constitutionalism = 0.8
+      hms_government = 0.5
+      democracy = 0.8
+    }
+  }
+  NOR = {
+    scale = 0.5
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0
+      prussian_constitutionalism = 0
+      hms_government = 0.8
+      democracy = 1
+    }
+    liberal = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
+  }
+  SPR = {
+    scale = 0.75
+    government = {
+      fascist_dictatorship = 0.25
+      proletarian_dictatorship = 0.8 
+      presidential_dictatorship = 0.1
+      bourgeois_dictatorship = 1
+      absolute_monarchy = 0
+      prussian_constitutionalism = 0
+      hms_government = 0 
+      democracy = 0
+    }
+    anarcho_liberal = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
+  }
+  SPA = {
+    scale = 0.8
+    government = {
+      fascist_dictatorship = 1
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0.9
+      bourgeois_dictatorship = 0.05
+      absolute_monarchy = 0.2
+      prussian_constitutionalism = 0
+      hms_government = 0 
+      democracy = 0
+    }
+  }
 }

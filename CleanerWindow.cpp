@@ -22,7 +22,9 @@ using namespace std;
  * Orders of battle
  * Techs
  * Buildings
- * National unity 
+ * National unity
+ * Diplomacy
+ * Strategic resources
  */
 
 char stringbuffer[10000];
@@ -35,6 +37,8 @@ string hoiTag;
 string vicTag; 
 
 const string NO_OWNER = "\"NONE\""; 
+const string HOI_FINEST_HOUR = ".\\HoI_TFH\\";
+const string HOI_VANILLA = ".\\HoI_Vanilla\\";
 
 int main (int argc, char** argv) {
   QApplication industryApp(argc, argv);
@@ -154,7 +158,7 @@ void CleanerWindow::openDebugLog (string fname) {
 }
 
 WorkerThread::WorkerThread (string fn, TaskType atask)
-  : targetVersion(".\\HoI_Vanilla\\")
+  : targetVersion(HOI_FINEST_HOUR)
   , sourceVersion(".\\V2_HoD\\")
   , fname(fn)
   , vicGame(0)
@@ -250,29 +254,8 @@ void WorkerThread::cleanUp () {
       spy_allocation->addToList("0.000");
       spy_priority->addToList("0"); 
     }
-    
-    if (0 < hoiCountryToHoiProvsMap[*hc].size()) continue;
-    hoiGame->unsetValue((*hc)->getKey());
-    /*
-    (*hc)->unsetValue("capital");
-    (*hc)->unsetValue("acting_capital");
-    (*hc)->unsetValue("modifier");
-    (*hc)->unsetValue("active_leaders");
-    //(*hc)->unsetValue("");
 
-    Object* temp = 0;
-    temp = (*hc)->safeGetObject("usage"); if (temp) temp->clear();
-    temp = (*hc)->safeGetObject("home"); if (temp) temp->clear();
-    temp = (*hc)->safeGetObject("flags"); if (temp) temp->clear();
-    temp = (*hc)->safeGetObject("variables"); if (temp) temp->clear();
-    temp = (*hc)->safeGetObject("to"); if (temp) temp->clear();
-    temp = (*hc)->safeGetObject("back"); if (temp) temp->clear();
-    temp = (*hc)->safeGetObject("convoyed_out"); if (temp) temp->clear();
-    temp = (*hc)->safeGetObject("traded_away"); if (temp) temp->clear();
-    temp = (*hc)->safeGetObject("traded_for"); if (temp) temp->clear();
-    */ 
-    
-    
+    (*hc)->unsetValue("ai"); 
   }
   
   hoiGame->unsetValue("active_war"); 
@@ -280,7 +263,7 @@ void WorkerThread::cleanUp () {
 
 void WorkerThread::configure () {
   configObject = processFile("config.txt");
-  targetVersion = configObject->safeGetString("hoidir", ".\\HoI_Vanilla\\");
+  targetVersion = configObject->safeGetString("hoidir", HOI_FINEST_HOUR);
   sourceVersion = configObject->safeGetString("vicdir", ".\\V2_HoD\\");
   Logger::logStream(Logger::Debug).setActive(false);
 
@@ -342,6 +325,19 @@ void WorkerThread::setPointersFromVicProvince (Object* vp) {
   hoiTag = vicTagToHoiTagMap[vicTag];
   hoiCountry = hoiTagToHoiCountryMap[hoiTag];
   vicCountry = hoiCountryToVicCountryMap[hoiCountry];
+}
+
+bool WorkerThread::swap (Object* one, Object* two, string key) {
+  Object* valOne = one->safeGetObject(key);
+  if (!valOne) return false;
+  Object* valTwo = two->safeGetObject(key);
+  if (!valTwo) return false;
+
+  one->unsetValue(key);
+  two->unsetValue(key);
+  one->setValue(valTwo);
+  two->setValue(valOne);
+  return true; 
 }
 
 
@@ -542,6 +538,9 @@ void WorkerThread::initialiseHoiSummaries () {
   objvec leaves = hoiGame->getLeaves();
   for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
     if (!(*leaf)->safeGetObject("flags")) continue;
+    if (targetVersion == HOI_FINEST_HOUR) {
+      if (!(*leaf)->safeGetObject("strategic_warfare")) continue;
+    }
     allHoiCountries.push_back(*leaf); 
   }
 }
@@ -558,7 +557,7 @@ void WorkerThread::initialiseVicSummaries () {
 }
 
 void WorkerThread::loadFiles () {
-  provinceMapObject   = loadTextFile(sourceVersion + "province_mappings.txt");
+  provinceMapObject   = loadTextFile(targetVersion + "province_mappings.txt");
   countryMapObject    = loadTextFile(sourceVersion + "country_mappings.txt");
   provinceNamesObject = loadTextFile(targetVersion + "provNames.txt"); 
   
@@ -602,6 +601,66 @@ bool WorkerThread::convertDiplomacy () {
     }
   }
   
+  return true; 
+}
+
+bool WorkerThread::convertGovernments () {
+  Logger::logStream(Logger::Game) << "Beginning government conversion.\n";
+  objvec resemblances;
+  for (objiter nc = hoiCountries.begin(); nc != hoiCountries.end(); ++nc) {
+    setPointersFromHoiCountry(*nc);
+    for (objiter oc = allHoiCountries.begin(); oc != allHoiCountries.end(); ++oc) {
+      if ((*oc)->getKey() == "REB") continue;
+      Object* resemblance = new Object("resemblance");
+      resemblance->resetLeaf("newCountry", hoiTag);
+      resemblance->resetLeaf("oldCountry", (*oc)->getKey());
+      double value = calculateGovResemblance(vicCountry, (*oc));
+      resemblance->resetLeaf("value", value); 
+      resemblances.push_back(resemblance);
+      if (value > 0.01) Logger::logStream(DebugGovernments) << "Vic " << vicCountry->getKey() << " resembles HoI " << (*oc)->getKey() << " at " << value << ".\n"; 
+    }
+  }
+  
+  ObjectDescendingSorter sorter("value");
+  sort(resemblances.begin(), resemblances.end(), sorter);
+  map<string, string> mappedCountries;
+  map<string, string> usedCountries; // Can't reuse mappedCountries because a country may need a new government when its old one has been used. 
+  for (objiter r = resemblances.begin(); r != resemblances.end(); ++r) {
+    hoiTag = (*r)->safeGetString("newCountry");
+    if (mappedCountries[hoiTag] != "") continue;
+    hoiCountry = hoiTagToHoiCountryMap[hoiTag];
+    if (0 == hoiCountryToHoiProvsMap[hoiCountry].size()) continue; 
+    string oldTag = (*r)->safeGetString("oldCountry");
+    if (usedCountries[oldTag] != "") continue;
+    Object* oldCountry = hoiGame->safeGetObject(oldTag);
+    setPointersFromHoiCountry(hoiCountry);
+
+    if (!swap(oldCountry, hoiCountry, "ministers")) continue;
+    Logger::logStream(Logger::Game) << "Vic country "
+				    << vicTag
+				    << " (HoI "
+				    << hoiTag
+				    << ") getting government of historical "
+				    << oldCountry->getKey()
+				    << " from resemblance "
+				    << (*r)->safeGetString("value")
+				    << ".\n";
+    mappedCountries[hoiTag] = oldTag;
+    usedCountries[oldTag] = hoiTag; 
+    swap(oldCountry, hoiCountry, "government");
+    swap(oldCountry, hoiCountry, "head_of_state");
+    swap(oldCountry, hoiCountry, "head_of_government");
+    swap(oldCountry, hoiCountry, "foreign_minister");
+    swap(oldCountry, hoiCountry, "armament_minister");
+    swap(oldCountry, hoiCountry, "minister_of_security");
+    swap(oldCountry, hoiCountry, "minister_of_intelligence");
+    swap(oldCountry, hoiCountry, "chief_of_staff");
+    swap(oldCountry, hoiCountry, "chief_of_army");
+    swap(oldCountry, hoiCountry, "chief_of_navy");
+    swap(oldCountry, hoiCountry, "chief_of_air");
+  }
+
+  Logger::logStream(Logger::Game) << "Done with governments.\n"; 
   return true; 
 }
 
@@ -1016,6 +1075,65 @@ double calcAvg (Object* ofthis) {
   return ret; 
 }
 
+double WorkerThread::calculateGovResemblance (Object* vicCountry, Object* hoiCountry) {
+  double ret = rand();
+  ret /= RAND_MAX;
+  ret *= 0.001;
+  static Object* resemblances = configObject->safeGetObject("govResemblance");
+  if (!resemblances) {
+    static bool printed = false;
+    if (!printed) {
+      printed = true;
+      Logger::logStream(Logger::Error) << "Warning: Could not find govResemblance object in config.\n";
+    }
+    return ret;
+  }
+
+  Object* resemblance = resemblances->safeGetObject(hoiCountry->getKey());
+  if (!resemblance) {
+    static map<string, bool> printed;
+    if (!printed[hoiCountry->getKey()]) {
+      Logger::logStream(Logger::Warning) << "No resemblance object found for " << hoiCountry->getKey() << "\n";
+      printed[hoiCountry->getKey()] = true;
+    }
+    return ret; 
+  }
+
+  static double humanFactor = resemblances->safeGetFloat("humanFactor", 0.1);
+  if (vicCountry->safeGetString("human", "no") == "yes") ret += humanFactor; 
+  
+  objvec leaves = resemblance->getLeaves();
+  for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
+    Object* target = vicCountry;
+    string keyword = (*leaf)->getKey();
+    string targetKey = (*leaf)->safeGetString("target", "none");
+    if (targetKey != "none") target = target->safeGetObject(targetKey);
+    
+    double amount = 0;
+    string value = target->safeGetString(keyword);    
+    if ((*leaf)->safeGetString("numerical", "no") == "yes") {
+      amount = target->safeGetFloat(keyword) * (*leaf)->safeGetFloat("value"); 
+    }
+    else {
+      amount = (*leaf)->safeGetFloat(value, amount);
+    }
+    if (fabs(amount) > 0.001) {
+      Logger::logStream(DebugGovernments) << "Vic country "
+					  << vicTag
+					  << " gets "
+					  << amount
+					  << " resemblance points to "
+					  << hoiCountry->getKey()
+					  << " from "
+					  << keyword << " " << value
+					  << "\n";
+      ret += amount; 
+    }
+  }
+  ret *= resemblance->safeGetFloat("scale", 1); 
+  return ret;
+}
+
 double WorkerThread::calculateVicProduction (Object* vicProvince, string resource) {
   double cached = vicProvince->safeGetFloat(resource, -1);
   if (0 <= cached) return cached;
@@ -1245,6 +1363,7 @@ void WorkerThread::convert () {
   if (!moveCapitals()) return;
   if (!moveResources()) return;
   if (!moveIndustry()) return;
+  if (!convertGovernments()) return; 
   if (!convertDiplomacy()) return; 
   cleanUp(); 
   

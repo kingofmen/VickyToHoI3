@@ -42,4 +42,85 @@ means that it is never useful to close a profitable factory, though
 there is some advantage to having factories that are only just barely
 profitable. 
 
+\section{Governments}
+
+Each converted nation gets the government of the historical nation it
+most closely resembles, provided no other nation resembles it even
+more. That is, a resemblance is calculated for each pair of converted
+and historical nations. The highest resemblance is then assigned, then
+the next highest for which neither converted or historical nation has
+already been used, and so on until all converted nations have a
+government. For example, suppose the converted nations are SWE, DEN,
+and NOR; and the historical nations are GER, ENG, and FRA. Suppose
+further that the resemblances are thus:
+\begin{verbatim}
+SWE - GER: 10
+SWE - ENG: 8
+SWE - FRA: 3
+DEN - GER: 9
+DEN - ENG: 7
+DEN - FRA: 2
+NOR - GER: 2
+NOR - ENG: 4
+NOR - FRA: 3
+\end{verbatim}
+Sorting this list from highest to lowest, we get:
+\begin{verbatim}
+SWE - GER: 10
+DEN - GER: 9
+SWE - ENG: 8
+DEN - ENG: 7
+NOR - ENG: 4
+NOR - FRA: 3
+SWE - FRA: 3
+DEN - FRA: 2
+NOR - GER: 2
+\end{verbatim}
+Thus, SWE gets the historical GER government, and SWE and GER are
+struck from the list, leaving:
+\begin{verbatim}
+DEN - ENG: 7
+NOR - ENG: 4
+NOR - FRA: 3
+DEN - FRA: 2
+\end{verbatim}
+Then, DEN gets the historical ENG government and these tags are
+struck, leaving only the final resemblance, from which NOR is assigned
+the FRA government. 
+
+Resemblance is calculated from the \texttt{govResemblance} object in
+the configuration file. For example, consider the resemblance object
+to Sweden:
+\begin{verbatim}
+  SWE = {
+    scale = 0.5
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0.1
+      prussian_constitutionalism = 0.8
+      hms_government = 0.5
+      democracy = 0.8
+    }
+  }
+\end{verbatim}
+This says that a Victoria nation gets 0.8 resemblance points to Sweden for
+having the \texttt{prussian\_constitutionalism} government, 0.5 for
+\texttt{hmc\_government}, and so on. Resemblances are multiplied by
+the \texttt{scale}, which is 1 by default and smaller for
+historically-minor countries like Sweden; this means that a country
+which equally resembles Germany and Sweden will get the German
+government if it is available. In addition, human countries get a
+bonus of \texttt{humanFactor} to all resemblances listed in the config
+file, to advantage them
+over AI minors in the scramble for interesting governments. There is
+also a tiny random factor to break ties. 
+
+Fields marked `numerical', such as plurality, create a resemblance of
+their \texttt{value} key times the number in the Victoria
+country. Fields with a `target' keyword look in the nested sub-object of
+the Victoria nation rather than the top level. 
+
 \end{document}
