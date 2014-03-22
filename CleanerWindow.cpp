@@ -17,10 +17,10 @@
 using namespace std; 
 
 /* TODOs
- * Governments
  * Officers 
  * Orders of battle
  * Techs
+ * Laws
  * Buildings
  * National unity
  * Diplomacy
@@ -238,6 +238,10 @@ void WorkerThread::cleanUp () {
 
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
     (*hc)->unsetValue("convoy"); 
+    (*hc)->unsetValue("military_construction"); 
+    (*hc)->unsetValue("army_size");
+    (*hc)->unsetValue("navy_size");
+    (*hc)->unsetValue("military_size"); 
     
     Object* spy_mission    = (*hc)->getNeededObject("spy_mission");
     Object* spy_date       = (*hc)->getNeededObject("spy_date");
@@ -328,6 +332,7 @@ void WorkerThread::setPointersFromVicProvince (Object* vp) {
 }
 
 bool WorkerThread::swap (Object* one, Object* two, string key) {
+  if (one == two) return true; 
   Object* valOne = one->safeGetObject(key);
   if (!valOne) return false;
   Object* valTwo = two->safeGetObject(key);
@@ -534,14 +539,65 @@ bool WorkerThread::createProvinceMap () {
   return true; 
 }
 
+double extractStrength (Object* unit) {
+  double ret = 0; 
+  objvec regiments = unit->getLeaves();
+  for (objiter regiment = regiments.begin(); regiment != regiments.end(); ++regiment) {
+    if ((*regiment)->isLeaf()) continue;
+    if ((*regiment)->getKey() == "regiment") ret += (*regiment)->safeGetFloat("strength");
+    else ret += extractStrength(*regiment);
+  }
+  return ret; 
+}
+
 void WorkerThread::initialiseHoiSummaries () {
   objvec leaves = hoiGame->getLeaves();
+  double maxArmy = 1;
+  double maxNavy = 1;
+  Object* hoiShipWeights = configObject->getNeededObject("hoiShips"); 
+  static map<string, bool> printed; 
+  
   for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
     if (!(*leaf)->safeGetObject("flags")) continue;
     if (targetVersion == HOI_FINEST_HOUR) {
       if (!(*leaf)->safeGetObject("strategic_warfare")) continue;
     }
-    allHoiCountries.push_back(*leaf); 
+    allHoiCountries.push_back(*leaf);
+
+    objvec armies = (*leaf)->getValue("theatre");
+    double totalArmy = 0;
+    double totalNavy = 0;    
+    for (objiter army = armies.begin(); army != armies.end(); ++army) {
+      totalArmy += extractStrength(*leaf);
+
+      objvec navies = (*army)->getValue("navy");
+      for (objiter navy = navies.begin(); navy != navies.end(); ++navy) {
+	objvec ships = (*navy)->getValue("ship");
+	for (objiter ship = ships.begin(); ship != ships.end(); ++ship) {
+	  double weight = -1;
+	  string shiptype = remQuotes((*ship)->safeGetString("type"));
+	  weight = hoiShipWeights->safeGetFloat(shiptype, -1);
+	  if (-1 == weight) {
+	    weight = 1;
+	    if (!printed[shiptype]) {
+	      Logger::logStream(Logger::Warning) << "Warning: Unknown HoI ship type " << shiptype << ", assigning weight 1.\n";
+	      printed[shiptype] = true;
+	    }
+	  }
+	  totalNavy += weight; 
+	}
+      }
+    }
+    (*leaf)->resetLeaf("army_size", totalArmy);
+    if (totalArmy > maxArmy) maxArmy = totalArmy;
+    (*leaf)->resetLeaf("navy_size", totalNavy);
+    if (totalNavy > maxNavy) maxNavy = totalNavy; 
+  }
+
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    (*hc)->resetLeaf("army_size", (*hc)->safeGetFloat("army_size") / maxArmy);
+    (*hc)->resetLeaf("navy_size", (*hc)->safeGetFloat("navy_size") / maxNavy);
+    (*hc)->resetLeaf("military_size", (*hc)->safeGetFloat("army_size") + (*hc)->safeGetFloat("navy_size")); 
   }
 }
 
@@ -553,6 +609,51 @@ void WorkerThread::initialiseVicSummaries () {
       totalPop += (*leaf)->safeGetInt("size");
     }
     (*vp)->resetLeaf("totalPop", totalPop); 
+  }
+
+  double maxArmy = 1;
+  double maxNavy = 1;
+  Object* vicShipWeights = configObject->getNeededObject("vicShips"); 
+  static map<string, bool> printed; 
+
+  for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
+    objvec armies = (*vc)->getValue("army");
+    double totalArmy = 0;
+    for (objiter army = armies.begin(); army != armies.end(); ++army) {
+      objvec regiments = (*army)->getValue("regiment");
+      for (objiter regiment = regiments.begin(); regiment != regiments.end(); ++regiment) {
+	totalArmy += (*regiment)->safeGetFloat("strength");
+      }
+    }
+    (*vc)->resetLeaf("army_size", totalArmy);
+    if (totalArmy > maxArmy) maxArmy = totalArmy;
+
+    double totalNavy = 0;
+    objvec navies = (*vc)->getValue("navy");
+    for (objiter navy = navies.begin(); navy != navies.end(); ++navy) {
+      objvec ships = (*navy)->getValue("ship");
+      for (objiter ship = ships.begin(); ship != ships.end(); ++ship) {
+	double weight = -1;
+	string shiptype = remQuotes((*ship)->safeGetString("type"));
+	weight = vicShipWeights->safeGetFloat(shiptype, -1);
+	if (-1 == weight) {
+	  weight = 1;
+	  if (!printed[shiptype]) {
+	    Logger::logStream(Logger::Warning) << "Warning: Unknown Vic ship type " << shiptype << ", assigning weight 1.\n";
+	    printed[shiptype] = true;
+	  }
+	}
+	totalNavy += weight; 
+      }
+    }
+    (*vc)->resetLeaf("navy_size", totalNavy);
+    if (totalNavy > maxNavy) maxNavy = totalNavy; 
+  }
+
+  for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
+    (*vc)->resetLeaf("army_size", (*vc)->safeGetFloat("army_size") / maxArmy);
+    (*vc)->resetLeaf("navy_size", (*vc)->safeGetFloat("navy_size") / maxNavy);
+    (*vc)->resetLeaf("military_size", (*vc)->safeGetFloat("army_size") + (*vc)->safeGetFloat("navy_size")); 
   }
 }
 
@@ -661,6 +762,57 @@ bool WorkerThread::convertGovernments () {
   }
 
   Logger::logStream(Logger::Game) << "Done with governments.\n"; 
+  return true; 
+}
+
+bool WorkerThread::convertLeaders () {
+  Logger::logStream(Logger::Game) << "Beginning leader conversion.\n";
+  ObjectDescendingSorter hoiSorter("military_size");
+  sort(allHoiCountries.begin(), allHoiCountries.end(), hoiSorter);
+  objvec unassignedVicCountries;
+  for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
+    if (!vicCountryToHoiCountryMap[*vc]) continue;
+    unassignedVicCountries.push_back(*vc);
+  }
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    hoiTag = (*hc)->getKey();
+    if (hoiTag == "REB") continue;
+    Logger::logStream(DebugLeaders) << "Assigning leaders of HoI country "
+				    << hoiTag
+				    << " (" << (*hc)->safeGetString("military_size")
+				    << ", " << (*hc)->safeGetString("army_size")
+				    << ", " << (*hc)->safeGetString("navy_size")
+				    << ")\n";
+    double leastDistance = 1e6;
+    objiter bestVicCountry = unassignedVicCountries.end();
+    for (objiter vc = unassignedVicCountries.begin(); vc != unassignedVicCountries.end(); ++vc) {
+      double distance = sqrt(pow((*vc)->safeGetFloat("army_size") - (*hc)->safeGetFloat("army_size"), 2) +
+			     pow((*vc)->safeGetFloat("navy_size") - (*hc)->safeGetFloat("navy_size"), 2));
+
+      // Avoid all the tiny (0, 0) countries being 'close' to HoI middle-powers. 
+      if ((*vc)->safeGetFloat("army_size") + (*vc)->safeGetFloat("navy_size") < 0.01) distance += 1; 
+      if (distance > leastDistance) continue;
+      leastDistance = distance;
+      bestVicCountry = vc;
+    }
+    if (bestVicCountry == unassignedVicCountries.end()) break;
+    setPointersFromVicCountry(*bestVicCountry);
+    Logger::logStream(DebugLeaders) << "  ...to Vic country " << vicTag << " (HoI " << hoiTag
+				    << ") with " << vicCountry->safeGetString("military_size")
+				    << ", " << vicCountry->safeGetString("army_size")
+				    << ", " << vicCountry->safeGetString("navy_size")
+				    << ".\n";
+    (*bestVicCountry)->setValue((*hc)->safeGetObject("active_leaders"));
+    unassignedVicCountries.erase(bestVicCountry);
+    if (0 == unassignedVicCountries.size()) break; 
+  }
+
+  for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
+    setPointersFromVicCountry(*vc); 
+    swap(hoiCountry, vicCountry, "active_leaders");
+  }
+
+  Logger::logStream(Logger::Game) << "Done with leaders.\n"; 
   return true; 
 }
 
@@ -1364,7 +1516,8 @@ void WorkerThread::convert () {
   if (!moveResources()) return;
   if (!moveIndustry()) return;
   if (!convertGovernments()) return; 
-  if (!convertDiplomacy()) return; 
+  if (!convertDiplomacy()) return;
+  if (!convertLeaders()) return; 
   cleanUp(); 
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";

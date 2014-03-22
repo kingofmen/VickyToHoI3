@@ -88,7 +88,8 @@ private:
 
   // Conversion processes
   bool convertDiplomacy ();
-  bool convertGovernments (); 
+  bool convertGovernments ();
+  bool convertLeaders (); 
   bool convertOoBs (); 
   bool convertProvinceOwners (); 
   bool moveCapitals ();

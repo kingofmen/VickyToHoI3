@@ -1,6 +1,6 @@
 debug = {
   generic  = yes 
-  30 = no # Leaders
+  30 = yes # Leaders
   31 = no # Provinces
   32 = no # Ministers
   33 = no # Tech teams 
@@ -18,7 +18,7 @@ debug = {
   45 = no # Manpower 
   46 = no # Culture
   47 = no # Religion 
-  48 = yes # Governments 
+  48 = no # Governments 
   49 = no # HRE 
   50 = no # COTs
   51 = no # Diplomacy  
@@ -346,4 +346,30 @@ govResemblance = {
       democracy = 0
     }
   }
+}
+
+hoiShips = {
+  carrier = 1
+  battleship = 0.95
+  battlecruiser = 0.75
+  light_cruiser = 0.25
+  destroyer = 0.10
+  escort_carrier = 0.25
+  nuclear_submarine = 0.8 # Somewhat unlikely in 1936
+  transport = 0.05
+  heavy_cruiser = 0.5
+  submarine = 0.2
+}
+
+vicShips = {
+  manowar = 0.05
+  frigate = 0.02
+  commerce_raider = 0.05
+  ironclad = 0.1
+  cruiser = 2
+  battleship = 5
+  dreadnought = 6
+  monitor = 0.1
+  steam_transport = 0.25
+  clipper_transport = 0.01 
 }
