@@ -1,5 +1,6 @@
 #include "StringManips.hh"
 #include "boost/tokenizer.hpp"
+#include <cstdio> 
 
 string addQuotes (string tag) {
   string ret("\"");
@@ -106,4 +107,35 @@ string convertMonth (int month) {
   else if (month == 11) return "november";
   else if (month == 12) return "december";
   else return "january"; 
+}
+
+void setIdAndType (Object* obj, int id, int type) {
+  Object* idObj = new Object("id");
+  obj->setValue(idObj);
+  idObj->setLeaf("id", id);
+  idObj->setLeaf("type", type); 
+}
+
+string ordinal (int i) {
+  static char buffer[1000];
+  if ((11 == i%100) || (12 == i%100) || (13 == i%100)) {
+    sprintf(buffer, "%ith", i);
+  }
+  else {
+    int mod = i%10;
+    sprintf(buffer, "%i%s", i, (1 == mod ? "st" : (2 == mod ? "nd" : (3 == mod ? "rd" : "th"))));
+  }
+  return buffer; 
+}
+
+string capitalise (string str) {
+  string ret = str;
+  ret[0] = toupper((int) ret[0]);
+  return ret; 
+}
+
+Object* pop (objvec& dat) {
+  Object* ret = dat.back();
+  dat.pop_back();
+  return ret; 
 }

@@ -87,6 +87,7 @@ private:
   TaskType autoTask;
 
   // Conversion processes
+  bool convertBuildings (); 
   bool convertDiplomacy ();
   bool convertGovernments ();
   bool convertLeaders (); 
@@ -116,12 +117,14 @@ private:
   void assignCountries (Object* vicCountry, Object* hoiCountry);
   double calculateGovResemblance (Object* vicCountry, Object* hoiCountry);
   double calculateVicProduction (Object* vicProvince, string resource); 
-  void cleanUp (); 
+  void cleanUp ();
+  double extractStrength (Object* unit); 
   Object* loadTextFile (string fname);
   Object* selectHoiProvince (Object* vicProv);
   void setPointersFromHoiCountry (Object* hc);
   void setPointersFromVicCountry (Object* vc);
   void setPointersFromVicProvince (Object* vp);
+  void setPointersFromVicTag (string tag);
   bool swap (Object* one, Object* two, string key); 
   
   // Maps
@@ -135,19 +138,25 @@ private:
   map<Object*, objvec> hoiCountryToHoiProvsMap;
   map<Object*, objvec> vicProvToHoiProvsMap;
   map<Object*, objvec> hoiProvToVicProvsMap; 
-
+  map<string, Object*> popIdMap; 
+  map<string, int> hoiUnitTypes;
+  map<string, int> vicUnitTypes;
+  map<string, int> vicUnitsThatConvertToHoIUnits; 
+  
   // Lists
   objvec vicProvinces;
   objvec vicCountries;  
   objvec hoiProvinces;
   objvec hoiCountries;
   objvec allHoiCountries; // Includes the ones with no provinces after conversion. 
+  objvec hoiShipList; 
   
   // Input info
   Object* provinceMapObject;
   Object* countryMapObject;
   Object* provinceNamesObject; 
-  Object* customObject; 
+  Object* customObject;
+  map<string, Object*> hoiProvincePositions; 
 }; 
 
 #endif

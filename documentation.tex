@@ -147,4 +147,56 @@ may be closer - that is, (0, 0) is closer to (0.1, 0) than (0.21, 0)
 is, but we want to prioritise the second nation, which actually has an
 army. 
 
+\section{Buildings}
+
+HoI naval bases are redistributed weighted by the Vic ones. 
+
+\section{Orders of Battle}
+
+Land units are created in numbers equalling the vanilla setup, so that
+each nation gets a number of HoI units proportional to the amount of the
+corresponding Victoria units it has. For example, all four
+kinds\footnote{And really, does any game need four kinds of cavalry?}
+of Vicky cavalry (cavalry, dragoon, hussar, and cuirassier) correspond
+to HoI cavalry. Consequently, if a nation has 25 Victoria cavalry
+regiments (all kinds) and the total of such units in Victoria is 100,
+then it gets HoI cavalry equal to one-fourth of the amount that exists
+in the input save. The unit correspondences are listed in the
+\texttt{unitTypes} object of the config file. Notice that reserve
+units (from mobilisation) do not count as infantry; notice also that
+not every HoI unit type has a corresponding Victoria one. 
+
+In some cases additional units will be created. For example, the 1936
+setup has only two armoured brigades (as opposed to light armour),
+which is experentially a somewhat absurd constraint to impose on a
+Victoria game in 1936. Consequently additional armoured brigades are
+created in accordance with the \texttt{extraUnits} field:
+\begin{verbatim}
+extraUnits = {
+  armor_brigade = { tank 5 10 15 20 25 35 50 75 100 125 150 175 200 225 250 300 350 400 450 500 600 }
+}
+\end{verbatim}
+which says that if the world contains 5 tank units, an additional
+armoured brigade is created, another at 10, and so on up to 600; after
+600 there is one for every 100, the difference between the last and
+the second-last entries. 
+
+A sufficient amount of divisions, corps and higher formations, with headquarters, are created to
+house the lower formations; so three (identical) brigades form a
+division, three divisions (identical or not) form a corps, and so
+on. Any formations at loose ends are attached to the single theatre
+that is created for each nation. 
+
+Ships are redistributed at random, weighted by the naval strength of
+nations. Naval strength is defined as the sum of the weights given in
+the \texttt{vicShips} field (that is, a dreadnought is 60, a cruiser
+20, and so on), averaged with the naval support limit (which comes
+from naval bases), \emph{unless} the former is higher than the latter,
+in which case the naval force limit is used. Thus, suppose my naval
+force limit is 100. If I build a single dreadnought (weight 60) my
+naval strength is 80 (average of 60 and 100). If I build another
+dreadnought (bringing the total weight to 120) my naval strength is
+100 (the force limit). 
+
+
 \end{document}

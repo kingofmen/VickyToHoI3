@@ -1,13 +1,13 @@
 debug = {
   generic  = yes 
-  30 = yes # Leaders
+  30 = no # Leaders
   31 = no # Provinces
   32 = no # Ministers
   33 = no # Tech teams 
   34 = no # Resources 
   35 = no # Techs 
-  36 = no # Buildings 
-  37 = no # Units 
+  36 = yes # Buildings 
+  37 = yes # Units 
   38 = no # Stockpiles 
   39 = no # Sliders 
   40 = no # Ideas 
@@ -35,6 +35,7 @@ custom = custom_overrides.txt
 debugInt = 780
 
 minimumProfitRate = 0.0005 
+base_naval_support = 10 # From defines.lua
 
 crude_oil = {
   oil = 1.0
@@ -348,6 +349,56 @@ govResemblance = {
   }
 }
 
+unitTypes = {
+  tank = armor_brigade
+  tank = light_armor_brigade
+  infantry = infantry_brigade
+  infantry = garrison_brigade
+  guards = motorized_brigade
+  engineer = engineer_brigade
+  hussar = cavalry_brigade
+  dragoon = cavalry_brigade
+  cavalry = cavalry_brigade
+  cuirassier = cavalry_brigade
+  plane = interceptor
+  plane = tactical_bomber
+  plane = strategic_bomber
+  artillery = artillery_brigade
+  irregular = militia_brigade
+}
+
+hoiDivNames = {
+  armor_brigade = "Armoured Division"
+  light_armor_brigade = "Pursuit Division"
+  infantry_brigade = "Infantry Division"
+  garrison_brigade = "Garrison Division"
+  motorized_brigade = "Motorised Division"
+  engineer_brigade = "Engineering Brigade"
+  cavalry_brigade = "Obsolete Division"
+  interceptor = "Fighter Wing"
+  tactical_bomber = "Close Support Wing"
+  strategic_bomber = "Bomber Wing"
+  artillery_brigade = "Grand Battery"
+  militia_brigade = "Militia Division"
+}
+
+shipConversions = {
+  heavy_cruiser
+  light_cruiser
+  battlecruiser
+  destroyer
+  light_cruiser
+  submarine
+  carrier
+  escort_carrier
+  battleship
+  transport_ship
+}
+
+extraUnits = {
+  armor_brigade = { tank 5 10 15 20 25 35 50 75 100 125 150 175 200 225 250 300 350 400 450 500 600 }
+}
+
 hoiShips = {
   carrier = 1
   battleship = 0.95
@@ -356,20 +407,20 @@ hoiShips = {
   destroyer = 0.10
   escort_carrier = 0.25
   nuclear_submarine = 0.8 # Somewhat unlikely in 1936
-  transport = 0.05
+  transport_ship = 0.05
   heavy_cruiser = 0.5
   submarine = 0.2
 }
 
-vicShips = {
+vicShips = { # From units files, modified for obsolescence. 
   manowar = 0.05
   frigate = 0.02
   commerce_raider = 0.05
-  ironclad = 0.1
-  cruiser = 2
-  battleship = 5
-  dreadnought = 6
-  monitor = 0.1
-  steam_transport = 0.25
+  ironclad = 0.25
+  cruiser = 20
+  battleship = 50
+  dreadnought = 60
+  monitor = 0.25
+  steam_transport = 1
   clipper_transport = 0.01 
 }
