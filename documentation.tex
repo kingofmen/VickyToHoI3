@@ -198,5 +198,17 @@ naval strength is 80 (average of 60 and 100). If I build another
 dreadnought (bringing the total weight to 120) my naval strength is
 100 (the force limit). 
 
+\section{Techs}
+
+Most human players will be fully teched by 1936, so there is little to
+distinguish nations on this point. The tech conversion is therefore
+intended mainly to activate the obvious stuff, so players don't sit
+about unable to build infantry divisions in 1936. The config file's
+\texttt{techConversion} object contains fields of this form:
+\begin{verbatim}
+vicTech = { hoiTech hoiTech ... }
+\end{verbatim}
+where each \texttt{hoiTech} is increased to level one if the nation
+has the \texttt{vicTech}. Otherwise all HoI techs start at zero. 
 
 \end{document}

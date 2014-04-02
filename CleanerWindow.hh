@@ -92,7 +92,8 @@ private:
   bool convertGovernments ();
   bool convertLeaders (); 
   bool convertOoBs (); 
-  bool convertProvinceOwners (); 
+  bool convertProvinceOwners ();
+  bool convertTechs (); 
   bool moveCapitals ();
   bool moveIndustry ();
   bool moveResources ();   

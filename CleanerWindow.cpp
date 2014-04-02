@@ -21,6 +21,8 @@ using namespace std;
    - Cav strength
  * Techs
  * Laws
+ * Officers
+ * Convoys 
  * Stockpiles
  * Buildings
  * National unity
@@ -325,13 +327,15 @@ void WorkerThread::setPointersFromHoiCountry (Object* hc) {
   hoiCountry = hc;
   vicCountry = hoiCountryToVicCountryMap[hoiCountry];
   hoiTag = hoiCountry->getKey();
-  vicTag = vicCountry->getKey();
+  if (vicCountry) vicTag = vicCountry->getKey();
+  else vicTag = "NONE"; 
 }
 
 void WorkerThread::setPointersFromVicCountry (Object* vc) {
   vicCountry = vc;
   hoiCountry = vicCountryToHoiCountryMap[vicCountry];
-  hoiTag = hoiCountry->getKey();
+  if (hoiCountry) hoiTag = hoiCountry->getKey();
+  else hoiTag = "NONE"; 
   vicTag = vicCountry->getKey();
 }
 
@@ -1264,6 +1268,52 @@ bool WorkerThread::convertProvinceOwners () {
   return true; 
 }
 
+bool WorkerThread::convertTechs () {
+  Logger::logStream(Logger::Game) << "Beginning tech conversion.\n";
+
+  Object* techObject = configObject->getNeededObject("techConversion");
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    setPointersFromHoiCountry(*hc);
+    Object* hoiTechObject = hoiCountry->safeGetObject("technology");
+    if (!hoiTechObject) {
+      Logger::logStream(Logger::Warning) << "Warning: No tech object for HoI " << hoiTag << ".\n";
+      continue;
+    }
+    objvec hoiTechList = hoiTechObject->getLeaves();
+    for (objiter hoiTech = hoiTechList.begin(); hoiTech != hoiTechList.end(); ++hoiTech) {
+      (*hoiTech)->resetToken(0, "0");
+    }
+    if (!vicCountry) continue;
+    
+    Object* vicTechObject = vicCountry->safeGetObject("technology");
+    if (!vicTechObject) {
+      Logger::logStream(Logger::Warning) << "Warning: No tech object for Vic " << vicTag << " (HoI " << hoiTag << ").\n";
+      continue;
+    }
+    objvec vicTechList = vicTechObject->getLeaves();
+    Logger::logStream(DebugTechs) << "Vic " << vicTag << " (HoI " << hoiTag << ") tech conversions:\n";
+    for (objiter vicTech = vicTechList.begin(); vicTech != vicTechList.end(); ++vicTech) {
+      if (0 == (*vicTech)->tokenAsInt(0)) continue;
+      string vicTechKey = (*vicTech)->getKey();
+      Object* hoiTechKeys = techObject->safeGetObject(vicTechKey); 
+      if (!hoiTechKeys) continue;
+      for (int i = 0; i < hoiTechKeys->numTokens(); ++i) {
+	string hoiTechKey = hoiTechKeys->getToken(i); 
+	Object* hoiTech = hoiTechObject->safeGetObject(hoiTechKey);
+	if (!hoiTech) {
+	  Logger::logStream(Logger::Warning) << "Warning: Ignoring unknown HoI tech " << hoiTechKey << "\n";
+	  continue;
+	}
+	hoiTech->resetToken(0, "1");
+	Logger::logStream(DebugTechs) << "  " << vicTechKey << " -> " << hoiTechKey << "\n"; 
+      }
+    }
+  }
+  
+  Logger::logStream(Logger::Game) << "Done with tech conversion.\n";
+  return true;
+}
+
 bool WorkerThread::moveCapitals () {
   for (objiter hc = hoiCountries.begin(); hc != hoiCountries.end(); ++hc) {
     setPointersFromHoiCountry(*hc);
@@ -1906,6 +1956,7 @@ void WorkerThread::convert () {
   if (!convertGovernments()) return; 
   if (!convertDiplomacy()) return;
   if (!convertLeaders()) return;
+  if (!convertTechs()) return; 
   cleanUp(); 
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";
