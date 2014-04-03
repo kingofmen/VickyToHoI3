@@ -19,7 +19,6 @@ using namespace std;
 /* TODOs
  * Orders of battle
    - Cav strength
- * Techs
  * Laws
  * Officers
  * Convoys 
@@ -616,6 +615,7 @@ void WorkerThread::initialiseHoiSummaries () {
 void WorkerThread::initialiseVicSummaries () {
   int base_naval_support = configObject->safeGetInt("base_naval_support", 10); 
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+    setPointersFromVicProvince(*vp);    
     objvec leaves = (*vp)->getLeaves();
     int totalPop = 0;
     for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
@@ -623,15 +623,28 @@ void WorkerThread::initialiseVicSummaries () {
       if (0 > popSize) continue;
       popIdMap[(*leaf)->safeGetString("id")] = (*leaf); 
       totalPop += popSize;
+      (*vp)->resetLeaf((*leaf)->getKey(), popSize + (*vp)->safeGetInt((*leaf)->getKey()));
+      if (vicCountry) {
+	vicCountry->resetLeaf((*leaf)->getKey(), popSize + vicCountry->safeGetInt((*leaf)->getKey()));
+      }
     }
     (*vp)->resetLeaf("totalPop", totalPop);
-    vicTag = remQuotes((*vp)->safeGetString("owner", "\"NONE\""));
-    if (vicTag == "NONE") continue;
-    setPointersFromVicTag(vicTag); 
+    if (!vicCountry) continue;
+    vicCountry->resetLeaf("totalPop", totalPop + vicCountry->safeGetInt("totalPop"));
+
     Object* navalBase = (*vp)->safeGetObject("naval_base");
     int level = 0;
-    if (navalBase) level = (int) floor(0.5 + navalBase->tokenAsFloat(0));
-    vicCountry->resetLeaf("navy_limit", vicCountry->safeGetInt("navy_limit") + base_naval_support * pow(2, level - 1));
+    if (navalBase) {
+      level = (int) floor(0.5 + navalBase->tokenAsFloat(0));
+      vicCountry->resetLeaf("navy_limit", vicCountry->safeGetInt("navy_limit") + base_naval_support * pow(2, level - 1));
+      vicCountry->resetLeaf("naval_base", level + vicCountry->safeGetInt("naval_base"));
+    }
+
+    Object* fort = (*vp)->safeGetObject("fort");
+    if (fort) {
+      level = (int) floor(0.5 + fort->tokenAsFloat(0));
+      vicCountry->resetLeaf("fort", level + vicCountry->safeGetInt("fort"));
+    }
   }
 
   double maxArmy = 1;
@@ -675,6 +688,7 @@ void WorkerThread::initialiseVicSummaries () {
       for (objiter ship = ships.begin(); ship != ships.end(); ++ship) {
 	double weight = -1;
 	string shiptype = remQuotes((*ship)->safeGetString("type"));
+	(*vc)->resetLeaf(shiptype, 1 + (*vc)->safeGetInt(shiptype)); 
 	weight = vicShipWeights->safeGetFloat(shiptype, -1);
 	if (-1 == weight) {
 	  weight = 1;
@@ -1271,6 +1285,15 @@ bool WorkerThread::convertProvinceOwners () {
 bool WorkerThread::convertTechs () {
   Logger::logStream(Logger::Game) << "Beginning tech conversion.\n";
 
+  Object* practicalConversion = configObject->safeGetObject("practicals");
+  if (!practicalConversion) {
+    Logger::logStream(Logger::Error) << "Error: Could not find practicals object in config.txt.\n";
+    return false; 
+  }
+  objvec practicals = practicalConversion->getLeaves();
+  map<string, double> maximumTroops;
+  map<string, double> maximumPracticals; 
+  
   Object* techObject = configObject->getNeededObject("techConversion");
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
     setPointersFromHoiCountry(*hc);
@@ -1283,7 +1306,25 @@ bool WorkerThread::convertTechs () {
     for (objiter hoiTech = hoiTechList.begin(); hoiTech != hoiTechList.end(); ++hoiTech) {
       (*hoiTech)->resetToken(0, "0");
     }
+
+    for (objiter practical = practicals.begin(); practical != practicals.end(); ++practical) {
+      string key = (*practical)->getKey();
+      string exists = hoiCountry->safeGetString(key, "NONE");
+      if (exists == "NONE") continue;
+      double curr = hoiCountry->safeGetFloat(key);
+      if (curr > maximumPracticals[key]) maximumPracticals[key] = curr; 
+      hoiCountry->resetLeaf(key, "0.000");
+    }
+    
     if (!vicCountry) continue;
+
+    for (objiter practical = practicals.begin(); practical != practicals.end(); ++practical) {
+      for (int i = 0; i < (*practical)->numTokens(); ++i) {
+	string key = (*practical)->getToken(i);
+	double currAmount = vicCountry->safeGetInt(key);
+	if (currAmount > maximumTroops[key]) maximumTroops[key] = currAmount; 
+      }
+    }
     
     Object* vicTechObject = vicCountry->safeGetObject("technology");
     if (!vicTechObject) {
@@ -1309,6 +1350,30 @@ bool WorkerThread::convertTechs () {
       }
     }
   }
+
+  for (objiter hc = hoiCountries.begin(); hc != hoiCountries.end(); ++hc) {
+    setPointersFromHoiCountry(*hc);
+    for (objiter practical = practicals.begin(); practical != practicals.end(); ++practical) {
+      string key = (*practical)->getKey(); 
+      for (int i = 0; i < (*practical)->numTokens(); ++i) {
+	string troops = (*practical)->getToken(i);
+	if (0 == maximumTroops[troops]) continue; 
+	double currAmount = vicCountry->safeGetInt(troops);
+	currAmount /= maximumTroops[troops];
+	currAmount /= (*practical)->numTokens();
+	currAmount *= maximumPracticals[key];
+	if (0.01 > currAmount) continue;
+	hoiCountry->resetLeaf(key, currAmount + hoiCountry->safeGetFloat(key));
+	Logger::logStream(DebugTechs) << vicTag << " (HoI " << hoiTag << ") gets " << currAmount << " of practical "
+				      << key << " from " << vicCountry->safeGetInt(troops) << " " << troops << ".\n"; 
+      }
+      // Numbers must have three significant figures or they are read as 1000 times what they actually are. Very strange. 
+      double currAmount = hoiCountry->safeGetFloat(key);
+      sprintf(stringbuffer, "%.3f", currAmount);
+      hoiCountry->resetLeaf(key, stringbuffer); 
+    }
+  }
+
   
   Logger::logStream(Logger::Game) << "Done with tech conversion.\n";
   return true;

@@ -211,4 +211,17 @@ vicTech = { hoiTech hoiTech ... }
 where each \texttt{hoiTech} is increased to level one if the nation
 has the \texttt{vicTech}. Otherwise all HoI techs start at zero. 
 
+Practicals are gained from units, as regulated by the
+\texttt{practicals} object. For example, the field
+\begin{verbatim}
+  infantry_practical = { infantry }
+\end{verbatim}
+indicates that Vicky infantry, as one might expect, gives the HoI
+\texttt{infantry\_practical}. In particular, the nation with the most
+Vicky infantry gains the highest practical that exists in the input
+save; everyone else gets an amount proportional to their
+infantry. Thus if the highest practical in historical 1936 is 10, and
+Russia has 1000 infantry regiments in Victoria, a nation with 500
+infantry regiments will get 5 infantry practical. 
+
 \end{document}
