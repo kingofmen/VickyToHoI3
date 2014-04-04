@@ -90,6 +90,7 @@ private:
   bool convertBuildings (); 
   bool convertDiplomacy ();
   bool convertGovernments ();
+  bool convertLaws (); 
   bool convertLeaders (); 
   bool convertOoBs (); 
   bool convertProvinceOwners ();

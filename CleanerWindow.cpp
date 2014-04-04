@@ -48,6 +48,7 @@ string vicTag;
 const string NO_OWNER = "\"NONE\""; 
 const string HOI_FINEST_HOUR = ".\\HoI_TFH\\";
 const string HOI_VANILLA = ".\\HoI_Vanilla\\";
+const string NFCON = "NOT_FOUND_IN_CONFIG";
 
 int main (int argc, char** argv) {
   QApplication industryApp(argc, argv);
@@ -629,6 +630,7 @@ void WorkerThread::initialiseVicSummaries () {
       (*vp)->resetLeaf((*leaf)->getKey(), popSize + (*vp)->safeGetInt((*leaf)->getKey()));
       if (vicCountry) {
 	vicCountry->resetLeaf((*leaf)->getKey(), popSize + vicCountry->safeGetInt((*leaf)->getKey()));
+	vicCountry->resetLeaf("totalPop", popSize + vicCountry->safeGetInt("totalPop")); 
       }
     }
     (*vp)->resetLeaf("totalPop", totalPop);
@@ -655,6 +657,13 @@ void WorkerThread::initialiseVicSummaries () {
   Object* vicShipWeights = configObject->getNeededObject("vicShips");
   Object* unitTypes = configObject->getNeededObject("unitTypes");  
   static map<string, bool> printed; 
+
+  map<string, bool> warIndustries;
+  map<string, bool> heavyIndustries;
+  Object* warFactories = configObject->getNeededObject("war_industry");
+  for (int i = 0; i < warFactories->numTokens(); ++i) warIndustries[warFactories->getToken(i)] = true;
+  warFactories = configObject->getNeededObject("heavy_industry");
+  for (int i = 0; i < warFactories->numTokens(); ++i) heavyIndustries[warFactories->getToken(i)] = true;
   
   for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
     objvec armies = (*vc)->getValue("army");
@@ -726,6 +735,9 @@ void WorkerThread::initialiseVicSummaries () {
 	}
 	string factoryType = remQuotes((*f)->safeGetString("building"));
 	(*vc)->resetLeaf(factoryType, workers + (*vc)->safeGetInt(factoryType));
+	(*vc)->resetLeaf("total_industry", workers + (*vc)->safeGetInt("total_industry"));
+	if (warIndustries[factoryType]) (*vc)->resetLeaf("war_industry", workers + (*vc)->safeGetInt("war_industry"));
+	if (heavyIndustries[factoryType]) (*vc)->resetLeaf("heavy_industry", workers + (*vc)->safeGetInt("heavy_industry"));
       }
     }
   }
@@ -917,6 +929,104 @@ bool WorkerThread::convertGovernments () {
 
   Logger::logStream(Logger::Game) << "Done with governments.\n"; 
   return true; 
+}
+
+string extractBest (string def, Object* hoiValues, double points) {
+  objvec hoiLaws = hoiValues->getLeaves();	
+  double bestPointsSoFar = -1e6;
+  for (objiter hoiLaw = hoiLaws.begin(); hoiLaw != hoiLaws.end(); ++hoiLaw) {
+    double requiredPoints = hoiValues->safeGetFloat((*hoiLaw)->getKey());
+    if (points < requiredPoints) continue;
+    if (requiredPoints < bestPointsSoFar) continue;
+    def = (*hoiLaw)->getKey();
+    bestPointsSoFar = requiredPoints;
+  }
+  return def; 
+}
+
+bool WorkerThread::convertLaws () {
+  Logger::logStream(Logger::Game) << "Beginning law conversion.\n";
+
+  Object* lawConversions = configObject->safeGetObject("laws");
+  if (!lawConversions) {
+    Logger::logStream(Logger::Error) << "Error: Could not find laws object in config.txt.\n";
+    return false; 
+  }
+
+  objvec laws = lawConversions->getLeaves();
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    setPointersFromHoiCountry(*hc);
+    if (vicCountry) Logger::logStream(DebugLaws) << "Laws for " << vicTag << " (HoI " << hoiTag << "):\n"; 
+    for (objiter law = laws.begin(); law != laws.end(); ++law) {
+      string base = (*law)->safeGetString("base", "NOLAW");
+      string hoiKey = (*law)->getKey();
+      if (base == "NOLAW") {
+	Logger::logStream(Logger::Error) << "Error: No base provided for law " << hoiKey << ".\n";
+	return false; 
+      }
+      hoiCountry->resetLeaf(hoiKey, base);
+      if (!vicCountry) continue;
+
+      string conversion = (*law)->safeGetString("conversionType", "NOT_FOUND");
+      if (conversion == "vickyField") {
+	string vicKey = (*law)->safeGetString("keyword", "NO_KEYWORD_GIVEN");
+	string vicValue = vicCountry->safeGetString(vicKey, "NOT_FOUND_IN_VIC_OBJECT");
+	string newHoiValue = (*law)->safeGetString(vicValue, NFCON);
+	if (newHoiValue == NFCON) {
+	  Logger::logStream(Logger::Warning) << "  Warning: Don't know what to do with Vicky value "
+					     << vicKey << " = " << vicValue
+					     << ", sticking to base " << base << " for HoI " << hoiKey << ".\n";
+	  newHoiValue = base; 
+	}
+	Logger::logStream(DebugLaws) << "  " << "Vic " << vicKey << " = " << vicValue << " gives HoI " << hoiKey << " = " << newHoiValue << "\n";
+	hoiCountry->resetLeaf(hoiKey, newHoiValue); 
+      }
+      else if (conversion == "points") {
+	Object* hoiValues = (*law)->safeGetObject("hoiValues");
+	if (!hoiValues) {
+	  Logger::logStream(Logger::Warning) << "  Could not find hoiValues, leaving " << hoiKey << " as base " << base << ".\n";
+	  continue; 
+	}
+	Object* vicKeys = (*law)->safeGetObject("vicKeys");
+	Object* pointObject = (*law)->getNeededObject("points");
+	int points = 0;
+	for (int i = 0; i < vicKeys->numTokens(); ++i) {
+	  string vicKey = vicKeys->getToken(i);
+	  string vicVal = vicCountry->safeGetString(vicKey, "NOT_FOUND_IN_VIC_OBJECT");
+	  int p = pointObject->safeGetInt(vicVal);
+	  Logger::logStream(DebugLaws) << "  " << p << " points for " << hoiKey << " from " << vicKey << " = " << vicVal << "\n";
+	  points += p;
+	}
+	string finalHoiLaw = extractBest(base, hoiValues, points);
+	Logger::logStream(DebugLaws) << "  Total " << points << " gives HoI " << hoiKey << " = " << finalHoiLaw << ".\n";
+	hoiCountry->resetLeaf(hoiKey, finalHoiLaw); 
+      }
+      else if (conversion == "ratio") {
+	string numKey = (*law)->safeGetString("numerator", NFCON);
+	string denKey = (*law)->safeGetString("denominator", NFCON);
+	double vicNum = vicCountry->safeGetInt(numKey);
+	int vicDen    = 1 + vicCountry->safeGetInt(denKey);
+	vicNum /= vicDen;
+	Object* hoiValues = (*law)->safeGetObject("hoiValues");
+	if (!hoiValues) {
+	  Logger::logStream(Logger::Warning) << "  Could not find hoiValues, leaving " << hoiKey << " as base " << base << ".\n";
+	  continue; 
+	}
+	string finalHoiLaw = extractBest(base, hoiValues, vicNum);
+	Logger::logStream(DebugLaws) << "  Ratio " << numKey << "/" << denKey << " = " << vicNum << " gives HoI " << hoiKey << " = " << finalHoiLaw << ".\n";
+	hoiCountry->resetLeaf(hoiKey, finalHoiLaw); 	
+      }
+      else {
+	Logger::logStream(Logger::Error) << "Error: Unsupported conversionType \"" << conversion << "\" for law " << hoiKey
+					 << ". Supported are vickyField, ratio, and points.\n";
+	return false; 
+      }
+    }
+  }
+
+  
+  Logger::logStream(Logger::Game) << "Done with law conversion.\n";
+  return true;
 }
 
 bool WorkerThread::convertLeaders () {
@@ -2044,7 +2154,8 @@ void WorkerThread::convert () {
   if (!convertGovernments()) return; 
   if (!convertDiplomacy()) return;
   if (!convertLeaders()) return;
-  if (!convertTechs()) return; 
+  if (!convertTechs()) return;
+  if (!convertLaws()) return; 
   cleanUp(); 
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";

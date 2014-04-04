@@ -5,11 +5,11 @@ debug = {
   32 = no # Ministers
   33 = no # Tech teams 
   34 = no # Resources 
-  35 = yes # Techs 
+  35 = no # Techs 
   36 = no # Buildings 
   37 = no # Units 
   38 = no # Stockpiles 
-  39 = no # Sliders 
+  39 = yes # Laws
   40 = no # Ideas 
   41 = no # Revolters 
   42 = no # Cores 
@@ -495,5 +495,115 @@ practicals = {
   nuclear_bomb = { }
   transport_practical = { steam_transport }
   construction_practical = { fort naval_base }
+}
+
+war_industry = { artillery_factory small_arms_factory barrel_factory aeroplane_factory ammunition_factory }
+heavy_industry = { artillery_factory small_arms_factory barrel_factory aeroplane_factory steamer_factory machine_parts_factory steel_factory cement_factory automobile_factory ammunition_factory electric_gear_factory }
+
+laws = {
+  civil_law = { 
+    conversionType = points
+    vicKeys = { slavery vote_franschise public_meetings press_rights trade_unions political_parties }
+    points = {
+      no_slavery = 0
+      slavery = -8
+      none_voting = -5
+      landed_voting = -2
+      wealth_weighted_voting = -1
+      wealth_voting = 0
+      universal_weighted_voting = 1
+      universal_voting = 2
+      no_meeting = -2
+      yes_meeting = 0
+      state_press = -2
+      censored_press = 0
+      free_press = 3
+      no_trade_unions = -2
+      state_controlled = -1
+      non_socialist = 0
+      all_trade_unions = 1
+      underground_parties = -3
+      harassment = -2
+      gerrymandering = -1
+      non_secret_ballots = 0
+      secret_ballots = 1
+    }
+    hoiValues = {
+      totalitarian_system = -100
+      repression = -5
+      legalistic_restrictions = 0
+      limited_restrictions = 3
+      open_society = 5
+    }
+    base = legalistic_restrictions
+  }
+  conscription_law = { 
+    conversionType = ratio
+    numerator = soldiers
+    denominator = totalPop
+    base = volunteer_army
+    hoiValues = {
+      volunteer_army = 0
+      one_year_draft = 0.01
+      two_year_draft = 0.025
+      three_year_draft = 0.05
+      service_by_requirement = 0.10
+    }
+  }
+  economic_law = { 
+    conversionType = ratio
+    numerator = war_industry
+    denominator = total_industry
+    base = full_civilian_economy
+    hoiValues = {
+      full_civilian_economy = 0
+      basic_mobilisation = 0.33 
+      full_mobilisation = 0.50
+      war_economy = 0.66
+      total_economic_mobilisation = 0.75
+    }
+  }
+  education_investment_law = { 
+    conversionType = vickyField
+    keyword = school_reforms
+    base = minimal_education_investment
+    no_schools = minimal_education_investment
+    low_schools = minimal_education_investment
+    acceptable_schools = average_education_investment
+    good_schools = medium_large_education_investment
+    # No way to get big_education_investment.
+  }
+  industrial_policy_laws = { 
+    conversionType = ratio
+    numerator = heavy_industry
+    denominator = total_industry
+    base = consumer_product_orientation
+    hoiValues = {
+      consumer_product_orientation = 0
+      mixed_industry = 0.40 
+      heavy_industry_emphasis = 0.75
+    }
+  }
+  press_laws = { 
+    conversionType = vickyField
+    keyword = press_rights
+    free_press = free_press
+    censored_press = censored_press
+    state_press = state_press
+    base = censored_press
+    # Nothing to correspond to propaganda_press.
+  }
+  training_laws = { 
+    conversionType = ratio
+    numerator = officers
+    denominator = soldiers
+    base = minimal_training
+    hoiValues = {
+      minimal_training = 0
+      basic_training = 0.25
+      advanced_training = 0.5
+      specialist_training = 1.0
+    }
+  }
 }
 
