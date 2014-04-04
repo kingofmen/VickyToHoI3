@@ -21,12 +21,15 @@ using namespace std;
    - Cav strength
  * Laws
  * Officers
+ * Manpower
  * Convoys 
  * Stockpiles
  * Buildings
  * National unity
  * Diplomacy
  * Strategic resources
+ * Factions
+ * Urban terrain
  */
 
 /* Nice to have:
@@ -704,7 +707,27 @@ void WorkerThread::initialiseVicSummaries () {
       }
     }
     (*vc)->resetLeaf("navy_size", totalNavy);
-    if (totalNavy > maxNavy) maxNavy = totalNavy; 
+    if (totalNavy > maxNavy) maxNavy = totalNavy;
+
+    objvec states = (*vc)->getValue("state");
+    for (objiter state = states.begin(); state != states.end(); ++state) {
+      objvec buildings = (*state)->getValue("state_buildings");
+      
+      for (objiter f = buildings.begin(); f != buildings.end(); ++f) {
+	if (0 >= (*f)->safeGetInt("level")) continue;
+	Object* employment = (*f)->safeGetObject("employment");
+	if (!employment) continue;
+	employment = employment->safeGetObject("employees");
+	if (!employment) continue;
+	objvec employees = employment->getLeaves();
+	int workers = 0; 
+	for (objiter emp = employees.begin(); emp != employees.end(); ++emp) {
+	  workers += (*emp)->safeGetInt("count");
+	}
+	string factoryType = remQuotes((*f)->safeGetString("building"));
+	(*vc)->resetLeaf(factoryType, workers + (*vc)->safeGetInt(factoryType));
+      }
+    }
   }
 
   for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
