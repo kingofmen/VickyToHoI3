@@ -19,11 +19,7 @@ using namespace std;
 /* TODOs
  * Orders of battle
    - Cav strength
- * Laws
- * Officers
- * Manpower
- * Convoys 
- * Stockpiles
+ * Laws - documentation
  * Buildings
  * National unity
  * Diplomacy
@@ -251,7 +247,9 @@ void WorkerThread::cleanUp () {
     (*hc)->unsetValue("military_construction"); 
     (*hc)->unsetValue("army_size");
     (*hc)->unsetValue("navy_size");
-    (*hc)->unsetValue("military_size"); 
+    (*hc)->unsetValue("military_size");
+    (*hc)->unsetValue("cap_pool"); 
+    (*hc)->resetLeaf("nukes", "0.000"); 
     
     Object* spy_mission    = (*hc)->getNeededObject("spy_mission");
     Object* spy_date       = (*hc)->getNeededObject("spy_date");
@@ -553,10 +551,25 @@ bool WorkerThread::createProvinceMap () {
 
   leaves = hoiGame->getLeaves();
   for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
-    if ((*leaf)->safeGetString("owner", "NONE") == "NONE") continue;
+    string ownertag = (*leaf)->safeGetString("owner", "NONE");
+    if (ownertag == "NONE") continue;
     hoiProvinces.push_back(*leaf);
+    hoiProvIdToHoiProvMap[(*leaf)->getKey()] = (*leaf); 
     (*leaf)->resetLeaf("name", provinceNamesObject->safeGetString((*leaf)->getKey(), "NO_NAME"));
-    (*leaf)->unsetValue("capital"); 
+    (*leaf)->unsetValue("capital");
+    Object* pool = (*leaf)->safeGetObject("pool");
+    if (pool) {
+      Object* owner = hoiGame->safeGetObject(remQuotes(ownertag));
+      if (owner) {
+	owner = owner->getNeededObject("cap_pool");
+	objvec resources = pool->getLeaves();
+	for (objiter resource = resources.begin(); resource != resources.end(); ++resource) {
+	  string key = (*resource)->getKey();
+	  owner->resetLeaf(key, pool->safeGetFloat(key) + owner->safeGetFloat(key)); 
+	}
+      }
+      (*leaf)->unsetValue("pool");
+    }
     if (0 < hoiProvToVicProvsMap[*leaf].size()) continue; 
     Logger::logStream(Logger::Warning) << "Warning: Hoi province " << (*leaf)->getKey() << " has no assigned Vicky province.\n"; 
   }
@@ -966,7 +979,8 @@ bool WorkerThread::convertLaws () {
       }
       hoiCountry->resetLeaf(hoiKey, base);
       if (!vicCountry) continue;
-
+      if (0 == vicCountryToHoiProvsMap[vicCountry].size()) continue;
+      
       string conversion = (*law)->safeGetString("conversionType", "NOT_FOUND");
       if (conversion == "vickyField") {
 	string vicKey = (*law)->safeGetString("keyword", "NO_KEYWORD_GIVEN");
@@ -1255,24 +1269,6 @@ bool WorkerThread::convertOoBs () {
   }
 
   map<string, bool> alreadyTried;
-  /*
-  alreadyTried["GER"] = true;
-  alreadyTried["BOL"] = true;
-  alreadyTried["PRU"] = true;
-
-  alreadyTried["CHI"] = true;
-  alreadyTried["ENG"] = true;
-  alreadyTried["FRA"] = true;
-
-  
-  alreadyTried["GRE"] = true;
-  alreadyTried["IND"] = true;
-  alreadyTried["ITA"] = true;
-  alreadyTried["SOV"] = true;
-  alreadyTried["PAR"] = true;
-  alreadyTried["SPA"] = true;
-  alreadyTried["NOR"] = true;
-  */
   map<string, objvec> countryShipLists;
   for (objiter hoiShip = hoiShipList.begin(); hoiShip != hoiShipList.end(); ++hoiShip) {
     double dieRoll = rand();
@@ -1398,12 +1394,16 @@ bool WorkerThread::convertProvinceOwners () {
       Logger::logStream(Logger::Warning) << ", skipping.\n";
       continue; 
     }
-    
-    string hoiOwnerTag = vicTagToHoiTagMap[bestOwnerTag];
-    string hoiControllerTag = vicTagToHoiTagMap[bestControllerTag];
-    (*hp)->resetLeaf("owner", addQuotes(hoiOwnerTag));
-    (*hp)->resetLeaf("controller", addQuotes(hoiControllerTag));
-    hoiCountryToHoiProvsMap[hoiTagToHoiCountryMap[hoiOwnerTag]].push_back(*hp); 
+
+    setPointersFromVicTag(bestOwnerTag);
+    (*hp)->resetLeaf("owner", addQuotes(hoiTag));
+    hoiCountryToHoiProvsMap[hoiCountry].push_back(*hp);
+    vicCountryToHoiProvsMap[vicCountry].push_back(*hp);
+    string hoiOwnerTag = hoiTag;
+
+    setPointersFromVicTag(bestControllerTag);
+    string hoiControllerTag = hoiTag;
+    (*hp)->resetLeaf("controller", addQuotes(hoiTag));
     Logger::logStream(Logger::Game) << "HoI province " << (*hp)->getKey()
 				    << " owner, controller = Vic "
 				    << bestOwnerTag << " -> HoI " << hoiOwnerTag << ", Vic "
@@ -1766,6 +1766,70 @@ bool WorkerThread::moveResources () {
   return true;
 }
 
+bool WorkerThread::moveStockpiles () {
+  Logger::logStream(Logger::Game) << "Starting stockpiles.\n";
+  Object* piles = configObject->getNeededObject("stockpiles");
+  objvec stocks = piles->getLeaves();
+  for (objiter stock = stocks.begin(); stock != stocks.end(); ++stock) {
+    if (3 <= (*stock)->numTokens()) continue;
+    Logger::logStream(Logger::Error) << "Error: Stockpile entry " << (*stock) << " should have at least three tokens.\n";
+    return false; 
+  }
+  map<string, double> totalHoiStuff;
+  map<string, double> totalVicStuff;
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    setPointersFromHoiCountry(*hc);
+    for (objiter stock = stocks.begin(); stock != stocks.end(); ++stock) {
+      string hoiKey = (*stock)->getKey();
+      Object* target = hoiCountry;
+      if ((*stock)->getToken(0) != "country") target = hoiCountry->getNeededObject((*stock)->getToken(0));
+      double hoiAmount = target->safeGetFloat(hoiKey);
+      //Logger::logStream(DebugStockpiles) << hoiTag << " " << hoiKey << ": " << hoiAmount << "\n"; 
+      totalHoiStuff[hoiKey] += hoiAmount;
+      target->resetLeaf(hoiKey, "0.000");
+      if (!vicCountry) continue;
+      if (0 == vicCountryToHoiProvsMap[vicCountry].size()) continue;
+      target = vicCountry;
+      if ((*stock)->getToken(1) != "country") target = vicCountry->getNeededObject((*stock)->getToken(1));
+      for (int i = 2; i < (*stock)->numTokens(); ++i) {
+	string vicKey = (*stock)->getToken(i);
+	totalVicStuff[vicKey] += target->safeGetFloat(vicKey);
+      }
+    }
+  }
+
+  for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
+    setPointersFromVicCountry(*vc);
+    if (!hoiCountry) continue;
+    if (0 == vicCountryToHoiProvsMap[vicCountry].size()) continue;
+    Logger::logStream(DebugStockpiles) << "Stockpiles for " << vicTag << " (HoI " << hoiTag << "):\n";    
+    for (objiter stock = stocks.begin(); stock != stocks.end(); ++stock) {
+      string hoiKey = (*stock)->getKey();
+      string vicKey = (*stock)->getToken(2);
+      Object* hoiTarget = hoiCountry;
+      if ((*stock)->getToken(0) == "cap_pool") {
+	hoiTarget = hoiProvIdToHoiProvMap[hoiCountry->safeGetString("capital", "BLAH")];
+	if (!hoiTarget) continue;
+	hoiTarget = hoiTarget->getNeededObject("pool");
+      }
+      else if ((*stock)->getToken(0) != "country") hoiTarget = hoiCountry->getNeededObject((*stock)->getToken(0));
+      Object* vicTarget = vicCountry;
+      if ((*stock)->getToken(1) != "country") vicTarget = vicCountry->getNeededObject((*stock)->getToken(1));
+      double vicAmount = 0;
+      for (int i = 2; i < (*stock)->numTokens(); ++i) {
+	string vicKey = (*stock)->getToken(i);
+	vicAmount += vicTarget->safeGetFloat(vicKey);
+      }
+      int hoiAmount = (int) floor(0.5 + vicTarget->safeGetFloat(vicKey) * totalHoiStuff[hoiKey] / (1 + totalVicStuff[vicKey]));
+      hoiTarget->resetLeaf(hoiKey, hoiAmount);
+      Logger::logStream(DebugStockpiles) << "  " << hoiKey << ": " << hoiAmount << "\n";
+    }
+  }
+
+  
+  Logger::logStream(Logger::Game) << "Done with stockpiles.\n";
+  return true;
+}
 /******************************* End conversions ********************************/
 
 /*******************************  Begin calculators ********************************/
@@ -2155,7 +2219,8 @@ void WorkerThread::convert () {
   if (!convertDiplomacy()) return;
   if (!convertLeaders()) return;
   if (!convertTechs()) return;
-  if (!convertLaws()) return; 
+  if (!convertLaws()) return;
+  if (!moveStockpiles()) return;
   cleanUp(); 
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";

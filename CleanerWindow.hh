@@ -97,7 +97,8 @@ private:
   bool convertTechs (); 
   bool moveCapitals ();
   bool moveIndustry ();
-  bool moveResources ();   
+  bool moveResources ();
+  bool moveStockpiles ();  
   
   // Infrastructure 
   void loadFile (string fname); 
@@ -135,7 +136,8 @@ private:
   map<string, string> vicTagToHoiTagMap;
   map<string, string> hoiTagToVicTagMap;
   map<string, Object*> hoiTagToHoiCountryMap;
-  map<string, Object*> vicProvIdToVicProvMap; 
+  map<string, Object*> vicProvIdToVicProvMap;
+  map<string, Object*> hoiProvIdToHoiProvMap; 
   map<Object*, objvec> vicCountryToHoiProvsMap;
   map<Object*, objvec> hoiCountryToHoiProvsMap;
   map<Object*, objvec> vicProvToHoiProvsMap;
