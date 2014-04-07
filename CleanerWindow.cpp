@@ -269,8 +269,6 @@ void WorkerThread::cleanUp () {
 
     (*hc)->unsetValue("ai"); 
   }
-  
-  hoiGame->unsetValue("active_war"); 
 }
 
 void WorkerThread::configure () {
@@ -880,6 +878,98 @@ bool WorkerThread::convertDiplomacy () {
       }
     }
   }
+
+  Object* vicDip = vicGame->getNeededObject("diplomacy");
+  objvec vicAlliances = vicDip->getValue("alliance");
+  for (objiter val = vicAlliances.begin(); val != vicAlliances.end(); ++val) {
+    string vicFirst = remQuotes((*val)->safeGetString("first"));
+    setPointersFromVicTag(vicFirst);
+    if (!hoiCountry) continue;
+    string hoiFirst = hoiTag;
+
+    string vicSecond = remQuotes((*val)->safeGetString("second"));
+    setPointersFromVicTag(vicSecond);
+    if (!hoiCountry) continue;
+    string hoiSecond = hoiTag;
+
+    Object* hoiAlliance = new Object("alliance");
+    hoiDip->setValue(hoiAlliance);
+    hoiAlliance->setLeaf("first", addQuotes(hoiFirst));
+    hoiAlliance->setLeaf("second", addQuotes(hoiSecond));
+    string startDate = remQuotes((*val)->safeGetString("start_date"));
+    startDate += ".0";
+    hoiAlliance->setLeaf("start_date", addQuotes(startDate));
+
+    Logger::logStream(DebugDiplomacy) << "HoI " << hoiFirst << " and " << hoiSecond << " are allied due to alliance of Vicky "
+				      << vicFirst << " and " << vicSecond << ".\n"; 
+  }
+
+  objvec vicVassals = vicDip->getValue("vassal");
+  for (objiter val = vicVassals.begin(); val != vicVassals.end(); ++val) {
+    string vicFirst = remQuotes((*val)->safeGetString("first"));
+    setPointersFromVicTag(vicFirst);
+    if (!hoiCountry) continue;
+    string hoiFirst = hoiTag;
+
+    string vicSecond = remQuotes((*val)->safeGetString("second"));
+    setPointersFromVicTag(vicSecond);
+    if (!hoiCountry) continue;
+    string hoiSecond = hoiTag;
+
+    Object* hoiAlliance = new Object("vassal");
+    hoiDip->setValue(hoiAlliance);
+    hoiAlliance->setLeaf("first", addQuotes(hoiFirst));
+    hoiAlliance->setLeaf("second", addQuotes(hoiSecond));
+    string startDate = remQuotes((*val)->safeGetString("start_date"));
+    startDate += ".0";
+    hoiAlliance->setLeaf("start_date", addQuotes(startDate));
+
+    Logger::logStream(DebugDiplomacy) << "HoI " << hoiSecond << " is vassal of " << hoiFirst << " because Vicky "
+				      << vicSecond << " is vassal to " << vicFirst << ".\n"; 
+  }
+
+  hoiGame->unsetValue("active_war");
+  hoiGame->unsetValue("previous_war"); 
+
+  objvec wars = vicGame->getValue("active_war");
+  for (objiter war = wars.begin(); war != wars.end(); ++war) {
+    Object* hoiWar = new Object("active_war");
+    hoiWar->setValue((*war)->safeGetObject("name"));
+    hoiWar->setLeaf("limited", "no"); 
+    hoiWar->setValue((*war)->safeGetObject("action"));
+    objvec vicAttackers = (*war)->getValue("attacker");
+    for (objiter vat = vicAttackers.begin(); vat != vicAttackers.end(); ++vat) {
+      setPointersFromVicTag(remQuotes((*vat)->getLeaf()));
+      if (!hoiCountry) continue;
+      hoiWar->setLeaf("attacker", addQuotes(hoiTag));
+    }
+    if (0 == hoiWar->getValue("attacker").size()) continue;
+    
+    objvec vicDefenders = (*war)->getValue("defender");
+    for (objiter vat = vicDefenders.begin(); vat != vicDefenders.end(); ++vat) {
+      setPointersFromVicTag(remQuotes((*vat)->getLeaf()));
+      if (!hoiCountry) continue;
+      hoiWar->setLeaf("defender", addQuotes(hoiTag));
+    }
+    if (0 == hoiWar->getValue("defender").size()) continue;
+    hoiGame->setValue(hoiWar);
+
+    string org = (*war)->safeGetString("original_attacker");
+    if (org == "\"---\"") hoiWar->setLeaf("original_attacker", org);
+    else {
+      setPointersFromVicTag(remQuotes(org));
+      if (hoiCountry) hoiWar->setLeaf("original_attacker", addQuotes(hoiTag));
+      else hoiWar->setLeaf("original_attacker", "\"---\"");
+    }
+    org = (*war)->safeGetString("original_defender");
+    if (org == "\"---\"") hoiWar->setLeaf("original_defender", org);
+    else {
+      setPointersFromVicTag(remQuotes(org));
+      if (hoiCountry) hoiWar->setLeaf("original_defender", addQuotes(hoiTag));
+      else hoiWar->setLeaf("original_defender", "\"---\"");
+    }    
+  }
+  
   
   return true; 
 }
