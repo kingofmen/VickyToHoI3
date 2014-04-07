@@ -22,9 +22,7 @@ using namespace std;
  * Laws - documentation
  * Buildings
  * National unity
- * Diplomacy
  * Strategic resources
- * Factions
  * Urban terrain
  */
 
@@ -875,6 +873,23 @@ bool WorkerThread::convertDiplomacy () {
       if (0 == hoiCountryToHoiProvsMap[*hc2].size()) {
 	(*hc1)->unsetValue((*hc2)->getKey());
 	continue; 
+      }
+    }
+  }
+  Object* factionList = hoiGame->safeGetObject("faction");
+  if (factionList) {
+    objvec factions = factionList->getLeaves();
+    for (objiter faction = factions.begin(); faction != factions.end(); ++faction) {
+      (*faction)->clear(); 
+    }
+  }
+  Object* victory = hoiGame->safeGetObject("victory_conditions");
+  if (victory) {
+    factionList = victory->safeGetObject("faction");
+    if (factionList) {
+      objvec factions = factionList->getLeaves();
+      for (objiter faction = factions.begin(); faction != factions.end(); ++faction) {
+	(*faction)->clear(); 
       }
     }
   }
