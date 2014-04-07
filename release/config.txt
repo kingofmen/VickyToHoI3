@@ -8,7 +8,7 @@ debug = {
   35 = no # Techs 
   36 = no # Buildings 
   37 = no # Units 
-  38 = yes # Stockpiles 
+  38 = no # Stockpiles 
   39 = no # Laws
   40 = no # Ideas 
   41 = no # Revolters 
@@ -21,7 +21,7 @@ debug = {
   48 = no # Governments 
   49 = no # HRE 
   50 = no # COTs
-  51 = no # Diplomacy  
+  51 = yes # Diplomacy  
   all = no 
 }
 vicdir = .\V2_HoD\
@@ -56,6 +56,7 @@ rare_materials = {
   opium = 0.75
   precious_metal = 0.75
   dye = 0.75
+  sulphur = 1.0 
 }
 
 manpower = {
@@ -68,6 +69,7 @@ manpower = {
   opium = 0
   precious_metal = 0
   dye = 0
+  sulphur = 0 
 }
 
 fightingClasses = {
