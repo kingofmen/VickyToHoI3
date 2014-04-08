@@ -879,7 +879,7 @@ link = { vic = 883 hoi = 4187 hoi = 4253 hoi = 4319 hoi = 4318 hoi = 4252 }	# Si
 link = { vic = 880 hoi = 4251 hoi = 4186 hoi = 4185 hoi = 4316 hoi = 4317 hoi = 4378 hoi = 4379 hoi = 4444 hoi = 4508 hoi = 4443 hoi = 4507 }	# Kastamonu -> Kastamonu, Ayancik, Küre, Daday, Ilgaz Daglari, Ilgaz, Osmancik, Tosya, Cankiri, Arac, Orta
 link = { vic = 876 hoi = 4619 hoi = 4620 }	# Ankara -> Ankara, Sulakyurt
 link = { vic = 881 hoi = 4315 hoi = 4377 hoi = 4250 hoi = 4184 hoi = 4249 hoi = 4314 hoi = 4376 hoi = 4442 hoi = 4506 }	# Bolu -> Caycuma, Eflâni, Azdavay, Cide, Bartin, Zonguldak, Devrek, Karabük, Mengen
-link = { vic = 861 hoi = 4439 hoi = 4504 }	# Uskudar -> Kandira, Sakarya
+link = { vic = 861 hoi = 4439 hoi = 4504 hoi = 4561 }	# Uskudar -> Kandira, Sakarya, Izmit
 link = { vic = 862 hoi = 4440 hoi = 4441 hoi = 4505 hoi = 4563 hoi = 4564 hoi = 4618 }	# Izmit -> Akcakoca, Eregli, Düzce, Bolu, Gerede, Güdül
 link = { vic = 863 hoi = 4616 hoi = 4670 hoi = 4724 hoi = 4671 hoi = 4617 hoi = 4562 hoi = 4615 }	# Bursa -> Tarakli, Inegöl, Bozüyük, Cukurhisar, Mudurnu, Akyazi, Bursa
 link = { vic = 865 vic = 844 hoi = 4721 hoi = 4668 hoi = 4772 hoi = 4773 } # Canakkale, Myteline -> Canakkale, Biga, Ezine, Can
@@ -1964,7 +1964,7 @@ link = { vic = 2777 hoi = 10597 hoi = 10598 }	# Eastern Black Sea -> Central Bla
 link = { vic = 2776 hoi = 10596 }	# Sea of Azov -> Sea of Azov
 link = { vic = 2775 hoi = 10594 }	# Gulf of Odessa -> Mouth of the Danube
 link = { vic = 2774 hoi = 10593 hoi = 10595 }	# Gulf of Varna -> Bulgarian Coast, Southwestern Black Sea
-link = { vic = 2773 hoi = 11382 hoi = 10592 hoi = 4561 }	# Sea of Marmara -> The Bosphorus, Sea of Marmara, Gebze
+link = { vic = 2773 hoi = 11382 hoi = 10592 }	# Sea of Marmara -> The Bosphorus, Sea of Marmara, 
 link = { vic = 2779 hoi = 14138 hoi = 14137 hoi = 14136 hoi = 14139 }	# Caspian Sea -> Eastern Caspian Sea, Western Caspian Sea, Northern Caspian Sea, Southern Caspian Sea
 link = { vic = 2770 hoi = 10586 hoi = 10587 hoi = 11452 }	# Gulf of Cyprus -> Gulf of Iskenderun, Gulf of Antalya, Coast of Lebanon
 link = { vic = 2769 hoi = 10585 hoi = 11453 hoi = 11454 }	# Palestinian Coast -> Coast of Palestine, Coast of Sinai, Eastern Mediterranean Sea
