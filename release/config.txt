@@ -10,7 +10,7 @@ debug = {
   37 = no # Units 
   38 = no # Stockpiles 
   39 = no # Laws
-  40 = no # Ideas 
+  40 = yes # Misc
   41 = no # Revolters 
   42 = no # Cores 
   43 = no # Countries 
@@ -21,7 +21,7 @@ debug = {
   48 = no # Governments 
   49 = no # HRE 
   50 = no # COTs
-  51 = yes # Diplomacy  
+  51 = no # Diplomacy  
   all = no 
 }
 vicdir = .\V2_HoD\
@@ -36,6 +36,8 @@ debugInt = 780
 
 minimumProfitRate = 0.0005 
 base_naval_support = 10 # From defines.lua
+minimumNeutrality = 10
+minimumUnity = 10
 
 crude_oil = {
   oil = 1.0

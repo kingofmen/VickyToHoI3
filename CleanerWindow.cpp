@@ -22,6 +22,7 @@ using namespace std;
  * Laws - documentation
  * Buildings
  * National unity
+ * Dissent 
  * Strategic resources
  * Urban terrain
  */
@@ -639,13 +640,13 @@ void WorkerThread::initialiseVicSummaries () {
       (*vp)->resetLeaf((*leaf)->getKey(), popSize + (*vp)->safeGetInt((*leaf)->getKey()));
       if (vicCountry) {
 	vicCountry->resetLeaf((*leaf)->getKey(), popSize + vicCountry->safeGetInt((*leaf)->getKey()));
-	vicCountry->resetLeaf("totalPop", popSize + vicCountry->safeGetInt("totalPop")); 
+	vicCountry->resetLeaf("totalPop", popSize + vicCountry->safeGetInt("totalPop"));
+	vicCountry->resetLeaf("avg_mil", (*leaf)->safeGetFloat("mil") + vicCountry->safeGetFloat("avg_mil"));
       }
     }
     (*vp)->resetLeaf("totalPop", totalPop);
     if (!vicCountry) continue;
-    vicCountry->resetLeaf("totalPop", totalPop + vicCountry->safeGetInt("totalPop"));
-
+    
     Object* navalBase = (*vp)->safeGetObject("naval_base");
     int level = 0;
     if (navalBase) {
@@ -675,6 +676,7 @@ void WorkerThread::initialiseVicSummaries () {
   for (int i = 0; i < warFactories->numTokens(); ++i) heavyIndustries[warFactories->getToken(i)] = true;
   
   for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
+    (*vc)->resetLeaf("avg_mil", (*vc)->safeGetFloat("avg_mil") / (1 + (*vc)->safeGetInt("totalPop")));
     objvec armies = (*vc)->getValue("army");
     double totalArmy = 0;
     Object* armyLocations = new Object("armyLocations");
@@ -1196,6 +1198,56 @@ bool WorkerThread::convertLeaders () {
   }
 
   Logger::logStream(Logger::Game) << "Done with leaders.\n"; 
+  return true; 
+}
+
+bool WorkerThread::convertMisc () {
+  Logger::logStream(Logger::Game) << "Starting misc conversion.\n";
+
+  double neutralRate = 100 - configObject->safeGetFloat("minimumNeutrality", 10);
+  double unityRate   = 100 - configObject->safeGetFloat("minimumUnity", 10);
+
+  objvec rebels = vicGame->getValue("rebel_faction");
+  for (objiter rebel = rebels.begin(); rebel != rebels.end(); ++rebel) {
+    setPointersFromVicTag(remQuotes((*rebel)->safeGetString("country")));
+    if (!hoiCountry) continue;
+    double totalRebs = 0;
+    objvec rebs = (*rebel)->getValue("pop");
+    for (objiter reb = rebs.begin(); reb != rebs.end(); ++reb) {
+      Object* pop = popIdMap[(*reb)->safeGetString("id")];
+      if (!pop) continue;
+      totalRebs += pop->safeGetInt("size"); 
+    }
+    vicCountry->setLeaf("totalRebels", totalRebs); 
+  }
+  
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    setPointersFromHoiCountry(*hc);
+    double unity = 100;
+    double dissent = 0;
+    double neutrality = 100;
+    if (vicCountry) {
+      unity = 100 - unityRate*vicCountry->safeGetFloat("avg_mil");
+      neutrality = 100 - neutralRate*vicCountry->safeGetFloat("revanchism");
+      dissent  = vicCountry->safeGetFloat("totalRebels");
+      dissent /= (1 + vicCountry->safeGetFloat("totalPop"));
+      dissent *= 100; 
+      if (0 < vicCountryToHoiProvsMap[vicCountry].size()) {
+	Logger::logStream(DebugMisc) << "Vic " << vicTag << " (HoI " << hoiTag << ") gets unity, dissent, neutrality "
+				     << unity << ", " << dissent << ", " << neutrality << ".\n";
+      }
+    }
+
+    sprintf(stringbuffer, "%.3f", neutrality);
+    hoiCountry->resetLeaf("neutrality", stringbuffer);
+    sprintf(stringbuffer, "%.3f", unity);
+    hoiCountry->resetLeaf("national_unity", stringbuffer);
+    sprintf(stringbuffer, "%.3f", dissent);
+    hoiCountry->resetLeaf("dissent", stringbuffer);
+  }
+
+  
+  Logger::logStream(Logger::Game) << "Done with misc.\n"; 
   return true; 
 }
 
@@ -2326,6 +2378,7 @@ void WorkerThread::convert () {
   if (!convertTechs()) return;
   if (!convertLaws()) return;
   if (!moveStockpiles()) return;
+  if (!convertMisc()) return; 
   cleanUp(); 
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";

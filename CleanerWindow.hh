@@ -91,7 +91,8 @@ private:
   bool convertDiplomacy ();
   bool convertGovernments ();
   bool convertLaws (); 
-  bool convertLeaders (); 
+  bool convertLeaders ();
+  bool convertMisc (); 
   bool convertOoBs (); 
   bool convertProvinceOwners ();
   bool convertTechs (); 
