@@ -21,10 +21,7 @@ using namespace std;
    - Cav strength
  * Laws - documentation
  * Buildings
- * National unity
- * Dissent 
  * Strategic resources
- * Urban terrain
  */
 
 /* Nice to have:
@@ -238,7 +235,8 @@ void WorkerThread::cleanUp () {
   for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
     (*hp)->unsetValue("name");
     (*hp)->unsetValue("vicIndustry");
-    (*hp)->unsetValue("vicUnemployed"); 
+    (*hp)->unsetValue("vicUnemployed");
+    (*hp)->unsetValue("coastal"); 
   }
 
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
@@ -795,13 +793,27 @@ void WorkerThread::setupDebugLog () {
 bool WorkerThread::convertBuildings () {
   Logger::logStream(Logger::Game) << "Beginning building conversion.\n";
   double hoiNavalBases = 0;
-  objvec hoiDefinitelyCoastal;
   for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
+    (*hp)->unsetValue("land_fort");
+    Object* seaFort = (*hp)->safeGetObject("coastal_fort");
+    if (seaFort) (*hp)->setLeaf("coastal", "yes");
+    (*hp)->unsetValue("coastal_fort");
     Object* naval_base = (*hp)->safeGetObject("naval_base");
     if (naval_base) {
-      hoiDefinitelyCoastal.push_back(*hp);
+      (*hp)->setLeaf("coastal", "yes");
       (*hp)->unsetValue("naval_base");
       hoiNavalBases += naval_base->tokenAsFloat(0); 
+    }
+    else if ((*hp)->safeGetString("coastal", "no") == "no") {
+      Object* pos = hoiProvincePositions[(*hp)->getKey()];
+      if (!pos) continue;
+      naval_base = pos->safeGetObject("naval_base");
+      if (!naval_base) {
+	pos = pos->safeGetObject("building_position");
+	if (!pos) continue;
+	naval_base = pos->safeGetObject("naval_base");
+      }
+      if (naval_base) (*hp)->setLeaf("coastal", "probably"); 
     }
   }
 
@@ -818,26 +830,16 @@ bool WorkerThread::convertBuildings () {
       Object* hoiTarget = 0;
       for (objiter hp = vicProvToHoiProvsMap[*vp].begin(); hp != vicProvToHoiProvsMap[*vp].end(); ++hp) {
 	if (remQuotes((*hp)->safeGetString("owner")) != hoiTag) {
-	  Logger::logStream(Logger::Debug) << "Skipping " << (*hp)->getKey() << " for bad owner " << (*hp)->safeGetString("owner") << "\n"; 
+	  Logger::logStream(DebugBuildings) << "Skipping naval base in " << (*hp)->getKey() << " for bad owner " << (*hp)->safeGetString("owner") << "\n"; 
 	  continue;
 	}
-	if (find(hoiDefinitelyCoastal.begin(), hoiDefinitelyCoastal.end(), (*hp)) != hoiDefinitelyCoastal.end()) {
+	if ((*hp)->safeGetString("coastal", "no") == "yes") {
 	  hoiTarget = (*hp);
 	  break;
 	}
-	Object* pos = hoiProvincePositions[(*hp)->getKey()];
-	if (!pos) {
-	  Logger::logStream(Logger::Debug) << "No position object for " << (*hp)->getKey() << "\n"; 
-	  continue;
+	if ((*hp)->safeGetString("coastal", "no") == "probably") {
+	  hoiTarget = (*hp); // We may find a better - don't break.
 	}
-	if (!pos->safeGetObject("naval_base")) {
-	  pos = pos->safeGetObject("building_position");
-	  if (!pos->safeGetObject("naval_base")) {
-	    Logger::logStream(Logger::Debug) << "Skipping " << (*hp)->getKey() << " for no naval base.\n"; 
-	    continue;
-	  }
-	}
-	hoiTarget = (*hp); // We may find a better - don't break. 
       }
       if (!hoiTarget) {
 	Logger::logStream(DebugBuildings) << "Could not find coastal HoI province with same owner ("
@@ -856,6 +858,30 @@ bool WorkerThread::convertBuildings () {
       hoiBase->addToList(hoiLevel);
       hoiBase->addToList(hoiLevel);
       hoiTarget->setValue(hoiBase);      
+    }
+  }
+
+  for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+    Object* fort = (*vp)->safeGetObject("fort");
+    if (!fort) continue;
+    setPointersFromVicProvince(*vp);
+    double level = fort->tokenAsFloat(0);
+    level -= 2;
+    if (level < 0.1) continue; 
+    Object* hoiFort = new Object("land_fort");
+    hoiFort->addToList(level);
+    hoiFort->addToList(level);
+    Object* seaFort = new Object("coastal_fort");
+    seaFort->addToList(level);
+    seaFort->addToList(level);
+    for (objiter hp = vicProvToHoiProvsMap[*vp].begin(); hp != vicProvToHoiProvsMap[*vp].end(); ++hp) {
+      if (remQuotes((*hp)->safeGetString("owner")) != hoiTag) {
+	Logger::logStream(DebugBuildings) << "Skipping fort in " << (*hp)->getKey() << " for bad owner " << (*hp)->safeGetString("owner") << "\n"; 
+	continue;
+      }
+      (*hp)->setValue(hoiFort);
+      if ((*hp)->safeGetString("coastal", "no") == "no") continue;
+      (*hp)->setValue(seaFort); 
     }
   }
 

@@ -149,7 +149,14 @@ army.
 
 \section{Buildings}
 
-HoI naval bases are redistributed weighted by the Vic ones. 
+HoI naval bases are redistributed weighted by the Vic ones. Forts
+convert directly except that the level is reduced by two, with coastal provinces gaining both sea and land
+forts; the coast detection algorithm is heuristic
+(specifically, it looks first for a naval base in the input, then in
+the positions file to see if coordinates are given for a naval base)
+and may miss some coastal provinces. 
+
+
 
 \section{Orders of Battle}
 
@@ -254,6 +261,10 @@ Unity is linear in average militancy; it is 100 at 0 militancy and
 
 Dissent is equal to the percentage of Vicky population that belongs to a
 rebel faction. 
+
+Terrain can only be modified by changing terrain.bmp, and the
+converter therefore leaves it alone even though this means historical
+placement of urban provinces. 
 
 
 \end{document}
