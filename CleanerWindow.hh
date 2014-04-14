@@ -95,7 +95,8 @@ private:
   bool convertMisc (); 
   bool convertOoBs (); 
   bool convertProvinceOwners ();
-  bool convertTechs (); 
+  bool convertTechs ();
+  bool listUrbanProvinces (); 
   bool moveCapitals ();
   bool moveIndustry ();
   bool moveResources ();

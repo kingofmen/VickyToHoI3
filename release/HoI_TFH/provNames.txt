@@ -1229,7 +1229,7 @@
 1229 = "Mar'ino"
 1230 = "Mednoye"
 1231 = "Tver"
-1232 = "Kimry"
+1232 = "Vysokovsk"
 1233 = "Pereslavl'-Zalesskiy"
 1234 = "Teykovo"
 1235 = "Ivanovo"

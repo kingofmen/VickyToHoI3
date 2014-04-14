@@ -77,7 +77,8 @@ link = { vic = 348 hoi = 778 }	# Aland Islands -> Mariehamn
 link = { vic = 353 hoi = 985 }	# Ösel -> Saaremaa
 link = { vic = 331 hoi = 1135 hoi = 1217 }	# Gotland -> Visby, Burgsvik
 link = { vic = 328 hoi = 940 hoi = 981 hoi = 1092 hoi = 1055 hoi = 857 hoi = 901 hoi = 772 hoi = 814 hoi = 858 }	# Karlstad -> Säffle, Mellerud, Kungälv, Vänersborg, Kil, Karlstad, Sunne, Munkfors, Storfors
-link = { vic = 330 hoi = 1131 hoi = 1213 hoi = 1172 hoi = 1171 hoi = 1093 hoi = 1132 hoi = 1056 hoi = 1020 }	# Borås -> Alingsås, Kungsbacka, Borås, Göteborg, Vara, Falköping, Skövde, Lidköping
+link = { vic = 329 hoi = 1171 }	# Göteborg -> Göteborg
+link = { vic = 330 hoi = 1131 hoi = 1213 hoi = 1172 hoi = 1093 hoi = 1132 hoi = 1056 hoi = 1020 }	# Borås -> Alingsås, Kungsbacka, Borås, Vara, Falköping, Skövde, Lidköping
 link = { vic = 334 hoi = 1302 hoi = 1258 hoi = 1347 hoi = 1392 hoi = 689 hoi = 1438 hoi = 1483 }	# Malmö -> Halmstad, Hylte, Markaryd, Helsingborg, Hörby, Malmö, Trelleborg
 link = { vic = 374 hoi = 1682 }	# Bornholm -> Bornholm
 link = { vic = 335 hoi = 1484 hoi = 317 hoi = 1393 hoi = 1394 hoi = 1349 }	# Karlskrona -> Ystad, Kristianstad, Hässleholm, Karlshamn, Karlskrona
@@ -1780,7 +1781,7 @@ link = { vic = 2709 hoi = 10509 hoi = 10510 }	# Gulf of Riga -> Gulf of Riga, No
 link = { vic = 2708 hoi = 10511 }	# Western Baltic Sea -> Northwestern Baltic
 link = { vic = 2710 hoi = 10512 hoi = 10514 hoi = 10513 hoi = 10515 }	# Southern Baltic Sea -> Eastern Baltic, Danzig Bay, Ölandssund, Southern Baltic
 link = { vic = 2711 hoi = 10516 hoi = 10517 hoi = 10518 hoi = 10519 }	# Öresund -> Pommeranian Coast, Öresund, The Bälts, Kattegat
-link = { vic = 329 vic = 2712 hoi = 10520 hoi = 10521 }	# MANY-TO-MANY: Göteborg, Kattegat -> Skagerrack, Eastern Norwegian Trench
+link = { vic = 2712 hoi = 10520 hoi = 10521 }	# Kattegat -> Skagerrack, Eastern Norwegian Trench
 link = { vic = 2720 hoi = 11410 hoi = 11411 hoi = 10687 }	# Skagerrack -> Coast of Jutland, Little Fisher Bank, Fisher Bank
 link = { vic = 2721 hoi = 10531 hoi = 10532 }	# Helgoland Bight -> Helgoland Bight, Frisian Coast
 # Russian Artic

@@ -20,7 +20,7 @@ using namespace std;
  * Orders of battle
    - Cav strength
  * Laws - documentation
- * Buildings
+ * VPs
  * Strategic resources
  */
 
@@ -228,12 +228,13 @@ void WorkerThread::assignCountries (Object* vicCountry, Object* hoiCountry) {
   if (find(hoiCountries.begin(), hoiCountries.end(), hoiCountry) == hoiCountries.end()) hoiCountries.push_back(hoiCountry);
   if (find(vicCountries.begin(), vicCountries.end(), vicCountry) == vicCountries.end()) vicCountries.push_back(vicCountry);
   hoiTagToHoiCountryMap[hoiTag] = hoiCountry; 
-  Logger::logStream(Logger::Game) << "Assigning Vic country " << vicTag << " <-> HoI " << hoiTag << "\n"; 
+  Logger::logStream(DebugCountries) << "Assigning Vic country " << vicTag << " <-> HoI " << hoiTag << "\n"; 
 }
 
 void WorkerThread::cleanUp () {
   for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
     (*hp)->unsetValue("name");
+    (*hp)->unsetValue("infraSet"); 
     (*hp)->unsetValue("vicIndustry");
     (*hp)->unsetValue("vicUnemployed");
     (*hp)->unsetValue("coastal"); 
@@ -793,7 +794,26 @@ void WorkerThread::setupDebugLog () {
 bool WorkerThread::convertBuildings () {
   Logger::logStream(Logger::Game) << "Beginning building conversion.\n";
   double hoiNavalBases = 0;
+  vector<double> infraValues;
+  vector<double> aaValues;
+  vector<double> airBaseValues; 
   for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
+    Object* infra = (*hp)->safeGetObject("infra");
+    if (infra) infraValues.push_back(infra->tokenAsFloat(0)); 
+
+    infra = (*hp)->safeGetObject("anti_air");
+    if (infra) {
+      aaValues.push_back(infra->tokenAsFloat(0));
+      (*hp)->unsetValue("anti_air"); 
+    }
+
+    infra = (*hp)->safeGetObject("air_base");
+    if (infra) {
+      airBaseValues.push_back(infra->tokenAsFloat(0));
+      (*hp)->unsetValue("air_base"); 
+    }
+    
+    
     (*hp)->unsetValue("land_fort");
     Object* seaFort = (*hp)->safeGetObject("coastal_fort");
     if (seaFort) (*hp)->setLeaf("coastal", "yes");
@@ -820,7 +840,22 @@ bool WorkerThread::convertBuildings () {
   double vicNavalBases = 0;
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
     Object* naval_base = (*vp)->safeGetObject("naval_base");
-    if (naval_base) vicNavalBases += naval_base->tokenAsFloat(0); 
+    double nbase = 0;
+    if (naval_base) {
+      nbase = naval_base->tokenAsFloat(0);
+      vicNavalBases += nbase;
+    }
+
+    double urbanity = (*vp)->safeGetFloat("clerks");
+    urbanity       /= (1 + (*vp)->safeGetFloat("labourers") + (*vp)->safeGetFloat("farmers"));
+    if ((*vp)->safeGetString("isCapital", "no") == "yes") urbanity *= 2; 
+    (*vp)->setLeaf("urbanity", urbanity + (*vp)->safeGetFloat("infrastructure"));
+
+    
+    float airValue = (*vp)->safeGetFloat("aeroplane_factory");
+    airValue      += 100*nbase;
+    airValue      += 100*urbanity;
+    (*vp)->resetLeaf("airValue", airValue); 
   }
 
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
@@ -885,7 +920,108 @@ bool WorkerThread::convertBuildings () {
     }
   }
 
-  
+  // Ascending order
+  sort(infraValues.begin(), infraValues.end());
+  sort(aaValues.begin(), aaValues.end());
+  sort(airBaseValues.begin(), airBaseValues.end()); 
+  double leastInfra = infraValues[0]; 
+  sort(vicProvinces.begin(), vicProvinces.end(), ObjectDescendingSorter("urbanity"));
+  for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+    setPointersFromVicProvince(*vp);
+    if (!hoiCountry) continue; 
+    for (objiter hp = vicProvToHoiProvsMap[*vp].begin(); hp != vicProvToHoiProvsMap[*vp].end(); ++hp) {
+      if ((*hp)->safeGetString("infraSet", "no") == "yes") continue; 
+      Object* hoiInfra = (*hp)->safeGetObject("infra");
+      double infraToUse = leastInfra;
+      if (!hoiInfra) {
+	Logger::logStream(DebugBuildings) << "HoI " << nameAndNumber(*hp) << " has no infra in input. ";
+	if ((*hp)->safeGetString("owner", "NONE") == "NONE") Logger::logStream(DebugBuildings) << " Is it a sea province?\n";
+	else {
+	  Logger::logStream(DebugBuildings) << " Assigning lowest infra value " << leastInfra << ".\n";
+	  hoiInfra = new Object("infra");
+	  (*hp)->setValue(hoiInfra);
+	  hoiInfra->addToList(leastInfra);
+	  hoiInfra->addToList(leastInfra);
+	}
+      continue;
+      }
+      if (remQuotes((*hp)->safeGetString("owner")) != hoiTag) {
+	Logger::logStream(DebugBuildings) << "Skipping infra in " << (*hp)->getKey() << " for bad owner " << (*hp)->safeGetString("owner") << "\n"; 
+	continue;
+      }
+
+      if (0 < infraValues.size()) {
+	infraToUse = infraValues.back();
+	infraValues.pop_back();
+      }
+      else {
+	static bool printed = false;
+	if (!printed) {
+	  printed = true;
+	  Logger::logStream(DebugBuildings) << "Ran out of HoI infra values at " << (*hp)->getKey() << ", using " << leastInfra << " from here.\n";
+	}
+      }
+
+      sprintf(stringbuffer, "%.3f", infraToUse);
+      Logger::logStream(DebugBuildings) << "HoI " << nameAndNumber(*hp) << " gets infra " << stringbuffer << " from Vic " << nameAndNumber(*vp) << ".\n"; 
+      hoiInfra->resetToken(0, stringbuffer);
+      hoiInfra->resetToken(1, stringbuffer);
+      (*hp)->setLeaf("infraSet", "yes");
+
+      if (0 < aaValues.size()) {
+	infraToUse = aaValues.back();
+	aaValues.pop_back();
+	sprintf(stringbuffer, "%.3f", infraToUse);
+	Object* antiAir = (*hp)->getNeededObject("anti_air");
+	antiAir->addToList(stringbuffer);
+	antiAir->addToList(stringbuffer);
+      }
+    }
+  }
+
+  sort(vicProvinces.begin(), vicProvinces.end(), ObjectDescendingSorter("airValue"));
+  for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+    if (0 == airBaseValues.size()) break;
+    setPointersFromVicProvince(*vp);
+    if (!vicCountry) continue;
+    double baseValue = airBaseValues.back();
+    Object* target = 0;
+    double bestIndustry = -1;
+    for (objiter hp = vicProvToHoiProvsMap[*vp].begin(); hp != vicProvToHoiProvsMap[*vp].end(); ++hp) {
+      if (remQuotes((*hp)->safeGetString("owner")) != vicTag) continue;
+      if ((*hp)->safeGetObject("air_base")) continue;
+      double currIndustry = 0;
+      Object* industry = (*hp)->safeGetObject("industry");
+      if (industry) currIndustry = industry->tokenAsFloat(0);
+      if (currIndustry < bestIndustry) continue;
+      target = (*hp);
+      bestIndustry = currIndustry;
+    }
+    if (!target) {
+      Logger::logStream(DebugBuildings) << "Could not find HoI province to put airbase of Vic " << nameAndNumber(*vp) << " in, skipping.\n";
+      continue;
+    }
+    Object* airBase = target->getNeededObject("air_base");
+    airBase->addToList(baseValue);
+    airBase->addToList(baseValue);
+    airBaseValues.pop_back(); 
+  }
+
+  for (objiter hc = hoiCountries.begin(); hc != hoiCountries.end(); ++hc) {
+    setPointersFromHoiCountry(*hc);
+    if (!vicCountry) continue;
+    string hoiCapId = hoiCountry->safeGetString("capital");
+    Object* hoiCap = hoiProvIdToHoiProvMap[hoiCapId];
+    if (!hoiCap) {
+      // This is a bit of a problem, eh?
+      Logger::logStream(DebugBuildings) << "Warning: HoI country " << hoiTag << " does not seem to have a capital; the id is \"" << hoiCapId << "\".\n";
+      continue;
+    }
+    if (hoiCap->safeGetObject("air_base")) continue;
+    Object* airBase = hoiCap->getNeededObject("air_base");
+    airBase->addToList("1.000");
+    airBase->addToList("1.000");
+  }
   
   Logger::logStream(Logger::Game) << "Done with building conversion.\n";
   return true;
@@ -1049,15 +1185,15 @@ bool WorkerThread::convertGovernments () {
     setPointersFromHoiCountry(hoiCountry);
 
     if (!swap(oldCountry, hoiCountry, "ministers")) continue;
-    Logger::logStream(Logger::Game) << "Vic country "
-				    << vicTag
-				    << " (HoI "
-				    << hoiTag
-				    << ") getting government of historical "
-				    << oldCountry->getKey()
-				    << " from resemblance "
-				    << (*r)->safeGetString("value")
-				    << ".\n";
+    Logger::logStream(DebugGovernments) << "Vic country "
+					<< vicTag
+					<< " (HoI "
+					<< hoiTag
+					<< ") getting government of historical "
+					<< oldCountry->getKey()
+					<< " from resemblance "
+					<< (*r)->safeGetString("value")
+					<< ".\n";
     mappedCountries[hoiTag] = oldTag;
     usedCountries[oldTag] = hoiTag; 
     swap(oldCountry, hoiCountry, "government");
@@ -1695,6 +1831,42 @@ bool WorkerThread::convertTechs () {
   return true;
 }
 
+bool WorkerThread::listUrbanProvinces () {
+  Logger::logStream(DebugCities) << "Urban provinces:\n";
+  for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+    setPointersFromVicProvince(*vp);
+    if (!vicCountry) continue;
+    double urbanTerrain = (*vp)->safeGetFloat("bureaucrats");
+    urbanTerrain       += (*vp)->safeGetFloat("craftsmen");
+    urbanTerrain       += (*vp)->safeGetFloat("clerks"); 
+  }
+
+  int numUrbanProvinces = configObject->safeGetInt("urbanProvinces", 100);
+  int printed = 0;
+  
+  sort(vicProvinces.begin(), vicProvinces.end(), ObjectDescendingSorter("urbanTerrain"));
+  for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+    setPointersFromVicProvince(*vp);
+    if (!vicCountry) continue;
+
+    Object* target = 0;
+    double bestIndustry = -1;
+    for (objiter hp = vicProvToHoiProvsMap[*vp].begin(); hp != vicProvToHoiProvsMap[*vp].end(); ++hp) {
+      double currIndustry = 0;
+      Object* industry = (*hp)->safeGetObject("industry");
+      if (industry) currIndustry = industry->tokenAsFloat(0);
+      if (currIndustry < bestIndustry) continue;
+      bestIndustry = currIndustry;
+      target = (*hp);
+    }
+    if (!target) continue;
+    Logger::logStream(DebugCities) << nameAndNumber(target) << "\n";
+    if (++printed >= numUrbanProvinces) break; 
+  }
+    
+  return true;
+}
+
 bool WorkerThread::moveCapitals () {
   for (objiter hc = hoiCountries.begin(); hc != hoiCountries.end(); ++hc) {
     setPointersFromHoiCountry(*hc);
@@ -1721,6 +1893,7 @@ bool WorkerThread::moveCapitals () {
       continue; 
     }
 
+    vicCap->resetLeaf("isCapital", "yes"); 
     Object* hoiCap = selectHoiProvince(vicCap);
     if (!hoiCap) {
       Logger::logStream(Logger::Warning) << "Warning: " << hoiTag
@@ -2404,7 +2577,8 @@ void WorkerThread::convert () {
   if (!convertTechs()) return;
   if (!convertLaws()) return;
   if (!moveStockpiles()) return;
-  if (!convertMisc()) return; 
+  if (!convertMisc()) return;
+  if (!listUrbanProvinces()) return; 
   cleanUp(); 
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";

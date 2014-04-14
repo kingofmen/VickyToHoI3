@@ -6,7 +6,7 @@ debug = {
   33 = no # Tech teams 
   34 = no # Resources 
   35 = no # Techs 
-  36 = yes # Buildings 
+  36 = no # Buildings 
   37 = no # Units 
   38 = no # Stockpiles 
   39 = no # Laws
@@ -20,7 +20,7 @@ debug = {
   47 = no # Religion 
   48 = no # Governments 
   49 = no # HRE 
-  50 = no # COTs
+  50 = yes # Urban terrain 
   51 = no # Diplomacy  
   all = no 
 }
@@ -32,6 +32,7 @@ logfile = logfile.txt
 # NOCUSTOM or delete to ignore 
 custom = custom_overrides.txt
 
+urbanProvinces = 100
 debugInt = 780
 
 minimumProfitRate = 0.0005 

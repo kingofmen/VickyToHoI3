@@ -27,7 +27,7 @@ enum Debugs {DebugLeaders = 30,
 	     DebugReligion,
 	     DebugGovernments,
 	     DebugHre,
-	     DebugCots,
+	     DebugCities,
 	     DebugDiplomacy, 
 	     NumDebugs};
 

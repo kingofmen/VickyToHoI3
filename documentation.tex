@@ -156,7 +156,21 @@ forts; the coast detection algorithm is heuristic
 the positions file to see if coordinates are given for a naval base)
 and may miss some coastal provinces. 
 
+Infrastructure converts ``urbanisation'', defined
+as the ratio of clerks to labourers or farmers, plus he railroad value. The Victoria provinces
+are sorted by urbanisation and assigned the input
+infrastructure in order, so that the highest urbanisation
+Victoria province gets the highest infrastructure in the
+input. Capitals have their urbanity doubled. 
 
+AA batteries convert like infrastructure, in the most urbanised
+provinces, on the assumption that large cities get such protection. 
+
+Air bases - vexed issue that they are - convert similarly to
+infrastructure, but the weighting is the number of workers in airplane
+factories, plus 100 times the naval-base level, plus 100 times the
+urbanisation. In addition, every capital gets at least a level-1
+airbase if it doesn't get one by other means. 
 
 \section{Orders of Battle}
 
@@ -264,7 +278,11 @@ rebel faction.
 
 Terrain can only be modified by changing terrain.bmp, and the
 converter therefore leaves it alone even though this means historical
-placement of urban provinces. 
+placement of urban provinces. However, it does print out a list of the
+100 provinces with the highest population of clerks, craftsmen, and
+bureaucrats, for use in modding. Note that this list is only printed
+if the debug stream labeled 50 in the config file is set to 'yes'. 
+
 
 
 \end{document}
