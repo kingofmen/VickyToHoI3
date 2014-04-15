@@ -2186,6 +2186,85 @@ bool WorkerThread::moveStockpiles () {
   Logger::logStream(Logger::Game) << "Done with stockpiles.\n";
   return true;
 }
+
+double getWeight (Object* algo, string approach, Object* vicProv) {
+  if (vicProv->safeGetString("has_sr", "no") == "yes") return 0; 
+  
+  if ((approach == "random") || (!algo) || (algo->safeGetString("type") == "random")) {
+    return rand(); 
+  }
+
+  return rand(); 
+}
+
+bool WorkerThread::moveStrategicResources () {
+  Logger::logStream(Logger::Game) << "Starting strategic resources.\n";
+  string approach = configObject->safeGetString("strategicResources", "remove");
+  if (approach == "historical") {
+    Logger::logStream(Logger::Game) << "Leaving in place.\n";
+    return true;
+  }
+
+  map<string, Object*> algoMap;
+  map<string, unsigned int> resourceMap; 
+  Object* stratObject = configObject->getNeededObject("srConversion");
+  for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
+    string resource = (*hp)->safeGetString("strategic_resource", "none");
+    if (resource == "none") continue;
+    resourceMap[resource]++; 
+    (*hp)->unsetValue("strategic_resource");
+    if (algoMap[resource]) continue;
+    algoMap[resource] = stratObject->safeGetObject(resource); 
+  }
+
+  if (approach == "remove") {
+    Logger::logStream(Logger::Game) << "Removed.\n";
+    return true;
+  }
+
+  if ((approach != "random") && (approach != "redistribute")) {
+    Logger::logStream(Logger::Game) << "Don't know what to do with approach \"" << approach << "\", defaulting to remove.\n";
+    return true;
+  }
+
+  for (map<string, Object*>::iterator r = algoMap.begin(); r != algoMap.end(); ++r) {
+    if (((*r).second) && ((*r).second->safeGetString("type") == "remove")) {
+      Logger::logStream(DebugResources) << "Removing " << (*r).first << ".\n"; 
+      continue;
+    }
+    for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+      (*vp)->resetLeaf("srWeight", getWeight((*r).second, approach, (*vp))); 
+    }
+
+    sort(vicProvinces.begin(), vicProvinces.end(), ObjectDescendingSorter("srWeight"));
+    int vicProvPointer = -1; 
+    for (unsigned int i = 0; i < resourceMap[(*r).first]; ++i) {
+      while (true) {
+	vicProvPointer++; 
+	Object* vicProv = vicProvinces[vicProvPointer];
+	setPointersFromVicProvince(vicProv);
+	if (!vicCountry) continue;
+	Object* hoiProv = 0;
+	for (objiter hp = vicProvToHoiProvsMap[vicProv].begin(); hp != vicProvToHoiProvsMap[vicProv].end(); ++hp) {
+	  if (hoiTag != remQuotes((*hp)->safeGetString("owner"))) continue;
+	  if ((*hp)->safeGetString("strategic_resource", "none") != "none") continue;
+	  hoiProv = (*hp);
+	  break;
+	}
+	if (!hoiProv) continue;
+	Logger::logStream(DebugResources) << "Putting " << (*r).first << " in " << nameAndNumber(hoiProv)
+					  << " from " << nameAndNumber(vicProv) << " with weight " << vicProv->safeGetString("srWeight") << "\n";
+	hoiProv->resetLeaf("strategic_resource", (*r).first);
+	vicProv->resetLeaf("has_sr", "yes");
+	break; 
+      }
+    }
+  }
+  
+  Logger::logStream(Logger::Game) << "Done redistributing strategic resources.\n";
+  return true;
+}
+
 /******************************* End conversions ********************************/
 
 /*******************************  Begin calculators ********************************/
@@ -2578,7 +2657,8 @@ void WorkerThread::convert () {
   if (!convertLaws()) return;
   if (!moveStockpiles()) return;
   if (!convertMisc()) return;
-  if (!listUrbanProvinces()) return; 
+  if (!listUrbanProvinces()) return;
+  if (!moveStrategicResources()) return; 
   cleanUp(); 
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";

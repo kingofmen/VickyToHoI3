@@ -100,7 +100,8 @@ private:
   bool moveCapitals ();
   bool moveIndustry ();
   bool moveResources ();
-  bool moveStockpiles ();  
+  bool moveStockpiles ();
+  bool moveStrategicResources (); 
   
   // Infrastructure 
   void loadFile (string fname); 

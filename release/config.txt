@@ -4,7 +4,7 @@ debug = {
   31 = no # Provinces
   32 = no # Ministers
   33 = no # Tech teams 
-  34 = no # Resources 
+  34 = yes # Strategic resources 
   35 = no # Techs 
   36 = no # Buildings 
   37 = no # Units 
@@ -20,7 +20,7 @@ debug = {
   47 = no # Religion 
   48 = no # Governments 
   49 = no # HRE 
-  50 = yes # Urban terrain 
+  50 = no # Urban terrain 
   51 = no # Diplomacy  
   all = no 
 }
@@ -34,7 +34,8 @@ custom = custom_overrides.txt
 
 urbanProvinces = 100
 debugInt = 780
-
+# Acceptable values are remove, random, historical, redistribute. 
+strategicResources = random 
 minimumProfitRate = 0.0005 
 base_naval_support = 10 # From defines.lua
 minimumNeutrality = 10
@@ -624,4 +625,8 @@ stockpiles = {
   rare_materials = { cap_pool stockpile dye tropical_wood opium sulphur }
   crude_oil      = { cap_pool stockpile oil }
   fuel           = { cap_pool stockpile fuel }
+}
+
+srConversion = {
+  
 }
