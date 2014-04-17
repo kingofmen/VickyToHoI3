@@ -18,14 +18,13 @@ using namespace std;
 
 /* TODOs
  * Orders of battle
-   - Cav strength
+   - Strength must be specified
  * Laws - documentation
- * VPs
- * Strategic resources
  */
 
 /* Nice to have:
    - Tweak some province conversions - Sitka is inland? Lots of Vic provinces with naval bases don't find a coastal HoI province.
+   - Also several Vic provinces with airbases don't find anywhere to put them. 
  */
 
 char stringbuffer[10000];
@@ -734,6 +733,7 @@ void WorkerThread::initialiseVicSummaries () {
       
       for (objiter f = buildings.begin(); f != buildings.end(); ++f) {
 	if (0 >= (*f)->safeGetInt("level")) continue;
+	string factoryType = remQuotes((*f)->safeGetString("building"));	
 	Object* employment = (*f)->safeGetObject("employment");
 	if (!employment) continue;
 	employment = employment->safeGetObject("employees");
@@ -741,9 +741,17 @@ void WorkerThread::initialiseVicSummaries () {
 	objvec employees = employment->getLeaves();
 	int workers = 0; 
 	for (objiter emp = employees.begin(); emp != employees.end(); ++emp) {
-	  workers += (*emp)->safeGetInt("count");
+	  int current = (*emp)->safeGetInt("count");
+	  workers += current;
+	  if (0 == current) continue;
+	  Object* provinceObject = (*emp)->safeGetObject("province_pop_id");
+	  if (!provinceObject) continue;
+	  string provTag = provinceObject->safeGetString("province_id");
+	  Object* vicProv = vicProvIdToVicProvMap[provTag];
+	  if (!vicProv) continue;
+	  vicProv->resetLeaf(factoryType, current + vicProv->safeGetInt(factoryType)); 
 	}
-	string factoryType = remQuotes((*f)->safeGetString("building"));
+
 	(*vc)->resetLeaf(factoryType, workers + (*vc)->safeGetInt(factoryType));
 	(*vc)->resetLeaf("total_industry", workers + (*vc)->safeGetInt("total_industry"));
 	if (warIndustries[factoryType]) (*vc)->resetLeaf("war_industry", workers + (*vc)->safeGetInt("war_industry"));
@@ -796,8 +804,15 @@ bool WorkerThread::convertBuildings () {
   double hoiNavalBases = 0;
   vector<double> infraValues;
   vector<double> aaValues;
-  vector<double> airBaseValues; 
+  vector<double> airBaseValues;
+  vector<double> victoryValues; 
   for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
+    double points = (*hp)->safeGetFloat("points", -1);
+    if (0.1 < points) {
+      victoryValues.push_back(points);
+      (*hp)->resetLeaf("points", "0"); 
+    }
+			    
     Object* infra = (*hp)->safeGetObject("infra");
     if (infra) infraValues.push_back(infra->tokenAsFloat(0)); 
 
@@ -838,7 +853,10 @@ bool WorkerThread::convertBuildings () {
   }
 
   double vicNavalBases = 0;
+  Object* victoryObject = configObject->getNeededObject("victoryPoints");
+  objvec victories = victoryObject->getLeaves();
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+    bool isCap = ((*vp)->safeGetString("isCapital", "no") == "yes");
     Object* naval_base = (*vp)->safeGetObject("naval_base");
     double nbase = 0;
     if (naval_base) {
@@ -846,16 +864,23 @@ bool WorkerThread::convertBuildings () {
       vicNavalBases += nbase;
     }
 
-    double urbanity = (*vp)->safeGetFloat("clerks");
-    urbanity       /= (1 + (*vp)->safeGetFloat("labourers") + (*vp)->safeGetFloat("farmers"));
-    if ((*vp)->safeGetString("isCapital", "no") == "yes") urbanity *= 2; 
+    double urbanity      = (*vp)->safeGetFloat("clerks");
+    urbanity            /= (1 + (*vp)->safeGetFloat("labourers") + (*vp)->safeGetFloat("farmers"));
+    if (isCap) urbanity *= 2; 
     (*vp)->setLeaf("urbanity", urbanity + (*vp)->safeGetFloat("infrastructure"));
 
     
-    float airValue = (*vp)->safeGetFloat("aeroplane_factory");
-    airValue      += 100*nbase;
+    double airValue = (*vp)->safeGetFloat("aeroplane_factory");
+    airValue      += 100*pow(2, nbase) * (0 < nbase ? 1 : 0);
     airValue      += 100*urbanity;
-    (*vp)->resetLeaf("airValue", airValue); 
+    (*vp)->resetLeaf("airValue", airValue);
+    
+    double victoryValue = victoryObject->safeGetFloat("navalBase")*pow(2, nbase) * (0 < nbase ? 1 : 0);
+    for (objiter victory = victories.begin(); victory != victories.end(); ++victory) {
+      victoryValue += (*vp)->safeGetFloat((*victory)->getKey()) * victoryObject->safeGetFloat((*victory)->getKey());
+    }
+    if (isCap) victoryValue *= victoryObject->safeGetFloat("isCapital");
+    (*vp)->resetLeaf("victoryValue", victoryValue); 
   }
 
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
@@ -922,6 +947,7 @@ bool WorkerThread::convertBuildings () {
 
   // Ascending order
   sort(infraValues.begin(), infraValues.end());
+  sort(victoryValues.begin(), victoryValues.end());  
   sort(aaValues.begin(), aaValues.end());
   sort(airBaseValues.begin(), airBaseValues.end()); 
   double leastInfra = infraValues[0]; 
@@ -988,7 +1014,7 @@ bool WorkerThread::convertBuildings () {
     Object* target = 0;
     double bestIndustry = -1;
     for (objiter hp = vicProvToHoiProvsMap[*vp].begin(); hp != vicProvToHoiProvsMap[*vp].end(); ++hp) {
-      if (remQuotes((*hp)->safeGetString("owner")) != vicTag) continue;
+      if (remQuotes((*hp)->safeGetString("owner")) != hoiTag) continue;
       if ((*hp)->safeGetObject("air_base")) continue;
       double currIndustry = 0;
       Object* industry = (*hp)->safeGetObject("industry");
@@ -1007,6 +1033,42 @@ bool WorkerThread::convertBuildings () {
     airBaseValues.pop_back(); 
   }
 
+  sort(vicProvinces.begin(), vicProvinces.end(), ObjectDescendingSorter("victoryValue"));
+  for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
+    if (0 == victoryValues.size()) break;
+    setPointersFromVicProvince(*vp);
+    if (!vicCountry) continue;
+    double baseValue = victoryValues.back();
+    Object* target = 0;
+    double bestIndustry = -1;
+    for (objiter hp = vicProvToHoiProvsMap[*vp].begin(); hp != vicProvToHoiProvsMap[*vp].end(); ++hp) {
+      if (remQuotes((*hp)->safeGetString("owner")) != vicTag) continue;
+      if ((*hp)->safeGetObject("air_base")) continue;
+      double currIndustry = 0;
+      Object* industry = (*hp)->safeGetObject("industry");
+      if (industry) currIndustry = industry->tokenAsFloat(0);
+      if (currIndustry < bestIndustry) continue;
+      target = (*hp);
+      bestIndustry = currIndustry;
+    }
+    if (!target) continue;
+    target->resetLeaf("points", baseValue);
+    victoryValues.pop_back(); 
+  } 
+
+  Object* strategic = configObject->getNeededObject("strategic_provinces");
+  for (int i = 0; i < strategic->numTokens(); ++i) {
+    string hoiProvId = strategic->getToken(i);
+    Object* hoiProv = hoiProvIdToHoiProvMap[hoiProvId];
+    if (!hoiProv) {
+      Logger::logStream(DebugBuildings) << "Warning: Could not find strategic province " << hoiProvId << ".\n";
+      continue;
+    }
+    if (0.1 < hoiProv->safeGetFloat("points")) continue;
+    hoiProv->resetLeaf("points", "1");
+    Logger::logStream(DebugBuildings) << nameAndNumber(hoiProv) << " assigned a victory point for strategic-ness.\n"; 
+  }
+  
   for (objiter hc = hoiCountries.begin(); hc != hoiCountries.end(); ++hc) {
     setPointersFromHoiCountry(*hc);
     if (!vicCountry) continue;
@@ -1017,6 +1079,8 @@ bool WorkerThread::convertBuildings () {
       Logger::logStream(DebugBuildings) << "Warning: HoI country " << hoiTag << " does not seem to have a capital; the id is \"" << hoiCapId << "\".\n";
       continue;
     }
+    if (0.1 > hoiCap->safeGetFloat("points")) hoiCap->resetLeaf("points", "1"); 
+    
     if (hoiCap->safeGetObject("air_base")) continue;
     Object* airBase = hoiCap->getNeededObject("air_base");
     airBase->addToList("1.000");
@@ -2645,8 +2709,8 @@ void WorkerThread::convert () {
   if (!createCountryMap()) return;
   initialiseVicSummaries();     
   if (!convertProvinceOwners()) return;
-  if (!convertBuildings()) return; // Must precede OOBs or there won't be naval bases. Must be after ownership conversion. 
-  if (!moveCapitals()) return; // Must precede OOBs or the capitals won't be placed right. 
+  if (!moveCapitals()) return; // Must precede OOBs or the capitals won't be placed right.
+  if (!convertBuildings()) return; // Must precede OOBs or there won't be naval bases. Must be after ownership conversion. Must be after capitals for urbanity.   
   if (!convertOoBs()) return; 
   if (!moveResources()) return;
   if (!moveIndustry()) return;

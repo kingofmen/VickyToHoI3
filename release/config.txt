@@ -4,9 +4,9 @@ debug = {
   31 = no # Provinces
   32 = no # Ministers
   33 = no # Tech teams 
-  34 = yes # Strategic resources 
+  34 = no # Strategic resources 
   35 = no # Techs 
-  36 = no # Buildings 
+  36 = yes # Buildings 
   37 = no # Units 
   38 = no # Stockpiles 
   39 = no # Laws
@@ -622,11 +622,29 @@ stockpiles = {
   supplies       = { cap_pool stockpile ammunition barrels small_arms aeroplanes canned_food artillery steamer_convoys }
   money          = { cap_pool country money }
   energy         = { cap_pool stockpile coal }
-  rare_materials = { cap_pool stockpile dye tropical_wood opium sulphur }
+  rare_materials = { cap_pool stockpile dye tropical_wood opium sulphur rubber }
   crude_oil      = { cap_pool stockpile oil }
   fuel           = { cap_pool stockpile fuel }
 }
 
 srConversion = {
-  
+  # This isn't implemented.   
+}
+
+# List of provinces that should always be worth at least 1 VP
+strategic_provinces = { 7717 1482 4503 5563 6394 5191 }
+
+victoryPoints = {
+  craftsmen = 1
+  clerks = 1.5
+  soldiers = 1
+  aeroplane_factory = 1.5
+  barrel_factory = 1.5
+  artillery_factory = 1.5
+  ammunition_factory = 1.25
+  small_arms_factory = 1.25
+  automobile_factory = 1
+  steamer_factory = 1
+  navalBase = 100
+  isCapital = 2 
 }

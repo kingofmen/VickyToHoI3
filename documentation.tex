@@ -283,6 +283,16 @@ placement of urban provinces. However, it does print out a list of the
 bureaucrats, for use in modding. Note that this list is only printed
 if the debug stream labeled 50 in the config file is set to 'yes'. 
 
-
+Victory points convert similarly to infrastructure: Victoria provinces
+are weighted, and the highest weight receives the highest VP value in
+the input save, and so down the list until there are no more input
+VPs. In this case the weights are given by the \texttt{victoryPoints}
+object in the config file; factory types are interpreted as the number
+of workers in that kind of factory in the province. The
+\texttt{navalBase} and \texttt{isCapital} fields are special; the
+former is a multiplier for the force-limit contribution of any naval
+base in the province, the second a multiplier applied to capitals. In addition,
+all HoI provinces listed in \texttt{strategic\_provinces}, and all
+capitals, get at least one victory point. 
 
 \end{document}
