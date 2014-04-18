@@ -19,7 +19,6 @@ using namespace std;
 /* TODOs
  * Orders of battle
    - Strength must be specified
- * Laws - documentation
  */
 
 /* Nice to have:

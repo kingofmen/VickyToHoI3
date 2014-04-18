@@ -249,6 +249,23 @@ number of employees.
 
 \section{Laws}
 
+Law conversions are given by the \texttt{laws} object.
+Laws convert in one of three ways:
+\begin{itemize}
+\item Points-based. The fields listed in \texttt{vicKeys} are
+  examined, and the value gives the number of points listed in the
+  \texttt{points} object. The total amount of points is then compared
+  with the \texttt{hoiValues} object, and the law with the highest
+  value less than the number of points is selected. 
+\item Ratios. The \texttt{numerator} field is divided by
+  \texttt{denominator} (note that many of these values do not exist in
+  a Vicky save, but are calculated by the converter) and the selection
+  then proceeds as for points - the law with the highest value less
+  than the ratio is selected. 
+\item By Victoria field: The \texttt{keyword} is examined and each
+  possible value directly translates to a HoI law. 
+\end{itemize}
+
 \section{Miscellanea}
 
 Manpower, officers, and resource stockpiles are distributed 
