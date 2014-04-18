@@ -124,8 +124,10 @@ private:
   double calculateGovResemblance (Object* vicCountry, Object* hoiCountry);
   double calculateVicProduction (Object* vicProvince, string resource); 
   void cleanUp ();
+  Object* createRegiment (int id, string type, string name);
   double extractStrength (Object* unit); 
   Object* loadTextFile (string fname);
+  void makeHigher (objvec& lowHolder, int& numUnits, string name, string location, string keyword, objvec& highHolder);
   Object* selectHoiProvince (Object* vicProv);
   void setPointersFromHoiCountry (Object* hc);
   void setPointersFromVicCountry (Object* vc);

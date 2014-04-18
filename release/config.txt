@@ -388,6 +388,22 @@ hoiDivNames = {
   militia_brigade = "Militia Division"
 }
 
+unitStrengths = {
+  light_armor_brigade = 30.000
+  armor_brigade = 30.000
+  infantry_brigade = 30.000
+  cavalry_brigade = 30.000
+  garrison_brigade = 30.000
+  motorized_brigade = 30.000
+  engineer_brigade = 30.000
+  artillery_brigade = 10.000
+  militia_brigade = 30.000
+  interceptor = 100.000
+  tactical_bomber = 100.000
+  strategic_bomber = 100.000
+  hq_brigade = 10.000
+}
+
 shipConversions = {
   heavy_cruiser
   light_cruiser

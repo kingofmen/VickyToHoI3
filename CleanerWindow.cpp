@@ -16,11 +16,6 @@
 
 using namespace std; 
 
-/* TODOs
- * Orders of battle
-   - Strength must be specified
- */
-
 /* Nice to have:
    - Tweak some province conversions - Sitka is inland? Lots of Vic provinces with naval bases don't find a coastal HoI province.
    - Also several Vic provinces with airbases don't find anywhere to put them. 
@@ -1482,14 +1477,17 @@ Object* createObjectWithIdAndType (int id, int type, string keyword) {
   return ret; 
 }
 
-Object* createRegiment (int id, string type, string name) {
+Object* WorkerThread::createRegiment (int id, string type, string name) {
+  static Object* strengths = configObject->getNeededObject("unitStrengths");
+  
   Object* ret = createObjectWithIdAndType(id, 41, "regiment");
   ret->setLeaf("type", addQuotes(type));
   ret->setLeaf("name", addQuotes(name));
+  if (0 < strengths->safeGetFloat(type, -1)) ret->setLeaf("strength", strengths->safeGetString(type)); 
   return ret; 
 }
 
-void makeHigher (objvec& lowHolder, int& numUnits, string name, string location, string keyword, objvec& highHolder) {
+void WorkerThread::makeHigher (objvec& lowHolder, int& numUnits, string name, string location, string keyword, objvec& highHolder) {
   Object* higher = createObjectWithIdAndType(numUnits++, 41, keyword);
   if (keyword != "division") {
     Object* hq = createRegiment(numUnits++, "hq_brigade", remQuotes(name) + " HQ");
