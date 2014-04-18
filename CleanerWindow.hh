@@ -129,6 +129,7 @@ private:
   Object* loadTextFile (string fname);
   void makeHigher (objvec& lowHolder, int& numUnits, string name, string location, string keyword, objvec& highHolder);
   Object* selectHoiProvince (Object* vicProv);
+  string selectRandomHoiProvince (Object* vicLocations, Object* hoiCountry);
   void setPointersFromHoiCountry (Object* hc);
   void setPointersFromVicCountry (Object* vc);
   void setPointersFromVicProvince (Object* vp);
