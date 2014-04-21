@@ -88,8 +88,8 @@ fightingClasses = {
 
 officerClasses = {
   class = officers
-  class = soldiers
-  class = aristocrats
+  class = clerks
+  class = clergy 
 }
 
 govResemblance = {
