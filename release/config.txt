@@ -524,6 +524,9 @@ practicals = {
 war_industry = { artillery_factory small_arms_factory barrel_factory aeroplane_factory ammunition_factory }
 heavy_industry = { artillery_factory small_arms_factory barrel_factory aeroplane_factory steamer_factory machine_parts_factory steel_factory cement_factory automobile_factory ammunition_factory electric_gear_factory }
 
+warIndustryBonus = 1.2
+heavyIndustryBonus = 1.1
+
 laws = {
   civil_law = { 
     conversionType = points

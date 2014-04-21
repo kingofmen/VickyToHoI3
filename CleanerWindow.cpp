@@ -2017,6 +2017,15 @@ bool WorkerThread::moveIndustry () {
   Object* prices = vicGame->getNeededObject("worldmarket");
   prices = prices->getNeededObject("price_pool"); 
   map<string, map<string, bool> > printedWarnings; 
+
+  map<string, bool> warIndustries;
+  map<string, bool> heavyIndustries;
+  Object* warFactories = configObject->getNeededObject("war_industry");
+  for (int i = 0; i < warFactories->numTokens(); ++i) warIndustries[warFactories->getToken(i)] = true;
+  warFactories = configObject->getNeededObject("heavy_industry");
+  for (int i = 0; i < warFactories->numTokens(); ++i) heavyIndustries[warFactories->getToken(i)] = true;
+  double warBonus = configObject->safeGetFloat("warIndustryBonus", 1.2);
+  double heavyBonus = configObject->safeGetFloat("heavyIndustryBonus", 1.1);
   
   double totalVicIndustry = 0;
   for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
@@ -2068,10 +2077,12 @@ bool WorkerThread::moveIndustry () {
 	}
 	double revenuePerWorker = revenue / workers;
 	Logger::logStream(DebugIndustry) << "Revenue per worker in "
-					 << (*f)->safeGetString("building") << " in state "
+					 << factoryType << " in state "
 					 << (*state)->safeGetObject("id")->safeGetString("id")
 					 << " is " << revenuePerWorker << ".\n"; 
 	if (revenuePerWorker < minimumRevenueRate) revenuePerWorker = minimumRevenueRate;
+	if (warIndustries[factoryType]) revenuePerWorker *= warBonus;
+	else if (heavyIndustries[factoryType]) revenuePerWorker *= heavyBonus; 
 	if (0 > revenue) unemployed += workers;
 	else stateWeight += revenuePerWorker * workers;
 	inFactories += workers;
