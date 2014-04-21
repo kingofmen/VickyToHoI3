@@ -283,6 +283,8 @@ void WorkerThread::configure () {
   for (objiter pos = posvec.begin(); pos != posvec.end(); ++pos) {
     hoiProvincePositions[(*pos)->getKey()] = (*pos); 
   }
+
+  vicTechObject = loadTextFile(sourceVersion + "technologies.txt"); 
 }
 
 Object* WorkerThread::loadTextFile (string fname) {
@@ -618,8 +620,15 @@ void WorkerThread::initialiseHoiSummaries () {
   }
 }
 
-void WorkerThread::initialiseVicSummaries () {
-  int base_naval_support = configObject->safeGetInt("base_naval_support", 10); 
+double WorkerThread::calcForceLimit (Object* navalBase) {
+  if (!navalBase) return 0;
+  int level = (int) floor(0.5 + navalBase->tokenAsFloat(0));
+  if (0 == level) return 0;
+  static int base_naval_support = configObject->safeGetInt("base_naval_support", 10); 
+  return base_naval_support * pow(2, level - 1); 
+}
+
+void WorkerThread::initialiseVicSummaries () {  
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
     setPointersFromVicProvince(*vp);    
     objvec leaves = (*vp)->getLeaves();
@@ -643,7 +652,7 @@ void WorkerThread::initialiseVicSummaries () {
     int level = 0;
     if (navalBase) {
       level = (int) floor(0.5 + navalBase->tokenAsFloat(0));
-      vicCountry->resetLeaf("navy_limit", vicCountry->safeGetInt("navy_limit") + base_naval_support * pow(2, level - 1));
+      vicCountry->resetLeaf("navy_limit", vicCountry->safeGetInt("navy_limit") + calcForceLimit(navalBase));
       vicCountry->resetLeaf("naval_base", level + vicCountry->safeGetInt("naval_base"));
     }
 
@@ -666,8 +675,21 @@ void WorkerThread::initialiseVicSummaries () {
   for (int i = 0; i < warFactories->numTokens(); ++i) warIndustries[warFactories->getToken(i)] = true;
   warFactories = configObject->getNeededObject("heavy_industry");
   for (int i = 0; i < warFactories->numTokens(); ++i) heavyIndustries[warFactories->getToken(i)] = true;
-  
+
+  objvec vicTechs = vicTechObject->getLeaves();
   for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
+    Object* techs = (*vc)->getNeededObject("technology");
+    double throughputMod = 0;
+    for (objiter vTech = vicTechs.begin(); vTech != vicTechs.end(); ++vTech) {
+      double currMod = (*vTech)->safeGetFloat("factory_throughput");
+      if (0.00001 > currMod) continue;
+      Object* hasTech = techs->safeGetObject((*vTech)->getKey());
+      if (!hasTech) continue;
+      if (0.5 > hasTech->tokenAsFloat(0)) continue;
+      throughputMod += currMod;
+    }
+    (*vc)->resetLeaf("throughputBonus", throughputMod); 
+    
     (*vc)->resetLeaf("avg_mil", (*vc)->safeGetFloat("avg_mil") / (1 + (*vc)->safeGetInt("totalPop")));
     objvec armies = (*vc)->getValue("army");
     double totalArmy = 0;
@@ -747,7 +769,9 @@ void WorkerThread::initialiseVicSummaries () {
 	  string provTag = provinceObject->safeGetString("province_id");
 	  Object* vicProv = vicProvIdToVicProvMap[provTag];
 	  if (!vicProv) continue;
-	  vicProv->resetLeaf(factoryType, current + vicProv->safeGetInt(factoryType)); 
+	  vicProv->resetLeaf(factoryType, current + vicProv->safeGetInt(factoryType));
+	  if (6 == provinceObject->safeGetInt("type")) (*f)->resetLeaf("clerks", (*f)->safeGetInt("clerks") + current);
+	  else if (7 == provinceObject->safeGetInt("type")) (*f)->resetLeaf("craftsmen", (*f)->safeGetInt("craftsmen") + current);
 	}
 
 	(*vc)->resetLeaf(factoryType, workers + (*vc)->safeGetInt(factoryType));
@@ -1708,7 +1732,11 @@ bool WorkerThread::convertOoBs () {
     for (objiter airforce = airforces.begin(); airforce != airforces.end(); ++airforce) {
       id = (*airforce)->safeGetObject("id");
       id->resetLeaf("id", numUnits++);
-      (*airforce)->unsetValue("leader"); 
+      (*airforce)->unsetValue("leader");
+      (*airforce)->resetLeaf("location", navy->safeGetString("location"));
+      Object* protection = (*airforce)->safeGetObject("carrier_protection");
+      if (protection) protection->resetLeaf("province", navy->safeGetString("location"));
+      (*airforce)->unsetValue("path"); 
       objvec wings = (*airforce)->getValue("wing");
       for (objiter wing = wings.begin(); wing != wings.end(); ++wing) {
 	id = (*wing)->safeGetObject("id");
@@ -1767,7 +1795,7 @@ bool WorkerThread::convertProvinceOwners () {
     for (objiter ic = inputCores.begin(); ic != inputCores.end(); ++ic) inputCoreTags.push_back(remQuotes((*ic)->getLeaf()));
     for (set<string>::iterator vct = vicCoreTags.begin(); vct != vicCoreTags.end(); ++vct) {
       string hoiCoreTag = vicTagToHoiTagMap[*vct];
-      Logger::logStream(Logger::Game) << nameAndNumber(*hp) << " is core of Vic " << (*vct) << " and hence HoI " << hoiCoreTag << "\n"; 
+      Logger::logStream(DebugCores) << nameAndNumber(*hp) << " is core of Vic " << (*vct) << " and hence HoI " << hoiCoreTag << "\n"; 
       if (find(inputCoreTags.begin(), inputCoreTags.end(), hoiCoreTag) != inputCoreTags.end()) continue;
       (*hp)->setLeaf("core", addQuotes(hoiCoreTag));
       inputCoreTags.push_back(hoiCoreTag); 
@@ -1793,12 +1821,12 @@ bool WorkerThread::convertProvinceOwners () {
     setPointersFromVicTag(bestControllerTag);
     string hoiControllerTag = hoiTag;
     (*hp)->resetLeaf("controller", addQuotes(hoiTag));
-    Logger::logStream(Logger::Game) << "HoI province " << (*hp)->getKey()
-				    << " owner, controller = Vic "
-				    << bestOwnerTag << " -> HoI " << hoiOwnerTag << ", Vic "
-				    << bestControllerTag << " -> HoI " << hoiControllerTag 
-				    << " based on Vic population " << popOwnerMap[bestOwnerTag]
-				    << ", " << popControllerMap[bestControllerTag] << ".\n"; 
+    Logger::logStream(DebugProvinces) << "HoI province " << (*hp)->getKey()
+				      << " owner, controller = Vic "
+				      << bestOwnerTag << " -> HoI " << hoiOwnerTag << ", Vic "
+				      << bestControllerTag << " -> HoI " << hoiControllerTag 
+				      << " based on Vic population " << popOwnerMap[bestOwnerTag]
+				      << ", " << popControllerMap[bestControllerTag] << ".\n"; 
   }
 
   return true; 
@@ -1983,25 +2011,52 @@ bool WorkerThread::moveCapitals () {
 }
 
 bool WorkerThread::moveIndustry () {
-  double minimumProfitRate = configObject->safeGetFloat("minimumProfitRate", 0.001);
-
+  double minimumRevenueRate = configObject->safeGetFloat("minimumProfitRate", 0.001);
+  double navalBaseWorkers   = configObject->safeGetFloat("navalBaseWorkers", 100); 
+  Object* factoryTypes = configObject->getNeededObject("factoryTypes");
+  Object* prices = vicGame->getNeededObject("worldmarket");
+  prices = prices->getNeededObject("price_pool"); 
+  map<string, map<string, bool> > printedWarnings; 
+  
   double totalVicIndustry = 0;
   for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
     setPointersFromVicCountry(*vc); 
-    objvec states = (*vc)->getValue("state");
+    objvec states = vicCountry->getValue("state");
+    double throughputMod = vicCountry->safeGetFloat("throughputBonus"); // Ignores inventions. 
     for (objiter state = states.begin(); state != states.end(); ++state) {
       objvec buildings = (*state)->getValue("state_buildings");
       int unemployed = 0;
       int inFactories = 0; 
       double stateWeight = 0;
-      // Weight is given by profit. If less than minimum rate, counts as minimum rate times number of workers.
+      double damagedRevenue = 0; 
+      // Weight is given by revenue. If less than minimum rate, counts as minimum rate times number of workers.
       // If less than zero, the workers count as unemployed; unemployed workers have the minimum rate, but
-      // start 'damaged'. 
-
+      // start 'damaged'.
       
       for (objiter f = buildings.begin(); f != buildings.end(); ++f) {
 	if (0 >= (*f)->safeGetInt("level")) continue;
-	double profit = calcAvg((*f)->safeGetObject("profit_history_entry"));
+	double revenue = (*f)->safeGetFloat("produces");
+	string factoryType = remQuotes((*f)->safeGetString("building", "no-building-keyword"));
+	string product = factoryTypes->safeGetString(factoryType, "unknown-product");
+	if (0.01 > revenue) {
+	  Logger::logStream(DebugIndustry) << "Factory " << factoryType << " owned by " << vicTag << " in state " << (*state)->safeGetObject("id")->safeGetString("id")
+					   << " produces " << revenue << " " << product << ".\n"; 
+	}	
+	double price = prices->safeGetFloat(product, -1);
+	if (0 > price) {
+	  if (!printedWarnings[factoryType][product]) {
+	    Logger::logStream(Logger::Warning) << "No price found for factory type " << factoryType
+					       << " and product " << product << ", using default 1.\n";
+	    printedWarnings[factoryType][product] = true; 
+	  }
+	  price = 1; 
+	}
+	revenue *= price;
+	
+	double throughput = (*f)->safeGetInt("craftsmen") * 0.0001;
+	throughput /= (*f)->safeGetInt("level");
+	double modifiedThroughput = throughput * (1 + throughputMod - 0.01 * vicCountry->safeGetFloat("war_exhaustion"));
+	throughput *= (1 + throughputMod);
 	Object* employment = (*f)->safeGetObject("employment");
 	if (!employment) continue;
 	employment = employment->safeGetObject("employees");
@@ -2011,21 +2066,23 @@ bool WorkerThread::moveIndustry () {
 	for (objiter emp = employees.begin(); emp != employees.end(); ++emp) {
 	  workers += (*emp)->safeGetInt("count");
 	}
-	double profitPerWorker = profit / workers;
-	Logger::logStream(Logger::Debug) << "Profit per worker in "
+	double revenuePerWorker = revenue / workers;
+	Logger::logStream(DebugIndustry) << "Revenue per worker in "
 					 << (*f)->safeGetString("building") << " in state "
 					 << (*state)->safeGetObject("id")->safeGetString("id")
-					 << " is " << profitPerWorker << ".\n"; 
-	if (profitPerWorker < minimumProfitRate) profitPerWorker = minimumProfitRate;
-	if (0 > profit) unemployed += workers;
-	else stateWeight += profitPerWorker * workers;
+					 << " is " << revenuePerWorker << ".\n"; 
+	if (revenuePerWorker < minimumRevenueRate) revenuePerWorker = minimumRevenueRate;
+	if (0 > revenue) unemployed += workers;
+	else stateWeight += revenuePerWorker * workers;
 	inFactories += workers;
+	if (0 < modifiedThroughput) damagedRevenue += revenue * (throughput / modifiedThroughput - 1);
       }
       Object* provs = (*state)->getNeededObject("provinces");
       int totalWorkers = 0;
       Object* hoiProv = 0;
       bool foundName = false;
       int bestSize = 0;
+      double navalBaseBonus = 0; 
       for (int i = 0; i < provs->numTokens(); ++i) {
 	Object* vicProv = vicProvIdToVicProvMap[provs->getToken(i)];
 	if (!vicProv) continue;
@@ -2034,7 +2091,8 @@ bool WorkerThread::moveIndustry () {
 	for (objiter pop = craftsmen.begin(); pop != craftsmen.end(); ++pop) currWorkers += (*pop)->safeGetInt("size");
 	craftsmen = vicProv->getValue("clerks");
 	for (objiter pop = craftsmen.begin(); pop != craftsmen.end(); ++pop) currWorkers += (*pop)->safeGetInt("size");
-	totalWorkers += currWorkers; 
+	totalWorkers += currWorkers;
+	navalBaseBonus += calcForceLimit(vicProv->safeGetObject("naval_base")) * minimumRevenueRate * navalBaseWorkers;
 	if (foundName) continue;
 	Object* hoiCand = selectHoiProvince(vicProv);
 	if (!hoiCand) continue; 
@@ -2049,11 +2107,13 @@ bool WorkerThread::moveIndustry () {
       }
       if (!hoiProv) continue; 
       unemployed += (totalWorkers - inFactories);
-      unemployed *= minimumProfitRate; 
+      unemployed *= minimumRevenueRate;
+      stateWeight += damagedRevenue;
       stateWeight += unemployed;
+      stateWeight += navalBaseBonus; 
       totalVicIndustry += stateWeight;
       hoiProv->resetLeaf("vicIndustry", stateWeight + hoiProv->safeGetFloat("vicIndustry"));
-      hoiProv->resetLeaf("vicUnemployed", unemployed + hoiProv->safeGetFloat("vicUnemployed")); 
+      hoiProv->resetLeaf("vicUnemployed", unemployed + damagedRevenue + hoiProv->safeGetFloat("vicUnemployed")); 
     }
   }
 
@@ -2066,6 +2126,7 @@ bool WorkerThread::moveIndustry () {
   }
 
   double hoiICperVicIndustry = totalHoiIndustry / totalVicIndustry;
+  Logger::logStream(DebugIndustry) << hoiICperVicIndustry << " " << totalHoiIndustry << " " << totalVicIndustry << "\n"; 
   map<string, pair<double, double> > tagToIcMap; 
   for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
     double vicInd = (*hp)->safeGetFloat("vicIndustry", -1);
@@ -2136,10 +2197,10 @@ bool WorkerThread::moveResources () {
     }
   }
 
-  Logger::logStream(Logger::Debug) << "Resource totals:\n"; 
+  Logger::logStream(DebugResources) << "Resource totals:\n"; 
   for (map<string, double>::iterator r = hoiWorldTotals.begin(); r != hoiWorldTotals.end(); ++r) {
     string resName = (*r).first;
-    Logger::logStream(Logger::Debug) << "  " << resName << " Vic: " << vicWorldTotals[resName] << " HoI: " << (*r).second << "\n"; 
+    Logger::logStream(DebugResources) << "  " << resName << " Vic: " << vicWorldTotals[resName] << " HoI: " << (*r).second << "\n"; 
   }
   
   map<string, map<string, double> > overflows; 
@@ -2299,7 +2360,7 @@ bool WorkerThread::moveStrategicResources () {
 
   for (map<string, Object*>::iterator r = algoMap.begin(); r != algoMap.end(); ++r) {
     if (((*r).second) && ((*r).second->safeGetString("type") == "remove")) {
-      Logger::logStream(DebugResources) << "Removing " << (*r).first << ".\n"; 
+      Logger::logStream(DebugStratResources) << "Removing " << (*r).first << ".\n"; 
       continue;
     }
     for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
@@ -2322,8 +2383,8 @@ bool WorkerThread::moveStrategicResources () {
 	  break;
 	}
 	if (!hoiProv) continue;
-	Logger::logStream(DebugResources) << "Putting " << (*r).first << " in " << nameAndNumber(hoiProv)
-					  << " from " << nameAndNumber(vicProv) << " with weight " << vicProv->safeGetString("srWeight") << "\n";
+	Logger::logStream(DebugStratResources) << "Putting " << (*r).first << " in " << nameAndNumber(hoiProv)
+					     << " from " << nameAndNumber(vicProv) << " with weight " << vicProv->safeGetString("srWeight") << "\n";
 	hoiProv->resetLeaf("strategic_resource", (*r).first);
 	vicProv->resetLeaf("has_sr", "yes");
 	break; 
@@ -2434,7 +2495,7 @@ double WorkerThread::calculateGovResemblance (Object* vicCountry, Object* hoiCou
   if (!resemblance) {
     static map<string, bool> printed;
     if (!printed[hoiCountry->getKey()]) {
-      Logger::logStream(Logger::Warning) << "No resemblance object found for " << hoiCountry->getKey() << "\n";
+      Logger::logStream(DebugGovernments) << "No resemblance object found for " << hoiCountry->getKey() << "\n";
       printed[hoiCountry->getKey()] = true;
     }
     return ret; 

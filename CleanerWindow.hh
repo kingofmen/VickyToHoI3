@@ -121,6 +121,7 @@ private:
   
   // Helpers:
   void assignCountries (Object* vicCountry, Object* hoiCountry);
+  double calcForceLimit (Object* navalBase); 
   double calculateGovResemblance (Object* vicCountry, Object* hoiCountry);
   double calculateVicProduction (Object* vicProvince, string resource); 
   void cleanUp ();
@@ -166,6 +167,7 @@ private:
   Object* countryMapObject;
   Object* provinceNamesObject; 
   Object* customObject;
+  Object* vicTechObject; 
   map<string, Object*> hoiProvincePositions; 
 }; 
 
