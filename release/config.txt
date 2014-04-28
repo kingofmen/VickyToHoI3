@@ -18,8 +18,8 @@ debug = {
   45 = no # Manpower 
   46 = no # Culture
   47 = no # Religion 
-  48 = no # Governments 
-  49 = yes # Industry 
+  48 = yes # Governments 
+  49 = no # Industry 
   50 = no # Urban terrain 
   51 = no # Diplomacy  
   52 = no # Resources 
@@ -521,7 +521,7 @@ practicals = {
   construction_practical = { fort naval_base }
 }
 
-war_industry = { artillery_factory small_arms_factory barrel_factory aeroplane_factory ammunition_factory }
+war_industry = { artillery_factory small_arms_factory barrel_factory aeroplane_factory ammunition_factory synthetic_oil_factory }
 heavy_industry = { artillery_factory small_arms_factory barrel_factory aeroplane_factory steamer_factory machine_parts_factory steel_factory cement_factory automobile_factory ammunition_factory electric_gear_factory }
 
 warIndustryBonus = 1.2

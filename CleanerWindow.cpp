@@ -1242,6 +1242,25 @@ bool WorkerThread::convertDiplomacy () {
 bool WorkerThread::convertGovernments () {
   Logger::logStream(Logger::Game) << "Beginning government conversion.\n";
   objvec resemblances;
+
+  map<string, Object*> govMap; 
+  for (objiter oc = allHoiCountries.begin(); oc != allHoiCountries.end(); ++oc) {
+    Object* government = new Object("government");
+    govMap[(*oc)->getKey()] = government;
+    government->setValue((*oc)->safeGetObject("ministers"));
+    government->setLeaf("government", (*oc)->safeGetString("government"));
+    government->setLeaf("head_of_state", (*oc)->safeGetString("head_of_state"));
+    government->setLeaf("head_of_government", (*oc)->safeGetString("head_of_government"));
+    government->setLeaf("foreign_minister", (*oc)->safeGetString("foreign_minister"));
+    government->setLeaf("armament_minister", (*oc)->safeGetString("armament_minister"));
+    government->setLeaf("minister_of_security", (*oc)->safeGetString("minister_of_security"));
+    government->setLeaf("minister_of_intelligence", (*oc)->safeGetString("minister_of_intelligence"));
+    government->setLeaf("chief_of_staff", (*oc)->safeGetString("chief_of_staff"));
+    government->setLeaf("chief_of_army", (*oc)->safeGetString("chief_of_army"));
+    government->setLeaf("chief_of_navy", (*oc)->safeGetString("chief_of_navy"));
+    government->setLeaf("chief_of_air", (*oc)->safeGetString("chief_of_air"));
+  }
+  
   for (objiter nc = hoiCountries.begin(); nc != hoiCountries.end(); ++nc) {
     setPointersFromHoiCountry(*nc);
     for (objiter oc = allHoiCountries.begin(); oc != allHoiCountries.end(); ++oc) {
@@ -1262,37 +1281,39 @@ bool WorkerThread::convertGovernments () {
   map<string, string> usedCountries; // Can't reuse mappedCountries because a country may need a new government when its old one has been used. 
   for (objiter r = resemblances.begin(); r != resemblances.end(); ++r) {
     hoiTag = (*r)->safeGetString("newCountry");
+    Logger::logStream(DebugGovernments) << hoiTag << " " << (*r)->safeGetString("oldCountry") << " \""
+					<< mappedCountries[hoiTag] << "\" \""
+					<< usedCountries[(*r)->safeGetString("oldCountry")] << "\"\n";
+
     if (mappedCountries[hoiTag] != "") continue;
     hoiCountry = hoiTagToHoiCountryMap[hoiTag];
     if (0 == hoiCountryToHoiProvsMap[hoiCountry].size()) continue; 
     string oldTag = (*r)->safeGetString("oldCountry");
-    if (usedCountries[oldTag] != "") continue;
-    Object* oldCountry = hoiGame->safeGetObject(oldTag);
-    setPointersFromHoiCountry(hoiCountry);
-
-    if (!swap(oldCountry, hoiCountry, "ministers")) continue;
+    Object* newGov = govMap[oldTag];
+    if (newGov->safeGetString("used", "no") == "yes") continue;
+    newGov->resetLeaf("used", "yes");
+    mappedCountries[hoiTag] = oldTag; 
     Logger::logStream(DebugGovernments) << "Vic country "
 					<< vicTag
 					<< " (HoI "
 					<< hoiTag
 					<< ") getting government of historical "
-					<< oldCountry->getKey()
+					<< oldTag 
 					<< " from resemblance "
 					<< (*r)->safeGetString("value")
 					<< ".\n";
-    mappedCountries[hoiTag] = oldTag;
-    usedCountries[oldTag] = hoiTag; 
-    swap(oldCountry, hoiCountry, "government");
-    swap(oldCountry, hoiCountry, "head_of_state");
-    swap(oldCountry, hoiCountry, "head_of_government");
-    swap(oldCountry, hoiCountry, "foreign_minister");
-    swap(oldCountry, hoiCountry, "armament_minister");
-    swap(oldCountry, hoiCountry, "minister_of_security");
-    swap(oldCountry, hoiCountry, "minister_of_intelligence");
-    swap(oldCountry, hoiCountry, "chief_of_staff");
-    swap(oldCountry, hoiCountry, "chief_of_army");
-    swap(oldCountry, hoiCountry, "chief_of_navy");
-    swap(oldCountry, hoiCountry, "chief_of_air");
+    swap(newGov, hoiCountry, "ministers");
+    swap(newGov, hoiCountry, "government");
+    swap(newGov, hoiCountry, "head_of_state");
+    swap(newGov, hoiCountry, "head_of_government");
+    swap(newGov, hoiCountry, "foreign_minister");
+    swap(newGov, hoiCountry, "armament_minister");
+    swap(newGov, hoiCountry, "minister_of_security");
+    swap(newGov, hoiCountry, "minister_of_intelligence");
+    swap(newGov, hoiCountry, "chief_of_staff");
+    swap(newGov, hoiCountry, "chief_of_army");
+    swap(newGov, hoiCountry, "chief_of_navy");
+    swap(newGov, hoiCountry, "chief_of_air");
   }
 
   Logger::logStream(Logger::Game) << "Done with governments.\n"; 
