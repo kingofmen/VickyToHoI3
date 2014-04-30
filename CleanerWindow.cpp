@@ -693,10 +693,6 @@ void WorkerThread::initialiseVicSummaries () {
     (*vc)->resetLeaf("avg_mil", (*vc)->safeGetFloat("avg_mil") / (1 + (*vc)->safeGetInt("totalPop")));
     objvec armies = (*vc)->getValue("army");
     double totalArmy = 0;
-    Object* armyLocations = new Object("armyLocations");
-    Object* regimentNames = new Object("regimentNames");
-    (*vc)->setValue(armyLocations);
-    (*vc)->setValue(regimentNames); 
     for (objiter army = armies.begin(); army != armies.end(); ++army) {
       objvec regiments = (*army)->getValue("regiment");
       for (objiter regiment = regiments.begin(); regiment != regiments.end(); ++regiment) {
@@ -706,16 +702,13 @@ void WorkerThread::initialiseVicSummaries () {
 	pop = popIdMap[pop->safeGetString("id")];
 	if (!pop) continue;
 	string regType = (*regiment)->safeGetString("type");
-	if (pop->getKey() != "soldiers") regType = "reserve"; 	
+	if (pop->getKey() != "soldiers") regType = "reserve";
+	vicCountryToUnitsMap[*vc][regType].push_back(*regiment);
 	(*vc)->resetLeaf(regType, (*vc)->safeGetInt(regType) + 1);
 	vicUnitTypes[regType]++;
 	vicUnitsThatConvertToHoIUnits[unitTypes->safeGetString(regType, "NONE")]++;
-	regimentNames->addToList((*regiment)->safeGetString("name"));
 	string vicLocation = (*army)->safeGetString("location");
-	Object* vicProv = vicProvIdToVicProvMap[vicLocation];
-	if (!vicProv) continue;
-	if (NO_OWNER == vicProv->safeGetString("owner", NO_OWNER)) continue; // Probably a sea province.
-	armyLocations->addToList(vicLocation);	
+	(*regiment)->resetLeaf("location", vicLocation); 
       }
     }
     (*vc)->resetLeaf("army_size", totalArmy);
@@ -1278,19 +1271,15 @@ bool WorkerThread::convertGovernments () {
   ObjectDescendingSorter sorter("value");
   sort(resemblances.begin(), resemblances.end(), sorter);
   map<string, string> mappedCountries;
-  map<string, string> usedCountries; // Can't reuse mappedCountries because a country may need a new government when its old one has been used. 
   for (objiter r = resemblances.begin(); r != resemblances.end(); ++r) {
     hoiTag = (*r)->safeGetString("newCountry");
-    Logger::logStream(DebugGovernments) << hoiTag << " " << (*r)->safeGetString("oldCountry") << " \""
-					<< mappedCountries[hoiTag] << "\" \""
-					<< usedCountries[(*r)->safeGetString("oldCountry")] << "\"\n";
-
     if (mappedCountries[hoiTag] != "") continue;
     hoiCountry = hoiTagToHoiCountryMap[hoiTag];
     if (0 == hoiCountryToHoiProvsMap[hoiCountry].size()) continue; 
     string oldTag = (*r)->safeGetString("oldCountry");
     Object* newGov = govMap[oldTag];
     if (newGov->safeGetString("used", "no") == "yes") continue;
+    setPointersFromHoiCountry(hoiCountry); 
     newGov->resetLeaf("used", "yes");
     mappedCountries[hoiTag] = oldTag; 
     Logger::logStream(DebugGovernments) << "Vic country "
@@ -1549,16 +1538,11 @@ void WorkerThread::makeHigher (objvec& lowHolder, int& numUnits, string name, st
   while (0 < lowHolder.size()) higher->setValue(pop(lowHolder));
 }
 
-string WorkerThread::selectRandomHoiProvince (Object* vicLocations, Object* hoiCountry) {
-  int counter = 0;
-  while (true) {
-    if (counter++ > 1000) break;
-    string vicLocation = vicLocations->getToken(rand() % vicLocations->numTokens());
-    Object* vicProv = vicProvIdToVicProvMap[vicLocation];
-    Object* hoiProv = vicProvToHoiProvsMap[vicProv][rand() % vicProvToHoiProvsMap[vicProv].size()];
-    if (!hoiProv) continue;
-    if (NO_OWNER == hoiProv->safeGetString("owner", NO_OWNER)) continue;
-    return hoiProv->getKey();
+string WorkerThread::selectHoiProvince (string vicLocation, Object* hoiCountry) {
+  Object* vicProv = vicProvIdToVicProvMap[vicLocation];
+  for (objiter hoiProv = vicProvToHoiProvsMap[vicProv].begin(); hoiProv != vicProvToHoiProvsMap[vicProv].end(); ++hoiProv) {   
+    if (NO_OWNER == (*hoiProv)->safeGetString("owner", NO_OWNER)) continue;
+    return (*hoiProv)->getKey();
   }
   return hoiCountry->safeGetString("capital"); 
 }
@@ -1641,12 +1625,11 @@ bool WorkerThread::convertOoBs () {
     int corCounter = 1;
     int armCounter = 1;
     int groCounter = 1;
-    Object* names = vicCountry->safeGetObject("regimentNames");
-    Object* locations = vicCountry->safeGetObject("armyLocations"); 
+
     for (objiter ut = unitTypes.begin(); ut != unitTypes.end(); ++ut) {
       string vicUnitName = (*ut)->getKey();
-      string hoiUnitName = (*ut)->getLeaf(); 
-      double vicUnits = vicCountry->safeGetInt(vicUnitName);
+      string hoiUnitName = (*ut)->getLeaf();
+      double vicUnits = vicCountryToUnitsMap[vicCountry][vicUnitName].size();
       if (0.1 > vicUnits) continue;
       vicUnits /= vicUnitsThatConvertToHoIUnits[hoiUnitName];
       vicUnits *= hoiUnitTypes[hoiUnitName];
@@ -1658,24 +1641,34 @@ bool WorkerThread::convertOoBs () {
 				    << " from " << vicCountry->safeGetInt(vicUnitName) << " " << vicUnitName << ".\n";
       objvec regHolder;
       int divCounter = 1;
+      objiter baseVicUnit = vicCountryToUnitsMap[vicCountry][vicUnitName].begin(); 
       for (int i = 0; i < unitsToGenerate; ++i) {
-	regHolder.push_back(createRegiment(numUnits++, hoiUnitName, remQuotes(names->getToken(rand() % names->numTokens())))); 
+	Object* underlyingVicUnit = (*baseVicUnit);
+	++baseVicUnit;
+	if (baseVicUnit == vicCountryToUnitsMap[vicCountry][vicUnitName].end()) baseVicUnit = vicCountryToUnitsMap[vicCountry][vicUnitName].begin();
+	int numCreated = underlyingVicUnit->safeGetInt("createdHoiUnits");
+	++numCreated;
+	underlyingVicUnit->resetLeaf("createdHoiUnits", numCreated);
+	sprintf(stringbuffer, "%i / %s", numCreated, remQuotes(underlyingVicUnit->safeGetString("name")).c_str());
+	regHolder.push_back(createRegiment(numUnits++, hoiUnitName, stringbuffer)); 
+	string vicLocation = underlyingVicUnit->safeGetString("location");
+	string hoiLocation = selectHoiProvince(vicLocation, hoiCountry);
 	
 	if (3 <= regHolder.size()) {
 	  string name = addQuotes(ordinal(divCounter++) + " " + remQuotes(hoiDivisionNames->safeGetString(hoiUnitName, "Division")));
-	  makeHigher(regHolder, numUnits, name, selectRandomHoiProvince(locations, hoiCountry), "division", divHolder);
+	  makeHigher(regHolder, numUnits, name, hoiLocation, "division", divHolder);
 	}
 	if (3 <= divHolder.size()) {
 	  string name = addQuotes(ordinal(corCounter++) + " Corps");
-	  makeHigher(divHolder, numUnits, name, selectRandomHoiProvince(locations, hoiCountry), "corps", corHolder);
+	  makeHigher(divHolder, numUnits, name, hoiLocation, "corps", corHolder);
 	}
 	if (3 <= corHolder.size()) {
 	  string name = addQuotes(ordinal(armCounter++) + " Army");
-	  makeHigher(corHolder, numUnits, name, selectRandomHoiProvince(locations, hoiCountry), "army", armHolder);
+	  makeHigher(corHolder, numUnits, name, hoiLocation, "army", armHolder);
 	}
 	if (3 <= armHolder.size()) {
 	  string name = addQuotes(ordinal(groCounter++) + " Army Group");
-	  makeHigher(armHolder, numUnits, name, selectRandomHoiProvince(locations, hoiCountry), "armygroup", groHolder);
+	  makeHigher(armHolder, numUnits, name, hoiLocation, "armygroup", groHolder);
 	}
       }
       

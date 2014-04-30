@@ -7,7 +7,7 @@ debug = {
   34 = no # Strategic resources 
   35 = no # Techs 
   36 = no # Buildings 
-  37 = no # Units 
+  37 = yes # Units 
   38 = no # Stockpiles 
   39 = no # Laws
   40 = no # Misc
@@ -18,7 +18,7 @@ debug = {
   45 = no # Manpower 
   46 = no # Culture
   47 = no # Religion 
-  48 = yes # Governments 
+  48 = no # Governments 
   49 = no # Industry 
   50 = no # Urban terrain 
   51 = no # Diplomacy  
@@ -136,7 +136,7 @@ govResemblance = {
       democracy = 0.1
     }
     voting_system = {
-      first_past_the_post = 0.2
+      first_past_the_post = 0.1
     }
     press_rights = {
       free_press = 0.1

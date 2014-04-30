@@ -130,7 +130,7 @@ private:
   Object* loadTextFile (string fname);
   void makeHigher (objvec& lowHolder, int& numUnits, string name, string location, string keyword, objvec& highHolder);
   Object* selectHoiProvince (Object* vicProv);
-  string selectRandomHoiProvince (Object* vicLocations, Object* hoiCountry);
+  string selectHoiProvince (string vicLocation, Object* hoiCountry);
   void setPointersFromHoiCountry (Object* hc);
   void setPointersFromVicCountry (Object* vc);
   void setPointersFromVicProvince (Object* vp);
@@ -153,6 +153,7 @@ private:
   map<string, int> hoiUnitTypes;
   map<string, int> vicUnitTypes;
   map<string, int> vicUnitsThatConvertToHoIUnits; 
+  map<Object*, map<string, objvec> > vicCountryToUnitsMap; 
   
   // Lists
   objvec vicProvinces;
