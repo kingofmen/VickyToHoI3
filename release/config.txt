@@ -390,6 +390,8 @@ hoiDivNames = {
   militia_brigade = "Militia Division"
 }
 
+airUnits = { interceptor tactical_bomber strategic_bomber }
+
 unitStrengths = {
   light_armor_brigade = 30.000
   armor_brigade = 30.000

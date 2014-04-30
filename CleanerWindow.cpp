@@ -606,6 +606,13 @@ void WorkerThread::initialiseHoiSummaries () {
 	  totalNavy += weight; 
 	}
       }
+      objvec airs = (*army)->getValue("air");
+      for (objiter air = airs.begin(); air != airs.end(); ++air) {
+	objvec wings = (*air)->getValue("wing");
+	for (objiter wing = wings.begin(); wing != wings.end(); ++wing) {
+	  hoiUnitTypes[remQuotes((*wing)->safeGetString("type"))]++; 
+	}
+      }
     }
     (*leaf)->resetLeaf("army_size", totalArmy);
     if (totalArmy > maxArmy) maxArmy = totalArmy;
@@ -706,7 +713,10 @@ void WorkerThread::initialiseVicSummaries () {
 	vicCountryToUnitsMap[*vc][regType].push_back(*regiment);
 	(*vc)->resetLeaf(regType, (*vc)->safeGetInt(regType) + 1);
 	vicUnitTypes[regType]++;
-	vicUnitsThatConvertToHoIUnits[unitTypes->safeGetString(regType, "NONE")]++;
+	objvec conversions = unitTypes->getValue(regType);
+	for (objiter con = conversions.begin(); con != conversions.end(); ++con) {
+	  vicUnitsThatConvertToHoIUnits[(*con)->getLeaf()]++; 
+	}
 	string vicLocation = (*army)->safeGetString("location");
 	(*regiment)->resetLeaf("location", vicLocation); 
       }
@@ -1515,10 +1525,10 @@ Object* createObjectWithIdAndType (int id, int type, string keyword) {
   return ret; 
 }
 
-Object* WorkerThread::createRegiment (int id, string type, string name) {
+Object* WorkerThread::createRegiment (int id, string type, string name, string keyword) {
   static Object* strengths = configObject->getNeededObject("unitStrengths");
   
-  Object* ret = createObjectWithIdAndType(id, 41, "regiment");
+  Object* ret = createObjectWithIdAndType(id, 41, keyword);
   ret->setLeaf("type", addQuotes(type));
   ret->setLeaf("name", addQuotes(name));
   if (0 < strengths->safeGetFloat(type, -1)) ret->setLeaf("strength", strengths->safeGetString(type)); 
@@ -1528,7 +1538,7 @@ Object* WorkerThread::createRegiment (int id, string type, string name) {
 void WorkerThread::makeHigher (objvec& lowHolder, int& numUnits, string name, string location, string keyword, objvec& highHolder) {
   Object* higher = createObjectWithIdAndType(numUnits++, 41, keyword);
   if (keyword != "division") {
-    Object* hq = createRegiment(numUnits++, "hq_brigade", remQuotes(name) + " HQ");
+    Object* hq = createRegiment(numUnits++, "hq_brigade", remQuotes(name) + " HQ", "regiment");
     //hq->setLeaf("location", location); 
     higher->setValue(hq); 
   } 
@@ -1599,6 +1609,9 @@ bool WorkerThread::convertOoBs () {
   }
 
   Object* hoiDivisionNames = configObject->getNeededObject("hoiDivNames"); 
+  Object* airUnits = configObject->getNeededObject("airUnits");
+  map<string, bool> airUnitMap;
+  for (int i = 0; i < airUnits->numTokens(); ++i) airUnitMap[airUnits->getToken(i)] = true; 
   
   int numUnits = 1;
   objvec unitTypes = unitConversions->getLeaves();
@@ -1617,7 +1630,7 @@ bool WorkerThread::convertOoBs () {
     theatre->setLeaf("can_upgrade", "yes");
     theatre->setLeaf("fuel", "1.000");
     theatre->setLeaf("supplies", "1.000");
-    theatre->setValue(createRegiment(numUnits++, "hq_brigade", "High Command"));
+    theatre->setValue(createRegiment(numUnits++, "hq_brigade", "High Command", "regiment"));
     objvec divHolder;
     objvec corHolder;
     objvec armHolder;
@@ -1625,20 +1638,34 @@ bool WorkerThread::convertOoBs () {
     int corCounter = 1;
     int armCounter = 1;
     int groCounter = 1;
-
+    
     for (objiter ut = unitTypes.begin(); ut != unitTypes.end(); ++ut) {
       string vicUnitName = (*ut)->getKey();
       string hoiUnitName = (*ut)->getLeaf();
       double vicUnits = vicCountryToUnitsMap[vicCountry][vicUnitName].size();
       if (0.1 > vicUnits) continue;
+      Logger::logStream(Logger::Debug) << vicUnits << " ";
       vicUnits /= vicUnitsThatConvertToHoIUnits[hoiUnitName];
+      Logger::logStream(Logger::Debug) << vicUnits << " ";
       vicUnits *= hoiUnitTypes[hoiUnitName];
+      Logger::logStream(Logger::Debug) << vicUnits << "\n";
       if (0.01 > vicUnits) continue;
       if (1 > vicUnits) vicUnits = 1;
       int unitsToGenerate = (int) floor(vicUnits + 0.5);
       Logger::logStream(DebugUnits) << vicTag << " (HoI " << hoiTag << ") gets "
 				    << unitsToGenerate << " " << hoiUnitName
 				    << " from " << vicCountry->safeGetInt(vicUnitName) << " " << vicUnitName << ".\n";
+      Object* air = 0;
+      if (airUnitMap[hoiUnitName]) {
+	air = theatre->safeGetObject("air");
+	if (!air) {
+	  air = createObjectWithIdAndType(numUnits++, 41, "air");
+	  theatre->setValue(air);
+	  air->setLeaf("name", "\"Air Force\""); 
+	  air->setLeaf("base", hoiCap);
+	  air->setLeaf("location", hoiCap);
+	}
+      }
       objvec regHolder;
       int divCounter = 1;
       objiter baseVicUnit = vicCountryToUnitsMap[vicCountry][vicUnitName].begin(); 
@@ -1650,7 +1677,12 @@ bool WorkerThread::convertOoBs () {
 	++numCreated;
 	underlyingVicUnit->resetLeaf("createdHoiUnits", numCreated);
 	sprintf(stringbuffer, "%i / %s", numCreated, remQuotes(underlyingVicUnit->safeGetString("name")).c_str());
-	regHolder.push_back(createRegiment(numUnits++, hoiUnitName, stringbuffer)); 
+	Object* regiment = createRegiment(numUnits++, hoiUnitName, stringbuffer, air ? "wing" : "regiment");
+	if (air) {
+	  air->setValue(regiment);
+	  continue;
+	}
+	regHolder.push_back(regiment);
 	string vicLocation = underlyingVicUnit->safeGetString("location");
 	string hoiLocation = selectHoiProvince(vicLocation, hoiCountry);
 	
