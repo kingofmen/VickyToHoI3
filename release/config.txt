@@ -704,3 +704,11 @@ factoryTypes = {
   radio_factory=radio
   synthetic_oil_factory=oil 
 }
+
+reservePenalties = {
+  volunteer_army = 0.25
+  one_year_draft = 0.34
+  two_year_draft = 0.50
+  three_year_draft = 0.75
+  service_by_requirement = 0.90
+}

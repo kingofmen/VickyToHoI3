@@ -16,7 +16,15 @@
 
 using namespace std; 
 
+/* TODO:
+   Resource production adjust for WE
+   Deal with mobilised troops
+   Fix HoI 4921 7891 (should not convert from ocean)
+   Fix Vic 2540 2542 2545 2546 2547 2548 2551 2552 (should convert to something)
+*/
+
 /* Nice to have:
+   - Debt? 
    - Tweak some province conversions - Sitka is inland? Lots of Vic provinces with naval bases don't find a coastal HoI province.
    - Also several Vic provinces with airbases don't find anywhere to put them. 
  */
@@ -574,7 +582,9 @@ void WorkerThread::initialiseHoiSummaries () {
   double maxNavy = 1;
   Object* hoiShipWeights = configObject->getNeededObject("hoiShips"); 
   static map<string, bool> printed; 
-  
+
+  Object* reserveObject = new Object("reserveFractions");
+  configObject->setValue(reserveObject);
   for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
     if (!(*leaf)->safeGetObject("flags")) continue;
     if (targetVersion == HOI_FINEST_HOUR) {
@@ -586,7 +596,7 @@ void WorkerThread::initialiseHoiSummaries () {
     double totalArmy = 0;
     double totalNavy = 0;    
     for (objiter army = armies.begin(); army != armies.end(); ++army) {
-      totalArmy += extractStrength(*leaf);
+      totalArmy += extractStrength(*leaf, reserveObject);
 
       objvec navies = (*army)->getValue("navy");
       for (objiter navy = navies.begin(); navy != navies.end(); ++navy) {
@@ -623,7 +633,14 @@ void WorkerThread::initialiseHoiSummaries () {
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
     (*hc)->resetLeaf("army_size", (*hc)->safeGetFloat("army_size") / maxArmy);
     (*hc)->resetLeaf("navy_size", (*hc)->safeGetFloat("navy_size") / maxNavy);
-    (*hc)->resetLeaf("military_size", (*hc)->safeGetFloat("army_size") + (*hc)->safeGetFloat("navy_size")); 
+    (*hc)->resetLeaf("military_size", (*hc)->safeGetFloat("army_size") + (*hc)->safeGetFloat("navy_size"));
+    (*hc)->unsetValue("mobilize");
+    Object* flags = (*hc)->safeGetObject("flags");
+    if (flags) flags->clear();
+    flags = (*hc)->safeGetObject("variables");
+    if (flags) flags->clear();
+    flags = (*hc)->safeGetObject("modifier");
+    if (flags) flags->clear();
   }
 }
 
@@ -1615,7 +1632,18 @@ bool WorkerThread::convertOoBs () {
   
   int numUnits = 1;
   objvec unitTypes = unitConversions->getLeaves();
-
+  Object* reserveObject = configObject->safeGetObject("reserveFractions"); // Created by the converter.
+  for (objiter ut = unitTypes.begin(); ut != unitTypes.end(); ++ut) {
+    string hoiUnitName = (*ut)->getLeaf();
+    double denom = hoiUnitTypes[hoiUnitName];
+    if (0.1 > denom) denom = 1;
+    double num = reserveObject->safeGetFloat(hoiUnitName);
+    if (0.001 > num) continue;
+    num /= denom;
+    reserveObject->resetLeaf(hoiUnitName, num); 
+  }
+  Object* reservePenalties = configObject->getNeededObject("reservePenalties");
+      
   for (objiter hc = hoiCountries.begin(); hc != hoiCountries.end(); ++hc) {
     setPointersFromHoiCountry(*hc);
     if (hoiTag == "REB") continue;
@@ -1638,10 +1666,20 @@ bool WorkerThread::convertOoBs () {
     int corCounter = 1;
     int armCounter = 1;
     int groCounter = 1;
+    bool mobilised = false;
+    if (vicCountry->safeGetInt("reserve") > 0) {
+      Logger::logStream(DebugUnits) << vicTag << " (HoI " << hoiTag << ") is mobilised.\n";
+      mobilised = true;
+      hoiCountry->resetLeaf("mobilize", "yes");
+    }
+    
+    string mobLaw = hoiCountry->safeGetString("conscription_law", "volunteer_army");
+    double reserveFactor = reservePenalties->safeGetFloat(mobLaw, 0.25); 
     
     for (objiter ut = unitTypes.begin(); ut != unitTypes.end(); ++ut) {
       string vicUnitName = (*ut)->getKey();
       string hoiUnitName = (*ut)->getLeaf();
+      double reserveFraction = reserveObject->safeGetFloat(hoiUnitName, 0); 
       double vicUnits = vicCountryToUnitsMap[vicCountry][vicUnitName].size();
       if (0.1 > vicUnits) continue;
       Logger::logStream(Logger::Debug) << vicUnits << " ";
@@ -1678,6 +1716,15 @@ bool WorkerThread::convertOoBs () {
 	underlyingVicUnit->resetLeaf("createdHoiUnits", numCreated);
 	sprintf(stringbuffer, "%i / %s", numCreated, remQuotes(underlyingVicUnit->safeGetString("name")).c_str());
 	Object* regiment = createRegiment(numUnits++, hoiUnitName, stringbuffer, air ? "wing" : "regiment");
+
+	double roll = rand();
+	roll /= RAND_MAX;
+	if (roll < reserveFraction) {
+	  regiment->setLeaf("is_reserve", "yes");
+	  double unMobStrength = regiment->safeGetFloat("strength") * reserveFactor;
+	  if (!mobilised) regiment->resetLeaf("strength", unMobStrength); 
+	}
+	
 	if (air) {
 	  air->setValue(regiment);
 	  continue;
@@ -2639,7 +2686,7 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
   return 0; 
 }
 
-double WorkerThread::extractStrength (Object* unit) {
+double WorkerThread::extractStrength (Object* unit, Object* reserves) {
   double ret = 0; 
   objvec regiments = unit->getLeaves();
   for (objiter regiment = regiments.begin(); regiment != regiments.end(); ++regiment) {
@@ -2647,9 +2694,11 @@ double WorkerThread::extractStrength (Object* unit) {
     if ((*regiment)->getKey() == "regiment") {
       double strength = (*regiment)->safeGetFloat("strength");
       ret += strength;
-      hoiUnitTypes[remQuotes((*regiment)->safeGetString("type"))]++;
+      string regType = remQuotes((*regiment)->safeGetString("type"));
+      hoiUnitTypes[regType]++;
+      if ((*regiment)->safeGetString("is_reserve", "no") == "yes") reserves->resetLeaf(regType, 1 + reserves->safeGetInt(regType));
     }
-    else ret += extractStrength(*regiment);
+    else ret += extractStrength(*regiment, reserves);
   }
   return ret; 
 }
@@ -2834,7 +2883,8 @@ void WorkerThread::convert () {
   initialiseVicSummaries();     
   if (!convertProvinceOwners()) return;
   if (!moveCapitals()) return; // Must precede OOBs or the capitals won't be placed right.
-  if (!convertBuildings()) return; // Must precede OOBs or there won't be naval bases. Must be after ownership conversion. Must be after capitals for urbanity.   
+  if (!convertBuildings()) return; // Must precede OOBs or there won't be naval bases. Must be after ownership conversion. Must be after capitals for urbanity.
+  if (!convertLaws()) return; // Must be before OOBs or mob laws won't be set.   
   if (!convertOoBs()) return; 
   if (!moveResources()) return;
   if (!moveIndustry()) return;
@@ -2842,7 +2892,6 @@ void WorkerThread::convert () {
   if (!convertDiplomacy()) return;
   if (!convertLeaders()) return;
   if (!convertTechs()) return;
-  if (!convertLaws()) return;
   if (!moveStockpiles()) return;
   if (!convertMisc()) return;
   if (!listUrbanProvinces()) return;

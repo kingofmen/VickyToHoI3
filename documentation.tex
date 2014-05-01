@@ -215,6 +215,15 @@ division, three divisions (identical or not) form a corps, and so
 on. Any formations at loose ends are attached to the single theatre
 that is created for each nation. 
 
+Brigades have a chance of being created as reserve; the chance is
+equal to the percentage of their brigade type that is reserve in the
+input. Reserve brigades are created at full strength in nations that
+are mobilised in Victoria, otherwise at the strength indicated by
+the HoI conscription law. Note that HoI immediately mobilises nations
+at war; a Victoria nation that is at war, but not mobilised, will
+therefore begin the game with reserve units at low strength but
+rapidly reinforcing up to 100\%. 
+
 Ships are redistributed at random, weighted by the naval strength of
 nations. Naval strength is defined as the sum of the weights given in
 the \texttt{vicShips} field (that is, a dreadnought is 60, a cruiser
