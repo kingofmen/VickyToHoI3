@@ -1,13 +1,13 @@
 debug = {
   generic  = yes 
-  30 = no # Leaders
+  30 = yes # Leaders
   31 = no # Provinces
   32 = no # Ministers
   33 = no # Tech teams 
   34 = no # Strategic resources 
   35 = no # Techs 
   36 = no # Buildings 
-  37 = yes # Units 
+  37 = no # Units 
   38 = no # Stockpiles 
   39 = no # Laws
   40 = no # Misc
@@ -91,6 +91,11 @@ officerClasses = {
   class = clerks
   class = clergy 
 }
+
+minimumArmyWeight = 75
+minimumNavyWeight = 1000
+minimumWingWeight = 30
+
 
 govResemblance = {
   humanFactor = 0.1 

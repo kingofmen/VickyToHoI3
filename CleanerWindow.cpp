@@ -17,10 +17,12 @@
 using namespace std; 
 
 /* TODO:
-   Resource production adjust for WE
-   Deal with mobilised troops
    Fix HoI 4921 7891 (should not convert from ocean)
    Fix Vic 2540 2542 2545 2546 2547 2548 2551 2552 (should convert to something)
+   Consumer goods need?
+   Neutrality?
+   Threat?
+   Relation? 
 */
 
 /* Nice to have:
@@ -244,9 +246,6 @@ void WorkerThread::cleanUp () {
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
     (*hc)->unsetValue("convoy"); 
     (*hc)->unsetValue("military_construction"); 
-    (*hc)->unsetValue("army_size");
-    (*hc)->unsetValue("navy_size");
-    (*hc)->unsetValue("military_size");
     (*hc)->unsetValue("cap_pool"); 
     (*hc)->resetLeaf("nukes", "0.000"); 
     
@@ -292,7 +291,8 @@ void WorkerThread::configure () {
     hoiProvincePositions[(*pos)->getKey()] = (*pos); 
   }
 
-  vicTechObject = loadTextFile(sourceVersion + "technologies.txt"); 
+  vicTechObject = loadTextFile(sourceVersion + "technologies.txt");
+  leaderTypesObject = loadTextFile(targetVersion + "leaderTypes.txt"); 
 }
 
 Object* WorkerThread::loadTextFile (string fname) {
@@ -578,8 +578,6 @@ bool WorkerThread::createProvinceMap () {
 
 void WorkerThread::initialiseHoiSummaries () {
   objvec leaves = hoiGame->getLeaves();
-  double maxArmy = 1;
-  double maxNavy = 1;
   Object* hoiShipWeights = configObject->getNeededObject("hoiShips"); 
   static map<string, bool> printed; 
 
@@ -591,13 +589,9 @@ void WorkerThread::initialiseHoiSummaries () {
       if (!(*leaf)->safeGetObject("strategic_warfare")) continue;
     }
     allHoiCountries.push_back(*leaf);
-
+    extractStrength(*leaf, reserveObject);
     objvec armies = (*leaf)->getValue("theatre");
-    double totalArmy = 0;
-    double totalNavy = 0;    
     for (objiter army = armies.begin(); army != armies.end(); ++army) {
-      totalArmy += extractStrength(*leaf, reserveObject);
-
       objvec navies = (*army)->getValue("navy");
       for (objiter navy = navies.begin(); navy != navies.end(); ++navy) {
 	objvec ships = (*navy)->getValue("ship");
@@ -613,27 +607,19 @@ void WorkerThread::initialiseHoiSummaries () {
 	    }
 	  }
 	  hoiShipList.push_back(*ship); 
-	  totalNavy += weight; 
 	}
       }
       objvec airs = (*army)->getValue("air");
       for (objiter air = airs.begin(); air != airs.end(); ++air) {
 	objvec wings = (*air)->getValue("wing");
 	for (objiter wing = wings.begin(); wing != wings.end(); ++wing) {
-	  hoiUnitTypes[remQuotes((*wing)->safeGetString("type"))]++; 
+	  hoiUnitTypes[remQuotes((*wing)->safeGetString("type"))]++;
 	}
       }
     }
-    (*leaf)->resetLeaf("army_size", totalArmy);
-    if (totalArmy > maxArmy) maxArmy = totalArmy;
-    (*leaf)->resetLeaf("navy_size", totalNavy);
-    if (totalNavy > maxNavy) maxNavy = totalNavy; 
   }
 
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
-    (*hc)->resetLeaf("army_size", (*hc)->safeGetFloat("army_size") / maxArmy);
-    (*hc)->resetLeaf("navy_size", (*hc)->safeGetFloat("navy_size") / maxNavy);
-    (*hc)->resetLeaf("military_size", (*hc)->safeGetFloat("army_size") + (*hc)->safeGetFloat("navy_size"));
     (*hc)->unsetValue("mobilize");
     Object* flags = (*hc)->safeGetObject("flags");
     if (flags) flags->clear();
@@ -717,10 +703,10 @@ void WorkerThread::initialiseVicSummaries () {
     (*vc)->resetLeaf("avg_mil", (*vc)->safeGetFloat("avg_mil") / (1 + (*vc)->safeGetInt("totalPop")));
     objvec armies = (*vc)->getValue("army");
     double totalArmy = 0;
+    double totalWing = 0;
     for (objiter army = armies.begin(); army != armies.end(); ++army) {
       objvec regiments = (*army)->getValue("regiment");
       for (objiter regiment = regiments.begin(); regiment != regiments.end(); ++regiment) {
-	totalArmy += (*regiment)->safeGetFloat("strength");
 	Object* pop = (*regiment)->safeGetObject("pop");
 	if (!pop) continue;
 	pop = popIdMap[pop->safeGetString("id")];
@@ -730,6 +716,9 @@ void WorkerThread::initialiseVicSummaries () {
 	vicCountryToUnitsMap[*vc][regType].push_back(*regiment);
 	(*vc)->resetLeaf(regType, (*vc)->safeGetInt(regType) + 1);
 	vicUnitTypes[regType]++;
+	if (regType == "plane")	totalWing += (*regiment)->safeGetFloat("strength");
+	else totalArmy += (*regiment)->safeGetFloat("strength");
+	
 	objvec conversions = unitTypes->getValue(regType);
 	for (objiter con = conversions.begin(); con != conversions.end(); ++con) {
 	  vicUnitsThatConvertToHoIUnits[(*con)->getLeaf()]++; 
@@ -738,6 +727,7 @@ void WorkerThread::initialiseVicSummaries () {
 	(*regiment)->resetLeaf("location", vicLocation); 
       }
     }
+    (*vc)->resetLeaf("wing_size", totalWing);
     (*vc)->resetLeaf("army_size", totalArmy);
     if (totalArmy > maxArmy) maxArmy = totalArmy;
 
@@ -800,13 +790,6 @@ void WorkerThread::initialiseVicSummaries () {
 	if (heavyIndustries[factoryType]) (*vc)->resetLeaf("heavy_industry", workers + (*vc)->safeGetInt("heavy_industry"));
       }
     }
-  }
-
-  for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
-    (*vc)->resetLeaf("army_size", (*vc)->safeGetFloat("army_size") / maxArmy);
-    (*vc)->resetLeaf("totalShipWeight", (*vc)->safeGetString("navy_size"));
-    (*vc)->resetLeaf("navy_size", (*vc)->safeGetFloat("navy_size") / maxNavy);
-    (*vc)->resetLeaf("military_size", (*vc)->safeGetFloat("army_size") + (*vc)->safeGetFloat("navy_size")); 
   }
 }
 
@@ -1435,51 +1418,81 @@ bool WorkerThread::convertLaws () {
   return true;
 }
 
+void WorkerThread::getOfficers (objvec& candidates, string keyword, double total, unsigned int original) {
+  if (0 == candidates.size()) {
+    static map<string, bool> printed;
+    if (printed[keyword]) return;
+    printed[keyword] = true;
+    Logger::logStream(Logger::Warning) << "Warning: Ran out of officers of type " << keyword << "; " << hoiTag << " and subsequent tags do not get any.\n";
+    return; 
+  }
+  double fraction = hoiCountry->safeGetFloat(keyword);
+  Logger::logStream(DebugLeaders) << "HoI " << hoiTag << " (Vic " << vicTag << ") has " << fraction << " " << keyword; 
+  fraction /= total;
+  int toAssign = (int) floor(fraction * original);
+  if (0 == toAssign) toAssign = 1;
+  Logger::logStream(DebugLeaders) << " giving " << toAssign << " officers.\n";
+
+  Object* leaders = hoiCountry->getNeededObject("active_leaders");
+  // Already shuffled
+  for (int i = 0; i < toAssign; ++i) {
+    leaders->setValue(pop(candidates));
+  }
+}
+
 bool WorkerThread::convertLeaders () {
   Logger::logStream(Logger::Game) << "Beginning leader conversion.\n";
-  ObjectDescendingSorter hoiSorter("military_size");
-  sort(allHoiCountries.begin(), allHoiCountries.end(), hoiSorter);
-  objvec unassignedVicCountries;
-  for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
-    if (!vicCountryToHoiCountryMap[*vc]) continue;
-    unassignedVicCountries.push_back(*vc);
-  }
+
+  objvec landLeaders;
+  objvec navyLeaders;
+  objvec wingLeaders;
+  double totalArmyWeight = 0;
+  double totalNavyWeight = 0;
+  double totalWingWeight = 0;
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
-    hoiTag = (*hc)->getKey();
-    if (hoiTag == "REB") continue;
-    Logger::logStream(DebugLeaders) << "Assigning leaders of HoI country "
-				    << hoiTag
-				    << " (" << (*hc)->safeGetString("military_size")
-				    << ", " << (*hc)->safeGetString("army_size")
-				    << ", " << (*hc)->safeGetString("navy_size")
-				    << ")\n";
-    double leastDistance = 1e6;
-    objiter bestVicCountry = unassignedVicCountries.end();
-    for (objiter vc = unassignedVicCountries.begin(); vc != unassignedVicCountries.end(); ++vc) {
-      double distance = sqrt(pow((*vc)->safeGetFloat("army_size") - (*hc)->safeGetFloat("army_size"), 2) +
-			     pow((*vc)->safeGetFloat("navy_size") - (*hc)->safeGetFloat("navy_size"), 2));
-
-      // Avoid all the tiny (0, 0) countries being 'close' to HoI middle-powers. 
-      if ((*vc)->safeGetFloat("army_size") + (*vc)->safeGetFloat("navy_size") < 0.01) distance += 1; 
-      if (distance > leastDistance) continue;
-      leastDistance = distance;
-      bestVicCountry = vc;
+    if ((*hc)->getKey() == "REB") continue;
+    Object* lead = (*hc)->safeGetObject("active_leaders");
+    if (!lead) continue;
+    objvec leaders = lead->getLeaves();
+    for (objiter leader = leaders.begin(); leader != leaders.end(); ++leader) {
+      string area = leaderTypesObject->safeGetString((*leader)->getKey(), "land");
+      if      (area == "land") landLeaders.push_back(*leader);
+      else if (area == "sea" ) navyLeaders.push_back(*leader);
+      else                     wingLeaders.push_back(*leader);
     }
-    if (bestVicCountry == unassignedVicCountries.end()) break;
-    setPointersFromVicCountry(*bestVicCountry);
-    Logger::logStream(DebugLeaders) << "  ...to Vic country " << vicTag << " (HoI " << hoiTag
-				    << ") with " << vicCountry->safeGetString("military_size")
-				    << ", " << vicCountry->safeGetString("army_size")
-				    << ", " << vicCountry->safeGetString("navy_size")
-				    << ".\n";
-    (*bestVicCountry)->setValue((*hc)->safeGetObject("active_leaders"));
-    unassignedVicCountries.erase(bestVicCountry);
-    if (0 == unassignedVicCountries.size()) break; 
+    lead->clear();
+
+    setPointersFromHoiCountry(*hc);
+    double armyWeight = configObject->safeGetFloat("minimumArmyWeight", 75);
+    double navyWeight = configObject->safeGetFloat("minimumNavyWeight", 1000);
+    double wingWeight = configObject->safeGetFloat("minimumWingWeight", 30);
+
+    if (!vicCountry) continue;
+    armyWeight += vicCountry->safeGetFloat("army_size");
+    navyWeight += vicCountry->safeGetFloat("trueNavySize");
+    wingWeight += vicCountry->safeGetFloat("wing_size");
+
+    (*hc)->resetLeaf("landOfficerWeight", armyWeight);
+    (*hc)->resetLeaf("navyOfficerWeight", navyWeight);
+    (*hc)->resetLeaf("wingOfficerWeight", wingWeight);
+
+    totalArmyWeight += armyWeight;
+    totalNavyWeight += navyWeight;
+    totalWingWeight += wingWeight; 
   }
 
-  for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
-    setPointersFromVicCountry(*vc); 
-    swap(hoiCountry, vicCountry, "active_leaders");
+  unsigned int totalLandLeaders = landLeaders.size();
+  unsigned int totalNavyLeaders = navyLeaders.size();
+  unsigned int totalWingLeaders = wingLeaders.size();
+  random_shuffle(landLeaders.begin(), landLeaders.end());
+  random_shuffle(navyLeaders.begin(), navyLeaders.end());
+  random_shuffle(wingLeaders.begin(), wingLeaders.end());
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    if ((*hc)->getKey() == "REB") continue;
+    setPointersFromHoiCountry(*hc);
+    getOfficers(landLeaders, "landOfficerWeight", totalArmyWeight, totalLandLeaders);
+    getOfficers(navyLeaders, "navyOfficerWeight", totalNavyWeight, totalNavyLeaders);
+    getOfficers(wingLeaders, "wingOfficerWeight", totalWingWeight, totalWingLeaders);
   }
 
   Logger::logStream(Logger::Game) << "Done with leaders.\n"; 
@@ -1682,11 +1695,8 @@ bool WorkerThread::convertOoBs () {
       double reserveFraction = reserveObject->safeGetFloat(hoiUnitName, 0); 
       double vicUnits = vicCountryToUnitsMap[vicCountry][vicUnitName].size();
       if (0.1 > vicUnits) continue;
-      Logger::logStream(Logger::Debug) << vicUnits << " ";
       vicUnits /= vicUnitsThatConvertToHoIUnits[hoiUnitName];
-      Logger::logStream(Logger::Debug) << vicUnits << " ";
       vicUnits *= hoiUnitTypes[hoiUnitName];
-      Logger::logStream(Logger::Debug) << vicUnits << "\n";
       if (0.01 > vicUnits) continue;
       if (1 > vicUnits) vicUnits = 1;
       int unitsToGenerate = (int) floor(vicUnits + 0.5);
@@ -1763,11 +1773,11 @@ bool WorkerThread::convertOoBs () {
   vector<double> weightList;
   double totalNavyWeight = 0; 
   for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
-    double shipWeight = (*vc)->safeGetFloat("totalShipWeight");
+    double shipWeight = (*vc)->safeGetFloat("navy_size");
     double support = (*vc)->safeGetFloat("navy_limit");
     double trueNavySize = 0.5*(shipWeight + support);
-    (*vc)->resetLeaf("trueNavySize", trueNavySize); 
     if (shipWeight > support) trueNavySize = support;
+    (*vc)->resetLeaf("trueNavySize", trueNavySize);     
     if (trueNavySize < 100) continue;
     totalNavyWeight += trueNavySize;
     navalCountries.push_back(*vc);
@@ -2307,7 +2317,8 @@ bool WorkerThread::moveResources () {
     Logger::logStream(DebugResources) << "  " << resName << " Vic: " << vicWorldTotals[resName] << " HoI: " << (*r).second << "\n"; 
   }
   
-  map<string, map<string, double> > overflows; 
+  map<string, map<string, double> > overflows;
+  map<string, map<string, double> > countryTotals; 
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
     string vicTag = (*vp)->safeGetString("owner", NO_OWNER);
     if (NO_OWNER == vicTag) continue;
@@ -2335,9 +2346,21 @@ bool WorkerThread::moveResources () {
       if (0.5 > curr) continue; 
 
       target->resetLeaf(resName, curr);
+      countryTotals[vicTag][resName] += curr; 
     }
   }
 
+  Logger::logStream(DebugResources) << "Country totals:\n"; 
+  for (map<string, map<string, double> >::iterator v = countryTotals.begin(); v != countryTotals.end(); ++v) {
+    vicTag = (*v).first;
+    Logger::logStream(DebugResources) << vicTag << ":\n";
+    for (map<string, double>::iterator r = (*v).second.begin(); r != (*v).second.end(); ++r) {
+      string resName = (*r).first;
+      Logger::logStream(DebugResources) << "  " << resName << ": " << (*r).second << "\n"; 
+    }
+  }
+  
+  
   for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
     Object* production = (*hp)->safeGetObject("max_producing");
     if ((!production) || (0 == production->getLeaves().size())) {
@@ -2890,7 +2913,7 @@ void WorkerThread::convert () {
   if (!moveIndustry()) return;
   if (!convertGovernments()) return; 
   if (!convertDiplomacy()) return;
-  if (!convertLeaders()) return;
+  if (!convertLeaders()) return; // Must come after OOBs or true navy size won't be set. 
   if (!convertTechs()) return;
   if (!moveStockpiles()) return;
   if (!convertMisc()) return;

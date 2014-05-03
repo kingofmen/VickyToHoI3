@@ -126,7 +126,8 @@ private:
   double calculateVicProduction (Object* vicProvince, string resource); 
   void cleanUp ();
   Object* createRegiment (int id, string type, string name, string keyword);
-  double extractStrength (Object* unit, Object* reserves); 
+  double extractStrength (Object* unit, Object* reserves);
+  void getOfficers (objvec& candidates, string keyword, double total, unsigned int original);
   Object* loadTextFile (string fname);
   void makeHigher (objvec& lowHolder, int& numUnits, string name, string location, string keyword, objvec& highHolder);
   Object* selectHoiProvince (Object* vicProv);
@@ -168,7 +169,8 @@ private:
   Object* countryMapObject;
   Object* provinceNamesObject; 
   Object* customObject;
-  Object* vicTechObject; 
+  Object* vicTechObject;
+  Object* leaderTypesObject; 
   map<string, Object*> hoiProvincePositions; 
 }; 
 

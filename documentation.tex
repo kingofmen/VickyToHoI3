@@ -132,27 +132,11 @@ the Victoria nation rather than the top level.
 
 \section{Leaders}
 
-Each nation, in HoI and Vicky, is considered as a point in army-navy
-space; its coordinates are given by its strength relative to the
-strongest nation. Thus a nation with the largest army, but a navy half
-the size of the largest navy in the game, is at the point $(1, 0.5)$. 
-Strength of armies is simply the sum of all regimental strengths. For
-navies, it is the sum of the weights of all ships; the weights are
-given in the \texttt{[hoi,vic]Ships} fields of the config object. 
-
-Each Vicky nation gains the historical officers of a HoI nation. The
-officers of the strongest HoI nation - that is, the one with the
-highest sum of army and navy strength - are handed out first, and go
-to the nation closest to it in army-navy space. Leaders are then
-handed out in descending HoI order of army plus navy strength, always
-going to the nation closest in army-navy space which has not yet
-received leaders. Vicky nations with less than 0.01 combined strength
-are always considered 1 unit further away than they really are, to
-ensure that mid-ranked historical nations are handed to mid-ranked
-Vicky nations rather than to minors with no army, which technically
-may be closer - that is, (0, 0) is closer to (0.1, 0) than (0.21, 0)
-is, but we want to prioritise the second nation, which actually has an
-army. 
+Active leaders are redistributed randomly, weighted by the size of
+army, navy (including bases), and air force. To ensure that releasable
+nations have a minimum amount of officers, the sizes are calculated as
+the real size plus \texttt{minimum\[Army,Navy,Wing\]Weight} from the
+config file. 
 
 \section{Buildings}
 
