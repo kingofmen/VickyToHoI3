@@ -360,7 +360,7 @@ link = { vic = 2487 hoi = 7834 hoi = 7839 hoi = 7842 hoi = 7846 hoi = 7849 hoi =
 link = { vic = 2604 hoi = 10264 hoi = 10276 hoi = 10250 hoi = 7829 hoi = 10265 hoi = 10277 } # Normanton -> Burketown, Kamileroi, Normanton, Staaten, Croydon, The Lynd Junction
 link = { vic = 2489 hoi = 10303 hoi = 10329 hoi = 7883 hoi = 10290 } # Longreach -> Whitewood, Aramac, Isisford, McKinlay
 link = { vic = 2483 hoi = 7923 } # Brisbane -> Brisbane
-link = { vic = 2484 hoi = 7858 hoi = 7863 hoi = 7868 hoi = 7872 hoi = 7884 hoi = 7896 hoi = 7902 hoi = 7897 hoi = 7912 } # Gladstone -> Mackay, Rockhampton, Leura, Gladstone, Rosedale, Monto, Murgon, Maryborough, Nambour
+link = { vic = 2484 hoi = 7858 hoi = 7863 hoi = 7868 hoi = 7872 hoi = 7884 hoi = 7896 hoi = 7902 hoi = 7897 hoi = 7912 hoi = 7891 } # Gladstone -> Mackay, Rockhampton, Leura, Gladstone, Rosedale, Monto, Murgon, Maryborough, Nambour, Bundaberg
 link = { vic = 2485 hoi = 7862 hoi = 7857 hoi = 7871 hoi = 7877 hoi = 7890 hoi = 7906 } # Clermont -> Moray Downs, Torrens Creek, Surbiton, Woorabinda, Theodore, Jackson
 link = { vic = 2486 hoi = 7928 hoi = 7918 } # Toowoomba -> Toowoomba, Kingaroy
 link = { vic = 2490 hoi = 10341 hoi = 10353 hoi = 10370 hoi = 10361 hoi = 7911 hoi = 7901 hoi = 7934 hoi = 7922 hoi = 10360 hoi = 10388 } # Charleville -> Yalleroi, Nive Downs, Westgate, Mitchell, Muckadilla, Eurombah, Toobeah, Surat, Coongoola, Durham Downs
@@ -758,7 +758,7 @@ link = { vic = 825 hoi = 4963 } # Arta -> Arta
 link = { vic = 824 vic = 826 hoi = 4870 hoi = 4819 hoi = 4871 hoi = 4918 }# Janina, Corfu -> Kerkyra, Ioannina, Pramanta, Morfi
 link = { vic = 853 hoi = 4769 hoi = 4717 } # Gjirokaster -> Vlore, Korce
 link = { vic = 833 hoi = 4964 hoi = 4919 } # Trikkala -> Agrinio, Thesprotiko
-link = { vic = 832 hoi = 4873 hoi = 4821 } # Volos -> Larisa, Katerini
+link = { vic = 832 hoi = 4873 hoi = 4821 hoi = 4921 } # Volos -> Larisa, Katerini, Volos
 link = { vic = 831 hoi = 4920 hoi = 4872 } # Larisa -> Trikala, Sykia
 link = { vic = 821 hoi = 4665 hoi = 4719 } # Edessa -> Edessa, Meliki
 link = { vic = 820 hoi = 4820 hoi = 4771 } # Grevena -> Paliouria, Kozani
@@ -1327,13 +1327,13 @@ link = { vic = 2220 hoi = 7638 } # Turks And Caicos -> Matthew Town
 link = { vic = 2219 hoi = 7521 hoi = 6433 hoi = 6537 hoi = 7545 } # Bahamas -> Grand Bahama, Andros, The Abacos, George Town
 # Pacific islands
 link = { vic = 2285 hoi = 9981 } # Galapagos -> Galapagos Islands
-link = { vic = 2543 vic = 2544 hoi = 6617 hoi = 14166 } # Apia, Pago Pago -> Samoa, American Samoa
+link = { vic = 2543 vic = 2544 vic = 2545 vic = 2546 vic = 2547 vic = 2548 hoi = 6617 hoi = 14166 } # Apia, Pago Pago, Rarotonga, Tongareva, Tokelau, Niue -> Samoa, American Samoa
 link = { vic = 658 hoi = 5934 hoi = 5933 hoi = 5812 hoi = 5825 hoi = 5811 hoi = 5782 hoi = 5795 } # Hawaii -> Hilo, Kailua Kona, Hana, Honolulu, Sunset Beach, Kaua'i Island, Ni'ihau Island
 link = { vic = 2623 hoi = 10669 } # Midway Island -> Midway Island
 link = { vic = 2526 hoi = 10665 hoi = 10668 } # Palmyra -> Palmyra, Johnston Island
 link = { vic = 686 hoi = 10666 hoi = 10667 } # Line Islands -> Jarvis Island, Christmas Island
 link = { vic = 801 hoi = 6619 } # Tahiti -> Papeete
-link = { vic = 2336 hoi = 6620 } # Easter Island -> Tahiti
+link = { vic = 2336 vic = 2552 hoi = 6620 } # Easter Island, Pitcairn -> Tahiti
 link = { vic = 1097 hoi = 6611 hoi = 6612 hoi = 6613 hoi = 6614 hoi = 6615 hoi = 6616 } # New Caledonia -> R�cifs d'Entrecasteux, Koumac, Kon�, Bourail, Thio, Noum�a
 link = { vic = 2535 hoi = 6610 hoi = 6609 } # New Hebrides -> Luganville, Ranuetlam
 link = { vic = 2536 hoi = 6582 } # Santa Cruz Islands -> Masoko
@@ -1351,8 +1351,8 @@ link = { vic = 2517 hoi = 6119 hoi = 10640 } # Guam -> Guam, Rota
 link = { vic = 2525 hoi = 10643 } # Marcus -> Marcus Island
 link = { vic = 1654 hoi = 14129 hoi = 10642 } # Bonin -> Bonin Islands, Iwo Jima
 link = { vic = 2524 hoi = 10664 } # Wake -> Wake Island
-link = { vic = 2454 vic = 2520 vic = 2553 hoi = 6622 hoi = 6624 hoi = 6618 hoi = 6621 hoi = 6623 } # Fiji, Taveuni, Tuamotus -> Fiji, Levuka, Yasawa Group, Vanua Levu, Vanua Balavu
-link = { vic = 2541 hoi = 10673 hoi = 10672 hoi = 10671 hoi = 10674 } # Ellice Islands -> Fongafale, Nukufetau, Nanumea, Nukulaelae
+link = { vic = 2540 vic = 2454 vic = 2520 vic = 2551 vic = 2553 hoi = 6622 hoi = 6624 hoi = 6618 hoi = 6621 hoi = 6623 } # Tonga, Fiji, Taveuni, Marquesas, Tuamotus -> Fiji, Levuka, Yasawa Group, Vanua Levu, Vanua Balavu
+link = { vic = 2541 vic = 2542 hoi = 10673 hoi = 10672 hoi = 10671 hoi = 10674 } # Ellice Islands, Wallis and Futuna -> Fongafale, Nukufetau, Nanumea, Nukulaelae
 link = { vic = 2527 hoi = 6586 hoi = 10637 hoi = 10638 hoi = 10639 hoi = 6512 hoi = 10670 } # Gilbert Islands -> Maiana, Apamama, Tarawa, Abaiang, Makin, Phoenix Island
 link = { vic = 2518 hoi = 6319 hoi = 6291 } # Palau -> South Palau, North Palau
 # Indonesia
@@ -1971,7 +1971,7 @@ link = { vic = 2770 hoi = 10586 hoi = 10587 hoi = 11452 } # Gulf of Cyprus -> Gu
 link = { vic = 2769 hoi = 10585 hoi = 11453 hoi = 11454 } # Palestinian Coast -> Coast of Palestine, Coast of Sinai, Eastern Mediterranean Sea
 link = { vic = 2771 hoi = 10589 } # Sea of Crete -> The Dodecanese
 link = { vic = 2768 hoi = 10584 hoi = 10583 hoi = 11451 } # Bay of Alexandria -> Nile Delta, Coast of Egypt, Sea of Crete
-link = { vic = 2772 hoi = 10591 hoi = 10590 hoi = 10588 hoi = 4921 } # Aegean Sea -> Northern Aegean Sea, Central Aegean Sea, Western Aegean Sea, Volos
+link = { vic = 2772 hoi = 10591 hoi = 10590 hoi = 10588 } # Aegean Sea -> Northern Aegean Sea, Central Aegean Sea, Western Aegean Sea
 link = { vic = 2761 hoi = 10575 } # Gulf of Venice -> Gulf of Venice
 link = { vic = 2762 hoi = 10576 } # Adriatic Sea -> Northern Coast of Dalmatia
 link = { vic = 2763 hoi = 10578 hoi = 10577 } # Straits of Otranto -> Southern Adriatic Sea, Southern Coast of Dalmatia
@@ -2005,7 +2005,7 @@ link = { vic = 2879 hoi = 11459 hoi = 11127 hoi = 11518 hoi = 11517 hoi = 11516 
 link = { vic = 2878 hoi = 11513 hoi = 11514 hoi = 11512 hoi = 11133 hoi = 11494 hoi = 11493 hoi = 11482 } # Cape Farwell, Norfolk Island -> Hauraki Gulf, Cape Karikari, North Cape, Cape Reinga, Kaipara Harbour, Northern East Tasman Sea, Northeastern North Tasman Sea
 link = { vic = 2865 hoi = 11505 hoi = 11257 hoi = 11506 } # Capricorn Bay -> Northern Swain Reefs, Smoky Cape, Moreton Bay
 link = { vic = 3220 hoi = 11484 hoi = 11486 hoi = 11132 hoi = 11485 hoi = 11495 hoi = 11483 } # Coast of Norfolk Island -> Northwestern North Tasman Sea, Western North Tasman Sea, Northern Central Tasman Sea, North Tasman Sea, Eastern North Tasman Sea, Northern North Tasman Sea
-link = { vic = 2864 hoi = 7891 hoi = 11507 hoi = 11531 hoi = 11533 hoi = 11255 hoi = 11532 hoi = 11508 hoi = 11256 } # Great Barrier Reef -> Bundaberg, Curtis Channel, Repulse Bay, Halifax Bay, Herald Cays, Abington Reef, Northern Swain Reef, Southern Swain Reefs
+link = { vic = 2864 hoi = 11507 hoi = 11531 hoi = 11533 hoi = 11255 hoi = 11532 hoi = 11508 hoi = 11256 } # Great Barrier Reef -> Curtis Channel, Repulse Bay, Halifax Bay, Herald Cays, Abington Reef, Northern Swain Reef, Southern Swain Reefs
 link = { vic = 2882 hoi = 11510 hoi = 11134 hoi = 11522 hoi = 11523 hoi = 11136 hoi = 11525 hoi = 11524 hoi = 11509 } # New Caledonian Sea -> Wreck Reef, New Caledonia Basin, Bay of Saint-Vincent, Bay of Sandal, Petrie Reef, Grand Passage, Bay of Nehoue, Saumarez Reef
 link = { vic = 2883 hoi = 11526 hoi = 11530 hoi = 11135 hoi = 11534 hoi = 11144 hoi = 11529 hoi = 11527 hoi = 11528 hoi = 11538 hoi = 11537 } # Coral Sea -> Frederick Reef, Marion Reef, Lihou Reef, Magdelaine Cays, Western Louisiadle Pass, Western Central Coral Sea, Northern D'Entrecasteaux Reef, Eastern Central Coral Sea, Eastern Louisiadle Pass, Pocklington Reef
 link = { vic = 3192 hoi = 11511 hoi = 11137 } # New Caledonia Basin -> Norfolk Ridge, Western New Herbides Trench
