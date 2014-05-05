@@ -1,6 +1,6 @@
 debug = {
   generic  = yes 
-  30 = yes # Leaders
+  30 = no # Leaders
   31 = no # Provinces
   32 = no # Ministers
   33 = no # Tech teams 
@@ -18,7 +18,7 @@ debug = {
   45 = no # Manpower 
   46 = no # Culture
   47 = no # Religion 
-  48 = no # Governments 
+  48 = yes # Governments 
   49 = no # Industry 
   50 = no # Urban terrain 
   51 = no # Diplomacy  
@@ -41,6 +41,7 @@ minimumProfitRate = 0.0005
 base_naval_support = 10 # From defines.lua
 navalBaseWorkers = 1000
 minimumNeutrality = 10
+neutralityPerCasualty = 0.00003
 minimumUnity = 10
 
 crude_oil = {
@@ -138,7 +139,7 @@ govResemblance = {
       absolute_monarchy = 0.05
       prussian_constitutionalism = 0
       hms_government = 1 
-      democracy = 0.1
+      democracy = 0.25
     }
     voting_system = {
       first_past_the_post = 0.1
@@ -310,6 +311,11 @@ govResemblance = {
       hms_government = 0.5
       democracy = 0.8
     }
+    conservative = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
   }
   NOR = {
     scale = 0.5
@@ -328,6 +334,73 @@ govResemblance = {
       numerical = yes
       value = 1
     }
+  }
+  DEN = {
+    scale = 0.5
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0.05
+      prussian_constitutionalism = 0.05
+      hms_government = 1
+      democracy = 0.8
+    }
+    socialist = {
+      target = upper_house
+      numerical = yes
+      value = 1
+    }
+  }
+  AST = {
+    scale = 0.9
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0
+      presidential_dictatorship = 0
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0
+      prussian_constitutionalism = 0
+      hms_government = 0.25
+      democracy = 1
+    }
+    voting_system = {
+      first_past_the_post = 0.05
+    }
+    press_rights = {
+      free_press = 0.1
+    }
+    vote_franschise = {
+      universal_voting = 0.2
+      landed_voting = -0.2 
+    }    
+  }
+  CAN = {
+    scale = 0.9
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0
+      presidential_dictatorship = 0
+      bourgeois_dictatorship = 0
+      absolute_monarchy = 0
+      prussian_constitutionalism = 0
+      hms_government = 0.25
+      democracy = 1
+    }
+    voting_system = {
+      first_past_the_post = 0.05
+    }
+    press_rights = {
+      free_press = 0.1
+    }
+    vote_franschise = {
+      universal_voting = 0.2
+      landed_voting = -0.2 
+    }
+    upper_house_composition = {
+      population_equal_weight = 0.1
+    }    
   }
   SPR = {
     scale = 0.75
@@ -360,6 +433,46 @@ govResemblance = {
       democracy = 0
     }
   }
+  SAF = {
+    scale = 0.9
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0.4
+      bourgeois_dictatorship = 0.05
+      absolute_monarchy = 0
+      prussian_constitutionalism = 0.25
+      hms_government = 0.8
+      democracy = 1
+    }
+    reactionary = {
+      target = upper_house
+      numerical = yes
+      value = 0.25
+    } 
+    vote_franschise = {
+      universal_voting = -0.2
+      landed_voting = 0.2 
+    }    
+  }
+  ARG = {
+    scale = 0.8
+    government = {
+      fascist_dictatorship = 0
+      proletarian_dictatorship = 0 
+      presidential_dictatorship = 0.5
+      bourgeois_dictatorship = 0.05
+      absolute_monarchy = 0
+      prussian_constitutionalism = 0.5
+      hms_government = 0.8
+      democracy = 1
+    }
+    conservative = {
+      target = upper_house
+      numerical = yes
+      value = 0.25
+    }    
+  }
 }
 
 unitTypes = {
@@ -377,6 +490,7 @@ unitTypes = {
   plane = tactical_bomber
   plane = strategic_bomber
   artillery = artillery_brigade
+  artillery = anti_tank_brigade
   irregular = militia_brigade
 }
 
@@ -428,6 +542,7 @@ shipConversions = {
 
 extraUnits = {
   armor_brigade = { tank 5 10 15 20 25 35 50 75 100 125 150 175 200 225 250 300 350 400 450 500 600 }
+  artillery_brigade = { artillery 5 10 15 20 25 35 40 50 60 75 100 125 150 175 200 225 250 300 350 400 450 500 600 }
 }
 
 hoiShips = {
@@ -459,7 +574,7 @@ vicShips = { # From units files, modified for obsolescence.
 techConversion = {
   infiltration = { infantry_activation }
   modern_army_doctrine = { grand_battle_plan mortorised_infantry }
-  aeronautics = { basic_aeroengine basic_small_fueltank basic_single_engine_airframe basic_aircraft_machinegun }
+  aeronautics = { single_engine_aircraft_design basic_aeroengine basic_small_fueltank basic_single_engine_airframe basic_aircraft_machinegun }
   great_war_experience = { lighttank_reliability tank_reliability engineer_brigade_activation }
   heavy_armament_dunno = { lighttank_brigade lighttank_gun lighttank_engine lighttank_armour tank_brigade tank_gun tank_engine tank_armour art_barrell_ammo art_carriage_sights }
   modern_divisional_structure = { artillery_research militia_research infantry_research }

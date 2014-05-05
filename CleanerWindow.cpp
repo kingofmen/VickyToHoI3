@@ -17,10 +17,6 @@
 using namespace std; 
 
 /* TODO:
-   Fix HoI 4921 7891 (should not convert from ocean)
-   Fix Vic 2540 2542 2545 2546 2547 2548 2551 2552 (should convert to something)
-   Consumer goods need?
-   Neutrality?
    Threat?
    Relation? 
 */
@@ -589,9 +585,9 @@ void WorkerThread::initialiseHoiSummaries () {
       if (!(*leaf)->safeGetObject("strategic_warfare")) continue;
     }
     allHoiCountries.push_back(*leaf);
-    extractStrength(*leaf, reserveObject);
     objvec armies = (*leaf)->getValue("theatre");
     for (objiter army = armies.begin(); army != armies.end(); ++army) {
+      extractStrength(*army, reserveObject);
       objvec navies = (*army)->getValue("navy");
       for (objiter navy = navies.begin(); navy != navies.end(); ++navy) {
 	objvec ships = (*navy)->getValue("ship");
@@ -628,6 +624,81 @@ void WorkerThread::initialiseHoiSummaries () {
     flags = (*hc)->safeGetObject("modifier");
     if (flags) flags->clear();
   }
+}
+
+void WorkerThread::calcCasualties (Object* war) {
+  Object* history = war->safeGetObject("history");
+  if (!history) return;
+
+  static int globalDate = days(remQuotes(vicGame->safeGetString("date")));
+  if (globalDate < 0) {
+    static bool printed = false;
+    if (printed) return;
+    Logger::logStream(Logger::Warning) << "Warning: Cannot calculate time from global date string "
+				       << vicGame->safeGetString("date")
+				       << ", no war casualties will be assigned. This means neutralities will be very high.\n";
+    printed = true;
+    return; 
+  }
+  
+  objvec leaves = history->getLeaves();
+  double totalWarCasualties = 0;
+  double weightedWarCasualties = 0;
+  for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
+    int battleDate = days((*leaf)->getKey());
+    if (0 > battleDate) continue;
+    Object* battle = (*leaf)->safeGetObject("battle");
+    if (!battle) continue;
+    double battleDays = globalDate - battleDate;
+    double decay = pow(0.5, battleDays / 365);
+    double currCasualties = calcCasualtiesInBattle(battle->safeGetObject("attacker"), decay);
+    currCasualties += calcCasualtiesInBattle(battle->safeGetObject("defender"), decay);
+    totalWarCasualties += currCasualties;
+    weightedWarCasualties += currCasualties*battleDays;     
+  }
+
+  double decay = 0;
+
+  if (0 < totalWarCasualties) {
+    weightedWarCasualties /= totalWarCasualties; // Average days since infliction
+    decay = pow(0.5, weightedWarCasualties / 365);
+    Logger::logStream(DebugMisc) << "Dated casualties in " << war->safeGetString("name") << ": " << totalWarCasualties << " " << decay << "\n";
+  }
+  else {
+    // Going to have to use the end date as decay factor
+    double enddate = days(remQuotes(war->safeGetString("action")));
+    if (0 > enddate) enddate = 365*50;
+    else enddate = globalDate - enddate;
+    decay = pow(0.5, enddate / 365);
+  }
+
+  totalWarCasualties = 0;
+  weightedWarCasualties = 0;
+  objvec battles = history->getValue("battle");
+  for (objiter battle = battles.begin(); battle != battles.end(); ++battle) {
+    Object* attacker = (*battle)->safeGetObject("attacker");
+    double currCasualties = calcCasualtiesInBattle(attacker, decay);
+    totalWarCasualties += currCasualties;
+    weightedWarCasualties += currCasualties * decay;
+    attacker = (*battle)->safeGetObject("defender");
+    currCasualties = calcCasualtiesInBattle(attacker, decay);
+    totalWarCasualties += currCasualties;
+    weightedWarCasualties += currCasualties * decay;
+  }
+  Logger::logStream(DebugMisc) << "Weighted total casualties in " << war->safeGetString("name") << ": "
+			       << totalWarCasualties << " "
+			       << weightedWarCasualties << " "
+			       << decay << "\n";
+}
+
+double WorkerThread::calcCasualtiesInBattle(Object* battle, double decay) {
+  if (!battle) return 0; 
+  setPointersFromVicTag(remQuotes(battle->safeGetString("country")));
+  if (!vicCountry) return 0;
+  double losses = battle->safeGetFloat("losses");
+  if (0 > losses) return 0; // This should never happen, but I've seen it in real saves, so...
+  vicCountry->resetLeaf("weightedCasualties", losses*decay + vicCountry->safeGetFloat("weightedCasualties"));
+  return losses; 
 }
 
 double WorkerThread::calcForceLimit (Object* navalBase) {
@@ -1199,8 +1270,15 @@ bool WorkerThread::convertDiplomacy () {
   hoiGame->unsetValue("active_war");
   hoiGame->unsetValue("previous_war"); 
 
-  objvec wars = vicGame->getValue("active_war");
+  objvec wars = vicGame->getValue("previous_war");
   for (objiter war = wars.begin(); war != wars.end(); ++war) {
+    calcCasualties(*war);
+  }
+  
+  wars = vicGame->getValue("active_war");
+  for (objiter war = wars.begin(); war != wars.end(); ++war) {
+    calcCasualties(*war); 
+    // Create the HoI war
     Object* hoiWar = new Object("active_war");
     hoiWar->setValue((*war)->safeGetObject("name"));
     hoiWar->setLeaf("limited", "no"); 
@@ -1210,6 +1288,7 @@ bool WorkerThread::convertDiplomacy () {
       setPointersFromVicTag(remQuotes((*vat)->getLeaf()));
       if (!hoiCountry) continue;
       hoiWar->setLeaf("attacker", addQuotes(hoiTag));
+      vicCountry->resetLeaf("at_war", "yes");
     }
     if (0 == hoiWar->getValue("attacker").size()) continue;
     
@@ -1218,6 +1297,7 @@ bool WorkerThread::convertDiplomacy () {
       setPointersFromVicTag(remQuotes((*vat)->getLeaf()));
       if (!hoiCountry) continue;
       hoiWar->setLeaf("defender", addQuotes(hoiTag));
+      vicCountry->resetLeaf("at_war", "yes");
     }
     if (0 == hoiWar->getValue("defender").size()) continue;
     hoiGame->setValue(hoiWar);
@@ -1237,7 +1317,6 @@ bool WorkerThread::convertDiplomacy () {
       else hoiWar->setLeaf("original_defender", "\"---\"");
     }    
   }
-  
   
   return true; 
 }
@@ -1262,6 +1341,8 @@ bool WorkerThread::convertGovernments () {
     government->setLeaf("chief_of_army", (*oc)->safeGetString("chief_of_army"));
     government->setLeaf("chief_of_navy", (*oc)->safeGetString("chief_of_navy"));
     government->setLeaf("chief_of_air", (*oc)->safeGetString("chief_of_air"));
+    government->setLeaf("election", (*oc)->safeGetString("election"));
+    government->setLeaf("last_election", (*oc)->safeGetString("last_election"));    
   }
   
   for (objiter nc = hoiCountries.begin(); nc != hoiCountries.end(); ++nc) {
@@ -1313,6 +1394,8 @@ bool WorkerThread::convertGovernments () {
     swap(newGov, hoiCountry, "chief_of_army");
     swap(newGov, hoiCountry, "chief_of_navy");
     swap(newGov, hoiCountry, "chief_of_air");
+    swap(newGov, hoiCountry, "election");
+    swap(newGov, hoiCountry, "last_election");
   }
 
   Logger::logStream(Logger::Game) << "Done with governments.\n"; 
@@ -1502,7 +1585,9 @@ bool WorkerThread::convertLeaders () {
 bool WorkerThread::convertMisc () {
   Logger::logStream(Logger::Game) << "Starting misc conversion.\n";
 
-  double neutralRate = 100 - configObject->safeGetFloat("minimumNeutrality", 10);
+  double minimumNeutrality = configObject->safeGetFloat("minimumNeutrality", 10);
+  double neutralRate = 100 - minimumNeutrality;
+  double neutralityPerCasualty = configObject->safeGetFloat("neutralityPerCasualty");
   double unityRate   = 100 - configObject->safeGetFloat("minimumUnity", 10);
 
   objvec rebels = vicGame->getValue("rebel_faction");
@@ -1524,12 +1609,19 @@ bool WorkerThread::convertMisc () {
     double unity = 100;
     double dissent = 0;
     double neutrality = 100;
+    double exhaustion = 0;
+    double influence = 0; 
     if (vicCountry) {
       unity = 100 - unityRate*vicCountry->safeGetFloat("avg_mil");
-      neutrality = 100 - neutralRate*vicCountry->safeGetFloat("revanchism");
+      bool atWar = (vicCountry->safeGetString("at_war", "no") == "yes");
+      neutrality = 100 + vicCountry->safeGetFloat("weightedCasualties") * neutralityPerCasualty * (atWar ? -1 : 1) - neutralRate*vicCountry->safeGetFloat("revanchism");
+      if (neutrality > 100) neutrality = 100;
+      if (neutrality < minimumNeutrality) neutrality = minimumNeutrality; 
       dissent  = vicCountry->safeGetFloat("totalRebels");
       dissent /= (1 + vicCountry->safeGetFloat("totalPop"));
-      dissent *= 100; 
+      dissent *= 100;
+      exhaustion = 0.1 * vicCountry->safeGetFloat("war_exhaustion");
+      influence = vicCountry->safeGetFloat("diplo_influence"); 
       if (0 < vicCountryToHoiProvsMap[vicCountry].size()) {
 	Logger::logStream(DebugMisc) << "Vic " << vicTag << " (HoI " << hoiTag << ") gets unity, dissent, neutrality "
 				     << unity << ", " << dissent << ", " << neutrality << ".\n";
@@ -1542,6 +1634,10 @@ bool WorkerThread::convertMisc () {
     hoiCountry->resetLeaf("national_unity", stringbuffer);
     sprintf(stringbuffer, "%.3f", dissent);
     hoiCountry->resetLeaf("dissent", stringbuffer);
+    sprintf(stringbuffer, "%.3f", exhaustion);
+    hoiCountry->resetLeaf("war_exhaustion", stringbuffer);
+    sprintf(stringbuffer, "%.3f", influence);
+    hoiCountry->resetLeaf("diplo_influence", stringbuffer);    
   }
 
   
@@ -2912,11 +3008,11 @@ void WorkerThread::convert () {
   if (!moveResources()) return;
   if (!moveIndustry()) return;
   if (!convertGovernments()) return; 
-  if (!convertDiplomacy()) return;
+  if (!convertDiplomacy()) return; // Sets casualties for Vicky nations. 
   if (!convertLeaders()) return; // Must come after OOBs or true navy size won't be set. 
   if (!convertTechs()) return;
   if (!moveStockpiles()) return;
-  if (!convertMisc()) return;
+  if (!convertMisc()) return; // Uses casualties, must be after diplomacy.
   if (!listUrbanProvinces()) return;
   if (!moveStrategicResources()) return; 
   cleanUp(); 

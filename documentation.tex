@@ -285,7 +285,13 @@ Factions are removed - no nation is a member of Axis, Allies, or
 Comintern. 
 
 Neutrality is linear in revanchism; it is 100 at 0 revanchism and
-\texttt{minimumNeutrality} at full revanchism. 
+\texttt{minimumNeutrality} at full revanchism. It is adjusted by the
+weighted number of casualties the nation has taken; the weight of a
+casualty is $2^{-n}$ where $n$ is the number of years since the
+battle. The rate of neutrality change per weighted casualty is given by
+the \texttt{neutralityPerCasualty} field in the config file. For
+nations actively at this is subtracted from neutrality; for those at
+peace, it is added. 
 
 Unity is linear in average militancy; it is 100 at 0 militancy and
 \texttt{minimumUnity} at 10 militancy. 

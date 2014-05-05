@@ -121,6 +121,8 @@ private:
   
   // Helpers:
   void assignCountries (Object* vicCountry, Object* hoiCountry);
+  void calcCasualties (Object* war);
+  double calcCasualtiesInBattle (Object* battle, double decay);   
   double calcForceLimit (Object* navalBase); 
   double calculateGovResemblance (Object* vicCountry, Object* hoiCountry);
   double calculateVicProduction (Object* vicProvince, string resource); 
