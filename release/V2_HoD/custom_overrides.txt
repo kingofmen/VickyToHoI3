@@ -1,6 +1,8 @@
 countries = {
-  SCA = NOR
-  BAV = GER
+  SCA = NOR 
+  BAV = GER 
+  BRU = INO
+  SIN = PAK 
 }
 provinces = {
   
