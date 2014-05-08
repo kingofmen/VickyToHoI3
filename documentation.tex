@@ -266,6 +266,45 @@ Laws convert in one of three ways:
   possible value directly translates to a HoI law. 
 \end{itemize}
 
+\section{Diplomacy}
+
+Wars, alliances, and vassalisations convert one for one; wargoals are
+ignored. Factions are removed - no nation is a member of Axis, Allies, or
+Comintern. 
+
+Neutrality is linear in revanchism; it is 100 at 0 revanchism and
+\texttt{minimumNeutrality} at full revanchism. It is adjusted by the
+weighted number of casualties the nation has taken; the weight of a
+casualty is $2^{-n}$ where $n$ is the number of years since the
+battle. The rate of neutrality change per weighted casualty is given by
+the \texttt{neutralityPerCasualty} field in the config file. For
+nations actively at this is subtracted from neutrality; for those at
+peace, it is added. 
+
+Diplomatic influence converts one-for-one from diplomacy points. 
+
+Relations convert directly. Threat is calculated from the relative
+army sizes by a stepwise function which is best summarised by code:
+\begin{verbatim}
+if      (armyRatio < 0.5) threat = 0;
+else if (armyRatio < 1.0) threat = (armyRatio - 0.5)*0.33;
+else if (armyRatio < 1.5) threat = (0.5*0.33 + armyRatio-1);
+else                      threat = (0.5*0.83 + (1-0.5*0.83)*(2/M_PI)*atan(armyRatio-1.5));
+\end{verbatim}
+where \texttt{armyRatio} is the amount of infantry of the threatening
+nation divided by that of the threatened one. This gives a number
+between zero and one, which is then multiplied into
+\texttt{maxWarThreat} or \texttt{maxPaxThreat} from the config
+file, depending on whether the nations are at war or not. If they are
+at peace, this is further modified by a factor
+\begin{eqnarray*}
+P = \frac{2}{\pi}\arctan\left(\frac{1+B_t}{1+B_o}-1\right)
+\end{eqnarray*}
+where $B_t$ is the badboy of the threatening nation and $B_o$ that of
+the threatened nation. To summarise, this means that a nation only
+feels threat from a country it is at peace with if that country has a
+larger badboy than itself.
+
 \section{Miscellanea}
 
 Manpower, officers, and resource stockpiles are distributed 
@@ -277,21 +316,6 @@ cases \texttt{country} refers to the top-level nation
 object. Note that for HoI, \texttt{cap\_pool} is not present in the
 input save; it is constructed by the converter, and moved to the
 nation's capital province after resources have been distributed. 
-
-Wars, alliances, and vassalisations convert one for one; wargoals are
-ignored. 
-
-Factions are removed - no nation is a member of Axis, Allies, or
-Comintern. 
-
-Neutrality is linear in revanchism; it is 100 at 0 revanchism and
-\texttt{minimumNeutrality} at full revanchism. It is adjusted by the
-weighted number of casualties the nation has taken; the weight of a
-casualty is $2^{-n}$ where $n$ is the number of years since the
-battle. The rate of neutrality change per weighted casualty is given by
-the \texttt{neutralityPerCasualty} field in the config file. For
-nations actively at this is subtracted from neutrality; for those at
-peace, it is added. 
 
 Unity is linear in average militancy; it is 100 at 0 militancy and
 \texttt{minimumUnity} at 10 militancy. 

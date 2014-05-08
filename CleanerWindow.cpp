@@ -17,8 +17,7 @@
 using namespace std; 
 
 /* TODO:
-   Threat?
-   Relation? 
+
 */
 
 /* Nice to have:
@@ -1284,21 +1283,31 @@ bool WorkerThread::convertDiplomacy () {
     hoiWar->setLeaf("limited", "no"); 
     hoiWar->setValue((*war)->safeGetObject("action"));
     objvec vicAttackers = (*war)->getValue("attacker");
+    objvec vicDefenders = (*war)->getValue("defender");    
     for (objiter vat = vicAttackers.begin(); vat != vicAttackers.end(); ++vat) {
       setPointersFromVicTag(remQuotes((*vat)->getLeaf()));
       if (!hoiCountry) continue;
       hoiWar->setLeaf("attacker", addQuotes(hoiTag));
       vicCountry->resetLeaf("at_war", "yes");
+      for (objiter vdf = vicDefenders.begin(); vdf != vicDefenders.end(); ++vdf) {
+	string defTag = remQuotes((*vdf)->getLeaf());
+	Object* relation = vicCountry->getNeededObject(defTag);
+	relation->resetLeaf("war", "yes"); 
+      }
     }
-    if (0 == hoiWar->getValue("attacker").size()) continue;
     
-    objvec vicDefenders = (*war)->getValue("defender");
-    for (objiter vat = vicDefenders.begin(); vat != vicDefenders.end(); ++vat) {
-      setPointersFromVicTag(remQuotes((*vat)->getLeaf()));
+    for (objiter vdf = vicDefenders.begin(); vdf != vicDefenders.end(); ++vdf) {
+      setPointersFromVicTag(remQuotes((*vdf)->getLeaf()));
       if (!hoiCountry) continue;
       hoiWar->setLeaf("defender", addQuotes(hoiTag));
       vicCountry->resetLeaf("at_war", "yes");
+      for (objiter vat = vicAttackers.begin(); vat != vicAttackers.end(); ++vat) {
+	string attTag = remQuotes((*vat)->getLeaf()); 
+	Object* relation = vicCountry->getNeededObject(attTag);
+	relation->resetLeaf("war", "yes"); 
+      }
     }
+    if (0 == hoiWar->getValue("attacker").size()) continue;
     if (0 == hoiWar->getValue("defender").size()) continue;
     hoiGame->setValue(hoiWar);
 
@@ -1316,6 +1325,52 @@ bool WorkerThread::convertDiplomacy () {
       if (hoiCountry) hoiWar->setLeaf("original_defender", addQuotes(hoiTag));
       else hoiWar->setLeaf("original_defender", "\"---\"");
     }    
+  }
+
+  double maxWarThreat = configObject->safeGetFloat("maxWarThreat", 50);
+  double maxPaxThreat = configObject->safeGetFloat("maxPaxThreat", 25);
+  
+  for (objiter hc1 = allHoiCountries.begin(); hc1 != allHoiCountries.end(); ++hc1) {
+    setPointersFromHoiCountry(*hc1);
+    Object* vc1 = vicCountry;
+    Object* highestThreat = 0; 
+    for (objiter hc2 = allHoiCountries.begin(); hc2 != allHoiCountries.end(); ++hc2) {
+      Object* relation = (*hc1)->getNeededObject((*hc2)->getKey());
+      relation->resetLeaf("relation", "0.000");
+      relation->resetLeaf("threat", "0.000");
+
+      if (!vc1) continue;      
+      setPointersFromHoiCountry(*hc2);
+      if (!vicCountry) continue;
+      if (vicTag == "REB") continue; 
+      if (vc1 == vicCountry) continue;
+      if ((*hc1)->getKey() == "REB") continue;
+      
+      bool war = false;
+      Object* vicRelation = vc1->safeGetObject(vicTag);
+      if (vicRelation) {
+	relation->resetLeaf("value", vicRelation->safeGetString("value"));
+	if (vicRelation->safeGetString("war", "no") == "yes") war = true;
+      }
+
+      double armyRatio = vicCountry->safeGetFloat("infantry");
+      armyRatio /= (1 + vc1->safeGetFloat("infantry"));
+      
+      double threat = 0;
+      if      (armyRatio < 0.5) threat = 0;
+      else if (armyRatio < 1.0) threat = (armyRatio - 0.5)*0.33;
+      else if (armyRatio < 1.5) threat = (0.5*0.33 + armyRatio-1);
+      else                      threat = (0.5*0.83 + (1-0.5*0.83)*(2/M_PI)*atan(armyRatio-1.5));
+      threat *= war ? maxWarThreat : maxPaxThreat;
+
+      if (!war) threat *= (2/M_PI)*atan((1+vicCountry->safeGetFloat("badboy") / (1+vc1->safeGetFloat("badboy"))) - 1);
+
+      sprintf(stringbuffer, "%.3f", threat);
+      relation->resetLeaf("threat", stringbuffer);
+      if ((!highestThreat) || (threat > highestThreat->safeGetFloat("threat"))) highestThreat = relation;
+    }
+    if (highestThreat) (*hc1)->resetLeaf("highest_threat", addQuotes(highestThreat->getKey()));
+    else (*hc1)->resetLeaf("highest_threat", "\"---\""); 
   }
   
   return true; 
@@ -1630,6 +1685,7 @@ bool WorkerThread::convertMisc () {
 
     sprintf(stringbuffer, "%.3f", neutrality);
     hoiCountry->resetLeaf("neutrality", stringbuffer);
+    hoiCountry->resetLeaf("effective_neutrality", stringbuffer);
     sprintf(stringbuffer, "%.3f", unity);
     hoiCountry->resetLeaf("national_unity", stringbuffer);
     sprintf(stringbuffer, "%.3f", dissent);

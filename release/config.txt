@@ -43,6 +43,8 @@ navalBaseWorkers = 1000
 minimumNeutrality = 10
 neutralityPerCasualty = 0.00003
 minimumUnity = 10
+maxWarThreat = 50
+maxPaxThreat = 25
 
 crude_oil = {
   oil = 1.0
