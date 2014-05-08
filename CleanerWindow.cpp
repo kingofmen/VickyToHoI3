@@ -348,6 +348,13 @@ void WorkerThread::setPointersFromVicTag (string tag) {
   vicCountry = hoiCountryToVicCountryMap[hoiCountry];
 }
 
+void WorkerThread::setPointersFromHoiTag (string tag) {
+  hoiTag = tag;
+  vicTag = hoiTagToVicTagMap[hoiTag];
+  hoiCountry = hoiTagToHoiCountryMap[hoiTag];
+  vicCountry = hoiCountryToVicCountryMap[hoiCountry];
+}
+
 bool WorkerThread::swap (Object* one, Object* two, string key) {
   if (one == two) return true; 
   Object* valOne = one->safeGetObject(key);
@@ -2046,14 +2053,23 @@ bool WorkerThread::convertProvinceOwners () {
     }
 
     objvec inputCores = (*hp)->getValue("core");
+    (*hp)->unsetValue("core"); 
     vector<string> inputCoreTags;
-    for (objiter ic = inputCores.begin(); ic != inputCores.end(); ++ic) inputCoreTags.push_back(remQuotes((*ic)->getLeaf()));
     for (set<string>::iterator vct = vicCoreTags.begin(); vct != vicCoreTags.end(); ++vct) {
-      string hoiCoreTag = vicTagToHoiTagMap[*vct];
-      Logger::logStream(DebugCores) << nameAndNumber(*hp) << " is core of Vic " << (*vct) << " and hence HoI " << hoiCoreTag << "\n"; 
-      if (find(inputCoreTags.begin(), inputCoreTags.end(), hoiCoreTag) != inputCoreTags.end()) continue;
-      (*hp)->setLeaf("core", addQuotes(hoiCoreTag));
-      inputCoreTags.push_back(hoiCoreTag); 
+      setPointersFromHoiTag(vicTagToHoiTagMap[*vct]);
+      if (0 == hoiCountryToHoiProvsMap[hoiCountry].size()) continue; // No Vicky revolters. 
+      Logger::logStream(DebugCores) << nameAndNumber(*hp) << " is core of Vic " << (*vct) << " and hence HoI " << hoiTag << "\n"; 
+      if (find(inputCoreTags.begin(), inputCoreTags.end(), hoiTag) != inputCoreTags.end()) continue;
+      (*hp)->setLeaf("core", addQuotes(hoiTag));
+      inputCoreTags.push_back(hoiTag); 
+    }
+
+    // Put back HoI revolter cores. 
+    for (objiter ic = inputCores.begin(); ic != inputCores.end(); ++ic) {
+      setPointersFromHoiTag(remQuotes((*ic)->getLeaf())); 
+      if (find(inputCoreTags.begin(), inputCoreTags.end(), hoiTag) != inputCoreTags.end()) continue;
+      if (0 < hoiCountryToHoiProvsMap[hoiCountry].size()) continue;
+      (*hp)->setLeaf("core", addQuotes(hoiTag)); 
     }
 
     

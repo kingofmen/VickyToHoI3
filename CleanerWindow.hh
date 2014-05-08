@@ -135,6 +135,7 @@ private:
   Object* selectHoiProvince (Object* vicProv);
   string selectHoiProvince (string vicLocation, Object* hoiCountry);
   void setPointersFromHoiCountry (Object* hc);
+  void setPointersFromHoiTag (string tag);  
   void setPointersFromVicCountry (Object* vc);
   void setPointersFromVicProvince (Object* vp);
   void setPointersFromVicTag (string tag);
