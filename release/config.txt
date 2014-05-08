@@ -8,7 +8,7 @@ debug = {
   35 = no # Techs 
   36 = no # Buildings 
   37 = no # Units 
-  38 = no # Stockpiles 
+  38 = yes # Stockpiles 
   39 = no # Laws
   40 = no # Misc
   41 = no # Revolters 
@@ -18,7 +18,7 @@ debug = {
   45 = no # Manpower 
   46 = no # Culture
   47 = no # Religion 
-  48 = yes # Governments 
+  48 = no # Governments 
   49 = no # Industry 
   50 = no # Urban terrain 
   51 = no # Diplomacy  
@@ -759,17 +759,17 @@ laws = {
 }
 
 stockpiles = {
-  manpower       = { country country soldiers }
-  officers       = { country country officers }
-  convoys        = { country country trueNavySize }
-  escorts        = { country country trueNavySize }
-  metal          = { cap_pool stockpile steel }
-  supplies       = { cap_pool stockpile ammunition barrels small_arms aeroplanes canned_food artillery steamer_convoys }
-  money          = { cap_pool country money }
-  energy         = { cap_pool stockpile coal }
-  rare_materials = { cap_pool stockpile dye tropical_wood opium sulphur rubber }
-  crude_oil      = { cap_pool stockpile oil }
-  fuel           = { cap_pool stockpile fuel }
+  manpower       = { country country 0 soldiers }
+  officers       = { country country 0 officers }
+  convoys        = { country country 0 trueNavySize }
+  escorts        = { country country 0 trueNavySize }
+  metal          = { cap_pool stockpile 1000 steel }
+  supplies       = { cap_pool stockpile 1000 ammunition barrels small_arms aeroplanes canned_food artillery steamer_convoys }
+  money          = { cap_pool country 100 money }
+  energy         = { cap_pool stockpile 1000 coal }
+  rare_materials = { cap_pool stockpile 1000 dye tropical_wood opium sulphur rubber }
+  crude_oil      = { cap_pool stockpile 1000 oil }
+  fuel           = { cap_pool stockpile 1000 fuel }
 }
 
 srConversion = {

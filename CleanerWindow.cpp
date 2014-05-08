@@ -2537,8 +2537,8 @@ bool WorkerThread::moveStockpiles () {
   Object* piles = configObject->getNeededObject("stockpiles");
   objvec stocks = piles->getLeaves();
   for (objiter stock = stocks.begin(); stock != stocks.end(); ++stock) {
-    if (3 <= (*stock)->numTokens()) continue;
-    Logger::logStream(Logger::Error) << "Error: Stockpile entry " << (*stock) << " should have at least three tokens.\n";
+    if (4 <= (*stock)->numTokens()) continue;
+    Logger::logStream(Logger::Error) << "Error: Stockpile entry " << (*stock) << " should have at least four tokens.\n";
     return false; 
   }
   map<string, double> totalHoiStuff;
@@ -2547,6 +2547,7 @@ bool WorkerThread::moveStockpiles () {
     setPointersFromHoiCountry(*hc);
     for (objiter stock = stocks.begin(); stock != stocks.end(); ++stock) {
       string hoiKey = (*stock)->getKey();
+
       Object* target = hoiCountry;
       if ((*stock)->getToken(0) != "country") target = hoiCountry->getNeededObject((*stock)->getToken(0));
       double hoiAmount = target->safeGetFloat(hoiKey);
@@ -2557,7 +2558,7 @@ bool WorkerThread::moveStockpiles () {
       if (0 == vicCountryToHoiProvsMap[vicCountry].size()) continue;
       target = vicCountry;
       if ((*stock)->getToken(1) != "country") target = vicCountry->getNeededObject((*stock)->getToken(1));
-      for (int i = 2; i < (*stock)->numTokens(); ++i) {
+      for (int i = 3; i < (*stock)->numTokens(); ++i) {
 	string vicKey = (*stock)->getToken(i);
 	totalVicStuff[vicKey] += target->safeGetFloat(vicKey);
       }
@@ -2571,7 +2572,6 @@ bool WorkerThread::moveStockpiles () {
     Logger::logStream(DebugStockpiles) << "Stockpiles for " << vicTag << " (HoI " << hoiTag << "):\n";    
     for (objiter stock = stocks.begin(); stock != stocks.end(); ++stock) {
       string hoiKey = (*stock)->getKey();
-      string vicKey = (*stock)->getToken(2);
       Object* hoiTarget = hoiCountry;
       if ((*stock)->getToken(0) == "cap_pool") {
 	hoiTarget = hoiProvIdToHoiProvMap[hoiCountry->safeGetString("capital", "BLAH")];
@@ -2582,11 +2582,14 @@ bool WorkerThread::moveStockpiles () {
       Object* vicTarget = vicCountry;
       if ((*stock)->getToken(1) != "country") vicTarget = vicCountry->getNeededObject((*stock)->getToken(1));
       double vicAmount = 0;
-      for (int i = 2; i < (*stock)->numTokens(); ++i) {
+      double vicTotal = 1; 
+      for (int i = 3; i < (*stock)->numTokens(); ++i) {
 	string vicKey = (*stock)->getToken(i);
 	vicAmount += vicTarget->safeGetFloat(vicKey);
+	vicTotal += totalVicStuff[vicKey]; 
       }
-      int hoiAmount = (int) floor(0.5 + vicTarget->safeGetFloat(vicKey) * totalHoiStuff[hoiKey] / (1 + totalVicStuff[vicKey]));
+      int hoiAmount = (int) floor(0.5 + vicAmount * totalHoiStuff[hoiKey] / vicTotal); 
+      hoiAmount += (*stock)->tokenAsFloat(2); 
       hoiTarget->resetLeaf(hoiKey, hoiAmount);
       Logger::logStream(DebugStockpiles) << "  " << hoiKey << ": " << hoiAmount << "\n";
     }
