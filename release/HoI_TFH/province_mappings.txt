@@ -2319,19 +2319,19 @@ link = { vic = 1289 hoi = 9492 hoi = 9465 } # Sukkur -> Saruna, Larkana
 link = { vic = 1294 hoi = 5800 hoi = 5786 } # Patan -> Nagar Parkar, Tando Alahyar
 link = { vic = 1290 hoi = 9518 hoi = 5772 hoi = 9540 } # Umarkot -> Nawabshah, Hyderabad, Mirpur Khas
 link = { vic = 1218 hoi = 9288 } # Peshawar -> Bhakkar
-link = { vic = 1227 hoi = 9344 } # Lahore -> Lahore
+link = { vic = 1227 hoi = 9344 hoi = 9373 } # Lahore -> Lahore, Sahiwal
 link = { vic = 1224 hoi = 9319 } # Srinagar -> Rawalpindi
 link = { vic = 1230 hoi = 9289 hoi = 9193 hoi = 9257 } # Attock -> Islamabad, Baltit, Gilgit
 link = { vic = 1229 hoi = 5751 } # Sialkot -> Gujranwala
 link = { vic = 1232 hoi = 9318 hoi = 9343 hoi = 9256 } # Shahpur -> Jhang, Multan, Peshawar
 link = { vic = 1236 hoi = 9406 hoi = 5828 hoi = 5853 } # Delhi -> Delhi, Hathras, Moradabad
 link = { vic = 1239 hoi = 9290 } # Meerut -> Upshi
-link = { vic = 1240 hoi = 9345 hoi = 9374 } # Agra -> Ludhiana, Moga
+link = { vic = 1240 hoi = 9374 } # Agra -> Moga
 link = { vic = 1268 hoi = 9435 hoi = 9467 } # Jaipur -> Sujangarh, Nagaur
 link = { vic = 1233 hoi = 9317 hoi = 5922 hoi = 5935 } # Amritsar -> Dera Ghazi Khan, Srinagar, Pathankot
 link = { vic = 1237 hoi = 5839 } # Panipat -> Panipat
 link = { vic = 1267 hoi = 9405 } # Bikaner -> Bikaner
-link = { vic = 1234 hoi = 9373 } # Firozpur -> Chishtian Mandi
+link = { vic = 1234 hoi = 9345 } # Firozpur -> Ludhiana
 link = { vic = 1228 hoi = 9372 hoi = 5785 hoi = 5798 } # Multan -> Rahimyar Khan, Taunsa, Muzaddagarh
 link = { vic = 1231 hoi = 9404 hoi = 9433 hoi = 5799 } # Bahawalpur -> Nawakot, Sukkur, Bahawalpur
 link = { vic = 1266 vic = 1264 hoi = 9494 hoi = 9519 hoi = 9558 } # MANY-TO-MANY: Jodhpur, Ajmer -> Jodhpur, Barmer, Ganga Sera
