@@ -1414,30 +1414,30 @@ link = { vic = 2123 vic = 2124 hoi = 11386 } # Comoros, Mayotte -> The Comoros
 link = { vic = 2087 hoi = 8054 hoi = 8019 } # Cape Town -> Cape Town, Lamberts Bay
 link = { vic = 2096 hoi = 8031 } # Port Elizabeth -> Port Elizabeth
 link = { vic = 2091 vic = 2089 vic = 2090 hoi = 8039 } # Mossel Bay, Worcester, Swettenham -> George
-link = { vic = 2111 hoi = 7965 } # Durban -> Durban
+link = { vic = 2111 vic = 2112 hoi = 7965 } # Durban, Ladysmith -> Durban
 link = { vic = 2100 hoi = 7987 } # Umtata -> Port Edward
 link = { vic = 2098 vic = 2099 hoi = 8005 } # Bisho, Mathele -> East London
 link = { vic = 2101 hoi = 7996 } # Bloemfontein -> Bloemfontein
 link = { vic = 2102 hoi = 7978 } # Winburg -> Johannesburg
 link = { vic = 2558 hoi = 8004 } # De Aar -> De Aar
 link = { vic = 2104 vic = 2103 vic = 2097 hoi = 7986 } # Thaba Bosiu, Philippolis, Graaf Reinet -> Maseru
-link = { vic = 2092 hoi = 8013 hoi = 8022 hoi = 8003 } # Beaufort -> Richmond, Graaff-Reinet, Loxton
-link = { vic = 2093 hoi = 8001 hoi = 7994 hoi = 7993 hoi = 10425 } # Calvinia -> Sutherland, Williston, Calvinia, Marydale
+link = { vic = 2092 hoi = 8013 hoi = 8003 } # Beaufort -> Richmond, Loxton
+link = { vic = 2093 hoi = 8001 hoi = 7994 hoi = 7993 } # Calvinia -> Sutherland, Williston, Calvinia
 link = { vic = 2088 hoi = 7976 hoi = 7970 hoi = 7983 } # Springbok -> Oranjemund, Aggeneys, Garies
 link = { vic = 2051 hoi = 10340 hoi = 10351 } # Inhambane -> Inhambane, Xai-Xai
-link = { vic = 2113 vic = 2112 hoi = 7960 } # Ulundi, Ladysmith -> Ulundi
+link = { vic = 2113 hoi = 7960 } # Ulundi -> Ubombo
 link = { vic = 2049 vic = 2050 hoi = 10382 } # Lourenzo Marques, Chaimate -> Lourenco Marques
-link = { vic = 2114 hoi = 10395 } # Mbabane -> Nelspruit
+link = { vic = 2114 hoi = 8022 hoi = 10395 } # Mbabane -> Mbabana, Nelspruit
 link = { vic = 2110 vic = 2109 hoi = 10357 hoi = 10326 } # MANY-TO-MANY: Thohoyandu, Lydenburg -> Massingir, Mossurize
-link = { vic = 2107 vic = 2106 vic = 2105 hoi = 10426 } # Klerksdorp, Witwatersrand, Pretoria -> Mafikeng
-link = { vic = 2095 vic = 2094 hoi = 10436 hoi = 10416 } # MANY-TO-MANY: Dikathong, Kimberley -> Kimberley, Upington
+link = { vic = 2107 vic = 2106 vic = 2105 hoi = 10426 hoi = 10366 hoi = 8038 } # Klerksdorp, Witwatersrand, Pretoria -> Mafikeng, Zoekmakaar, Pretoria
+link = { vic = 2095 vic = 2094 hoi = 10436 hoi = 10416 hoi = 10425 } # Dikathong, Kimberley -> Kimberley, Upington, Kuruman
 link = { vic = 2084 hoi = 10381 hoi = 10365 } # Angra Pequena -> Pomona, Hottentots Bay
 link = { vic = 2086 hoi = 10393 hoi = 10406 } # Karasburg -> Ai-Ais, Karasburg
 link = { vic = 2085 hoi = 7997 } # Nu-gouses -> Keetmanshoop
 link = { vic = 2083 hoi = 10350 } # Walvis Bay -> Walvis Bay
-link = { vic = 2074 hoi = 10366 } # Gaborone -> Polokwane
-link = { vic = 2574 vic = 2075 hoi = 8038 } # Mochudi, Serowe -> Rustenburg
-link = { vic = 2077 hoi = 10407 hoi = 8023 hoi = 10394 } # Tsabong -> Gaberones, Maun, Tshabong
+link = { vic = 2074 hoi = 10407 } # Gaborone -> Gaberones
+link = { vic = 2574 vic = 2075 hoi = 8023 } # Mochudi, Serowe -> Serowe
+link = { vic = 2077 hoi = 10394 } # Tsabong -> Tshabong
 link = { vic = 2078 hoi = 8021 } # Windhoek -> Windhoek
 link = { vic = 2061 vic = 2059 hoi = 10274 } # Angoche, Quelimane -> Angoche
 link = { vic = 2057 vic = 2052 vic = 2073 hoi = 10300 hoi = 10311 hoi = 10319 } # MANY-TO-MANY: Sofala, Massekisse, Masvingo -> Quelimane, Vila Pery, Beira
@@ -2456,7 +2456,7 @@ link = { vic = 1337 hoi = 6018 hoi = 6009 hoi = 7673 } # Prome -> Paungde, Kama,
 link = { vic = 1336 hoi = 6032 hoi = 6019 hoi = 7666 } # Magwe -> Shwegyin, Mon, Toungoo
 link = { vic = 1333 hoi = 6057 hoi = 6045 hoi = 6072 hoi = 7692 } # Toungoo -> Yin Baing, Kadaingti, Mae Ramat, Mae Wong
 link = { vic = 1335 hoi = 7674 hoi = 7680 } # Kyaukse -> Mawchi, Kyaukhnyat
-link = { vic = 1338 hoi = 7667 hoi = 9685 hoi = 9672 hoi = 7628 } # Taunggyi -> Mae Hong Son, Chiang Dao, Chiang Rai, Mong Ma
+link = { vic = 1338 hoi = 7667 hoi = 9685 hoi = 9672 } # Taunggyi -> Mae Hong Son, Chiang Dao, Chiang Rai
 link = { vic = 1356 hoi = 7636 hoi = 7643 hoi = 7651 hoi = 5962 hoi = 7644 hoi = 7658 hoi = 5982 hoi = 5992 hoi = 5983 hoi = 5973 } # Luang Prabang -> Muang Sing, Muang Pakbeng, Louangphabang, Xam Nua, Muang Xon, Muang Souy, Ban Ban, N�ng Het, Qui Ch�u, Nam San
 link = { vic = 1355 hoi = 7677 hoi = 7681 hoi = 7683 } # Chiang Mai -> Ban Mae La  Luang, Chiang Mai, Thoen
 link = { vic = 2572 hoi = 9697 hoi = 7688 hoi = 7684 } # Nan -> Ngao, Loei, Uttaradit
@@ -2471,7 +2471,7 @@ link = { vic = 1358 hoi = 7690 hoi = 7686 hoi = 7695 hoi = 7689 } # Udon Thani -
 link = { vic = 1341 hoi = 9546 hoi = 9563 } # Putao -> Mawhun, Katha
 link = { vic = 1340 hoi = 9621 hoi = 9640 hoi = 9657 hoi = 7619 hoi = 7610 hoi = 7627 hoi = 7635 hoi = 7642 } # Lashio -> Keng Hkam, Taunggyi, Mong Pan, Maymyo, Mandalay, Kyaukse, Kalaw, Samka
 link = { vic = 1334 hoi = 7657 hoi = 7650 hoi = 7656 hoi = 7641 hoi = 7634 hoi = 7618 } # Ava -> Loikaw, Pyinmana, Allanmyo, Meiktila, Chauk, Pakokku
-link = { vic = 1342 hoi = 9602 hoi = 9583 hoi = 7584 hoi = 7602 } # Myitkyina -> Namlan, Mogok, Kyunhla, Monywa
+link = { vic = 1342 hoi = 9583 hoi = 7584 hoi = 7602 } # Myitkyina -> Mogok, Kyunhla, Monywa
 link = { vic = 1339 hoi = 7665 hoi = 7649 hoi = 5972 hoi = 5991 hoi = 5981 hoi = 5961 hoi = 5952 hoi = 5942 hoi = 7626 hoi = 5928 hoi = 5914 hoi = 7617 hoi = 7609 hoi = 7594 hoi = 7601 hoi = 7583 hoi = 7571 hoi = 9562 hoi = 9525 } # Haka -> Thayetmyo, Minbu, Ngape, Mindon, An, Pwinbyu, Arakan Yoma, Pen, Pauk, Mi, Daletme, Khreum, Yinmabin, Mingin, Gangaw, Kalemyo, Mawlaik, Pinlebu, Tamanthi
 # CHINA
 link = { vic = 1485 hoi = 5747 hoi = 5737 hoi = 5769 hoi = 5780 } # Taibei -> Hsinchu, T'aipei, Fengyuan, Hsilo
@@ -2498,7 +2498,7 @@ link = { vic = 1607 hoi = 5652 hoi = 5664 hoi = 5663 hoi = 5674 hoi = 5684 } # J
 link = { vic = 1546 hoi = 5683 hoi = 5672 hoi = 5682 hoi = 5692 } # Guangxin -> Guangze, Hengfeng, Yingtan, Lichuan
 link = { vic = 1483 hoi = 5701 hoi = 5694 hoi = 5693 hoi = 5708 hoi = 5700 hoi = 5718 } # Jianning -> Jianyang, Shuiji, Futun Xi, Jianning, Shaowu, Sanming
 link = { vic = 1486 hoi = 5717 hoi = 5726 hoi = 5745 hoi = 5734 hoi = 5744 hoi = 5756 hoi = 5767 } # Tingzhou -> Yong'an, Zhangping, Hua'an, Longyan, Kanshi, Jingcheng, Ting Jiang
-link = { vic = 1602 hoi = 9413 hoi = 9475 hoi = 9500 hoi = 9526 hoi = 9547 hoi = 9584 } # Dali -> Gongshan, Fugong, Eryuan, Lushui, Tengchong, Longling
+link = { vic = 1602 hoi = 9413 hoi = 9475 hoi = 9500 hoi = 9526 hoi = 9547 hoi = 9584 hoi = 9602 hoi = 7628 } # Dali -> Gongshan, Fugong, Eryuan, Lushui, Tengchong, Longling, Hsenwei, Mongpayak
 link = { vic = 1603 hoi = 9603 hoi = 7603 hoi = 7572 hoi = 9585 } # Puer -> Lancaing, Simao, Xinping, Zhenyuan
 link = { vic = 1502 hoi = 7573 hoi = 7586 hoi = 7605 hoi = 7596 hoi = 5880 hoi = 7585 hoi = 7595 hoi = 5846 hoi = 5847 hoi = 5862 hoi = 5861 } # Nanning -> Guangnan, Bose, Cao Bang, Napo, Gejiu, Yuxi, Honghe, Binyang, Litang, Nanning, Daxin
 link = { vic = 1504 hoi = 7575 hoi = 5801 hoi = 7564 hoi = 7553 hoi = 5788 hoi = 7563 hoi = 7587 hoi = 5866 hoi = 5830 } # Pingle -> Liuzhou, Mengshan, Lipu, Guilin, Yongfu, Liuzhou, Heshan, Mashan, Guigang
@@ -2545,7 +2545,7 @@ link = { vic = 1476 hoi = 5471 hoi = 5452 hoi = 5436 } # Sizhou -> Chuzhou, Xuyi
 link = { vic = 1536 hoi = 5406 hoi = 5422 hoi = 5437 hoi = 5421 } # Huaian -> Binhai, Yancheng, Huai'an, Huaiyin
 link = { vic = 1542 hoi = 5405 hoi = 5420 hoi = 5387 hoi = 5403 hoi = 5419 hoi = 5386 } # Xuzhou -> Lianyungang, Pizhou, Ganyu, Fengxian, Xuzhou, Zaozhuang
 link = { vic = 1509 hoi = 5418 hoi = 5402 hoi = 5384 hoi = 5417 } # Guide -> Dangshan, Shangqiu, Fengqiu, Xuchang
-link = { vic = 1577 hoi = 9444 hoi = 9382 } # Chongqing -> Meishan, Xuanhan
+link = { vic = 1577 hoi = 9444 hoi = 9382 hoi = 9415 } # Chongqing -> Meishan, Xuanhan, Chengdu
 link = { vic = 1521 hoi = 7497 hoi = 7502 hoi = 5472 hoi = 9352 hoi = 7510 } # Shinan -> Wuduhe, Yuan'an, Zhushan, Kaixian, Yichang
 link = { vic = 1506 hoi = 9477 hoi = 9528 } # Anshun -> Leshan, Zhaotong
 link = { vic = 1505 hoi = 7541 hoi = 5848 hoi = 9502 } # Guiyang -> Guiyang, Meitan, Zunyi
@@ -2556,10 +2556,10 @@ link = { vic = 1581 hoi = 9296 hoi = 5451 } # Kuizhou -> Ankang, Chengkou
 link = { vic = 1583 hoi = 9325 } # Shunqing -> Hanzhong
 link = { vic = 1579 hoi = 9266 } # Baotung -> Tianshui
 link = { vic = 1584 hoi = 9295 hoi = 9351 } # Tongchuan -> Tianshui, Guangyuan
-link = { vic = 1578 hoi = 9415 } # Chengdu -> Chengdu
+link = { vic = 1578 hoi = 9324 } # Chengdu -> Pingwu
 link = { vic = 1580 hoi = 9381 } # Jiading -> Ya'an
 link = { vic = 1586 hoi = 9264 hoi = 9293 hoi = 9323 hoi = 9350 hoi = 9414 hoi = 9443 hoi = 9380 hoi = 9349 } # Yazhou -> Darlag, Maniganggo, Xinlong, Yajiang, Rongbaca, Zhongdian, Wengshui, Chali
-link = { vic = 1582 hoi = 9324 hoi = 9294 hoi = 9232 hoi = 9265 } # Longan -> Minxian, Qianning, Bayan Har Shan, Jingning
+link = { vic = 1582 hoi = 9294 hoi = 9232 hoi = 9265 } # Longan -> Minxian, Qianning, Bayan Har Shan, Jingning
 link = { vic = 1569 hoi = 5181 } # Weihaiwei -> Weihai
 link = { vic = 1566 hoi = 5246 } # Qingdao -> Qingdao
 link = { vic = 1617 hoi = 5018 hoi = 5054 hoi = 5086 } # Tianjin -> Tianjin, Dagu, Huanghua
