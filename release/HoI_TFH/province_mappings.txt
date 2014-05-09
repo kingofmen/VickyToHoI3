@@ -965,8 +965,8 @@ link = { vic = 1081 hoi = 8695 hoi = 8668 } # Yaksa -> Mar'ino, Ust'-Karsk
 link = { vic = 1082 hoi = 4456 hoi = 4327 hoi = 4262 hoi = 4457 hoi = 4390 hoi = 4328 hoi = 4391 hoi = 4458 hoi = 4329 hoi = 4264 hoi = 3724 hoi = 3859 hoi = 3930 hoi = 3996 hoi = 4064 hoi = 4129 hoi = 4196 hoi = 4263 hoi = 4130 hoi = 4065 hoi = 4195 hoi = 4063 hoi = 4389 hoi = 3790 hoi = 4197 } # HaIshenwai -> Novokiyevskoye, Razdolnaya, Voroshilov, Nakhodka, Vladivostok, Artyom, Suchan, Preobrazheniye, Vangou, Olga, Edinka, Svetlaya, Amgu, Molodezhnoye, Novopokrovka, Kirovsky, Chuguevka, Semyonovka, Kavalerovka, Terney, Spassk-Dalny, Lesozavodsk, Mys Gamova, Okhotnichy, Tetyukhe
 link = { vic = 1083 hoi = 8576 hoi = 6822 hoi = 6837 hoi = 6876 hoi = 3133 hoi = 3199 hoi = 3329 hoi = 3397 hoi = 3465 hoi = 3531 hoi = 3466 hoi = 3657 hoi = 3596 hoi = 3595 hoi = 3656 hoi = 3530 hoi = 3198 hoi = 3263 hoi = 3328 hoi = 3396 hoi = 3858 hoi = 3929 hoi = 3723 hoi = 3789 hoi = 3995 hoi = 3928 hoi = 3857 hoi = 7045 hoi = 6855 hoi = 6900 hoi = 6945 } # Boli -> Bogorodskoye, De-Kastri, Tumnin, Vysokogorny, Uska-Orochskaya, Vanino, Sovetskaya Gavan, Gatka, Koppi, Grossevichi, Innokentevsky, Nelma, Sikhote Alin, Mukhen, Agzu, Malyshevo, Gornuy, Maysky, Bira, Sarapulskoye, Vostok, Verkhniy-Pereval, Gvasyugi, Dolmi, Iman, Bikin, Vyazemsky, Khabarovsk, Verkhnetambovskoye, Orlovka, Troitskoye
 link = { vic = 2617 hoi = 7044 hoi = 7027 hoi = 8776 hoi = 6988 hoi = 7007 hoi = 7028 hoi = 7008 hoi = 6989 hoi = 6944 hoi = 6967 hoi = 6920 hoi = 6919 hoi = 6966 hoi = 6899 hoi = 6874 hoi = 6836 } # Saghalian Oula -> Leninskoye, Arkhara, Blagoveshchensk, Raychikha, Obluchye, Birobidzhan, Novoussuri, Kukan, Dzhuen, Litovko, Malmyzh, Kur, Urgal, Elban, Suluk, Komsomolsk-na-Amure
-link = { vic = 1085 hoi = 8724 hoi = 8697 hoi = 8638 hoi = 8574 hoi = 8671 hoi = 8639 hoi = 8607 } # Ulusamudan -> Kuybyshevka-Vostochnaya, Svobodnyy, Vladimiro-Shimanovskiy, Sivaki, Tyrma, Chegdomyn, Sofiysk
-link = { vic = 2697 hoi = 8542 hoi = 8504 hoi = 8572 hoi = 8604 hoi = 8466 hoi = 8503 hoi = 8540 hoi = 8436 } # Magdagachi -> Magdagachi, Skovorodino, Yerofey Pavlovich, Amazar, Solov'evsk, Berezitovyy, Silka, Bomnaksk
+link = { vic = 1085 hoi = 8724 hoi = 8697 hoi = 8638 hoi = 8574 hoi = 8671 hoi = 8639 hoi = 8607 hoi = 8409 hoi = 8436 hoi = 8466 hoi = 8540 hoi = 8571 hoi = 8605 hoi = 8635 hoi = 8696 hoi = 8775 } # Ulusamudan -> Kuybyshevka-Vostochnaya, Svobodnyy, Vladimiro-Shimanovskiy, Sivaki, Tyrma, Chegdomyn, Sofiysk, Tyndinskiy, Bomnaksk, Solov'evsk, Silka, Davenda, Gulian, Udski Ostrog, Mordaga, Aigun, Alihe
+link = { vic = 2697 hoi = 8542 hoi = 8504 hoi = 8572 hoi = 8604 hoi = 8503 } # Magdagachi -> Magdagachi, Skovorodino, Yerofey Pavlovich, Amazar, Berezitovyy
 # Western Russia
 link = { vic = 994 hoi = 782 } # St Petersburg -> Leningrad
 link = { vic = 997 hoi = 948 hoi = 908 hoi = 949 hoi = 865 } # Gdov -> Gdov, Luga, Simsk, Slancy
@@ -1132,7 +1132,7 @@ link = { vic = 1084 hoi = 8437 hoi = 8467 hoi = 8505 hoi = 8468 hoi = 8506 hoi =
 link = { vic = 1072 hoi = 8254 hoi = 8281 } # Okhotsk -> Ulya, Enken
 link = { vic = 2641 hoi = 8253 hoi = 8280 hoi = 8306 hoi = 8333 hoi = 8359 hoi = 8410 hoi = 8332 hoi = 8384 hoi = 8305 } # Ayan -> Curapca, Ust'-Maja, Nelkan, Ayan, Nemuy, Chumikan, Aidanskoe Nagor's, Stanovoj Hrebet, Tommot
 link = { vic = 2676 hoi = 8601 hoi = 8568 hoi = 8537 } # Kirensk -> Kurumkan, Nizhneangarsk, Kirensk
-link = { vic = 1080 hoi = 8720 hoi = 8693 hoi = 8667 hoi = 8635 hoi = 8571 hoi = 8603 hoi = 8539 } # Chernomin -> Sretensk, Nerchinsk, Chernyshevsk, Mogocha, Davenda, Aksenovo-Zilovskoye, Petropavlovsk-Kamchatskiy
+link = { vic = 1080 hoi = 8720 hoi = 8693 hoi = 8667 hoi = 8603 hoi = 8539 } # Chernomin -> Sretensk, Nerchinsk, Chernyshevsk, Aksenovo-Zilovskoye, Petropavlovsk-Kamchatskiy
 link = { vic = 2696 hoi = 8602 } # Aldan -> Bukacaca
 link = { vic = 2644 hoi = 8538 hoi = 8464 hoi = 8433 hoi = 8501 hoi = 8463 hoi = 8432 hoi = 8406 hoi = 8381 hoi = 8407 hoi = 8380 hoi = 8329 hoi = 8356 } # Olyekminsk -> Amalat, Dronovskiy, Taksimo, Stanovoe Nagore, Taksimo, Limpeya, Kropotkin, Engazhimo, Sinyuga, Mutina, Khamra, Sorgo
 link = { vic = 2645 hoi = 8569 hoi = 8500 } # Chilchi -> Vitimskoe Ploskogore, Lena
@@ -1141,7 +1141,7 @@ link = { vic = 2639 hoi = 8745 } # Susuman -> Lazo
 link = { vic = 2651 hoi = 11360 hoi = 587 } # Udanchniy -> Udzha, Saskylah
 link = { vic = 2650 hoi = 8248 hoi = 8275 hoi = 8301 hoi = 8327 hoi = 8379 hoi = 8405 hoi = 8462 hoi = 8566 hoi = 8224 } # Nyurba -> Morkoka, Nianjaja Tunguska, Nizhnealysardakh, Erbogacen, Nizhnekarelina, Parshino, Rassokha, Essej, Kotuj
 link = { vic = 2695 hoi = 8461 hoi = 8431 hoi = 8498 hoi = 8404 hoi = 8353 hoi = 8326 hoi = 8274 hoi = 8247 hoi = 8223 hoi = 8299 hoi = 8273 hoi = 8378 hoi = 8430 } # Mukhtuya -> Ust'-limsk, Lena, Ust'-limskij Vodohranilisce, Vanavara, Cunya, Evenkijskij Avtonomnyj Okrug, Tura, Poligus, Novoselovo, Bor, Kominskiy, Podkamennaja Tunguska, Energetik
-link = { vic = 2669 hoi = 8331 hoi = 8357 hoi = 8382 hoi = 8434 hoi = 8408 hoi = 8358 hoi = 8409 hoi = 8435 hoi = 8465 hoi = 8502 hoi = 8330 hoi = 8304 hoi = 8279 } # Amga -> Aldan, Torgo, Kedrovyy, Novaya Chara, Ust'-Nyukzha, Nerjungri, Tyndinskiy, Ust'-Urkima, Erofej Pavlovic, Mogoca, Artemovskij, Olekminsk, Mohsogolloh
+link = { vic = 2669 hoi = 8331 hoi = 8357 hoi = 8382 hoi = 8434 hoi = 8408 hoi = 8358 hoi = 8435 hoi = 8465 hoi = 8502 hoi = 8330 hoi = 8304 hoi = 8279 } # Amga -> Aldan, Torgo, Kedrovyy, Novaya Chara, Ust'-Nyukzha, Nerjungri, Ust'-Urkima, Erofej Pavlovic, Mogoca, Artemovskij, Olekminsk, Mohsogolloh
 link = { vic = 2640 hoi = 8354 hoi = 8376 hoi = 8228 hoi = 8206 hoi = 8252 } # Ziryanka -> Kytalyktah, Tomtor, Jakutsk, Tjung, Berdingestjah
 link = { vic = 2643 vic = 2668 hoi = 11359 } # Honuu, Verkhoyansk -> Bulun
 link = { vic = 1071 hoi = 707 } # Bytantaysk -> Muna
@@ -1428,8 +1428,8 @@ link = { vic = 2051 hoi = 10340 hoi = 10351 } # Inhambane -> Inhambane, Xai-Xai
 link = { vic = 2113 hoi = 7960 } # Ulundi -> Ubombo
 link = { vic = 2049 vic = 2050 hoi = 10382 } # Lourenzo Marques, Chaimate -> Lourenco Marques
 link = { vic = 2114 hoi = 8022 hoi = 10395 } # Mbabane -> Mbabana, Nelspruit
-link = { vic = 2110 vic = 2109 hoi = 10357 hoi = 10326 } # MANY-TO-MANY: Thohoyandu, Lydenburg -> Massingir, Mossurize
-link = { vic = 2107 vic = 2106 vic = 2105 hoi = 10426 hoi = 10366 hoi = 8038 } # Klerksdorp, Witwatersrand, Pretoria -> Mafikeng, Zoekmakaar, Pretoria
+link = { vic = 2110 vic = 2109 hoi = 10357 } # Thohoyandu, Lydenburg -> Massingir
+link = { vic = 2107 vic = 2106 vic = 2105 vic = 2108 hoi = 10426 hoi = 10366 hoi = 8038 } # Klerksdorp, Witwatersrand, Pretoria, Mosega -> Mafikeng, Zoekmakaar, Pretoria
 link = { vic = 2095 vic = 2094 hoi = 10436 hoi = 10416 hoi = 10425 } # Dikathong, Kimberley -> Kimberley, Upington, Kuruman
 link = { vic = 2084 hoi = 10381 hoi = 10365 } # Angra Pequena -> Pomona, Hottentots Bay
 link = { vic = 2086 hoi = 10393 hoi = 10406 } # Karasburg -> Ai-Ais, Karasburg
@@ -1440,7 +1440,8 @@ link = { vic = 2574 vic = 2075 hoi = 8023 } # Mochudi, Serowe -> Serowe
 link = { vic = 2077 hoi = 10394 } # Tsabong -> Tshabong
 link = { vic = 2078 hoi = 8021 } # Windhoek -> Windhoek
 link = { vic = 2061 vic = 2059 hoi = 10274 } # Angoche, Quelimane -> Angoche
-link = { vic = 2057 vic = 2052 vic = 2073 hoi = 10300 hoi = 10311 hoi = 10319 } # MANY-TO-MANY: Sofala, Massekisse, Masvingo -> Quelimane, Vila Pery, Beira
+link = { vic = 2057 vic = 2052 vic = 2073 hoi = 10300 hoi = 10311 hoi = 10319 hoi = 10326 } # Sofala, Massekisse -> Quelimane, Vila Pery, Beira, Massangena
+link = { vic = 2073 hoi = 8030 } # Masvingo -> Beitbridge
 link = { vic = 2060 hoi = 10230 } # Mocambique -> Nacala
 link = { vic = 2064 hoi = 10246 } # Nampula -> Nampula
 link = { vic = 2065 hoi = 10260 } # Milange -> Mocuba
@@ -1451,15 +1452,16 @@ link = { vic = 2068 hoi = 10285 } # Harare -> M�go�
 link = { vic = 2069 hoi = 10298 hoi = 10310 hoi = 8002 } # Gweru -> Salisbury, Umtali, Masvingo
 link = { vic = 2071 hoi = 8011 } # Bulawayo -> Bulawayo
 link = { vic = 2072 hoi = 10271 } # Hwange -> Rufunsa
-link = { vic = 2081 vic = 2076 hoi = 8012 hoi = 7995 } # MANY-TO-MANY: Linyati, Nokaneng -> Livingstone, Orapa
-link = { vic = 2082 hoi = 8047 hoi = 10339 } # Otjinene -> Tsumeb, Karibib
+link = { vic = 2081 hoi = 10339 } # Linyati -> Andara
+link = { vic = 2076 hoi = 7995 } # Nokaneng -> Maun
+link = { vic = 2082 hoi = 8047 } # Otjinene -> Tsumeb
 link = { vic = 2079 vic = 2080 hoi = 8029 hoi = 10297 hoi = 10309 hoi = 10318 hoi = 10333 } # MANY-TO-MANY: Swakopmund, Tsumeb -> Rundu, Oshakati, Cape Fria, Korixas, Swakopmund
 link = { vic = 2004 hoi = 10284 hoi = 10257 hoi = 10227 hoi = 10194 } # Mocamedes -> Porto Alexandre, Mo��medes, Lucira, Benguela
 link = { vic = 2008 hoi = 7984 } # Ondjiva -> S� da Bandeira
 link = { vic = 2007 hoi = 8041 } # Mavinga -> Serpa Pinto
 link = { vic = 2005 hoi = 10183 } # Huambo -> Nova Lisboa
-link = { vic = 2006 hoi = 7985 } # Kuito -> Vila Luso
-link = { vic = 2013 hoi = 8014 hoi = 8028 } # Mongu -> Zambezi, Mongu
+link = { vic = 2006 vic = 2011 hoi = 7985 } # Kuito, Kubanda -> Munhango
+link = { vic = 2013 hoi = 8014 hoi = 8028 hoi = 8012 } # Mongu -> Zambezi, Mongu, Livingstone
 link = { vic = 2012 hoi = 8024 hoi = 8020 } # Lusaka -> Solwezi, Lusaka
 link = { vic = 2015 hoi = 10228 } # Monzo -> Chipata
 link = { vic = 2054 vic = 2056 vic = 2055 vic = 2635 hoi = 10214 } # Tete, Zumbo, Songo, Kariba -> Barra do Garcas
@@ -1476,14 +1478,13 @@ link = { vic = 2046 hoi = 10115 hoi = 10087 } # Ujiji -> Sumpawanga, Kigoma
 link = { vic = 2017 vic = 2018 vic = 2016 vic = 790 hoi = 8048 } # Kasema, Chipata, Kazembe, Kitwe -> Ndola
 link = { vic = 1989 vic = 1987 hoi = 8000 } # Munza, Bunkeya -> �lisabethville
 link = { vic = 2014 hoi = 7971 } # Kasempa -> Kamina
-link = { vic = 1988 hoi = 8040 } # Mussumba -> Mbuji-Mayi
-link = { vic = 2011 hoi = 8032 } # Kubanda -> Suana
-link = { vic = 2044 hoi = 10075 } # Mwanza -> Mwanza
+link = { vic = 1988 hoi = 8040 hoi = 8032 } # Mussumba -> Mbuji-Mayi, Demba
+link = { vic = 2044 hoi = 10075 hoi = 10088 } # Mwanza -> Mwanza, Ikoma
 link = { vic = 2043 hoi = 10116 } # Tabora -> Tabora
 link = { vic = 2045 hoi = 10129 hoi = 10117 } # Morogoro -> Dodoma, Mziha
 link = { vic = 2037 hoi = 10102 } # Tanga -> Korogwe
 link = { vic = 2033 vic = 2029 hoi = 10076 hoi = 10066 } # MANY-TO-MANY: Voi, Mombasa -> Tanga, Mombasa
-link = { vic = 2047 hoi = 10089 hoi = 10101 hoi = 10088 } # Arusha -> Kondoa, Singida, Shinyanga
+link = { vic = 2047 hoi = 10089 hoi = 10101 } # Arusha -> Kondoa, Singida
 link = { vic = 2028 vic = 2023 hoi = 10244 } # Kisumu, Jinja -> Kisumu
 link = { vic = 2027 hoi = 10065 } # Nakuru -> Arusha
 link = { vic = 2026 hoi = 9925 } # Lodwar -> North Horr
@@ -1959,8 +1960,7 @@ link = { vic = 3032 hoi = 13079 hoi = 13029 hoi = 13033 hoi = 13030 hoi = 13018 
 link = { vic = 3207 hoi = 10853 hoi = 13019 hoi = 13017 hoi = 13040 } # Cape Verde Basin -> South-Central Barracuda Fracture Zone, Southeastern Barracuda Fracture Zone, Eastern Vema Fracture Zone, East-Central Vema Fracture Zone
 link = { vic = 3206 hoi = 13037 hoi = 10852 hoi = 13237 hoi = 10851 hoi = 13236 } # East Demerara Plain -> Western Vema Fracture Zone, Southwestern Vema Fracture Zone, Southeastern Demerara Plain, Western Four North Fracture Zone, Western Sierra Leone Fracture Zone
 link = { vic = 3030 hoi = 13016 hoi = 13039 hoi = 13038 hoi = 13041 } # Southern Guiana Basin -> Western Banary Basin, Southeastern Vema Fracture Zone, Southern Vema Fracture Zone, West-Central Vema Fracture Zone
-link = { vic = 2108 hoi = 8030 } # Mosega -> Mazunga
-# Meditereanean sea
+# Mediterranean sea
 link = { vic = 2777 hoi = 10597 hoi = 10598 } # Eastern Black Sea -> Central Black Sea, Coast of Abkhazia
 link = { vic = 2776 hoi = 10596 } # Sea of Azov -> Sea of Azov
 link = { vic = 2775 hoi = 10594 } # Gulf of Odessa -> Mouth of the Danube
@@ -2231,12 +2231,12 @@ link = { vic = 1213 hoi = 9254 hoi = 9220 hoi = 9190 hoi = 9221 } # Bamyan -> Ta
 link = { vic = 1210 hoi = 9109 hoi = 9134 hoi = 9164 hoi = 9192 hoi = 9165 hoi = 9222 } # Faizabad -> Feyzabad, Baghlan, Nao, Zebak, Gilgit, Gardez
 link = { vic = 1216 hoi = 9133 hoi = 9108 hoi = 9163 } # Jalalabad -> Sheberghan, Mardian, Mazar-e Sharif
 # INDIA
-link = { vic = 1223 hoi = 9223 hoi = 9193 } # Chitral -> Mongora, Chilas
+link = { vic = 1223 hoi = 9223 } # Chitral -> Mongora
 link = { vic = 1225 hoi = 9224 } # Gilgit -> Astor
-link = { vic = 1226 hoi = 9258 hoi = 9225 hoi = 9259 } # Leh -> Masherbrum, Kibar, Joshimath
+link = { vic = 1226 hoi = 9258 hoi = 9225 } # Leh -> Masherbrum, Kibar
 link = { vic = 1235 hoi = 9407 hoi = 9320 hoi = 9375 } # Simla -> Bareilly, Dehra Dun, Meerut
 link = { vic = 1238 hoi = 9437 } # Dehra Dun -> Shahjahanpur
-link = { vic = 1242 hoi = 9469 } # Lucknow -> Lucknow
+link = { vic = 1242 hoi = 9469 hoi = 5907 } # Lucknow -> Lucknow, Rae Bareli
 link = { vic = 1244 hoi = 9497 hoi = 9470 } # Fyzabad -> Kanpur, Faizabad
 link = { vic = 1246 hoi = 9498 hoi = 7525 } # Gorakhpur -> Jaunpur, Muzaffarpur
 link = { vic = 1260 hoi = 9442 hoi = 9474 hoi = 9441 hoi = 9473 } # Dibrugarh -> Myitkyina, Lahe, Kohima, Tezpur
@@ -2274,7 +2274,7 @@ link = { vic = 1322 hoi = 6273 hoi = 6282 } # Jaffna -> Jaffna, Anuradhapura
 link = { vic = 1324 hoi = 6283 } # Trincomalee -> Trincomalee
 link = { vic = 1321 hoi = 6303 hoi = 6320 } # Colombo -> Kurunegala, Colombo
 link = { vic = 1323 hoi = 6304 hoi = 6321 hoi = 6327 } # Kandy -> Batticaloa, Badulla, Galle
-link = { vic = 1292 hoi = 5936 hoi = 5907 hoi = 5888 hoi = 5869 hoi = 5853 hoi = 5887 hoi = 5906 hoi = 5921 hoi = 5935 hoi = 5922 hoi = 5870 hoi = 5840 } # Rajkot -> Mahuva, Amreli, Rajkot, Jamnagar, Okha, Porbandar, Junagadh, Somnath, Gadhra, Botad, Surendranagar, Gandhidham
+link = { vic = 1292 hoi = 5936 hoi = 5888 hoi = 5869 hoi = 5887 hoi = 5921 hoi = 5870 hoi = 5840 } # Rajkot -> Mahuva, Rajkot, Jamnagar, Porbandar, Somnath, Surendranagar, Gandhidham
 link = { vic = 1291 hoi = 5908 hoi = 5889 } # Ahmedabad -> Bhavnagar, Ahmadabad
 link = { vic = 1295 hoi = 5890 hoi = 5872 hoi = 5909 } # Baroda -> Godhra, Vadodara, Bharuch
 link = { vic = 1296 hoi = 5923 hoi = 5937 hoi = 5956 hoi = 5967 } # Surat -> Surat, Valsad, Silvassa, Vasai
@@ -2294,7 +2294,7 @@ link = { vic = 1277 hoi = 9639 hoi = 9601 } # Nagpur -> Nagpur, Chhindwara
 link = { vic = 1243 hoi = 9522 } # Allahabad -> Orai
 link = { vic = 1275 hoi = 9581 } # Jubbulpore -> Jhansi
 link = { vic = 1274 hoi = 9561 } # Rewa -> Tikamgarh
-link = { vic = 1273 hoi = 9543 } # Chhatarpur -> Dabra
+link = { vic = 1273 hoi = 9543 hoi = 5906  } # Chhatarpur -> Dabra, Chhatarpur
 link = { vic = 1262 hoi = 5891 hoi = 5910 hoi = 5925 } # Keunjahr -> Baripada, Karanjia, Anandapur
 link = { vic = 1249 hoi = 5873 hoi = 7591 hoi = 7600 hoi = 7579 hoi = 7590 hoi = 7608 } # Kharswari -> Kharagpur, Jamshedpur, Chaibasa, Ranchi, Gumla, Raurkela
 link = { vic = 1248 hoi = 7567 hoi = 7547 hoi = 7538 hoi = 7531 hoi = 7546 hoi = 7556 hoi = 7566 } # Gaya -> Deoghar, Munger, Patna, Maunath Bhanjan, Dehri, Gaya, Sherghati
@@ -2303,9 +2303,9 @@ link = { vic = 1282 hoi = 7565 hoi = 7555 hoi = 7578 hoi = 7589 } # Raigarh -> R
 link = { vic = 1281 hoi = 9582 } # Bilaspur -> Jabalpur
 link = { vic = 1280 hoi = 9620 hoi = 7598 hoi = 7615 } # Raipur -> Gondia, Kawardha, Raj Nandgaon
 link = { vic = 1263 hoi = 7599 hoi = 7607 hoi = 7624 } # Sambalpur -> Raigarh, Raipur, Dhamtari
-link = { vic = 1222 hoi = 9539 hoi = 9517 hoi = 5740 hoi = 5751 } # Bela -> Gwadar, Omara, Sonmiani, Hab Chauki
-link = { vic = 1288 hoi = 5762 hoi = 5785 } # Karachi -> Karachi, Gharo
-link = { vic = 1293 hoi = 5815 hoi = 5839 hoi = 5827 hoi = 5826 hoi = 5814 hoi = 5799 hoi = 5828 hoi = 5813 hoi = 5798 } # Mandvi -> Khavda, Bhuj, Lakhpat, Shahbandar, Badin, Tatta, Rapar, Ghorabari, Jhimpir
+link = { vic = 1222 hoi = 9539 hoi = 9517 hoi = 5740 } # Bela -> Gwadar, Omara, Sonmiani
+link = { vic = 1288 hoi = 5762 } # Karachi -> Karachi
+link = { vic = 1293 hoi = 5815 hoi = 5827 hoi = 5826 hoi = 5814 hoi = 5813 } # Mandvi -> Khavda, Lakhpat, Shahbandar, Badin, Ghorabari
 link = { vic = 1278 hoi = 9619 hoi = 9600 hoi = 9618 } # Amarati -> Harda, Dewas, Indore
 link = { vic = 1271 hoi = 9579 hoi = 9541 hoi = 5842 hoi = 5841 hoi = 5855 hoi = 5854 } # Indore -> Disa, Pali, Udaipur, Patan, Himatnagar, Dhrangadhra
 link = { vic = 1272 hoi = 9559 hoi = 9542 } # Bhopal -> Bhilwara, Tonk
@@ -2318,20 +2318,22 @@ link = { vic = 1219 hoi = 9403 } # Quetta -> Quetta
 link = { vic = 1289 hoi = 9492 hoi = 9465 } # Sukkur -> Saruna, Larkana
 link = { vic = 1294 hoi = 5800 hoi = 5786 } # Patan -> Nagar Parkar, Tando Alahyar
 link = { vic = 1290 hoi = 9518 hoi = 5772 hoi = 9540 } # Umarkot -> Nawabshah, Hyderabad, Mirpur Khas
-link = { vic = 1218 hoi = 9256 hoi = 9288 } # Peshawar -> Peshawar, Bhakkar
+link = { vic = 1218 hoi = 9288 } # Peshawar -> Bhakkar
 link = { vic = 1227 hoi = 9344 } # Lahore -> Lahore
-link = { vic = 1224 hoi = 9319 hoi = 9257 } # Srinagar -> Srinagar, Rawalpindi
-link = { vic = 1230 vic = 1229 hoi = 9289 } # Attock, Sialkot -> Islamabad
-link = { vic = 1232 hoi = 9318 hoi = 9343 } # Shahpur -> Jhang, Multan
-link = { vic = 1236 hoi = 9406 } # Delhi -> Delhi
+link = { vic = 1224 hoi = 9319 } # Srinagar -> Rawalpindi
+link = { vic = 1230 hoi = 9289 hoi = 9193 hoi = 9257 } # Attock -> Islamabad, Baltit, Gilgit
+link = { vic = 1229 hoi = 5751 } # Sialkot -> Gujranwala
+link = { vic = 1232 hoi = 9318 hoi = 9343 hoi = 9256 } # Shahpur -> Jhang, Multan, Peshawar
+link = { vic = 1236 hoi = 9406 hoi = 5828 hoi = 5853 } # Delhi -> Delhi, Hathras, Moradabad
 link = { vic = 1239 hoi = 9290 } # Meerut -> Upshi
 link = { vic = 1240 hoi = 9345 hoi = 9374 } # Agra -> Ludhiana, Moga
 link = { vic = 1268 hoi = 9435 hoi = 9467 } # Jaipur -> Sujangarh, Nagaur
-link = { vic = 1233 hoi = 9317 } # Amritsar -> Dera Ghazi Khan
-link = { vic = 1237 vic = 1267 hoi = 9405 } # Panipat, Bikaner -> Bikaner
+link = { vic = 1233 hoi = 9317 hoi = 5922 hoi = 5935 } # Amritsar -> Dera Ghazi Khan, Srinagar, Pathankot
+link = { vic = 1237 hoi = 5839 } # Panipat -> Panipat
+link = { vic = 1267 hoi = 9405 } # Bikaner -> Bikaner
 link = { vic = 1234 hoi = 9373 } # Firozpur -> Chishtian Mandi
-link = { vic = 1228 hoi = 9372 } # Multan -> Rahimyar Khan
-link = { vic = 1231 hoi = 9404 hoi = 9433 } # Bahawalpur -> Nawakot, Sukkur
+link = { vic = 1228 hoi = 9372 hoi = 5785 hoi = 5798 } # Multan -> Rahimyar Khan, Taunsa, Muzaddagarh
+link = { vic = 1231 hoi = 9404 hoi = 9433 hoi = 5799 } # Bahawalpur -> Nawakot, Sukkur, Bahawalpur
 link = { vic = 1266 vic = 1264 hoi = 9494 hoi = 9519 hoi = 9558 } # MANY-TO-MANY: Jodhpur, Ajmer -> Jodhpur, Barmer, Ganga Sera
 link = { vic = 1265 hoi = 9434 hoi = 9466 hoi = 9493 } # Jaisalmer -> Phalodi, Jaisalmer, Sanghar
 # NEPAL
@@ -2339,10 +2341,11 @@ link = { vic = 1327 hoi = 9408 hoi = 9438 } # Jumla -> Dailekh, Nepalganj
 link = { vic = 1326 hoi = 9471 hoi = 9439 } # Katmandu -> Kathmandu, Janakpur
 link = { vic = 1329 hoi = 9472 hoi = 9440 hoi = 9499 } # Thimpu -> Thimphu, Gasa, Kenga
 # TIBET
-link = { vic = 1592 hoi = 9226 hoi = 9260 hoi = 9409 hoi = 9376 } # Ngari -> Rut�g, Ngala Ringco, Paryang, Zhari Namco
-link = { vic = 1591 hoi = 9195 hoi = 9196 hoi = 9166 hoi = 9261 hoi = 9227 hoi = 9228 } # Changtang -> Garyarsa, Yanhuqu, Lhazhong, Paryang, Mapam Yumco, Gyangrang
+link = { vic = 1592 hoi = 9226 hoi = 9260 hoi = 9409 hoi = 9376 hoi = 9259 } # Ngari -> Rutg, Ngala Ringco, Paryang, Zhari Namco, Ngari
+link = { vic = 1591 hoi = 9195 hoi = 9196 hoi = 9166 hoi = 9261 hoi = 9227 hoi = 9228 hoi = 9198 } # Changtang -> Garyarsa, Yanhuqu, Lhazhong, Paryang, Mapam Yumco, Gyangrang, Lenghu
 link = { vic = 1587 hoi = 9377 } # Lhasa -> Lhasa
-link = { vic = 1588 hoi = 9197 hoi = 9167 hoi = 9229 hoi = 9262 hoi = 9292 hoi = 9348 hoi = 9263 hoi = 9322 hoi = 9230 } # Chamdo -> Xainza, Lenghuzhen, Qaidam Pendi, Sog, Qamdo, Baxoi, Dainkog, Zogang, Xiangride
+link = { vic = 1588 hoi = 9197 hoi = 9167 hoi = 9229 hoi = 9262 hoi =
+9292 hoi = 9348 hoi = 9263 hoi = 9322 hoi = 9230 hoi = 9349 } # Chamdo -> Xainza, Lenghuzhen, Qaidam Pendi, Sog, Qamdo, Baxoi, Dainkog, Zogang, Xiangride, Markam
 link = { vic = 1590 hoi = 9379 hoi = 9412 hoi = 9378 hoi = 9321 hoi = 9291 } # Lhodrak -> Rawu, Wulang, Nailung, Maizhokunggar, Amdo
 link = { vic = 1593 hoi = 9411 hoi = 9347 } # Tawang -> Lh�nze, Nang
 link = { vic = 1589 vic = 1328 hoi = 9346 hoi = 9410 } # MANY-TO-MANY: Shigatse, Tumlong -> Gyangz�, Gamba
@@ -2558,7 +2561,7 @@ link = { vic = 1579 hoi = 9266 } # Baotung -> Tianshui
 link = { vic = 1584 hoi = 9295 hoi = 9351 } # Tongchuan -> Tianshui, Guangyuan
 link = { vic = 1578 hoi = 9324 } # Chengdu -> Pingwu
 link = { vic = 1580 hoi = 9381 } # Jiading -> Ya'an
-link = { vic = 1586 hoi = 9264 hoi = 9293 hoi = 9323 hoi = 9350 hoi = 9414 hoi = 9443 hoi = 9380 hoi = 9349 } # Yazhou -> Darlag, Maniganggo, Xinlong, Yajiang, Rongbaca, Zhongdian, Wengshui, Chali
+link = { vic = 1586 hoi = 9264 hoi = 9293 hoi = 9323 hoi = 9350 hoi = 9414 hoi = 9443 hoi = 9380 } # Yazhou -> Darlag, Maniganggo, Xinlong, Yajiang, Rongbaca, Zhongdian, Wengshu
 link = { vic = 1582 hoi = 9294 hoi = 9232 hoi = 9265 } # Longan -> Minxian, Qianning, Bayan Har Shan, Jingning
 link = { vic = 1569 hoi = 5181 } # Weihaiwei -> Weihai
 link = { vic = 1566 hoi = 5246 } # Qingdao -> Qingdao
@@ -2609,7 +2612,7 @@ link = { vic = 1596 hoi = 8864 hoi = 8887 hoi = 8908 } # Tulta -> Ulungur Hu, Er
 link = { vic = 1599 hoi = 8909 hoi = 8930 hoi = 8955 hoi = 8979 } # Kumul -> M�nh Havrhan Uul, Manas, Di Hua, Hami
 link = { vic = 1488 hoi = 9006 hoi = 9031 hoi = 9032 hoi = 9060 } # Gansu -> Karlik Shan, Lop Nur, Bei Shan, Gansu
 link = { vic = 1557 hoi = 9231 hoi = 9169 hoi = 9199 hoi = 9140 hoi = 9086 } # Balekungomi -> Madoi, Wengquan, Chindu, Madoi, Zhangye
-link = { vic = 1558 hoi = 9168 hoi = 9139 hoi = 9198 hoi = 9112 hoi = 9138 } # Kegudo -> Da Qaidam Zhen, Qilian Shan, Golmud, Dangjin Shankou, Ayakkum Hu
+link = { vic = 1558 hoi = 9168 hoi = 9139 hoi = 9112 hoi = 9138 } # Kegudo -> Da Qaidam Zhen, Qilian Shan, Dangjin Shankou, Ayakkum Hu
 link = { vic = 1556 hoi = 9113 hoi = 9085 hoi = 9059 hoi = 9084 } # Makhai -> Jiuquan, Anxi, Dunhuang, Altun Shan
 link = { vic = 1208 hoi = 9082 hoi = 9136 } # Khorug -> Kashi, Mingteke
 link = { vic = 1190 vic = 3233 hoi = 9056 hoi = 9028 } # MANY-TO-MANY: Naryn, Issyk Kul -> Xekar, Kakshaal-Too
@@ -2625,8 +2628,8 @@ link = { vic = 1480 hoi = 4788 hoi = 4838 hoi = 4837 hoi = 4736 hoi = 4628 hoi =
 link = { vic = 1613 hoi = 4785 hoi = 4835 hoi = 4888 hoi = 4936 hoi = 4981 hoi = 4889 hoi = 4787 hoi = 4836 hoi = 4786 hoi = 4735 hoi = 4627 hoi = 4734 hoi = 4626 hoi = 4733 hoi = 4680 hoi = 7297 hoi = 7277 hoi = 4682 hoi = 7259 hoi = 7296 hoi = 7313 hoi = 4732 hoi = 4784 } # Chengde -> Chengde, Kuancheng, Qinglong, Qinhuangdao, Changli, Suizhong, Nanpiao, Jianchang, Pingquan, Jinlingsi, Beipiao, Chaoyang, Chifeng, Balihan, Weichang, Bairin Qiao, Tiantaiyong, Qagan Us, Mandlat Sum, Sonid Youqi, Duolun, Longhua, Luanping
 link = { vic = 1576 hoi = 7358 hoi = 7348 hoi = 5052 hoi = 7337 hoi = 7349 hoi = 5017 hoi = 7359 } # Datong -> Suj, Qongj, Bayan Obo, Airgin Sum, Guyang, Hohhot, Baotou
 link = { vic = 1616 hoi = 7276 hoi = 7312 hoi = 4834 hoi = 7325 hoi = 7326 hoi = 7338 hoi = 4980 hoi = 7360 hoi = 4932 hoi = 4978 hoi = 4885 hoi = 4933 hoi = 4833 hoi = 4886 hoi = 4934 hoi = 4887 hoi = 4935 hoi = 5019 hoi = 5055 } # Shuntian -> Airgin Sum, Siziwang Qi, Xangdin Hural, Aibag Gol, Tomortei, Wuchuan, Zhuozi, Liangcheng, Jining, Tianzhen, Kalgan, Zhuolu Changping, Xuanhua, Miyun, Jixian, Luan He, Qianxi, Tangshan, Leting
-link = { vic = 1002 hoi = 8872 hoi = 8850 hoi = 8826 hoi = 8801 hoi = 8748 hoi = 8773 hoi = 8722 hoi = 8696 hoi = 7183 hoi = 7159 hoi = 7135 hoi = 7115 hoi = 7094 hoi = 7075 hoi = 8774 hoi = 8749 } # Manzhouli -> Manzhouli, Qagan, Ergun, Huder, Sanhe, Gen He, Yitulihe, Mordaga, Hulun Nur, Hulun Buir, Yakeshi, Bugt, Balin, Orqohan, Kabansk, Gan He
-link = { vic = 1553 hoi = 8573 hoi = 8605 hoi = 8636 hoi = 8637 hoi = 8606 hoi = 8670 hoi = 8723 hoi = 8775 hoi = 8750 hoi = 8802 hoi = 8827 hoi = 8803 hoi = 7060 hoi = 7043 hoi = 7077 } # Aigun -> Tahe, Gulian, Mangui, Bishui, Huma, Heilong Jiang, Jagdaqi, Alihe, Heihe, Nenjiang, Lindian, Huma, Nenjiang, Yichun, Nehe
+link = { vic = 1002 hoi = 8872 hoi = 8850 hoi = 8826 hoi = 8801 hoi = 8748 hoi = 8773 hoi = 8722 hoi = 7183 hoi = 7159 hoi = 7135 hoi = 7115 hoi = 7094 hoi = 7075 hoi = 8774 hoi = 8749 } # Manzhouli -> Manzhouli, Qagan, Ergun, Huder, Sanhe, Gen He, Yitulihe, Hulun Nur, Hulun Buir, Yakeshi, Bugt, Balin, Orqohan, Kabansk, Gan He
+link = { vic = 1553 hoi = 8573 hoi = 8636 hoi = 8637 hoi = 8606 hoi = 8670 hoi = 8723 hoi = 8750 hoi = 8802 hoi = 8827 hoi = 8803 hoi = 7060 hoi = 7043 hoi = 7077 } # Aigun -> Tahe, Mangui, Bishui, Huma, Heilong Jiang, Jagdaqi, Heihe, Nenjiang, Lindian, Huma, Nenjiang, Yichun, Nehe
 link = { vic = 1533 hoi = 4681 hoi = 7233 hoi = 7208 hoi = 7184 hoi = 7160 hoi = 7185 hoi = 7210 hoi = 7236 hoi = 4514 hoi = 7235 hoi = 7209 hoi = 4684 hoi = 7234 hoi = 7260 hoi = 7278 hoi = 4683 hoi = 7261 hoi = 4571 hoi = 7186 hoi = 7211 hoi = 4573 hoi = 4515 hoi = 4574 hoi = 4450 hoi = 4516 hoi = 4575 hoi = 4576 hoi = 4517 hoi = 4451 } # Jirim Chuulgan -> Har Nur, Qagan Qulut, Arxan, Solon, Moguqi, Ulanhot, Tipingchuan, Qiangqihao, Tongliao, Kailu, Tule Mod, Bairin Zouqi, Da Hinggan Ling, Linxi, Xar Moron, Jiaolai He, Laoha He, Baixingt, Lanzijing, Dabs Nur, Yemaotai, Tieling, Jinguanshan, Changling, Kaiyuan, Siping, Caoshi, Shuangliao, Huaidezhen
 link = { vic = 1552 hoi = 7136 hoi = 7161 hoi = 7116 hoi = 7095 hoi = 7076 hoi = 7096 hoi = 7118 hoi = 7097 hoi = 7078 hoi = 7119 hoi = 7164 hoi = 7139 hoi = 7188 hoi = 7117 hoi = 7137 hoi = 7162 hoi = 7138 } # Qiqihar -> Zalantun, Baicheng, Langtoutun, Qiqihar, Xindian, Daqing, Anda, Hailun, Nancha, Suihua, Fangzheng, Harbin, Lalin, Tailai, Tantu, Anguang, Datong
 link = { vic = 1554 hoi = 7062 hoi = 7079 hoi = 7061 hoi = 7098 hoi = 7140 hoi = 7099 hoi = 3994 hoi = 3927 hoi = 3993 hoi = 4062 hoi = 4128 hoi = 4194 hoi = 4261 hoi = 4193 hoi = 4127 hoi = 4061 hoi = 4126 hoi = 4192 hoi = 4326 hoi = 4260 hoi = 4325 hoi = 4388 } # Ninguta -> Qianjin, Huachuan, Hegang, Jiamusi, Yilan, Fujin, Raohe, Youyi, Shuangyashan, Dongfanghong, Hulin, Lianzhushan, Hengshan, Jixi, Xingkai, Qitaihe, Diaoling, Linkou, Da Suifen He, Mudanjiang, Dongjingcheng, Dunhua
