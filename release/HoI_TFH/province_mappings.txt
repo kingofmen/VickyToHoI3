@@ -1440,12 +1440,13 @@ link = { vic = 2574 vic = 2075 hoi = 8023 } # Mochudi, Serowe -> Serowe
 link = { vic = 2077 hoi = 10394 } # Tsabong -> Tshabong
 link = { vic = 2078 hoi = 8021 } # Windhoek -> Windhoek
 link = { vic = 2061 vic = 2059 hoi = 10274 } # Angoche, Quelimane -> Angoche
-link = { vic = 2057 vic = 2052 vic = 2073 hoi = 10300 hoi = 10311 hoi = 10319 hoi = 10326 } # Sofala, Massekisse -> Quelimane, Vila Pery, Beira, Massangena
+link = { vic = 2057 vic = 2073 hoi = 10300 hoi = 10311 hoi = 10319 } # Sofala -> Quelimane, Vila Pery, Beira
+link = { vic = 2052 hoi = 10326 } # Massekisse -> Massangena
 link = { vic = 2073 hoi = 8030 } # Masvingo -> Beitbridge
 link = { vic = 2060 hoi = 10230 } # Mocambique -> Nacala
 link = { vic = 2064 hoi = 10246 } # Nampula -> Nampula
 link = { vic = 2065 hoi = 10260 } # Milange -> Mocuba
-link = { vic = 2066 hoi = 10245 hoi = 10229 } # Zomba -> Mandimba, Blantyre
+link = { vic = 2066 hoi = 10245 } # Zomba -> Mandimba
 link = { vic = 2053 hoi = 10259 } # Sena -> Caia
 link = { vic = 2058 vic = 2070 hoi = 10286 } # Mossurize, Mutare -> Tete
 link = { vic = 2068 hoi = 10285 } # Harare -> M�go�
@@ -1464,8 +1465,8 @@ link = { vic = 2006 vic = 2011 hoi = 7985 } # Kuito, Kubanda -> Munhango
 link = { vic = 2013 hoi = 8014 hoi = 8028 hoi = 8012 } # Mongu -> Zambezi, Mongu, Livingstone
 link = { vic = 2012 hoi = 8024 hoi = 8020 } # Lusaka -> Solwezi, Lusaka
 link = { vic = 2015 hoi = 10228 } # Monzo -> Chipata
-link = { vic = 2054 vic = 2056 vic = 2055 vic = 2635 hoi = 10214 } # Tete, Zumbo, Songo, Kariba -> Barra do Garcas
-link = { vic = 2067 hoi = 8010 } # Lilongwe -> Mzuzu
+link = { vic = 2054 vic = 2056 vic = 2055 vic = 2635 hoi = 10229 } # Tete, Zumbo, Songo, Kariba -> Blantyre
+link = { vic = 2067 hoi = 8010 hoi = 10214 } # Lilongwe -> Mzuz, Barra do Garcas
 link = { vic = 2581 hoi = 10258 } # Mataka -> Vila Cabral
 link = { vic = 2040 hoi = 10327 } # Songea -> Songea
 link = { vic = 2063 hoi = 10215 hoi = 10205 } # Ibo -> Lalaua, Porto Am�lia
@@ -1496,12 +1497,13 @@ link = { vic = 2003 hoi = 10171 hoi = 10160 } # Benguela -> Novo Redondo, Vila S
 link = { vic = 1999 hoi = 10147 } # Luanda -> Luanda
 link = { vic = 2009 hoi = 10099 } # Malanje -> Matadi
 link = { vic = 2002 hoi = 10139 hoi = 10127 hoi = 10113 } # Quibala -> U�ge, Ambrizete, Boma
-link = { vic = 2001 hoi = 10073 hoi = 10085 } # Mbanza -> Dolisie, Cabinda
+link = { vic = 2001 hoi = 10073 } # Mbanza -> Dolisie
 link = { vic = 1974 hoi = 10047 } # Mayumbe -> Port-Gentil
 link = { vic = 1972 hoi = 10021 } # Libreville -> Libreville
 link = { vic = 1975 vic = 1978 hoi = 10037 } # Moanda, Madingou -> Lambar�ne
 link = { vic = 1982 hoi = 10064 } # Kinshasa -> Pointe-Noire
-link = { vic = 2624 vic = 2000 vic = 1983 hoi = 10055 } # Loango, Cabinda, Boma -> Tchibanga
+link = { vic = 2624 hoi = 10055 } # Loango -> Mayoumbe
+link = { vic = 2000 vic = 1983 hoi = 10085 } # Cabinda, Boma -> Cabinda
 link = { vic = 1954 hoi = 10632 } # Sao Tome -> S�o Tom�
 link = { vic = 1955 vic = 1973 hoi = 10002 } # Fernando Po, Bata -> Bata
 link = { vic = 1956 vic = 1958 vic = 1959 hoi = 9986 } # Douala, Kribi, Yaounde -> Douala
