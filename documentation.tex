@@ -148,7 +148,8 @@ the positions file to see if coordinates are given for a naval base)
 and may miss some coastal provinces. 
 
 Infrastructure converts ``urbanisation'', defined
-as the ratio of clerks to labourers or farmers, plus he railroad value. The Victoria provinces
+as the ratio of clerks to labourers or farmers, plus the railroad
+value times \texttt{infraWeight} from the config file. The Victoria provinces
 are sorted by urbanisation and assigned the input
 infrastructure in order, so that the highest urbanisation
 Victoria province gets the highest infrastructure in the

@@ -957,6 +957,7 @@ bool WorkerThread::convertBuildings () {
   double vicNavalBases = 0;
   Object* victoryObject = configObject->getNeededObject("victoryPoints");
   objvec victories = victoryObject->getLeaves();
+  double infraWeight = configObject->safeGetFloat("infraWeight", 0.01);
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
     bool isCap = ((*vp)->safeGetString("isCapital", "no") == "yes");
     Object* naval_base = (*vp)->safeGetObject("naval_base");
@@ -969,7 +970,7 @@ bool WorkerThread::convertBuildings () {
     double urbanity      = (*vp)->safeGetFloat("clerks");
     urbanity            /= (1 + (*vp)->safeGetFloat("labourers") + (*vp)->safeGetFloat("farmers"));
     if (isCap) urbanity *= 2; 
-    (*vp)->setLeaf("urbanity", urbanity + (*vp)->safeGetFloat("infrastructure"));
+    (*vp)->setLeaf("urbanity", urbanity + infraWeight*(*vp)->safeGetFloat("infrastructure"));
 
     
     double airValue = (*vp)->safeGetFloat("aeroplane_factory");
