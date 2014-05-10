@@ -263,7 +263,7 @@ link = { vic = 47 hoi = 8616 } # Fort Severn -> Winisk
 link = { vic = 37 hoi = 5027 hoi = 11375 } # Churchill -> Churchill, Lake Lynn
 link = { vic = 43 hoi = 8258 } # Arviat -> Baker Lake
 link = { vic = 2595 hoi = 11372 hoi = 8257 } # Nunavut -> Coral Harbor, Chesterfield Inlet
-link = { vic = 44 hoi = 8448 hoi = 8390 hoi = 11374 } # Echo Bay -> Taloyoak, Cape Dorset, Repulse Bay
+link = { vic = 44 hoi = 8448 hoi = 8390 } # Echo Bay -> Taloyoak, Cape Dorset
 link = { vic = 45 hoi = 8417 hoi = 14126 hoi = 3796 } # Baffin Island -> Cumberland, Nettiling, Iqaluit
 link = { vic = 38 hoi = 11362 } # Indian Lakes -> Back River
 link = { vic = 39 hoi = 8477 hoi = 8478 } # Norway House -> Norway House, Berens River
@@ -294,12 +294,12 @@ link = { vic = 68 hoi = 6930 hoi = 6955 hoi = 6976 hoi = 6954 hoi = 6996 } # Fre
 link = { vic = 250 hoi = 6928 hoi = 6953 hoi = 6929 } # Caribou -> St-Georges, Mullinocket, Millinocket
 link = { vic = 249 hoi = 6975 hoi = 7015 hoi = 6995 hoi = 7014 hoi = 6994 hoi = 7033 } # Bangor -> Danforth, Machias, Old Town, Bangor, Monson, Rockland
 link = { vic = 248 hoi = 7013 hoi = 3872 hoi = 7049 hoi = 3741 } # Lewiston -> Stratton, Waterville, Augusta, Portland
-link = { vic = 12 hoi = 8732 hoi = 11368 hoi = 8308 hoi = 10686 hoi = 4800 hoi = 11364 } # Reliance -> Reliance, Aberdeen Lake, Kugluktuk, Bathurst Inlet, Cambridge Bay, Gjoa Haven
+link = { vic = 12 hoi = 8732 hoi = 11368 hoi = 8308 hoi = 10686 hoi = 4800 } # Reliance -> Reliance, Aberdeen Lake, Kugluktuk, Bathurst Inlet, Cambridge Bay
 link = { vic = 40 hoi = 8284 hoi = 8365 } # Dauphin -> Swan River, Russel
 link = { vic = 36 hoi = 8445 } # Winnipeg -> Winnipeg
 link = { vic = 42 hoi = 8516 } # Pembina -> Hannah
 link = { vic = 41 hoi = 8444 hoi = 8416 } # Brandon -> Portage la Prairie, Brandon
-link = { vic = 26 hoi = 8336 } # Calgary -> Calgary
+link = { vic = 26 hoi = 8336 hoi = 11374 } # Calgary -> Calgary, Brooks
 link = { vic = 30 hoi = 8364 hoi = 8415 hoi = 8339 hoi = 8338 } # Regina -> Regina, Virden, Preeceville, Fort Qu'Appelle
 link = { vic = 32 hoi = 8584 } # Prince Albert -> La Ronge
 link = { vic = 35 hoi = 8388 hoi = 8414 hoi = 8363 } # Maple Creek -> Central Butte, Westhope, Moose Jaw
@@ -320,9 +320,9 @@ link = { vic = 6 hoi = 8082 hoi = 8085 hoi = 8090 } # Whitehorse -> Whitehorse, 
 link = { vic = 7 hoi = 8232 } # Dawson -> Dawson
 link = { vic = 8 vic = 2598 vic = 10 hoi = 11367 } # Ross River, Fort Liard, Inuvik -> Fort McPherson
 link = { vic = 9 hoi = 8583 hoi = 11377 } # Fort Simpson -> Tuktoyaktuk, Great Bear Lake
-link = { vic = 11 hoi = 11392 } # Echo Bay -> Point Lake
-link = { vic = 23 hoi = 8312 } # Athabaska Landing -> Yellowknife
-link = { vic = 22 hoi = 8389 } # Edmonton -> Fort Chipewyan
+link = { vic = 11 hoi = 8312 hoi = 11392 } # Echo Bay -> Yellowknife, something
+link = { vic = 23 hoi = 8389 } # Athabaska Landing -> Fort McMurray
+link = { vic = 22 hoi = 11364 } # Edmonton -> Red Deer
 link = { vic = 2597 hoi = 8362 } # Fort Vermilion -> Paddle Prairie
 link = { vic = 2629 hoi = 8311 hoi = 8189 } # Beatton River -> Fort Liard, Beatton River
 link = { vic = 17 hoi = 8309 } # Atlin -> Hyland Post
@@ -2722,10 +2722,10 @@ link = { vic = 174 hoi = 3794 hoi = 3728 hoi = 3795 hoi = 3662 hoi = 3661 hoi = 
 link = { vic = 175 hoi = 3334 hoi = 3471 hoi = 3403 hoi = 3472 hoi = 3602 } # Saginaw -> Sterling, Saginaw, Unionville, Minden City, Croswell
 link = { vic = 173 hoi = 3664 hoi = 3729 hoi = 3537 hoi = 3538 hoi = 3663 hoi = 3730 hoi = 3797 } # Detroit -> Flint, Howell, St Charles, Birch Run, Holt, Ann Arbor, Detroit
 link = { vic = 161 hoi = 8681 hoi = 8786 } # Green Bay -> Goodman, Green Bay
-link = { vic = 162 hoi = 8760 hoi = 8707 } # Madison -> Rochester, Eau Claire
-link = { vic = 159 hoi = 3793 hoi = 7084 } # Milwaukee -> Milwaukee, Madison
+link = { vic = 162 hoi = 8760 hoi = 8707 hoi = 4945 hoi = 5121 hoi = 7065 } # Madison -> Rochester, Eau Claire, Stevens Point, Merrill, Dodgeville
+link = { vic = 159 hoi = 3793 hoi = 7084 hoi = 5096 } # Milwaukee -> Milwaukee, Madison, Manitowoc
 link = { vic = 163 hoi = 7104 hoi = 2998 } # Chicago -> Chicago, Joliet
-link = { vic = 164 hoi = 7124 hoi = 7065 } # Rockford -> Rockford, Dubuque
+link = { vic = 164 hoi = 7124 hoi = 3134 } # Rockford -> Rockford, Freeport
 link = { vic = 165 hoi = 7148 hoi = 7170 hoi = 7196 hoi = 7219 } # Champaign -> Kankakee, Champaign, Crawfordsville, Terre Haute
 link = { vic = 171 hoi = 3727 hoi = 3862 hoi = 3934 hoi = 3999 hoi = 3863 hoi = 3933 hoi = 7171 } # South Bend -> Gary, Wolcott, Fort Wayne, Kokomo, Argos, Logansport, Lafayette
 link = { vic = 167 hoi = 8944 hoi = 7244 } # Springfield -> Springfield, Bloomington
@@ -2748,23 +2748,23 @@ link = { vic = 186 hoi = 9071 } # Bowling Green -> Bowling Green
 link = { vic = 189 hoi = 7371 hoi = 7387 hoi = 7352 hoi = 8412 } # Memphis -> Kennett, Memphis, Poplar Bluff, Dyersburg
 link = { vic = 187 hoi = 7380 } # Paducah -> Dyersburg
 link = { vic = 184 hoi = 9045 hoi = 9098 hoi = 7362 hoi = 7215 hoi = 4392 } # Louisville -> Oran, Clarksville, Polar Bluff, Richmond, Owensboro
-link = { vic = 206 hoi = 7402 hoi = 7396 hoi = 5152 hoi = 5222 hoi = 5121 } # Columbia -> Columbia, Bishopville, Florence, Olanta, Laurinburg
+link = { vic = 206 hoi = 7402 hoi = 7396 hoi = 5152 hoi = 5222 } # Columbia -> Columbia, Bishopville, Florence, Olanta
 link = { vic = 209 hoi = 7388 } # Charlotte -> Charlotte
 link = { vic = 205 hoi = 7415 hoi = 5287 hoi = 5349 hoi = 5317 hoi = 5288 hoi = 5257 hoi = 5223 hoi = 5256 } # Charleston -> Orangeburg, Cameron, Beaufort, Charleston, McClellanville, Georgetown, Myrtle Beach, Sumter
-link = { vic = 210 hoi = 5124 hoi = 5155 hoi = 5095 hoi = 5094 hoi = 5154 hoi = 5190 hoi = 5189 hoi = 5153 hoi = 5122 hoi = 5096 } # Wilmington -> Midway Park, Hampstead, Kenanasville, Rose Hill, Wilmington, Southport, Shallotte, Lumberton, Sisimiut, Beaufort
+link = { vic = 210 hoi = 5124 hoi = 5155 hoi = 5095 hoi = 5094 hoi = 5154 hoi = 5190 hoi = 5189 hoi = 5153 hoi = 5122 } # Wilmington -> Midway Park, Hampstead, Kenanasville, Rose Hill, Wilmington, Southport, Shallotte, Lumberton, Sisimiut
 link = { vic = 207 hoi = 5028 hoi = 5065 hoi = 4990 hoi = 5064 hoi = 5063 hoi = 4989 hoi = 4988 } # Greenville -> Greenville, Havelock, New Bern, Goldsboro, Clinton, Rocky Mount, Spring Hope
 link = { vic = 208 hoi = 5026 hoi = 5062 } # Raleigh -> Raleigh, Fayetteville
 link = { vic = 2556 hoi = 9124 hoi = 7395 hoi = 5188 } # Asheville -> Asheville, Gastonia, Spartanburg
 link = { vic = 169 hoi = 7197 hoi = 7220 hoi = 8945 } # Indianapolis -> Indianapolis, Bloomington, Frankfort
 link = { vic = 219 hoi = 4801 hoi = 4698 hoi = 4642 hoi = 4467 hoi = 4587 } # Baltimore -> Exmore, Salisbury, Cambridge, Baltimore, Clayton
-link = { vic = 222 hoi = 4643 } # Dover -> Dover
+link = { vic = 222 hoi = 4643 hoi = 4212 } # Dover -> Dover, Stamford
 link = { vic = 223 hoi = 4532 hoi = 4531 hoi = 4468 } # Philadelphia -> Philadelphia, North East, Reading
 link = { vic = 231 hoi = 4588 } # Atlantic City -> Atlantic City
 link = { vic = 233 hoi = 4280 hoi = 4281 } # Long Island -> Nassau, Suffolk
 link = { vic = 232 hoi = 4279 } # New York -> New York
-link = { vic = 230 hoi = 4469 hoi = 4404 } # Trenton -> Point Pleasant, Long Branch
+link = { vic = 230 hoi = 4469 hoi = 4404 hoi = 4146 } # Trenton -> Point Pleasant, Long Branch, Trenton
 link = { vic = 229 hoi = 4342 hoi = 4403 } # Newark -> Newark, Allentown
-link = { vic = 241 hoi = 4212 hoi = 4146 hoi = 4082 hoi = 4147 } # Hartford -> Stamford, Bridgeport, Hartford, New Haven
+link = { vic = 241 hoi = 4082 hoi = 4147 } # Hartford -> Hartford, New Haven
 link = { vic = 243 hoi = 4016 hoi = 3947 } # Boston -> Boston, Lowell
 link = { vic = 244 hoi = 4085 } # New Bedford -> New Bedford
 link = { vic = 242 hoi = 4084 hoi = 4148 hoi = 4083 } # Providence -> Fall River, New London, Providence
@@ -2775,7 +2775,7 @@ link = { vic = 247 hoi = 7012 hoi = 7032 hoi = 7048 hoi = 3740 hoi = 3807 hoi = 
 link = { vic = 239 hoi = 3410 hoi = 3542 hoi = 3606 hoi = 3477 } # Watertown -> Watertown, Ogdensburg, Fulton, Long Lake
 link = { vic = 240 hoi = 3411 hoi = 3478 hoi = 3607 hoi = 3608 hoi = 3738 } # Plattsburgh -> Massena, Lake Placid, North Creek, Lowville, Glens Falls
 link = { vic = 236 hoi = 3733 hoi = 3867 hoi = 3799 hoi = 3868 hoi = 3939 hoi = 3938 hoi = 4008 } # Buffalo -> Buffalo, Fredonia, Lockport, Springville, Olean, Jamestown, Lewis Run
-link = { vic = 235 hoi = 3941 hoi = 3940 hoi = 3870 hoi = 3942 hoi = 3871 hoi = 4011 hoi = 4010 } # Binghamton -> Hornell, Houghton, Cortland, Unadilla, Stamford, Delhi, Binghampton
+link = { vic = 235 hoi = 3941 hoi = 3940 hoi = 3870 hoi = 3942 hoi = 3871 hoi = 4011 } # Binghamton -> Hornell, Houghton, Cortland, Unadilla, Stamford, Delhi
 link = { vic = 238 hoi = 3672 hoi = 3673 hoi = 3802 hoi = 3736 hoi = 3801 hoi = 3671 } # Syracuse -> Camden, Utica, Hamilton, Syracuse, Canandaigua, Wolcott
 link = { vic = 237 hoi = 3735 hoi = 3670 hoi = 3734 hoi = 3800 hoi = 3869 } # Rochester -> Rochester, Albion, Warsaw, Nunda, Wayland
 link = { vic = 180 hoi = 3865 hoi = 3936 hoi = 4002 hoi = 4071 hoi = 4001 hoi = 3935 } # Sandusky -> Adrian, Toledo, Sandusky, Attica, Bowling Green, Liberty Center
@@ -2789,7 +2789,7 @@ link = { vic = 216 hoi = 7372 hoi = 7381 hoi = 7373 hoi = 5093 hoi = 7364 hoi = 
 link = { vic = 214 hoi = 4900 hoi = 4948 hoi = 4947 hoi = 4850 } # Norfolk -> Norfolk, Elizabeth City, Franklin, West Point
 link = { vic = 215 hoi = 7318 hoi = 7343 hoi = 4799 hoi = 4696 hoi = 4748 } # Staunton -> Staunton, Lynchburg, Waynesboro, Sperryville, Culpeper
 link = { vic = 213 hoi = 4749 } # Fredericksburg -> Fredricksburg
-link = { vic = 211 hoi = 4899 hoi = 4849 hoi = 4946 hoi = 4898 hoi = 4945 } # Richmond -> Richmond, Palmyra, Roanoke Rapids, Nottoway, Durham
+link = { vic = 211 hoi = 4899 hoi = 4849 hoi = 4946 hoi = 4898 } # Richmond -> Richmond, Palmyra, Roanoke Rapids, Nottoway
 link = { vic = 212 hoi = 4640 hoi = 4585 hoi = 4697 } # Manassas -> Manassas, New Market, Woodbridge
 link = { vic = 220 hoi = 4530 hoi = 4641 } # Washington -> Washington D.C., Waldorf
 link = { vic = 221 hoi = 4529 hoi = 4528 hoi = 4464 hoi = 4527 } # Hagerstown -> Winchester, Moorefield, Cumberland, Belington
@@ -2798,7 +2798,7 @@ link = { vic = 178 hoi = 4005 hoi = 4073 hoi = 4138 hoi = 4272 hoi = 4335 hoi = 
 link = { vic = 227 hoi = 4273 hoi = 4205 hoi = 4139 hoi = 4206 hoi = 4207 hoi = 4274 hoi = 4338 hoi = 4337 hoi = 4398 } # Pittsburgh -> Pittsburgh, New Castle, Sugarcreek, Ford City, Altona, Indiana, Somerset, Uniontown, Morgantown
 link = { vic = 226 hoi = 4339 hoi = 4465 hoi = 4466 hoi = 4401 hoi = 4340 hoi = 4402 } # Harrisburg -> Mount Union, Berkeley Springs, Martinsburg, Hagerstown, Harrisburg, Lancaster
 link = { vic = 228 hoi = 3866 hoi = 3937 hoi = 4006 hoi = 4074 hoi = 4007 hoi = 4076 hoi = 4075 } # Erie -> Ripley, Erie, Corry, Meadville, Tionesta, St Marys, Clarion
-link = { vic = 224 hoi = 4211 hoi = 4144 hoi = 4079 hoi = 4143 hoi = 4277 hoi = 4278 hoi = 4341 } # Scranton -> Paterson, Carbondale, Hancock, New Millford, Hazleton, Stroudsburg, Pottsville
+link = { vic = 224 hoi = 4211 hoi = 4144 hoi = 4079 hoi = 4143 hoi = 4277 hoi = 4278 hoi = 4341 hoi = 4010 } # Scranton -> Paterson, Carbondale, Hancock, New Millford, Hazleton, Stroudsburg, Pottsville, Sayre
 link = { vic = 225 hoi = 4009 hoi = 4078 hoi = 4142 hoi = 4208 hoi = 4275 hoi = 4077 hoi = 4141 hoi = 4140 hoi = 4210 hoi = 4209 hoi = 4276 } # Williamsport -> Wellsboro, Towanda, Williamsport, State College, Huntingdon, Karthouse, Philipsburg, Du Bois, Scranton, Lewisburg, Chambersburg
 link = { vic = 135 hoi = 9121 hoi = 9096 hoi = 9069 hoi = 9016 hoi = 8989 hoi = 9042 hoi = 9015 hoi = 8965 hoi = 9095 hoi = 8966 } # Lubbock -> Dallas, Hugo, Ardmore, Oklahoma City, Enid, Wichita Falls, Clinton, Woodward, Fort Worth, Wichita
 link = { vic = 196 hoi = 7430 hoi = 7441 hoi = 7429 hoi = 2604 } # Tuscaloosa -> Birmingham, Meridian, Tuscaloosa, Phenix City
@@ -2812,26 +2812,26 @@ link = { vic = 147 hoi = 7299 hoi = 7315 hoi = 7300 hoi = 8991 } # Joplin -> Spr
 link = { vic = 145 hoi = 7340 hoi = 7361 hoi = 7379 hoi = 7370 hoi = 7351 hoi = 7328 } # Fayetteville -> Mountain Home, Heber Springs, Searcy, Warm Springs, Russellville, Harrison
 link = { vic = 130 hoi = 9017 hoi = 9065 } # Tahlequah -> Tahlequah, Fort Gibson
 link = { vic = 131 hoi = 9044 hoi = 9070 hoi = 9043 } # Okmulgee -> Fort Smith, Dierks, McAlester
-link = { vic = 129 hoi = 8941 hoi = 8967 hoi = 8990 hoi = 8943 hoi = 8942 hoi = 8921 hoi = 8922 } # Oklahoma City -> Hays, Chanute, Tulsa, Kansas City, Salina, Beloit, Topeka
+link = { vic = 129 hoi = 8941 hoi = 8967 hoi = 8990 hoi = 8943 hoi = 8942 hoi = 8921 hoi = 8922 hoi = 8938 } # Oklahoma City -> Hays, Chanute, Tulsa, Kansas City, Salina, Beloit, Topeka, Clinton
 link = { vic = 104 hoi = 8987 hoi = 9040 hoi = 9066 hoi = 9093 } # Albuquerque -> Albuquerque, Las Cruces, Lordsburg, El Paso
-link = { vic = 103 hoi = 8939 hoi = 8940 hoi = 8964 hoi = 8988 } # Santa Fe -> Santa Fe, Liberal, Tucumcari, Pampa
+link = { vic = 103 hoi = 8939 hoi = 8964 hoi = 8988 } # Santa Fe -> Santa Fe, Tucumcari, Pampa
 link = { vic = 105 hoi = 9041 hoi = 9014 hoi = 9067 hoi = 9068 hoi = 9094 hoi = 9120 hoi = 9148 hoi = 9175 hoi = 9119 } # Las Cruces -> Childress, Amarillo, Roswell, Abilene, Midland, Winters, Crane, Marfa, Orla
 link = { vic = 136 hoi = 9270 hoi = 9207 hoi = 9177 hoi = 9149 hoi = 9176 hoi = 9239 hoi = 9206 hoi = 9240 } # El Paso -> Burnet, Killeen, Waco, Hico, San Angelo, Rocksprings, Study Butte, Temple
 link = { vic = 102 hoi = 9039 hoi = 9092 hoi = 9038 } # Tucson -> Tucson, Nogales, Sentinel
 link = { vic = 100 hoi = 9012 hoi = 9013 hoi = 8962 hoi = 8985 } # Phoenix -> Casa Grande, Morenci, Phoenix, Salome
 link = { vic = 90 hoi = 7350 hoi = 7339 hoi = 9037 } # San Diego -> San Diego, Palm Desert, Yuma
-link = { vic = 96 hoi = 8916 hoi = 8873 hoi = 8961 hoi = 8828 } # Las Vegas -> Las Vegas, Indian Springs, Lake Havasu City, Cedar City
+link = { vic = 96 hoi = 8916 hoi = 8961 hoi = 8828 } # Las Vegas -> Las Vegas, Lake Havasu City, Cedar City
 link = { vic = 97 hoi = 8726 hoi = 8778 hoi = 8829 hoi = 8752 hoi = 8753 hoi = 8805 } # Salt Lake City -> Salt Lake City, Aurora, Junction, Wendover, Vernal, Price
 link = { vic = 106 hoi = 8854 hoi = 8831 hoi = 8855 hoi = 8807 hoi = 8832 hoi = 8781 } # Denver -> Denver, Scottsbluff, Sidney, Alliance, North Platte, Wall
-link = { vic = 109 hoi = 8876 hoi = 8877 hoi = 8920 hoi = 8898 hoi = 8919 hoi = 8897 } # Pueblo -> Cope, Goodland, Scott City, Colby, Des Moimes, Raton
+link = { vic = 109 hoi = 8877 hoi = 8920 hoi = 8898 hoi = 8919 hoi = 8897 } # Pueblo -> Goodland, Scott City, Colby, Des Moimes, Raton
 link = { vic = 98 hoi = 8852 hoi = 8895 } # Loa -> St George, Lake Mead
 link = { vic = 99 hoi = 8853 hoi = 8874 } # Moab -> Big Water, Orderville
-link = { vic = 101 hoi = 8937 hoi = 8917 hoi = 8938 hoi = 8963 hoi = 8986 } # Flagstaff -> Kingman, Grand Canyon, Holbrook, Show Low, Claypool
+link = { vic = 101 hoi = 8937 hoi = 8917 hoi = 8963 hoi = 8986 } # Flagstaff -> Kingman, Grand Canyon, Show Low, Claypool
 link = { vic = 108 hoi = 8918 hoi = 8896 } # Alamosa -> Farmington, Kayenta
 link = { vic = 107 hoi = 8875 hoi = 8830 hoi = 8779 hoi = 8806 } # Grand Junction -> Grand Junction, Glenwood Springs, Steamboat Springs, Fort Collins
 link = { vic = 151 hoi = 8835 hoi = 8880 } # Des Moines -> Des Moines, Mount Ayr
-link = { vic = 155 hoi = 8706 } # Minneapolis -> Minneapolis
-link = { vic = 153 hoi = 7102 hoi = 7083 hoi = 8785 hoi = 8759 hoi = 8811 hoi = 7082 } # Cedar Rapids -> Cedar Rapids, Anamosa, Waterloo, Owatonna, Mason City, Marshalltown
+link = { vic = 155 hoi = 8706 hoi = 8876 hoi = 8759 hoi = 8940 hoi = 8873 } # Minneapolis -> Minneapolis, Winona, Rochester, Willmar, Ortonville
+link = { vic = 153 hoi = 7102 hoi = 7083 hoi = 8785 hoi = 8811 hoi = 7082 } # Cedar Rapids -> Cedar Rapids, Anamosa, Waterloo, Mason City, Marshalltown
 link = { vic = 152 hoi = 7145 hoi = 7122 hoi = 7146 hoi = 7123 } # Oskaloosa -> Oskaloosa, Grinnell, Ottumwa, Iowa City
 link = { vic = 150 hoi = 7168 hoi = 7217 hoi = 7193 hoi = 7216 hoi = 8901 } # Kansas City -> Bloomfield, Kahoka, Moberly, Chillicothe, St Joseph
 link = { vic = 154 hoi = 8783 hoi = 8810 } # Sioux City -> Sioux City, Fort Dodge
@@ -2844,9 +2844,9 @@ link = { vic = 156 hoi = 8758 hoi = 8784 } # Granite Falls -> Sioux Falls, Manka
 link = { vic = 157 hoi = 8553 hoi = 8585 hoi = 8649 } # Moorhead -> Grand Forks, Grand Rapids, Brainerd
 link = { vic = 118 hoi = 8515 hoi = 8514 hoi = 8443 hoi = 8476 } # Minot -> Rocklake, Cando, Dunseith, Botineau
 link = { vic = 78 hoi = 6696 hoi = 6713 hoi = 6722 hoi = 6714 hoi = 6697 hoi = 6683 } # Seattle -> Bremerton, Aberdeen, Olympia, Tacoma, Seattle, Everett
-link = { vic = 79 hoi = 8385 hoi = 6698 hoi = 6689 } # Spokane -> Spokane, Quincy, Wenatchee
-link = { vic = 80 hoi = 8471 hoi = 6723 hoi = 6705 hoi = 6732 hoi = 6743 } # Walla Walla -> Richland, Yakima, Ellensburg, Mount St Helens, Granger
-link = { vic = 92 hoi = 8360 hoi = 8411 hoi = 8509 hoi = 8438 hoi = 8547 hoi = 8578 } # Coeur D'Alene -> Libby, Kellogg, Weiser, Craigmont, Butte, Boise
+link = { vic = 79 hoi = 8385 hoi = 6698 hoi = 6689 hoi = 8438 } # Spokane -> Spokane, Quincy, Wenatchee, Marcus
+link = { vic = 80 hoi = 8471 hoi = 6723 hoi = 6705 hoi = 6732 hoi = 6743 hoi = 8509 } # Walla Walla -> Richland, Yakima, Ellensburg, Mount St Helens, Granger, Pomeroy
+link = { vic = 92 hoi = 8360 hoi = 8411 hoi = 8547 } # Coeur D'Alene -> Libby, Kellogg, Butte
 link = { vic = 93 hoi = 8673 hoi = 8610 hoi = 8643 hoi = 8700 } # Pocatello -> Pocatello, Dillon, Etna, Big Piney
 link = { vic = 113 hoi = 8548 hoi = 8580 hoi = 8611 } # Bozeman -> Big Timber, Billings, Red Lodge
 link = { vic = 114 hoi = 8439 hoi = 8361 hoi = 8473 hoi = 8510 } # Missoula -> Helena, Browning, Great Falls, White Sulphur Springs
@@ -2864,15 +2864,15 @@ link = { vic = 116 hoi = 8512 hoi = 8581 hoi = 8549 } # Billings -> Williston, W
 link = { vic = 84 hoi = 3658 hoi = 3597 hoi = 3725 hoi = 3791 hoi = 3860 hoi = 3861 hoi = 3931 hoi = 3997 hoi = 3659 } # San Francisco -> San Francisco, Vallejo, Sunnyvale, Turlock, San Jose, Newman, Morgan Hill, Santa Cruz, Modesto
 link = { vic = 89 hoi = 4694 hoi = 4747 hoi = 7327 hoi = 4695 hoi = 4639 hoi = 4638 hoi = 4693 hoi = 4582 hoi = 4637 hoi = 4524 } # Los Angeles -> Los Angeles, Santa Ana, Oceanside, Riverside, Fontana, Lancaster, Oxnard, Los Alamos, Lompoc, Bakersfield
 link = { vic = 87 hoi = 4131 hoi = 4265 hoi = 4330 hoi = 4581 hoi = 4523 hoi = 4266 hoi = 4066 hoi = 4331 hoi = 4459 hoi = 3998 } # Monterey -> Watsonville, Seaside, Greenfield, Santa Maria, Atascadero, San Benito Mountain, Los Banos, Coalinga, Lost Hills, Gustine
-link = { vic = 85 hoi = 2800 hoi = 2801 hoi = 2931 hoi = 2997 hoi = 3066 hoi = 3200 hoi = 3264 hoi = 3330 hoi = 3398 hoi = 3532 hoi = 3265 hoi = 3467 hoi = 2932 hoi = 2866 hoi = 3067 hoi = 3134 hoi = 2735 hoi = 2669 } # Eureka -> Myrtle Point, Crater Lake, Ophir, Brookings, Crescent City, Arcata, Fortuna, Willits, Point Arena, Santa Rosa, Redding, Cloverdale, Klamath Falls, Mount Scott, Dorris, Weed, Roseburg, Coos Bay
+link = { vic = 85 hoi = 2800 hoi = 2801 hoi = 2931 hoi = 2997 hoi = 3066 hoi = 3200 hoi = 3264 hoi = 3330 hoi = 3398 hoi = 3532 hoi = 3265 hoi = 3467 hoi = 2932 hoi = 2866 hoi = 3067 hoi = 2735 hoi = 2669 } # Eureka -> Myrtle Point, Crater Lake, Ophir, Brookings, Crescent City, Arcata, Fortuna, Willits, Point Arena, Santa Rosa, Redding, Cloverdale, Klamath Falls, Mount Scott, Dorris, Roseburg, Coos Bay
 link = { vic = 81 hoi = 6742 hoi = 6731 hoi = 6741 hoi = 6763 hoi = 6784 hoi = 6796 hoi = 2670 hoi = 6809 hoi = 6797 hoi = 6774 hoi = 6752 } # Portland -> Glenoma, Astoria, Seaside, Nehalem, Salem, Corvallis, Sutherline, Eugene, Stayton, Portland, Longview
-link = { vic = 91 hoi = 8609 hoi = 8672 hoi = 8642 hoi = 8699 } # Boise -> Caldwell, Matterhorn, Twin Falls, Burley
+link = { vic = 91 hoi = 8642 hoi = 8699 } # Boise -> Twin Falls, Burley
 link = { vic = 88 hoi = 4132 hoi = 4067 hoi = 7143 hoi = 7167 hoi = 7263 hoi = 7279 hoi = 9011 hoi = 7314 hoi = 7298 hoi = 4583 hoi = 4525 hoi = 4393 hoi = 4267 hoi = 4199 hoi = 7191 hoi = 7240 } # Mariposa -> Chowchilla, North Palisade, Bishop, Lone Pine, Telescope Peak, Twentynine Palms, Blythe, Desert Hot Springs, Yermo, Boron, Inyokern, Porterville, Hanford, Fresno, Visalia, Olancha Peak
 link = { vic = 95 hoi = 7241 hoi = 7192 hoi = 7144 hoi = 7121 hoi = 7101 hoi = 8851 hoi = 7064 hoi = 7081 } # Elko -> Mojave Desert, Charleston Peak, Death Valley, Goldfield, Kawich Peak, Bald Mountain, Shoshone Mountains, Tonopah
 link = { vic = 94 hoi = 8777 hoi = 8804 hoi = 8751 hoi = 7030 hoi = 6969 hoi = 7011 hoi = 7047 hoi = 7046 hoi = 7029 } # Carson City -> Ely, Milford, Battle Mountain, Humbolt Salt Marsh, McDermitt, Imlay, Paradise Peak, Carson City, Carson Sink
 link = { vic = 86 hoi = 6968 hoi = 3135 hoi = 6946 hoi = 6991 hoi = 3201 hoi = 3266 hoi = 7010 hoi = 7063 hoi = 7080 hoi = 3932 hoi = 3792 hoi = 3726 hoi = 3660 hoi = 3468 hoi = 3598 hoi = 3533 hoi = 3399 hoi = 3331 hoi = 3400 hoi = 3534 hoi = 7100 } # Sacramento -> Fort Bidwell, Clear Lake, Duffer Peak, Black Rock Desert, Bieber, Janesville, Reno, Babbitt, Lee Vining, Merced, El Portal, Hughson, Oakdale, Sutter Creek, Stockton, Sacramento, Citrus Heights, Chico, Colfax, South Lake Tahoe, Boundary Peak
-link = { vic = 82 hoi = 6753 hoi = 6764 hoi = 6785 hoi = 8577 hoi = 8508 hoi = 8546 hoi = 6810 } # Baker City -> Mount Adams, Lewis, John Day, Ukiah, Columbia, Grand Forks, Strawberry Mountain
-link = { vic = 83 hoi = 8725 hoi = 8698 hoi = 6878 hoi = 6839 hoi = 6823 hoi = 8641 hoi = 6922 hoi = 6856 hoi = 6838 hoi = 2736 hoi = 6877 hoi = 6901 hoi = 6921 hoi = 2999 } # Klamath Falls -> Wells, Jordanvalley, Harney Lake, Burns, McKenzie, Malheur, Steens Mountains, Lake Abert, Crescent, Chemult, Summer Lake, Warner Lakes, Lakeview, Merrill
+link = { vic = 82 hoi = 6753 hoi = 6764 hoi = 6785 hoi = 8577 hoi = 8508 hoi = 8546 hoi = 6810 hoi = 8578 } # Baker City -> Mount Adams, Lewis, John Day, Ukiah, Columbia, Grand Forks, Strawberry Mountain, Elgin
+link = { vic = 83 hoi = 8725 hoi = 8698 hoi = 6878 hoi = 6839 hoi = 6823 hoi = 8641 hoi = 6922 hoi = 6856 hoi = 6838 hoi = 2736 hoi = 6877 hoi = 6901 hoi = 6921 hoi = 2999 hoi = 8609 hoi = 8672 } # Klamath Falls -> Wells, Jordanvalley, Harney Lake, Burns, McKenzie, Malheur, Steens Mountains, Lake Abert, Crescent, Chemult, Summer Lake, Warner Lakes, Lakeview, Merrill, Vale, Juntura
 link = { vic = 3116 hoi = 14132 } # Lake Superior -> Lake Superior
 link = { vic = 3115 hoi = 14130 } # Lake Michigan -> Lake Michigan
 link = { vic = 3114 hoi = 14131 } # Lake Huron -> Lake Huron

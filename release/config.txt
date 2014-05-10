@@ -1,18 +1,18 @@
 debug = {
   generic  = yes 
   30 = no # Leaders
-  31 = no # Provinces
+  31 = yes # Provinces
   32 = no # Ministers
   33 = no # Tech teams 
   34 = no # Strategic resources 
   35 = no # Techs 
   36 = no # Buildings 
-  37 = no # Units 
+  37 = yes # Units 
   38 = no # Stockpiles 
   39 = no # Laws
   40 = no # Misc
   41 = no # Revolters 
-  42 = yes # Cores 
+  42 = no # Cores 
   43 = no # Countries 
   44 = no # Base tax
   45 = no # Manpower 
@@ -495,6 +495,7 @@ unitTypes = {
   artillery = artillery_brigade
   artillery = anti_tank_brigade
   irregular = militia_brigade
+  reserve = militia_brigade
 }
 
 hoiDivNames = {
@@ -546,6 +547,7 @@ shipConversions = {
 extraUnits = {
   armor_brigade = { tank 5 10 15 20 25 35 50 75 100 125 150 175 200 225 250 300 350 400 450 500 600 }
   artillery_brigade = { artillery 5 10 15 20 25 35 40 50 60 75 100 125 150 175 200 225 250 300 350 400 450 500 600 }
+  militia_brigade = { reserve 1 3 5 7 10 15 20 25 30 35 40 45 50 60 70 80 90 100 120 140 160 180 200 225 }
 }
 
 hoiShips = {
