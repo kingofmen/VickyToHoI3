@@ -323,7 +323,8 @@ Unity is linear in average militancy; it is 100 at 0 militancy and
 \texttt{minimumUnity} at 10 militancy. 
 
 Dissent is equal to the percentage of Vicky population that belongs to a
-rebel faction. 
+rebel faction, multiplied by \texttt{rebelWeight}, plus average
+militancy. 
 
 Terrain can only be modified by changing terrain.bmp, and the
 converter therefore leaves it alone even though this means historical

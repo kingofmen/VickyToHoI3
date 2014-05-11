@@ -1405,7 +1405,10 @@ bool WorkerThread::convertGovernments () {
     government->setLeaf("chief_of_navy", (*oc)->safeGetString("chief_of_navy"));
     government->setLeaf("chief_of_air", (*oc)->safeGetString("chief_of_air"));
     government->setLeaf("election", (*oc)->safeGetString("election"));
-    government->setLeaf("last_election", (*oc)->safeGetString("last_election"));    
+    government->setLeaf("duration", (*oc)->safeGetString("duration"));
+    government->setLeaf("last_election", (*oc)->safeGetString("last_election"));
+    government->setValue((*oc)->safeGetObject("popularity"));
+    government->setValue((*oc)->safeGetObject("organization"));     
   }
   
   for (objiter nc = hoiCountries.begin(); nc != hoiCountries.end(); ++nc) {
@@ -1458,7 +1461,10 @@ bool WorkerThread::convertGovernments () {
     swap(newGov, hoiCountry, "chief_of_navy");
     swap(newGov, hoiCountry, "chief_of_air");
     swap(newGov, hoiCountry, "election");
+    swap(newGov, hoiCountry, "duration"); 
     swap(newGov, hoiCountry, "last_election");
+    swap(newGov, hoiCountry, "popularity");
+    swap(newGov, hoiCountry, "organization");
   }
 
   Logger::logStream(Logger::Game) << "Done with governments.\n"; 
@@ -1657,15 +1663,16 @@ bool WorkerThread::convertMisc () {
   for (objiter rebel = rebels.begin(); rebel != rebels.end(); ++rebel) {
     setPointersFromVicTag(remQuotes((*rebel)->safeGetString("country")));
     if (!hoiCountry) continue;
-    double totalRebs = 0;
     objvec rebs = (*rebel)->getValue("pop");
+    double totalRebs = 0;  
     for (objiter reb = rebs.begin(); reb != rebs.end(); ++reb) {
       Object* pop = popIdMap[(*reb)->safeGetString("id")];
       if (!pop) continue;
-      totalRebs += pop->safeGetInt("size"); 
+      totalRebs += pop->safeGetInt("size");
     }
-    vicCountry->setLeaf("totalRebels", totalRebs); 
+    vicCountry->resetLeaf("totalRebels", totalRebs + vicCountry->safeGetFloat("totalRebels"));   
   }
+  double rebelWeight = configObject->safeGetFloat("rebelWeight", 0.1);
   
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
     setPointersFromHoiCountry(*hc);
@@ -1682,12 +1689,16 @@ bool WorkerThread::convertMisc () {
       if (neutrality < minimumNeutrality) neutrality = minimumNeutrality; 
       dissent  = vicCountry->safeGetFloat("totalRebels");
       dissent /= (1 + vicCountry->safeGetFloat("totalPop"));
+      dissent *= rebelWeight; 
       dissent *= 100;
+      dissent += vicCountry->safeGetFloat("avg_mil"); 
       exhaustion = 0.1 * vicCountry->safeGetFloat("war_exhaustion");
       influence = vicCountry->safeGetFloat("diplo_influence"); 
       if (0 < vicCountryToHoiProvsMap[vicCountry].size()) {
 	Logger::logStream(DebugMisc) << "Vic " << vicTag << " (HoI " << hoiTag << ") gets unity, dissent, neutrality "
-				     << unity << ", " << dissent << ", " << neutrality << ".\n";
+				     << unity << ", "
+				     << dissent << " (" << vicCountry->safeGetString("totalRebels") << " / " << vicCountry->safeGetString("totalPop") << "), "
+				     << neutrality << ".\n";
       }
     }
 

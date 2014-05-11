@@ -23,7 +23,7 @@ debug = {
   50 = no # Urban terrain 
   51 = no # Diplomacy  
   52 = no # Resources 
-  all = no 
+  all = yes
 }
 vicdir = .\V2_HoD\
 # Allowed values: HoI_Vanilla, HoI_TFH 
@@ -46,6 +46,7 @@ minimumUnity = 10
 maxWarThreat = 50
 maxPaxThreat = 25
 infraWeight = 0.01
+rebelWeight = 0.1
 
 crude_oil = {
   oil = 1.0
