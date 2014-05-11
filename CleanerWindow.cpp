@@ -916,7 +916,7 @@ bool WorkerThread::convertBuildings () {
     }
 			    
     Object* infra = (*hp)->safeGetObject("infra");
-    if (infra) infraValues.push_back(infra->tokenAsFloat(0)); 
+    if (infra) infraValues.push_back(infra->tokenAsFloat(0));
 
     infra = (*hp)->safeGetObject("anti_air");
     if (infra) {
@@ -1072,7 +1072,7 @@ bool WorkerThread::convertBuildings () {
 	  hoiInfra->addToList(leastInfra);
 	  hoiInfra->addToList(leastInfra);
 	}
-      continue;
+	continue;
       }
       if (remQuotes((*hp)->safeGetString("owner")) != hoiTag) {
 	Logger::logStream(DebugBuildings) << "Skipping infra in " << (*hp)->getKey() << " for bad owner " << (*hp)->safeGetString("owner") << "\n"; 
@@ -1091,8 +1091,17 @@ bool WorkerThread::convertBuildings () {
 	}
       }
 
+      if ((infraToUse < 2) && ((*vp)->safeGetFloat("infrastructure") > 0.01)) infraToUse = 2; 
+      
       sprintf(stringbuffer, "%.3f", infraToUse);
-      Logger::logStream(DebugBuildings) << "HoI " << nameAndNumber(*hp) << " gets infra " << stringbuffer << " from Vic " << nameAndNumber(*vp) << ".\n"; 
+      Logger::logStream(DebugBuildings) << "HoI " << nameAndNumber(*hp) << " gets infra " << stringbuffer << " from Vic " << nameAndNumber(*vp) << ".\n";
+      if (infraToUse < 2) {
+	double inputInfra = hoiInfra->tokenAsFloat(0);
+	if (inputInfra > 1) {
+	  Logger::logStream(DebugBuildings) << "  Resetting to 2 as input is " << inputInfra << "\n";
+	  sprintf(stringbuffer, "2.000");
+	}
+      }
       hoiInfra->resetToken(0, stringbuffer);
       hoiInfra->resetToken(1, stringbuffer);
       (*hp)->setLeaf("infraSet", "yes");
@@ -1288,8 +1297,7 @@ bool WorkerThread::convertDiplomacy () {
     // Create the HoI war
     Object* hoiWar = new Object("active_war");
     hoiWar->setValue((*war)->safeGetObject("name"));
-    hoiWar->setLeaf("limited", "no"); 
-    hoiWar->setValue((*war)->safeGetObject("action"));
+    hoiWar->setLeaf("limited", "no");
     objvec vicAttackers = (*war)->getValue("attacker");
     objvec vicDefenders = (*war)->getValue("defender");    
     for (objiter vat = vicAttackers.begin(); vat != vicAttackers.end(); ++vat) {
@@ -1315,6 +1323,10 @@ bool WorkerThread::convertDiplomacy () {
 	relation->resetLeaf("war", "yes"); 
       }
     }
+    string action = remQuotes((*war)->safeGetString("action"));
+    action += ".0";
+    hoiWar->setLeaf("action", action);
+    
     if (0 == hoiWar->getValue("attacker").size()) continue;
     if (0 == hoiWar->getValue("defender").size()) continue;
     hoiGame->setValue(hoiWar);
@@ -1405,6 +1417,7 @@ bool WorkerThread::convertGovernments () {
     government->setLeaf("chief_of_navy", (*oc)->safeGetString("chief_of_navy"));
     government->setLeaf("chief_of_air", (*oc)->safeGetString("chief_of_air"));
     government->setLeaf("election", (*oc)->safeGetString("election"));
+    government->setLeaf("ideology", (*oc)->safeGetString("ideology"));
     government->setLeaf("duration", (*oc)->safeGetString("duration"));
     government->setLeaf("last_election", (*oc)->safeGetString("last_election"));
     government->setValue((*oc)->safeGetObject("popularity"));
@@ -1460,7 +1473,7 @@ bool WorkerThread::convertGovernments () {
     swap(newGov, hoiCountry, "chief_of_army");
     swap(newGov, hoiCountry, "chief_of_navy");
     swap(newGov, hoiCountry, "chief_of_air");
-    swap(newGov, hoiCountry, "election");
+    swap(newGov, hoiCountry, "ideology");
     swap(newGov, hoiCountry, "duration"); 
     swap(newGov, hoiCountry, "last_election");
     swap(newGov, hoiCountry, "popularity");
@@ -2852,8 +2865,9 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
 
   double ret = 0;  
   Object* rgo = vicProvince->safeGetObject("rgo");
+  if (!rgo) return 0; 
   Object* resourceConversion = configObject->safeGetObject(resource);
-  if ((rgo) && (resourceConversion)) {
+  if (resourceConversion) {
     string goods = remQuotes(rgo->safeGetString("goods_type"));
     ret = rgo->safeGetFloat("last_income") * resourceConversion->safeGetFloat(goods, -1);
     if (ret >= 0) {
