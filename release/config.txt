@@ -73,18 +73,22 @@ rare_materials = {
   coffee = 1.0
 }
 
+# RGOs that give other resources mostly have MP set to zero so as not
+# to double-count. Note default value is 1. 
 manpower = {
   oil = 0
   coal = 0
   iron = 0
   coal = 0
-  timber = 0
+  timber = 0.9
   rubber = 0
   opium = 0
   precious_metal = 0
   dye = 0
   sulphur = 0 
   tropical_wood = 0 
+  tea = 0
+  coffee = 0
 }
 
 

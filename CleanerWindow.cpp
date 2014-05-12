@@ -1091,10 +1091,12 @@ bool WorkerThread::convertBuildings () {
 	}
       }
 
+      // Don't allow level 1 unless province is totally undeveloped
       if ((infraToUse < 2) && ((*vp)->safeGetFloat("infrastructure") > 0.01)) infraToUse = 2; 
       
       sprintf(stringbuffer, "%.3f", infraToUse);
       Logger::logStream(DebugBuildings) << "HoI " << nameAndNumber(*hp) << " gets infra " << stringbuffer << " from Vic " << nameAndNumber(*vp) << ".\n";
+      // ... and also wasteland in input. 
       if (infraToUse < 2) {
 	double inputInfra = hoiInfra->tokenAsFloat(0);
 	if (inputInfra > 1) {
@@ -2865,17 +2867,10 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
 
   double ret = 0;  
   Object* rgo = vicProvince->safeGetObject("rgo");
-  if (!rgo) return 0; 
-  Object* resourceConversion = configObject->safeGetObject(resource);
-  if (resourceConversion) {
-    string goods = remQuotes(rgo->safeGetString("goods_type"));
-    ret = rgo->safeGetFloat("last_income") * resourceConversion->safeGetFloat(goods, -1);
-    if (ret >= 0) {
-      vicProvince->setLeaf(resource, ret);
-      return ret;
-    }
-  }
-
+  if (!rgo) return 0;
+  string goods = remQuotes(rgo->safeGetString("goods_type"));
+  Object* resourceConversion = configObject->getNeededObject(resource);
+  
   if (resource == "manpower") {
     static Object* fightingClasses = configObject->getNeededObject("fightingClasses");
     static objvec classes = fightingClasses->getValue("class");
@@ -2885,8 +2880,17 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
 	ret += (*pop)->safeGetFloat("size");
       }
     }
+    ret *= resourceConversion->safeGetFloat(goods, 1); 
     vicProvince->setLeaf(resource, ret);
     return ret; 
+  }
+  
+  if (resourceConversion) {
+    ret = rgo->safeGetFloat("last_income") * resourceConversion->safeGetFloat(goods, -1);
+    if (ret >= 0) {
+      vicProvince->setLeaf(resource, ret);
+      return ret;
+    }
   }
 
   if (resource == "leadership") {
