@@ -64,12 +64,29 @@ energy = {
 
 rare_materials = {
   rubber = 1.0
-  opium = 0.75
-  precious_metal = 0.75
-  dye = 0.75
+  opium = 1.0
+  precious_metal = 1.0
+  dye = 1.0
   sulphur = 1.0 
   tropical_wood = 1.0 
+  tea = 1.0
+  coffee = 1.0
 }
+
+manpower = {
+  oil = 0
+  coal = 0
+  iron = 0
+  coal = 0
+  timber = 0
+  rubber = 0
+  opium = 0
+  precious_metal = 0
+  dye = 0
+  sulphur = 0 
+  tropical_wood = 0 
+}
+
 
 fightingClasses = {
   class = artisans
