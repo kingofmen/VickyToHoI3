@@ -1152,12 +1152,19 @@ bool WorkerThread::convertBuildings () {
     if (0 == victoryValues.size()) break;
     setPointersFromVicProvince(*vp);
     if (!vicCountry) continue;
+
+    for (objiter victory = victories.begin(); victory != victories.end(); ++victory) {
+      Logger::logStream(Logger::Debug) << nameAndNumber(*vp) << " VPs from " << (*victory)->getKey() << ": " 
+				       << (*vp)->safeGetFloat((*victory)->getKey()) * victoryObject->safeGetFloat((*victory)->getKey())
+				       << "\n"; 
+    }
+
+    
     double baseValue = victoryValues.back();
     Object* target = 0;
     double bestIndustry = -1;
     for (objiter hp = vicProvToHoiProvsMap[*vp].begin(); hp != vicProvToHoiProvsMap[*vp].end(); ++hp) {
-      if (remQuotes((*hp)->safeGetString("owner")) != vicTag) continue;
-      if ((*hp)->safeGetObject("air_base")) continue;
+      if (remQuotes((*hp)->safeGetString("owner")) != hoiTag) continue;
       double currIndustry = 0;
       Object* industry = (*hp)->safeGetObject("industry");
       if (industry) currIndustry = industry->tokenAsFloat(0);
@@ -1166,6 +1173,7 @@ bool WorkerThread::convertBuildings () {
       bestIndustry = currIndustry;
     }
     if (!target) continue;
+    Logger::logStream(Logger::Debug) << "Selected " << target->getKey() << "\n"; 
     target->resetLeaf("points", baseValue);
     victoryValues.pop_back(); 
   } 
@@ -2884,14 +2892,6 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
     vicProvince->setLeaf(resource, ret);
     return ret; 
   }
-  
-  if (resourceConversion) {
-    ret = rgo->safeGetFloat("last_income") * resourceConversion->safeGetFloat(goods, -1);
-    if (ret >= 0) {
-      vicProvince->setLeaf(resource, ret);
-      return ret;
-    }
-  }
 
   if (resource == "leadership") {
     static Object* officerClasses = configObject->getNeededObject("officerClasses");
@@ -2904,6 +2904,12 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
     }
     vicProvince->setLeaf(resource, ret);
     return ret; 
+  }
+  
+  ret = rgo->safeGetFloat("last_income") * resourceConversion->safeGetFloat(goods, -1);
+  if (ret >= 0) {
+    vicProvince->setLeaf(resource, ret);
+    return ret;
   }
 
   vicProvince->setLeaf(resource, 0);
