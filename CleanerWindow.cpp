@@ -381,10 +381,9 @@ bool WorkerThread::createCountryMap () {
   }
 
   map<string, int> vicTagToProvsMap;
-  map<string, int> vicTagToCoresMap;
 
   if (customObject) {
-    Object* countryCustom = customObject->safeGetObject("countries");
+    Object* countryCustom = customObject->getNeededObject("countries");
     objvec overrides = countryCustom->getLeaves();
     for (objiter over = overrides.begin(); over != overrides.end(); ++over) {
       vicTag = (*over)->getKey();
@@ -419,6 +418,7 @@ bool WorkerThread::createCountryMap () {
   }
   
   objvec links = countryMapObject->getValue("link");
+  // First assign countries with provinces by the given links. 
   for (objiter link = links.begin(); link != links.end(); ++link) {
     objvec vics = (*link)->getValue("vic");
     vicCountry = 0;
@@ -442,13 +442,39 @@ bool WorkerThread::createCountryMap () {
       hoiCountry = hCurr;
       break;
     }
-    if (!hoiCountry) {
-      continue;
-    }
-
+    if (!hoiCountry) continue;
     assignCountries(vicCountry, hoiCountry); 
   }
 
+  // Still using the links, but now for revolters. 
+  for (objiter link = links.begin(); link != links.end(); ++link) {
+    objvec vics = (*link)->getValue("vic");
+    vicCountry = 0;
+
+    for (objiter v = vics.begin(); v != vics.end(); ++v) {
+      Object* vCurr = vicGame->safeGetObject((*v)->getLeaf());
+      if (!vCurr) continue;
+      if (vicCountryToHoiCountryMap[vCurr]) continue;
+      vicCountry = vCurr;
+      break;
+    }
+    if (!vicCountry) continue;
+    if (0 < vicTagToProvsMap[vicCountry->getKey()]) continue; 
+
+    objvec hois = (*link)->getValue("hoi");
+    hoiCountry = 0;    
+    for (objiter h = hois.begin(); h != hois.end(); ++h) {
+      Object* hCurr = hoiGame->safeGetObject((*h)->getLeaf());
+      if (!hCurr) continue;
+      if (hoiCountryToVicCountryMap[hCurr]) continue;
+      hoiCountry = hCurr;
+      break;
+    }
+    if (!hoiCountry) continue;
+    assignCountries(vicCountry, hoiCountry); 
+  }
+
+  // Now just match unassigned tags as best we can. 
   objvec leaves = vicGame->getLeaves();
   objvec vicUnassigned;
   for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
@@ -1152,14 +1178,7 @@ bool WorkerThread::convertBuildings () {
     if (0 == victoryValues.size()) break;
     setPointersFromVicProvince(*vp);
     if (!vicCountry) continue;
-
-    for (objiter victory = victories.begin(); victory != victories.end(); ++victory) {
-      Logger::logStream(Logger::Debug) << nameAndNumber(*vp) << " VPs from " << (*victory)->getKey() << ": " 
-				       << (*vp)->safeGetFloat((*victory)->getKey()) * victoryObject->safeGetFloat((*victory)->getKey())
-				       << "\n"; 
-    }
-
-    
+   
     double baseValue = victoryValues.back();
     Object* target = 0;
     double bestIndustry = -1;
@@ -1173,7 +1192,6 @@ bool WorkerThread::convertBuildings () {
       bestIndustry = currIndustry;
     }
     if (!target) continue;
-    Logger::logStream(Logger::Debug) << "Selected " << target->getKey() << "\n"; 
     target->resetLeaf("points", baseValue);
     victoryValues.pop_back(); 
   } 
@@ -2092,7 +2110,7 @@ bool WorkerThread::convertProvinceOwners () {
     vector<string> inputCoreTags;
     for (set<string>::iterator vct = vicCoreTags.begin(); vct != vicCoreTags.end(); ++vct) {
       setPointersFromHoiTag(vicTagToHoiTagMap[*vct]);
-      if (0 == hoiCountryToHoiProvsMap[hoiCountry].size()) continue; // No Vicky revolters. 
+      if (hoiTag == "") continue;       
       Logger::logStream(DebugCores) << nameAndNumber(*hp) << " is core of Vic " << (*vct) << " and hence HoI " << hoiTag << "\n"; 
       if (find(inputCoreTags.begin(), inputCoreTags.end(), hoiTag) != inputCoreTags.end()) continue;
       (*hp)->setLeaf("core", addQuotes(hoiTag));
@@ -2101,9 +2119,14 @@ bool WorkerThread::convertProvinceOwners () {
 
     // Put back HoI revolter cores. 
     for (objiter ic = inputCores.begin(); ic != inputCores.end(); ++ic) {
-      setPointersFromHoiTag(remQuotes((*ic)->getLeaf())); 
-      if (find(inputCoreTags.begin(), inputCoreTags.end(), hoiTag) != inputCoreTags.end()) continue;
-      if (0 < hoiCountryToHoiProvsMap[hoiCountry].size()) continue;
+      setPointersFromHoiTag(remQuotes((*ic)->getLeaf()));
+      if (hoiTag == "") continue; 
+      if (vicCountry) {
+	if (0 < hoiCountryToHoiProvsMap[hoiCountry].size()) continue; // This nation converted, no historical cores.
+	if (0 < vicTagToCoresMap[vicTag]) continue; // Is a Vicky revolter, got some cores already.
+      }
+      if (find(inputCoreTags.begin(), inputCoreTags.end(), hoiTag) != inputCoreTags.end()) continue; // Already got this one.
+      Logger::logStream(DebugCores) << nameAndNumber(*hp) << " is core of HoI revolter " << hoiTag << "\n"; 
       (*hp)->setLeaf("core", addQuotes(hoiTag)); 
     }
 

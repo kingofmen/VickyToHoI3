@@ -158,6 +158,7 @@ private:
   map<string, int> vicUnitTypes;
   map<string, int> vicUnitsThatConvertToHoIUnits; 
   map<Object*, map<string, objvec> > vicCountryToUnitsMap; 
+  map<string, int> vicTagToCoresMap;
   
   // Lists
   objvec vicProvinces;
