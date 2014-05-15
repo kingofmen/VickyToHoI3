@@ -21,6 +21,7 @@ using namespace std;
 */
 
 /* Nice to have:
+   - Convoys
    - Debt? 
    - Tweak some province conversions - Sitka is inland? Lots of Vic provinces with naval bases don't find a coastal HoI province.
    - Also several Vic provinces with airbases don't find anywhere to put them. 
@@ -617,6 +618,15 @@ void WorkerThread::initialiseHoiSummaries () {
       if (!(*leaf)->safeGetObject("strategic_warfare")) continue;
     }
     allHoiCountries.push_back(*leaf);
+    int usedConvoys = 0;
+    int usedEscorts = 0;
+    objvec convoys = (*leaf)->getValue("convoy");
+    for (objiter convoy = convoys.begin(); convoy != convoys.end(); ++convoy) {
+      usedConvoys += (*convoy)->safeGetInt("convoys");
+      usedEscorts += (*convoy)->safeGetInt("escorts");
+    }
+    (*leaf)->resetLeaf("convoys", (*leaf)->safeGetInt("convoys") + usedConvoys);
+    (*leaf)->resetLeaf("escorts", (*leaf)->safeGetInt("escorts") + usedEscorts);
     objvec armies = (*leaf)->getValue("theatre");
     for (objiter army = armies.begin(); army != armies.end(); ++army) {
       extractStrength(*army, reserveObject);
@@ -2504,7 +2514,7 @@ bool WorkerThread::moveResources () {
       Logger::logStream(Logger::Error) << "Error: No " << (*o) << " object in config.txt.\n";
       return false;
     }
-    objvec classes = fightingClasses->getValue("class");
+    objvec classes = fightingClasses->getLeaves();
     if (0 == classes.size()) {
       Logger::logStream(Logger::Error) << "Error: " << (*o) << " object in config.txt is empty - should include at least one POP type.\n"; 
       return false;
@@ -2529,11 +2539,26 @@ bool WorkerThread::moveResources () {
     production->unsetValue("rare_materials");
   }
 
+  Object* officerClasses = configObject->safeGetObject("officerClasses");
+  objvec classes = officerClasses->getLeaves();
+  objvec goodClasses;
+  for (objiter poptype = classes.begin(); poptype != classes.end(); ++poptype) {
+    if (2 > (*poptype)->numTokens()) {
+      Logger::logStream(Logger::Warning) << "Warning: Dropping " << (*poptype) << " from leadership because it has too few tokens.\n";
+      continue;
+    }
+    goodClasses.push_back(*poptype); 
+  }
+  if (0 == goodClasses.size()) {
+    Logger::logStream(Logger::Error) << "Error: Cannot extract leadership from any of the classes in officerClasses.\n";
+    return false; 
+  }
+  
   map<string, double> vicWorldTotals;
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
     for (map<string, double>::iterator r = hoiWorldTotals.begin(); r != hoiWorldTotals.end(); ++r) {
-      string resName = (*r).first; 
-      vicWorldTotals[resName]       += calculateVicProduction((*vp), resName);
+      string resName = (*r).first;
+      vicWorldTotals[resName]       += calculateVicProduction((*vp), resName, goodClasses);
     }
   }
 
@@ -2552,7 +2577,7 @@ bool WorkerThread::moveResources () {
     Object* hoiProv = selectHoiProvince(*vp);
     for (map<string, double>::iterator r = hoiWorldTotals.begin(); r != hoiWorldTotals.end(); ++r) {
       string resName = (*r).first;
-      double curr = calculateVicProduction((*vp), resName);
+      double curr = calculateVicProduction((*vp), resName, goodClasses);
       if (0 >= curr) continue;
       curr /= vicWorldTotals[resName];
       curr *= hoiWorldTotals[resName]; 
@@ -2892,7 +2917,7 @@ double WorkerThread::calculateGovResemblance (Object* vicCountry, Object* hoiCou
   return ret;
 }
 
-double WorkerThread::calculateVicProduction (Object* vicProvince, string resource) {
+double WorkerThread::calculateVicProduction (Object* vicProvince, string resource, const objvec& goodClasses) {
   double cached = vicProvince->safeGetFloat(resource, -1);
   if (0 <= cached) return cached;
 
@@ -2900,7 +2925,7 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
   Object* rgo = vicProvince->safeGetObject("rgo");
   if (!rgo) return 0;
   string goods = remQuotes(rgo->safeGetString("goods_type"));
-  Object* resourceConversion = configObject->getNeededObject(resource);
+  Object* resourceConversion = configObject->getNeededObject(resource); 
   
   if (resource == "manpower") {
     static Object* fightingClasses = configObject->getNeededObject("fightingClasses");
@@ -2917,26 +2942,36 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
   }
 
   if (resource == "leadership") {
-    static Object* officerClasses = configObject->getNeededObject("officerClasses");
-    static objvec classes = officerClasses->getValue("class");
-    for (objiter poptype = classes.begin(); poptype != classes.end(); ++poptype) {
-      objvec pops = vicProvince->getValue((*poptype)->getLeaf());
-      for (objiter pop = pops.begin(); pop != pops.end(); ++pop) {
-	ret += (*pop)->safeGetFloat("size");
+    setPointersFromVicProvince(vicProvince);
+    if (!vicCountry) {
+      vicProvince->setLeaf(resource, 0);
+      return 0; 
+    }
+
+    Object* production = vicCountry->getNeededObject("leadershipProduction");
+    for (objvec::const_iterator poptype = goodClasses.begin(); poptype != goodClasses.end(); ++poptype) {
+      string keyword = (*poptype)->getKey();
+      double nationalProduction = production->safeGetFloat(keyword, -1);
+      if (0 > nationalProduction) {
+	double optimalRatio = (*poptype)->tokenAsFloat(0);
+	double pointsPerPercent = (*poptype)->tokenAsFloat(1);
+	nationalProduction = vicCountry->safeGetFloat(keyword);
+	nationalProduction /= (1 + vicCountry->safeGetFloat("totalPop"));
+	if (nationalProduction > optimalRatio) nationalProduction = optimalRatio;
+	nationalProduction *= pointsPerPercent;
+	production->setLeaf(keyword, nationalProduction);
       }
+      double localAmount = vicProvince->safeGetFloat(keyword);
+      double nationalAmount = 1 + vicCountry->safeGetFloat(keyword);
+      ret += nationalProduction * (localAmount / nationalAmount);
     }
     vicProvince->setLeaf(resource, ret);
     return ret; 
   }
-  
-  ret = rgo->safeGetFloat("last_income") * resourceConversion->safeGetFloat(goods, -1);
-  if (ret >= 0) {
-    vicProvince->setLeaf(resource, ret);
-    return ret;
-  }
 
-  vicProvince->setLeaf(resource, 0);
-  return 0; 
+  ret = rgo->safeGetFloat("last_income") * resourceConversion->safeGetFloat(goods, -1);
+  vicProvince->setLeaf(resource, ret);
+  return ret;
 }
 
 double WorkerThread::extractStrength (Object* unit, Object* reserves) {
