@@ -21,7 +21,6 @@ using namespace std;
 */
 
 /* Nice to have:
-   - Convoys
    - Debt? 
    - Tweak some province conversions - Sitka is inland? Lots of Vic provinces with naval bases don't find a coastal HoI province.
    - Also several Vic provinces with airbases don't find anywhere to put them. 
@@ -263,6 +262,14 @@ void WorkerThread::cleanUp () {
 
     (*hc)->unsetValue("ai"); 
   }
+}
+
+string WorkerThread::currentTags () const {
+  string ret = "Vic ";
+  ret += vicCountry ? vicTag : "none";
+  ret += " HoI ";
+  ret += hoiCountry ? hoiTag : "none";
+  return ret; 
 }
 
 void WorkerThread::configure () {
@@ -2959,7 +2966,10 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
 	nationalProduction /= (1 + vicCountry->safeGetFloat("totalPop"));
 	if (nationalProduction > optimalRatio) nationalProduction = optimalRatio;
 	nationalProduction *= pointsPerPercent;
+	//nationalProduction *= sqrt(vicCountry->safeGetFloat("totalPop"));
+	nationalProduction *= sqrt(vicCountryToHoiProvsMap[vicCountry].size()); 
 	production->setLeaf(keyword, nationalProduction);
+	Logger::logStream(DebugResources) << currentTags() << " leadership from " << keyword << " " << nationalProduction << "\n"; 
       }
       double localAmount = vicProvince->safeGetFloat(keyword);
       double nationalAmount = 1 + vicCountry->safeGetFloat(keyword);

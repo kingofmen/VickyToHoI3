@@ -128,6 +128,7 @@ private:
   double calculateVicProduction (Object* vicProvince, string resource, const objvec& goodClasses); 
   void cleanUp ();
   Object* createRegiment (int id, string type, string name, string keyword);
+  string currentTags () const; 
   double extractStrength (Object* unit, Object* reserves);
   void getOfficers (objvec& candidates, string keyword, double total, unsigned int original);
   Object* loadTextFile (string fname);

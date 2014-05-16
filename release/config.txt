@@ -101,10 +101,10 @@ fightingClasses = {
 }
 
 officerClasses = {
-  # class  = { optimal_ratio weight}
-  officers = { 0.002 0.20 } # Some weight given for leadership
-  clerks   = { 0.040 0.20 } # Clerks give 0.5 RPS per percentage point
-  clergy   = { 0.030 0.60 } # Clergy give 1.5 RPs 
+  # class   = { optimal_ratio weight}
+  officers  = { 0.002 0.30 } # Some weight given for leadership
+  clerks    = { 0.040 0.40 } 
+  clergymen = { 0.030 0.30 } 
 }
 
 minimumArmyWeight = 75

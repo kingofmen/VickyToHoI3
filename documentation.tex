@@ -27,8 +27,15 @@ nonzero weights for resource, and the weights in it are all zero. The
 effect is that labourers who work in resource-giving RGOs do not give
 manpower. 
 
-Leadership is redistributed according to the size of the POP types
-listed in the \texttt{officerClasses} object. 
+Leadership is redistributed according to the ratios of the POP types
+listed in the \texttt{officerClasses} object. The first number is the
+optimal ratio (from Vicky); the second is the weight for the
+class. The leadership weight of a nation equals its ratio of the
+listed classes, times their weights, capped at the optimal ratio. This
+is then multiplied by the square root of the number of HoI provinces
+the nation owns, to prevent minors from having the same amount of
+leadership as Great Powers. Finally this leadership is distributed
+within the nation according to where the listed POP types are. 
 
 \section{Industry} 
 
