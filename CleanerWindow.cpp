@@ -2979,7 +2979,7 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
     return ret; 
   }
 
-  ret = rgo->safeGetFloat("last_income") * resourceConversion->safeGetFloat(goods, -1);
+  ret = rgo->safeGetFloat("last_income") * resourceConversion->safeGetFloat(goods);
   vicProvince->setLeaf(resource, ret);
   return ret;
 }
