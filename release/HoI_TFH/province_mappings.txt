@@ -2167,8 +2167,8 @@ link = { vic = 1157 hoi = 9613 hoi = 9575 hoi = 9594 hoi = 9555 hoi = 9537 hoi =
 link = { vic = 1160 hoi = 9458 hoi = 9487 hoi = 9513 hoi = 9536 hoi = 9512 } # Hail -> Linah, Irq al Mazhur, Hafar al Batin, Az Zilfi, Buraydah
 link = { vic = 926 hoi = 9213 } # Baghdad -> Baghdad
 link = { vic = 932 hoi = 9365 } # Basra -> Umm Qasr
-link = { vic = 933 hoi = 9335 } # Nasiriyya -> Al Basrah
-link = { vic = 930 hoi = 9280 hoi = 9247 hoi = 9214 hoi = 9183 } # Kut -> Al 'Amarah, Al Kut, Al Muqdadiyah, Kifri
+link = { vic = 933 hoi = 9335 hoi = 9309 } # Nasiriyya -> Al Basrah
+link = { vic = 930 hoi = 9310 hoi = 9280 hoi = 9247 hoi = 9214 hoi = 9183 } # Kut -> Al 'Amarah, Al Kut, Al Muqdadiyah, Kifri
 link = { vic = 928 hoi = 4622 hoi = 9155 } # Mendeli -> As Sulaymaniyah, Kirkuk
 link = { vic = 901 hoi = 5173 hoi = 7345 hoi = 9073 hoi = 4510 hoi = 9125 hoi = 7382 hoi = 7375 hoi = 7365 hoi = 7355 } # Dayr al-Zour -> Al Qamishi, Cizre, Tall Birak, Ash Shaddadah, Dayr az Zawr, Buhayrat al Asad, Kubar, Al Hasakah, Senyurt
 link = { vic = 907 hoi = 7397 hoi = 7403 hoi = 7434 hoi = 5382 } # Palmyra -> Palmyra, Al Basir, Af Tanf, As Suwayda
@@ -2177,7 +2177,7 @@ link = { vic = 923 hoi = 4446 hoi = 9100 hoi = 4831 } # Mosul -> Dahuk, Al Mawsi
 link = { vic = 925 hoi = 9126 } # Kirkuk -> Koi Shanjaq
 link = { vic = 927 hoi = 9182 hoi = 7409 } # Samarra -> Al Hadithah, Akashat
 link = { vic = 929 hoi = 9279 } # Karbala -> An Najaf
-link = { vic = 934 hoi = 9397 hoi = 9364 hoi = 9309 hoi = 9334 } # Najaf -> Safwan, Al Busayyah, An Nasiriyah, Ash Shabakah
+link = { vic = 934 hoi = 9397 hoi = 9364 hoi = 9334 } # Najaf -> Safwan, Al Busayyah, An Nasiriyah, Ash Shabakah
 link = { vic = 931 hoi = 7424 hoi = 7445 hoi = 9246 hoi = 9308 } # Rutbah -> Bi'r al Mulusi, Badiyat ash Sham, Ar Rutbah, Magar  an Na'am
 # Iran
 link = { vic = 1121 hoi = 9158 } # Tehran -> Tehran
@@ -2205,7 +2205,7 @@ link = { vic = 1128 hoi = 9249 } # Arak -> Arak
 link = { vic = 1132 vic = 1131 hoi = 9336 } # Abadan, Ahvaz -> Ahvaz
 link = { vic = 1134 hoi = 9311 hoi = 9337 } # Dehkord -> Shahr-e Kord, Yasuj
 link = { vic = 1133 hoi = 9281 } # Dezful -> Dezful
-link = { vic = 1119 hoi = 9310 hoi = 9248 } # Ilam -> Susangerd, Kuhdasht
+link = { vic = 1119 hoi = 9248 } # Ilam -> Susangerd, Kuhdasht
 link = { vic = 1120 hoi = 9215 hoi = 9157 } # Khoramabad -> Hamadan, Abhar
 link = { vic = 1117 hoi = 9184 } # Kermanshah -> Kermanshah
 link = { vic = 1136 hoi = 9398 hoi = 9366 } # Bushire -> Bushehr, Behbehan
