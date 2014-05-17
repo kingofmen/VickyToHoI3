@@ -125,6 +125,7 @@ private:
   double calcCasualtiesInBattle (Object* battle, double decay);   
   double calcForceLimit (Object* navalBase); 
   double calculateGovResemblance (Object* vicCountry, Object* hoiCountry);
+  bool   calculateRanks (); 
   double calculateVicProduction (Object* vicProvince, string resource, const objvec& goodClasses); 
   void cleanUp ();
   Object* createRegiment (int id, string type, string name, string keyword);

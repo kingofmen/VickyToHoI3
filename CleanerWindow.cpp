@@ -2498,8 +2498,10 @@ bool WorkerThread::moveIndustry () {
     industry->addToList(stringbuffer);
     sprintf(stringbuffer, "%.2f", hoiMaxInd);
     industry->addToList(stringbuffer);
-    tagToIcMap[(*hp)->safeGetString("owner")].first += hoiCurrInd;
-    tagToIcMap[(*hp)->safeGetString("owner")].second += hoiMaxInd;
+    setPointersFromHoiTag(remQuotes((*hp)->safeGetString("owner")));
+    tagToIcMap[hoiTag].first += hoiCurrInd;
+    tagToIcMap[hoiTag].second += hoiMaxInd;
+    vicCountry->resetLeaf("totalIndustry", hoiMaxInd + vicCountry->safeGetFloat("totalIndustry"));
   }
 
   Logger::logStream(Logger::Game) << "Industry totals: \n";
@@ -2610,8 +2612,8 @@ bool WorkerThread::moveResources () {
 
   Logger::logStream(DebugResources) << "Country totals:\n"; 
   for (map<string, map<string, double> >::iterator v = countryTotals.begin(); v != countryTotals.end(); ++v) {
-    vicTag = (*v).first;
-    Logger::logStream(DebugResources) << vicTag << ":\n";
+    setPointersFromVicTag(remQuotes((*v).first));
+    Logger::logStream(DebugResources) << currentTags() << ":\n";
     for (map<string, double>::iterator r = (*v).second.begin(); r != (*v).second.end(); ++r) {
       string resName = (*r).first;
       Logger::logStream(DebugResources) << "  " << resName << ": " << (*r).second << "\n"; 
@@ -2924,6 +2926,48 @@ double WorkerThread::calculateGovResemblance (Object* vicCountry, Object* hoiCou
   return ret;
 }
 
+bool WorkerThread::calculateRanks () {
+  objvec rankedCountries;
+  int enddate = days(remQuotes(vicGame->safeGetString("date", "\"1935.12.31\"")));
+  for (objiter vc = vicCountries.begin(); vc != vicCountries.end(); ++vc) {
+    setPointersFromVicCountry(*vc);
+    if (0 == vicCountryToHoiProvsMap[vicCountry].size()) {
+      vicCountry->resetLeaf("powerRank", -1); 
+      continue;
+    }
+    rankedCountries.push_back(vicCountry);
+    double powerPoints = vicCountry->safeGetFloat("totalIndustry");
+    string greatDate = remQuotes(vicCountry->safeGetString("last_greatness_date", "\"1.1.1\""));
+    int daysSinceGreat = enddate - days(greatDate);
+    if (daysSinceGreat < 100) {
+      powerPoints += 1e6;
+      Logger::logStream(DebugDiplomacy) << currentTags() << " detected as Great Power.\n";
+    }
+    vicCountry->resetLeaf("powerPoints", powerPoints); 
+  }
+
+  sort(rankedCountries.begin(), rankedCountries.end(), ObjectDescendingSorter("powerPoints"));
+  double previousPower = 0;
+  int rank = 1; 
+  for (objiter vc = rankedCountries.begin(); vc != rankedCountries.end(); ++vc) {
+    setPointersFromVicCountry(*vc);
+    if (rank <= 8) {
+      previousPower = vicCountry->safeGetFloat("powerPoints") - 1e6; 
+    }
+    else if (rank <= 16) {
+      double currentPower = vicCountry->safeGetFloat("powerPoints");
+      if (currentPower < 0.1 * previousPower) {
+	Logger::logStream(DebugDiplomacy) << "Demoting " << currentTags() << " because its industry is less than one-tenth of the previous nation's.\n";
+	rank = 17; 
+      }
+      previousPower = currentPower; 
+    }
+    Logger::logStream(DebugDiplomacy) << currentTags() << " has rank " << rank << " and is a " << (rank < 9 ? "Great Power" : rank < 17 ? "Secondary Power" : "minor") << "\n";    
+    vicCountry->resetLeaf("rank", rank++);
+  }
+  return true; 
+}
+
 double WorkerThread::calculateVicProduction (Object* vicProvince, string resource, const objvec& goodClasses) {
   double cached = vicProvince->safeGetFloat(resource, -1);
   if (0 <= cached) return cached;
@@ -2967,7 +3011,12 @@ double WorkerThread::calculateVicProduction (Object* vicProvince, string resourc
 	if (nationalProduction > optimalRatio) nationalProduction = optimalRatio;
 	nationalProduction *= pointsPerPercent;
 	//nationalProduction *= sqrt(vicCountry->safeGetFloat("totalPop"));
-	nationalProduction *= sqrt(vicCountryToHoiProvsMap[vicCountry].size()); 
+	//nationalProduction *= sqrt(vicCountryToHoiProvsMap[vicCountry].size());
+	//nationalProduction *= sqrt(vicCountry->safeGetFloat("totalIndustry"));
+	int rank = vicCountry->safeGetInt("rank");
+	if      (rank < 9)  nationalProduction *= 1.0; // Great Power
+	else if (rank < 17) nationalProduction *= 0.9; // Secondary Power
+	else                nationalProduction *= 0.1; // Minor 
 	production->setLeaf(keyword, nationalProduction);
 	Logger::logStream(DebugResources) << currentTags() << " leadership from " << keyword << " " << nationalProduction << "\n"; 
       }
@@ -3183,9 +3232,10 @@ void WorkerThread::convert () {
   if (!moveCapitals()) return; // Must precede OOBs or the capitals won't be placed right.
   if (!convertBuildings()) return; // Must precede OOBs or there won't be naval bases. Must be after ownership conversion. Must be after capitals for urbanity.
   if (!convertLaws()) return; // Must be before OOBs or mob laws won't be set.   
-  if (!convertOoBs()) return; 
-  if (!moveResources()) return;
+  if (!convertOoBs()) return;
   if (!moveIndustry()) return;
+  if (!calculateRanks()) return; // Must come after moveIndustry or industry totals will not be set. 
+  if (!moveResources()) return;
   if (!convertGovernments()) return; 
   if (!convertDiplomacy()) return; // Sets casualties for Vicky nations. 
   if (!convertLeaders()) return; // Must come after OOBs or true navy size won't be set. 

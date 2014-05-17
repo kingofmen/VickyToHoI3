@@ -32,9 +32,25 @@ listed in the \texttt{officerClasses} object. The first number is the
 optimal ratio (from Vicky); the second is the weight for the
 class. The leadership weight of a nation equals its ratio of the
 listed classes, times their weights, capped at the optimal ratio. This
-is then multiplied by the square root of the number of HoI provinces
-the nation owns, to prevent minors from having the same amount of
-leadership as Great Powers. Finally this leadership is distributed
+is then multiplied by a factor that depends on how powerful the
+country is; for Great Powers it is 1, for secondary powers 0.9, and
+for everyone else 0.1. Note that the definition of Great and Secondary
+power varies somewhat from Victoria's, because the military and
+industrial scores are not stored directly in the savefile. In
+particular, the countries are sorted by their HoI industry, and the
+first eight are considered Great Powers; there is a huge bonus to
+industry if the \texttt{last\_greatness\_date} of the nation is within
+100 days of the save date, which should put all countries that
+Victoria thinks are Great Powers into these first eight. To
+become a secondary power the country must have rank 9 through 16, and
+must also have at least one-tenth the industry of the next greater
+power; this is to prevent three-province minors from being secondary
+powers (and getting lots of leadership) just because there aren't very
+many powerful nation. So, for example, if Sweden is ranked 12th and
+has 100 industry, and Afghanistan is 11th at 9 industry, then Sweden
+is a secondary power, but Afghanistan and all subsequent countries are
+minors. 
+Finally this leadership is distributed
 within the nation according to where the listed POP types are. 
 
 \section{Industry} 
