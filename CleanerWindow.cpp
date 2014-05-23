@@ -92,7 +92,8 @@ int main (int argc, char** argv) {
 
   parentWindow->show();
   if (argc > 1) {
-    if (atoi(argv[1]) == AutoMap) parentWindow->autoMap(); 
+    if (atoi(argv[1]) == AutoMap) parentWindow->autoMap();
+    else if (atoi(argv[1]) == MoveProvinces) parentWindow->moveProvinces(argv[2], argv[3]); 
     else parentWindow->loadFile(argv[2], (TaskType) atoi(argv[1])); 
   }
   int ret = industryApp.exec();
@@ -114,7 +115,7 @@ void CleanerWindow::message (QString m) {
 }
 
 void CleanerWindow::loadFile () {
-  QString filename = QFileDialog::getOpenFileName(this, tr("Select file"), QString(""), QString("*.ck2"));
+  QString filename = QFileDialog::getOpenFileName(this, tr("Select file"), QString(""), QString("*.v2"));
   string fn(filename.toAscii().data());
   if (fn == "") return;
   loadFile(fn);   
@@ -141,6 +142,12 @@ void CleanerWindow::convert () {
 void CleanerWindow::autoMap () {
   worker = new WorkerThread("", AutoMap);
   Logger::logStream(Logger::Game) << "Generate province mapping. NB! This does not give good results due to differing projections.\n";  
+  worker->start(); 
+}
+
+void CleanerWindow::moveProvinces (string hoiFile, string moveFile) {
+  worker = new WorkerThread(hoiFile, moveFile);
+  Logger::logStream(Logger::Game) << "Change ownership of provinces in " << hoiFile << " using " << moveFile << ".\n";  
   worker->start(); 
 }
 
@@ -178,6 +185,29 @@ WorkerThread::WorkerThread (string fn, TaskType atask)
   }  
 }  
 
+WorkerThread::WorkerThread (string hoiFile, string moveFile)
+  : targetVersion(HOI_FINEST_HOUR)
+  , sourceVersion(".\\V2_HoD\\")
+  , fname(hoiFile)
+  , vicGame(0)
+  , hoiGame(0)
+  , task(MoveProvinces)
+  , configObject(0)
+  , autoTask(MoveProvinces)
+  , provinceMapObject(0)
+  , countryMapObject(0)
+  , provinceNamesObject(0)
+  , customObject(0)
+{
+  configObject = processFile("config.txt");
+  if (!createOutputDir()) {
+    Logger::logStream(Logger::Error) << "Error: No output directory, could not create one. Fix this before proceeding.\n";
+    autoTask = NumTasks; 
+  }
+  hoiGame = loadTextFile(fname);
+  customObject = loadTextFile(moveFile);
+}  
+
 WorkerThread::~WorkerThread () {
   if (hoiGame) delete hoiGame;
   if (vicGame) delete vicGame; 
@@ -193,7 +223,8 @@ void WorkerThread::run () {
   case LoadFile: loadFile(fname); break;
   case Statistics: getStatistics(); break;
   case Convert: convert(); break;
-  case AutoMap: autoMap(); break;        
+  case AutoMap: autoMap(); break;
+  case MoveProvinces: moveProvinces(); break; 
   case NumTasks: 
   default: break; 
   }
@@ -3254,4 +3285,46 @@ void WorkerThread::convert () {
   writer << (*hoiGame);
   writer.close();
   Logger::logStream(Logger::Game) << "Done writing.\n";
+}
+
+void WorkerThread::moveProvinces () {
+  objvec countries = customObject->getLeaves();
+  for (objiter country = countries.begin(); country != countries.end(); ++country) {
+    hoiTag = (*country)->getKey();
+    hoiCountry = hoiGame->safeGetObject(hoiTag);
+    if (!hoiCountry) {
+      Logger::logStream(Logger::Warning) << "Could not find country " << hoiTag << ", skipping.\n";
+      continue;
+    }
+    vicTag = (*country)->getToken(0);
+    if (0 != atoi(vicTag.c_str())) vicTag = ""; // Is a province ID. 
+    
+    for (int i = 0; i < (*country)->numTokens(); ++i) {
+      string provId = (*country)->getToken(i);
+      if (provId == vicTag) continue; 
+      Object* province = hoiGame->safeGetObject(provId);
+      if (!province) {
+	Logger::logStream(Logger::Warning) << "Could not find province " << provId << ", skipping.\n";
+	continue;
+      }
+      string ownerTag = province->safeGetString("owner", NO_OWNER);
+      if (ownerTag == NO_OWNER) {
+	Logger::logStream(Logger::Warning) << "Province " << provId << " has no owner, is it a sea province? Skipping.\n";
+	continue;
+      }
+      if ((vicTag != "") && (remQuotes(ownerTag) != vicTag)) {
+	Logger::logStream(Logger::Game) << "Skipping " << provId << " owned by " << ownerTag << " instead of target " << vicTag << "\n";
+	continue;
+      }
+      province->resetLeaf("owner", addQuotes(hoiTag));
+      province->resetLeaf("controller", addQuotes(hoiTag));
+    }
+  }
+  
+  ofstream writer;
+  writer.open(".\\Output\\fixed.hoi3");
+  Parser::topLevel = hoiGame;
+  writer << (*hoiGame);
+  writer.close();
+  Logger::logStream(Logger::Game) << "Done writing.\n";  
 }

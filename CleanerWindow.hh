@@ -17,6 +17,7 @@ enum TaskType {LoadFile = 0,
 	       Statistics,
 	       AutoMap, 
 	       Convert,
+	       MoveProvinces, 
 	       NumTasks}; 
 
 class CleanerWindow : public QMainWindow {
@@ -40,6 +41,7 @@ public slots:
   void getStats ();
   void autoMap (); 
   void convert ();
+  void moveProvinces (string hoiFile, string moveFile); 
   void message (QString m); 
   
 private:
@@ -68,7 +70,8 @@ double calcAvg (Object* ofthis);
 class WorkerThread : public QThread {
   Q_OBJECT
 public:
-  WorkerThread (string fname, TaskType aTask = NumTasks); 
+  WorkerThread (string fname, TaskType aTask = NumTasks);
+  WorkerThread (string hoiFile, string moveFile); 
   ~WorkerThread ();
   void setTask(TaskType t) {task = t;} 
 
@@ -109,6 +112,7 @@ private:
   void autoMap (); 
   void convert ();   
   void configure ();
+  void moveProvinces (); 
 
   // Initialisers
   bool createCountryMap ();

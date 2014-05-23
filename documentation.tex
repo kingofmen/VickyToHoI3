@@ -7,6 +7,42 @@
 
 \begin{document}
 
+\section{How to use the converter}
+
+\begin{itemize}
+\item Download the zip file: \url{https://github.com/kingofmen/VickyToHoI3/archive/master.zip}.
+\item Unpack it. 
+\item Ignore the source code unless you intend to modify it. 
+\item Copy the Vicky savegame you intend to convert into the release
+  directory. 
+\item Start the VickyToHoI3 executable. 
+\item Go to File->Load file and select your savegame. 
+\item Wait for it to load - it will take a minute or two. If it takes
+  more than five minutes, you have either a very slow computer, or a
+  problem - go to Troubleshooting, below. 
+\item Go to Actions->Convert to HoI. Wait until it says ``Done
+  writing''. If the output stops for more than a few minutes with any
+  other message, especially one starting `Error', go to
+  Troubleshooting. 
+\item Conversion is now done. Go to the Output directory. It should
+  contain `converted.hoi3'. Move this to your HoI savegames folder; on
+  my machine this is on C:\\Users\\UserName\\My Documents\\Paradox
+  Interactive\\Hearts of Iron III, but installations differ. 
+\item Start HoI3 as usual. The converted game should appear as a
+  regular saved game; select your country and play. If it crashes or
+  hangs on loading, or within a few days of starting, go to
+  Troubleshooting. 
+\item Conquer \emph{All} the Pixels! 
+\end{itemize}
+
+\section{Troubleshooting}
+
+Upload your Victoria savegame somewhere, then send me (``King of Men'') a PM on Paradox, Ederon, or
+(``King\_of\_Men'') reddit with a link to the upload. I'll run the
+debugging version of the converter and try to fix the
+problem. If you are skilled at C++ development in Windows you can also
+try to compile in debug mode and run gdb on it. 
+
 \section{Resources}
 
 Resources convert from Vicky RGOs. In particular, the
