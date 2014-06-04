@@ -35,7 +35,8 @@ Object* vicCountry = 0;
 string hoiTag;
 string vicTag; 
 
-const string NO_OWNER = "\"NONE\""; 
+const string NO_OWNER = "\"NONE\"";
+const string NONE = "NONE"; 
 const string HOI_FINEST_HOUR = ".\\HoI_TFH\\";
 const string HOI_VANILLA = ".\\HoI_Vanilla\\";
 const string NFCON = "NOT_FOUND_IN_CONFIG";
@@ -250,14 +251,25 @@ void WorkerThread::loadFile (string fname) {
 void WorkerThread::assignCountries (Object* vicCountry, Object* hoiCountry) {
   vicTag = vicCountry->getKey();
   hoiTag = hoiCountry->getKey();
+
+  bool primary = true; 
+  if (hoiCountryToVicCountryMap[hoiCountry]) primary = false; 
   vicCountryToHoiCountryMap[vicCountry] = hoiCountry;
-  hoiCountryToVicCountryMap[hoiCountry] = vicCountry;
   vicTagToHoiTagMap[vicTag] = hoiTag;
-  hoiTagToVicTagMap[hoiTag] = vicTag;
+  
+  if (primary) {
+    // Every Vic country has a HoI country, but a HoI country only points to its primary. 
+    hoiCountryToVicCountryMap[hoiCountry] = vicCountry;
+    hoiTagToVicTagMap[hoiTag] = vicTag;
+    Logger::logStream(DebugCountries) << "Assigning Vic country " << vicTag << " <-> HoI " << hoiTag << "\n"; 
+  }
+  else {
+    Logger::logStream(DebugCountries) << "Assigning Vic country " << vicTag << " -> HoI " << hoiTag << " (nonprimary)\n"; 
+  }
+  
   if (find(hoiCountries.begin(), hoiCountries.end(), hoiCountry) == hoiCountries.end()) hoiCountries.push_back(hoiCountry);
   if (find(vicCountries.begin(), vicCountries.end(), vicCountry) == vicCountries.end()) vicCountries.push_back(vicCountry);
   hoiTagToHoiCountryMap[hoiTag] = hoiCountry; 
-  Logger::logStream(DebugCountries) << "Assigning Vic country " << vicTag << " <-> HoI " << hoiTag << "\n"; 
 }
 
 void WorkerThread::cleanUp () {
@@ -419,8 +431,6 @@ bool WorkerThread::createCountryMap () {
     return false; 
   }
 
-  map<string, int> vicTagToProvsMap;
-
   if (customObject) {
     Object* countryCustom = customObject->getNeededObject("countries");
     objvec overrides = countryCustom->getLeaves();
@@ -448,8 +458,6 @@ bool WorkerThread::createCountryMap () {
   }
   
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
-    vicTagToProvsMap[remQuotes((*vp)->safeGetString("owner", "NONE"))]++;
-    vicTagToProvsMap[remQuotes((*vp)->safeGetString("controller", "NONE"))]++;
     objvec cores = (*vp)->getValue("core");
     for (objiter c = cores.begin(); c != cores.end(); ++c) {
       vicTagToCoresMap[remQuotes((*c)->getLeaf())]++; 
@@ -470,7 +478,7 @@ bool WorkerThread::createCountryMap () {
       break;
     }
     if (!vicCountry) continue;
-    if (0 == vicTagToProvsMap[vicCountry->getKey()]) continue; 
+    if (0 == vicCountry->safeGetInt("ownedProvinces")) continue; 
 
     objvec hois = (*link)->getValue("hoi");
     hoiCountry = 0;    
@@ -498,7 +506,7 @@ bool WorkerThread::createCountryMap () {
       break;
     }
     if (!vicCountry) continue;
-    if (0 < vicTagToProvsMap[vicCountry->getKey()]) continue; 
+    if (0 < vicCountry->safeGetInt("ownedProvinces")) continue; 
 
     objvec hois = (*link)->getValue("hoi");
     hoiCountry = 0;    
@@ -522,6 +530,8 @@ bool WorkerThread::createCountryMap () {
     vicUnassigned.push_back(*leaf);
   }
 
+  sort(vicUnassigned.begin(), vicUnassigned.end(), ObjectAscendingSorter("ownedProvinces")); 
+  
   leaves = hoiGame->getLeaves();
   objvec hoiUnassigned;
   for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
@@ -535,17 +545,71 @@ bool WorkerThread::createCountryMap () {
   while (0 < vicUnassigned.size()) {
     vicCountry = vicUnassigned.back();
     vicUnassigned.pop_back();
-    if (0 == vicTagToProvsMap[vicCountry->getKey()]) {
+    if (0 == vicCountry->safeGetInt("ownedProvinces")) {
       vicRevolters.push_back(vicCountry); 
       continue;
     }
-    if (0 == hoiUnassigned.size()) {
-      Logger::logStream(Logger::Warning) << "Warning: Unable to assign Vic country " << vicCountry->getKey() << ".\n";
-      continue; 
+    if (0 < hoiUnassigned.size()) {
+      hoiCountry = hoiUnassigned.back();
+      hoiUnassigned.pop_back();
+      assignCountries(vicCountry, hoiCountry);
+      continue;
     }
-    hoiCountry = hoiUnassigned.back();
-    hoiUnassigned.pop_back();
-    assignCountries(vicCountry, hoiCountry); 
+    
+    // Absorb into overlord if it has one, otherwise by closest capital.
+    string absorbTag = NONE;
+    string reason = "vassal"; 
+    vicTag = vicCountry->getKey();
+    Object* vicDip = vicGame->getNeededObject("diplomacy");
+    objvec vassals = vicDip->getValue("vassal");
+    for (objiter vassal = vassals.begin(); vassal != vassals.end(); ++vassal) {
+      string currVassal = remQuotes((*vassal)->safeGetString("second"));
+      if (vicTag != currVassal) continue;
+      currVassal = remQuotes((*vassal)->safeGetString("first"));
+      if (vicTagToHoiTagMap[currVassal] == "") break; // Overlord hasn't been assigned either.
+      absorbTag = vicTagToHoiTagMap[currVassal];
+      break; 
+    }
+    if (NONE == absorbTag) {
+      string vicCapId = vicCountry->safeGetString("capital");
+      Object* vicCap = vicProvIdToVicProvMap[vicCapId];
+      Object* hoiCap = vicProvToHoiProvsMap[vicCap][0];
+      string hoiCapId = hoiCap->getKey();
+      double bestDistance = 1e20;
+      Object* hoiCapPos = hoiProvincePositions[hoiCapId];
+      if (!hoiCapPos) {
+	// More or less random. 
+	hoiCapPos = new Object(hoiCapId);
+	hoiCapPos->setLeaf("xpos", "3000");
+	hoiCapPos->setLeaf("ypos", "1500");
+      }
+      calculateCentroid(hoiCapPos, false); 
+      
+      for (map<Object*, Object*>::iterator link = vicCountryToHoiCountryMap.begin(); link != vicCountryToHoiCountryMap.end(); ++link) {
+	if (!(*link).second) continue; // Previous lookups will have created null elements. 
+
+	string candVicCapId = (*link).first->safeGetString("capital", NONE);
+	if (NONE == candVicCapId) continue;
+	Object* candVicCap = vicProvIdToVicProvMap[candVicCapId];
+	if (!candVicCap) continue;
+	Object* candHoiCap = vicProvToHoiProvsMap[candVicCap][0];
+	string candHoiCapId = candHoiCap->getKey();
+	Object* candHoiCapPos = hoiProvincePositions[candHoiCapId];
+	if (!candHoiCapPos) continue; 
+	calculateCentroid(candHoiCapPos, false);
+	double curr = calculateDistance(candHoiCapPos, hoiCapPos);
+	if (curr > bestDistance) continue;
+	bestDistance = curr;
+	absorbTag = (*link).second->getKey(); 
+	reason = "closest capitals (" + hoiCapId + ", " + candHoiCapId + ")";	
+      }
+    }
+    
+    Logger::logStream(Logger::Game) << "No free tag for Vic country " << vicTag
+				    << ". Absorbing into Vic "
+				    << hoiTagToVicTagMap[absorbTag] << " (HoI " << absorbTag 
+				    << ") due to " << reason << ".\n";
+    assignCountries(vicCountry, hoiTagToHoiCountryMap[absorbTag]); 
   }
 
   while (0 < vicRevolters.size()) {
@@ -599,7 +663,10 @@ bool WorkerThread::createProvinceMap () {
 	  Logger::logStream(Logger::Warning) << "Warning: Could not find alleged Vicky province " << vicProvId << ", skipping.\n";
 	  continue;
 	}
-      
+
+	string vicOwnerTag = remQuotes(vicProv->safeGetString("owner", NO_OWNER));
+	Object* vicOwner = vicGame->safeGetObject(vicOwnerTag);
+	if (vicOwner) vicOwner->resetLeaf("ownedProvinces", 1 + vicOwner->safeGetInt("ownedProvinces"));	
 	hoiProvToVicProvsMap[hoiProv].push_back(vicProv);
 	vicProvToHoiProvsMap[vicProv].push_back(hoiProv);
       }
@@ -1347,6 +1414,8 @@ bool WorkerThread::convertDiplomacy () {
     if (!hoiCountry) continue;
     string hoiSecond = hoiTag;
 
+    if (hoiFirst == hoiSecond) continue; // Can happen with nonprimaries. 
+    
     Object* hoiAlliance = new Object("vassal");
     hoiDip->setValue(hoiAlliance);
     hoiAlliance->setLeaf("first", addQuotes(hoiFirst));
@@ -1920,18 +1989,22 @@ bool WorkerThread::convertOoBs () {
   for (objiter hc = hoiCountries.begin(); hc != hoiCountries.end(); ++hc) {
     setPointersFromHoiCountry(*hc);
     if (hoiTag == "REB") continue;
+    if (!vicCountry) continue; 
     string hoiCap = hoiCountry->safeGetString("capital", "NONE");
     if (hoiCap == "NONE") continue; 
-    Object* theatre = createObjectWithIdAndType(numUnits++, 41, "theatre");
-    hoiCountry->setValue(theatre);
-    theatre->setLeaf("name", addQuotes("Home Defense Theatre")); 
-    theatre->setLeaf("location", hoiCap);
-    theatre->setLeaf("is_prioritized", "no");
-    theatre->setLeaf("can_reinforce", "yes");
-    theatre->setLeaf("can_upgrade", "yes");
-    theatre->setLeaf("fuel", "1.000");
-    theatre->setLeaf("supplies", "1.000");
-    theatre->setValue(createRegiment(numUnits++, "hq_brigade", "High Command", "regiment"));
+    Object* theatre = hoiCountry->safeGetObject("theatre");
+    if (!theatre) {
+      theatre = createObjectWithIdAndType(numUnits++, 41, "theatre");
+      hoiCountry->setValue(theatre);
+      theatre->setLeaf("name", addQuotes("Home Defense Theatre")); 
+      theatre->setLeaf("location", hoiCap);
+      theatre->setLeaf("is_prioritized", "no");
+      theatre->setLeaf("can_reinforce", "yes");
+      theatre->setLeaf("can_upgrade", "yes");
+      theatre->setLeaf("fuel", "1.000");
+      theatre->setLeaf("supplies", "1.000");
+      theatre->setValue(createRegiment(numUnits++, "hq_brigade", "High Command", "regiment"));
+    }
     objvec divHolder;
     objvec corHolder;
     objvec armHolder;
@@ -2075,7 +2148,7 @@ bool WorkerThread::convertOoBs () {
 	alreadyTried[hoiTag] = true;
 	continue; 
       }
-      navy->setLeaf("name", vicCountry->safeGetString("largestNavyName", "Conversion navy")); 
+      navy->setLeaf("name", vicCountry->safeGetString("largestNavyName", "\"Conversion navy\"")); 
       navy->setLeaf("base", location);
       navy->setLeaf("location", location);      
       navy->setLeaf("movement_progress", "0.000");
@@ -2142,7 +2215,7 @@ bool WorkerThread::convertProvinceOwners () {
       }
       
       vicTag = remQuotes((*vp)->safeGetString("owner", NO_OWNER));
-      if (vicTag == NO_OWNER) continue;
+      if (vicTag == NONE) continue;
       int currVicPop = (*vp)->safeGetInt("totalPop");
       if (0 == currVicPop) continue;
       popOwnerMap[vicTag] += currVicPop;
@@ -3261,6 +3334,7 @@ void WorkerThread::convert () {
   initialiseVicSummaries();     
   if (!convertProvinceOwners()) return;
   if (!moveCapitals()) return; // Must precede OOBs or the capitals won't be placed right.
+  
   if (!convertBuildings()) return; // Must precede OOBs or there won't be naval bases. Must be after ownership conversion. Must be after capitals for urbanity.
   if (!convertLaws()) return; // Must be before OOBs or mob laws won't be set.   
   if (!convertOoBs()) return;
@@ -3274,7 +3348,7 @@ void WorkerThread::convert () {
   if (!moveStockpiles()) return;
   if (!convertMisc()) return; // Uses casualties, must be after diplomacy.
   if (!listUrbanProvinces()) return;
-  if (!moveStrategicResources()) return; 
+  if (!moveStrategicResources()) return;
   cleanUp(); 
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";

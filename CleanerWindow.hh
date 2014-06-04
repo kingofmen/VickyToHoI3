@@ -184,5 +184,8 @@ private:
   map<string, Object*> hoiProvincePositions; 
 }; 
 
+void calculateCentroid (Object* province, bool vic);
+double calculateDistance (Object* one, Object* two); 
+
 #endif
 

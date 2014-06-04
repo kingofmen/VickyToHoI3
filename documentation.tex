@@ -406,4 +406,28 @@ base in the province, the second a multiplier applied to capitals. In addition,
 all HoI provinces listed in \texttt{strategic\_provinces}, and all
 capitals, get at least one victory point. 
 
+\section{Too many tags}
+
+If there are more Victoria countries than there are HoI countries in
+the input save, some Victoria countries will be absorbed. An absorbed
+country contributes its provinces, but not its army or government, to
+another. The priority for country conversions is:
+\begin{itemize}
+\item Overrides from \texttt{custom\_overrides.txt}.
+\item Tag conversions from \texttt{country\_mappings.txt}.
+\item Any remaining Victoria countries with provinces, in order of
+  size.
+\item Any Victoria revolters.
+\end{itemize}
+Only the third set can be absorbed. If a Victoria country with
+provinces has no free HoI country to be converted to, it will be
+absorbed into its overlord (if it is a vassal) or the country whose
+capital is closest to its capital. 
+
+If you have a Victoria mod with a lot of tags, you may want to try
+converting to a HoI mod with extra tags. To do so, load up your HoI
+mod, save on day 1, move that save to the HoI\_TFH directory,
+and rename it to \texttt{input.hoi3}. Then load up the converted save
+in the same mod. 
+
 \end{document}
