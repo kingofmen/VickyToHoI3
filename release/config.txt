@@ -28,7 +28,6 @@ debug = {
 vicdir = .\V2_HoD\
 # Allowed values: HoI_Vanilla, HoI_TFH 
 hoidir = .\HoI_TFH\
-logfile = logfile.txt
 
 # NOCUSTOM or delete to ignore 
 custom = custom_overrides.txt

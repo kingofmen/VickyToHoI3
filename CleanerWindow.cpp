@@ -94,7 +94,7 @@ int main (int argc, char** argv) {
   parentWindow->show();
   if (argc > 1) {
     if (atoi(argv[1]) == AutoMap) parentWindow->autoMap();
-    else if (atoi(argv[1]) == MoveProvinces) parentWindow->moveProvinces(argv[2], argv[3]); 
+    else if ((atoi(argv[1]) == MoveProvinces) || (atoi(argv[1]) == DistributeLeaders)) parentWindow->specialAction(argv[2], argv[3], (TaskType) atoi(argv[1]));
     else parentWindow->loadFile(argv[2], (TaskType) atoi(argv[1])); 
   }
   int ret = industryApp.exec();
@@ -146,9 +146,8 @@ void CleanerWindow::autoMap () {
   worker->start(); 
 }
 
-void CleanerWindow::moveProvinces (string hoiFile, string moveFile) {
-  worker = new WorkerThread(hoiFile, moveFile);
-  Logger::logStream(Logger::Game) << "Change ownership of provinces in " << hoiFile << " using " << moveFile << ".\n";  
+void CleanerWindow::specialAction (string hoiFile, string moveFile, TaskType task) {
+  worker = new WorkerThread(hoiFile, moveFile, task);
   worker->start(); 
 }
 
@@ -186,15 +185,15 @@ WorkerThread::WorkerThread (string fn, TaskType atask)
   }  
 }  
 
-WorkerThread::WorkerThread (string hoiFile, string moveFile)
+WorkerThread::WorkerThread (string hoiFile, string moveFile, TaskType t)
   : targetVersion(HOI_FINEST_HOUR)
   , sourceVersion(".\\V2_HoD\\")
   , fname(hoiFile)
   , vicGame(0)
   , hoiGame(0)
-  , task(MoveProvinces)
+  , task(t)
   , configObject(0)
-  , autoTask(MoveProvinces)
+  , autoTask(t)
   , provinceMapObject(0)
   , countryMapObject(0)
   , provinceNamesObject(0)
@@ -206,7 +205,7 @@ WorkerThread::WorkerThread (string hoiFile, string moveFile)
     autoTask = NumTasks; 
   }
   hoiGame = loadTextFile(fname);
-  customObject = loadTextFile(moveFile);
+  if (t == MoveProvinces) customObject = loadTextFile(moveFile);
 }  
 
 WorkerThread::~WorkerThread () {
@@ -217,7 +216,6 @@ WorkerThread::~WorkerThread () {
 }
 
 void WorkerThread::run () {
-  setupDebugLog();  
   if (AutoMap == autoTask) task = AutoMap; 
   
   switch (task) {
@@ -225,7 +223,8 @@ void WorkerThread::run () {
   case Statistics: getStatistics(); break;
   case Convert: convert(); break;
   case AutoMap: autoMap(); break;
-  case MoveProvinces: moveProvinces(); break; 
+  case MoveProvinces: moveProvinces(); break;
+  case DistributeLeaders: distributeLeaders(); break; 
   case NumTasks: 
   default: break; 
   }
@@ -316,6 +315,7 @@ string WorkerThread::currentTags () const {
 }
 
 void WorkerThread::configure () {
+  setupDebugLog();  
   configObject = processFile("config.txt");
   targetVersion = configObject->safeGetString("hoidir", HOI_FINEST_HOUR);
   sourceVersion = configObject->safeGetString("vicdir", ".\\V2_HoD\\");
@@ -338,7 +338,6 @@ void WorkerThread::configure () {
   }
 
   vicTechObject = loadTextFile(sourceVersion + "technologies.txt");
-  leaderTypesObject = loadTextFile(targetVersion + "leaderTypes.txt"); 
 }
 
 Object* WorkerThread::loadTextFile (string fname) {
@@ -1022,19 +1021,17 @@ void WorkerThread::loadFiles () {
 }
 
 void WorkerThread::setupDebugLog () {
-  string debuglog = configObject->safeGetString("logfile");
-  if (debuglog != "") {
-    string outputdir = "Output\\";
-    debuglog = outputdir + debuglog;
-    Logger::logStream(Logger::Game) << "Opening debug log " << debuglog << "\n"; 
+  string debuglog = "logfile.txt";
+  string outputdir = "Output\\";
+  debuglog = outputdir + debuglog;
+  Logger::logStream(Logger::Game) << "Opening debug log " << debuglog << "\n"; 
     
-    DWORD attribs = GetFileAttributesA(debuglog.c_str());
-    if (attribs != INVALID_FILE_ATTRIBUTES) {
-      int error = remove(debuglog.c_str());
-      if (0 != error) Logger::logStream(Logger::Warning) << "Warning: Could not delete old log file. New one will be appended.\n";
-    }
-    parentWindow->openDebugLog(debuglog);
+  DWORD attribs = GetFileAttributesA(debuglog.c_str());
+  if (attribs != INVALID_FILE_ATTRIBUTES) {
+    int error = remove(debuglog.c_str());
+    if (0 != error) Logger::logStream(Logger::Warning) << "Warning: Could not delete old log file. New one will be appended.\n";
   }
+  parentWindow->openDebugLog(debuglog);
 }
 
 /******************************* End initialisers *******************************/ 
@@ -1759,28 +1756,51 @@ bool WorkerThread::convertLeaders () {
   double totalArmyWeight = 0;
   double totalNavyWeight = 0;
   double totalWingWeight = 0;
+  map<string, Object*> historicalLeaders;
+  int originalUnassignedLand = 0;
+  int originalUnassignedNavy = 0;
+  int originalUnassignedWing = 0;
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
-    if ((*hc)->getKey() == "REB") continue;
-    Object* lead = (*hc)->safeGetObject("active_leaders");
+    setPointersFromHoiCountry(*hc);
+    string filename = targetVersion + "leaders\\" + hoiTag + ".txt";
+    ifstream checkFile(filename.c_str());
+    if (!checkFile) continue;
+    Object* leaderObject = loadTextFile(filename);
+    objvec leaders = leaderObject->getLeaves(); 
+    for (objiter leader = leaders.begin(); leader != leaders.end(); ++leader) {
+      historicalLeaders[(*leader)->getKey()] = (*leader);
+      string area = (*leader)->safeGetString("type");
+      if (area == "land")      originalUnassignedLand++;
+      else if (area == "sea" ) originalUnassignedNavy++;
+      else                     originalUnassignedWing++;
+    }    
+  }
+
+  map<string, objvec> leaderFiles;  
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    setPointersFromHoiCountry(*hc);
+    if (hoiTag == "REB") continue;
+    Object* lead = hoiCountry->safeGetObject("active_leaders");
     if (!lead) continue;
     objvec leaders = lead->getLeaves();
     for (objiter leader = leaders.begin(); leader != leaders.end(); ++leader) {
-      string area = leaderTypesObject->safeGetString((*leader)->getKey(), "land");
+      string area = historicalLeaders[(*leader)->getKey()]->safeGetString("type", "land");
       if      (area == "land") landLeaders.push_back(*leader);
       else if (area == "sea" ) navyLeaders.push_back(*leader);
       else                     wingLeaders.push_back(*leader);
+      historicalLeaders[(*leader)->getKey()]->resetLeaf("assigned", "yes");
     }
     lead->clear();
 
-    setPointersFromHoiCountry(*hc);
     double armyWeight = configObject->safeGetFloat("minimumArmyWeight", 75);
     double navyWeight = configObject->safeGetFloat("minimumNavyWeight", 1000);
     double wingWeight = configObject->safeGetFloat("minimumWingWeight", 30);
-
-    if (!vicCountry) continue;
-    armyWeight += vicCountry->safeGetFloat("army_size");
-    navyWeight += vicCountry->safeGetFloat("trueNavySize");
-    wingWeight += vicCountry->safeGetFloat("wing_size");
+    
+    if (vicCountry) {
+      armyWeight += vicCountry->safeGetFloat("army_size");
+      navyWeight += vicCountry->safeGetFloat("trueNavySize");
+      wingWeight += vicCountry->safeGetFloat("wing_size");
+    }
 
     (*hc)->resetLeaf("landOfficerWeight", armyWeight);
     (*hc)->resetLeaf("navyOfficerWeight", navyWeight);
@@ -1790,19 +1810,65 @@ bool WorkerThread::convertLeaders () {
     totalNavyWeight += navyWeight;
     totalWingWeight += wingWeight; 
   }
-
+  
   unsigned int totalLandLeaders = landLeaders.size();
   unsigned int totalNavyLeaders = navyLeaders.size();
   unsigned int totalWingLeaders = wingLeaders.size();
   random_shuffle(landLeaders.begin(), landLeaders.end());
   random_shuffle(navyLeaders.begin(), navyLeaders.end());
   random_shuffle(wingLeaders.begin(), wingLeaders.end());
+  originalUnassignedLand -= landLeaders.size();
+  originalUnassignedNavy -= navyLeaders.size();
+  originalUnassignedWing -= wingLeaders.size();
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
     if ((*hc)->getKey() == "REB") continue;
     setPointersFromHoiCountry(*hc);
     getOfficers(landLeaders, "landOfficerWeight", totalArmyWeight, totalLandLeaders);
     getOfficers(navyLeaders, "navyOfficerWeight", totalNavyWeight, totalNavyLeaders);
     getOfficers(wingLeaders, "wingOfficerWeight", totalWingWeight, totalWingLeaders);
+
+    Object* activeLeaders = hoiCountry->safeGetObject("active_leaders");
+    objvec leaders = activeLeaders->getLeaves();
+    for (objiter leader = leaders.begin(); leader != leaders.end(); ++leader) {
+      Object* officer = historicalLeaders[(*leader)->getKey()];
+      officer->resetLeaf("assigned", "yes");
+      officer->resetLeaf("country", hoiTag);
+      leaderFiles[hoiTag].push_back(officer); 
+    }
+
+    map<string, pair<int, int> > toTakeAndTaken;
+    toTakeAndTaken["land"] = pair<int, int>(originalUnassignedLand * hoiCountry->safeGetFloat("landOfficerWeight") / totalArmyWeight, 0);
+    toTakeAndTaken["sea"]  = pair<int, int>(originalUnassignedNavy * hoiCountry->safeGetFloat("navyOfficerWeight") / totalNavyWeight, 0);
+    toTakeAndTaken["air"]  = pair<int, int>(originalUnassignedWing * hoiCountry->safeGetFloat("wingOfficerWeight") / totalWingWeight, 0);
+
+    for (map<string, Object*>::iterator off = historicalLeaders.begin(); off != historicalLeaders.end(); ++off) {
+      Object* officer = (*off).second;
+      if (officer->safeGetString("assigned", "no") == "yes") continue;
+      string area = officer->safeGetString("type", "land");
+      if (toTakeAndTaken[area].first >= toTakeAndTaken[area].second) continue;
+      officer->resetLeaf("assigned", "yes");
+      officer->resetLeaf("country", hoiTag);
+      leaderFiles[hoiTag].push_back(officer);
+      toTakeAndTaken[area].second++; 
+    }
+  }
+
+  for (map<string, Object*>::iterator off = historicalLeaders.begin(); off != historicalLeaders.end(); ++off) {
+    (*off).second->unsetValue("assigned");
+  }
+
+  for (map<string, objvec>::iterator file = leaderFiles.begin(); file != leaderFiles.end(); ++file) {
+    hoiTag = (*file).first;
+    Object* leaderFile = new Object(hoiTag);
+    Parser::topLevel = leaderFile;
+    for (objiter off = (*file).second.begin(); off != (*file).second.end(); ++off) {
+      leaderFile->setValue(*off);
+    }
+    ofstream writer;
+    string filename = "./Output/history/leaders/" + hoiTag + ".txt";
+    writer.open(filename.c_str());
+    writer << (*leaderFile);
+    writer.close(); 
   }
 
   Logger::logStream(Logger::Game) << "Done with leaders.\n"; 
@@ -3359,6 +3425,110 @@ void WorkerThread::convert () {
   writer << (*hoiGame);
   writer.close();
   Logger::logStream(Logger::Game) << "Done writing.\n";
+}
+
+void WorkerThread::distributeLeaders () {
+  // Probably a one-off method: Distributes inactive leaders for a game already in progress.
+  objvec leaves = hoiGame->getLeaves();
+  for (objiter leaf = leaves.begin(); leaf != leaves.end(); ++leaf) {
+    if (!(*leaf)->safeGetObject("flags")) continue;
+    if (!(*leaf)->safeGetObject("strategic_warfare")) continue;
+    allHoiCountries.push_back(*leaf);
+  }
+
+  map<string, Object*> activeOfficers;
+  map<string, objvec> leaderFiles;   
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    setPointersFromHoiCountry(*hc);
+    if (hoiTag == "REB") continue;
+    
+    Object* existingOfficers = hoiCountry->safeGetObject("active_leaders");
+    if (!existingOfficers) continue;
+    objvec offVec = existingOfficers->getLeaves();
+    for (objiter off = offVec.begin(); off != offVec.end(); ++off) {
+      activeOfficers[(*off)->getKey()] = (*off);
+      (*off)->resetLeaf("country", hoiTag);
+    }
+  }
+
+  map<string, Object*> officersToRedistribute;
+  map<string, double> originalNumbers;
+  objvec allOfficers;
+  map<string, map<string, double> > tagToNumbers;
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    setPointersFromHoiCountry(*hc);
+    if (hoiTag == "REB") continue;
+    string filename = targetVersion + "leaders\\" + hoiTag + ".txt";
+    ifstream checkFile(filename.c_str());
+    if (!checkFile) continue;
+    Object* leaderObject = loadTextFile(filename);
+    objvec leaders = leaderObject->getLeaves(); 
+    for (objiter leader = leaders.begin(); leader != leaders.end(); ++leader) {
+      allOfficers.push_back(*leader); 
+      string leaderNumber = (*leader)->getKey();
+      string area = (*leader)->safeGetString("type");
+      if (activeOfficers[leaderNumber]) {
+	string tag = activeOfficers[leaderNumber]->safeGetString("country");
+	tagToNumbers[tag][area]++;
+	tagToNumbers["total"][area]++;
+	leaderFiles[tag].push_back(*leader);
+	(*leader)->resetLeaf("country", tag); 
+	continue;
+      }
+      officersToRedistribute[leaderNumber] = (*leader);      
+      originalNumbers[area]++;
+    }
+  }
+
+  vector<string> areas; areas.push_back("land"); areas.push_back("sea"); areas.push_back("air");
+  for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
+    setPointersFromHoiCountry(*hc);
+    if (hoiTag == "REB") continue;
+    
+    for (vector<string>::iterator area = areas.begin(); area != areas.end(); ++area) {
+      double numToTake = tagToNumbers[hoiTag][*area];
+      numToTake /= tagToNumbers["total"][*area];
+      numToTake *= originalNumbers[*area];
+      int actualToTake = (int) floor(numToTake + 0.5);
+      Logger::logStream(Logger::Game) << hoiTag
+				      << " should get "
+				      << actualToTake
+				      << " of type "
+				      << (*area)
+				      << " (existing "
+				      << tagToNumbers[hoiTag][*area]
+				      << " / "
+				      << tagToNumbers["total"][*area]
+				      << ") ...";
+      int taken = 0;
+      for (map<string, Object*>::iterator off = officersToRedistribute.begin(); off != officersToRedistribute.end(); ++off) {
+	Object* officer = (*off).second;
+	if (!officer) continue;
+	if (officer->safeGetString("type") != (*area)) continue;
+	officer->resetLeaf("country", hoiTag);
+	leaderFiles[hoiTag].push_back(officer);
+	officersToRedistribute[(*off).first] = 0; 
+	if (++taken >= actualToTake) break;
+      }
+      Logger::logStream(Logger::Game) << " found " << taken << "\n"; 
+    }
+  }
+  
+  for (map<string, objvec>::iterator file = leaderFiles.begin(); file != leaderFiles.end(); ++file) {
+    hoiTag = (*file).first;
+    Object* leaderFile = new Object(hoiTag);
+    Parser::topLevel = leaderFile;
+    for (objiter off = (*file).second.begin(); off != (*file).second.end(); ++off) {
+      leaderFile->setValue(*off);
+    }
+    ofstream writer;
+    string filename = "./Output/history/leaders/" + hoiTag + ".txt";
+    writer.open(filename.c_str());
+    writer << (*leaderFile);
+    writer.close(); 
+  }
+
+  
 }
 
 void WorkerThread::moveProvinces () {

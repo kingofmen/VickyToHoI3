@@ -17,7 +17,8 @@ enum TaskType {LoadFile = 0,
 	       Statistics,
 	       AutoMap, 
 	       Convert,
-	       MoveProvinces, 
+	       MoveProvinces,
+	       DistributeLeaders, 
 	       NumTasks}; 
 
 class CleanerWindow : public QMainWindow {
@@ -32,7 +33,7 @@ public:
   void openDebugLog (string fname);
   void closeDebugLog (); 
   void loadFile (string fname, TaskType autoTask = NumTasks);
-						 
+  void specialAction (string hoiFile, string moveFile, TaskType t = MoveProvinces); 					 
 						 
 						 
 public slots:
@@ -41,11 +42,9 @@ public slots:
   void getStats ();
   void autoMap (); 
   void convert ();
-  void moveProvinces (string hoiFile, string moveFile); 
   void message (QString m); 
   
 private:
-
 };
 
 struct ObjectSorter {
@@ -71,7 +70,7 @@ class WorkerThread : public QThread {
   Q_OBJECT
 public:
   WorkerThread (string fname, TaskType aTask = NumTasks);
-  WorkerThread (string hoiFile, string moveFile); 
+  WorkerThread (string hoiFile, string moveFile, TaskType t = MoveProvinces); 
   ~WorkerThread ();
   void setTask(TaskType t) {task = t;} 
 
@@ -112,7 +111,8 @@ private:
   void autoMap (); 
   void convert ();   
   void configure ();
-  void moveProvinces (); 
+  void moveProvinces ();
+  void distributeLeaders ();
 
   // Initialisers
   bool createCountryMap ();
@@ -180,7 +180,6 @@ private:
   Object* provinceNamesObject; 
   Object* customObject;
   Object* vicTechObject;
-  Object* leaderTypesObject; 
   map<string, Object*> hoiProvincePositions; 
 }; 
 
