@@ -1,0 +1,5223 @@
+50000 = {
+	name = "Bai Chongxi"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50000
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+	}
+}
+50001 = {
+	name = "Zhang Zhen"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50001
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50002 = {
+	name = "Zhang Zhenn"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50002
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50003 = {
+	name = "Zhang Chi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50003
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50004 = {
+	name = "Zhang Zhizhong"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50004
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50005 = {
+	name = "Chang Enduo"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50005
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50006 = {
+	name = "Zhang Fakui"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50006
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+50007 = {
+	name = "Zhang Fang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50007
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50008 = {
+	name = "Zhang Xuxing"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50008
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+50009 = {
+	name = "Zhang Xuzi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50009
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+50010 = {
+	name = "Zhang Xuezhong"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50010
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+50011 = {
+	name = "Zhang Xueliang"
+	country = CHI
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50011
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 4 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50012 = {
+	name = "Zhang Gan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50012
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50013 = {
+	name = "Zhang Kexia"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50013
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50014 = {
+	name = "Zhang Lingfu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50014
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50015 = {
+	name = "Zhang Shixi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50015
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50016 = {
+	name = "Zhang Zizhong"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50016
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+50017 = {
+	name = "Zhang Dulun"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50017
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50018 = {
+	name = "Zhang Yan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50018
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+50019 = {
+	name = "Zhang Yaoming"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50019
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+50020 = {
+	name = "Zhang Yinwu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50020
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50021 = {
+	name = "Zhao Chengshou"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50021
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50022 = {
+	name = "Zhao Jiaxiang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50022
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50023 = {
+	name = "Zhao Xizhang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50023
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50024 = {
+	name = "Zhao Hong Wenguo"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50024
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50025 = {
+	name = "Zhao Guoping"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50025
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50026 = {
+	name = "Zhao Shoushan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50026
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+	}
+}
+50027 = {
+	name = "Zhao Dengyu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50027
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50028 = {
+	name = "Chen Anbao"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50028
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50029 = {
+	name = "Chen Changjie"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50029
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50030 = {
+	name = "Chen Cheng"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50030
+	add_trait = engineer
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+50031 = {
+	name = "Chen Jitang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50031
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1938.1.1 = { rank = 4 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50032 = {
+	name = "Chen Jihuan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50032
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50033 = {
+	name = "Chen Gongxia"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50033
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50034 = {
+	name = "Chen Mingren"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50034
+	add_trait = defensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+50035 = {
+	name = "Chen Daqing"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50035
+	history = {
+		1937.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50036 = {
+	name = "Chen Tie"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50036
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50037 = {
+	name = "Chen Wanren"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50037
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50038 = {
+	name = "Chen Wenqi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50038
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50039 = {
+	name = "Zheng Tingzhen"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50039
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+50040 = {
+	name = "Zheng Tingji"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50040
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50041 = {
+	name = "Cheng Qian"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50041
+	add_trait = fortress_buster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+	}
+}
+50042 = {
+	name = "Zheng Zuomin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50042
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+50043 = {
+	name = "Zheng Dongguo"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50043
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50044 = {
+	name = "Ji Zhangjian"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50044
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50045 = {
+	name = "Ji Xingwen"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50045
+	add_trait = defensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+50046 = {
+	name = "Qi Xueqi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50046
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50047 = {
+	name = "Jiang Zhiying"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50047
+	history = {
+		1930.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50048 = {
+	name = "Chiang Kai-Shek"
+	country = CHI
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 0.00
+	picture = L50048
+	add_trait = defensive_doctrine
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+	}
+}
+50049 = {
+	name = "Jiang Guangnai"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50049
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50050 = {
+	name = "Jiang Dingwen"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50050
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+	}
+}
+50051 = {
+	name = "Jiang Yuzhen"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50051
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50052 = {
+	name = "Jie Fang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50052
+	add_trait = logistics_wizard
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50053 = {
+	name = "Chih Fengcheng"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50053
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50054 = {
+	name = "Qin Yizhi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50054
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50055 = {
+	name = "Zhou Jiabin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50055
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+50056 = {
+	name = "Zhou Zhidao"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50056
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+50057 = {
+	name = "Zhou Qingxiang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50057
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+50058 = {
+	name = "Zhou Fu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50058
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50059 = {
+	name = "Zhou Fucheng"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50059
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+50060 = {
+	name = "Zhou Lan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50060
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50061 = {
+	name = "Zhou Yan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50061
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+50062 = {
+	name = "Zhu Zhiyi"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50062
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+50063 = {
+	name = "Zhu Chi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50063
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50064 = {
+	name = "Zhu Huaibing"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50064
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50065 = {
+	name = "Zhu Shaozhou"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50065
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50066 = {
+	name = "Zhu Shaoliang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50066
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+	}
+}
+50067 = {
+	name = "Zhu Dingqing"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50067
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+50068 = {
+	name = "Zhu Qi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50068
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50069 = {
+	name = "Qiu Qingquan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50069
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50070 = {
+	name = "Qiu Kaiji"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50070
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50071 = {
+	name = "Zhong Song"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50071
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50072 = {
+	name = "Zhong Yi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50072
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50073 = {
+	name = "Daljaya"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50073
+	add_trait = trickster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50074 = {
+	name = "Fan Hanjie"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50074
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50075 = {
+	name = "Fang Jing"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50075
+	add_trait = defensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+50076 = {
+	name = "Fang Xianjue"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50076
+	add_trait = defensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+50077 = {
+	name = "Fang Shuhong"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50077
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+50078 = {
+	name = "Fang Tian"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50078
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50079 = {
+	name = "Feng Anbang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50079
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50080 = {
+	name = "Feng Zhian"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50080
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50081 = {
+	name = "Feng Shengfa"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50081
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+50082 = {
+	name = "Feng Qinzai"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50082
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50083 = {
+	name = "Feng Yuxiang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50083
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1937.1.1 = { rank = 4 }
+	}
+}
+50084 = {
+	name = "Fu Bingxun"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50084
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50085 = {
+	name = "Fu Zuoyi"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50085
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+50086 = {
+	name = "Han Jun"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50086
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+50087 = {
+	name = "Han Fuqu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50087
+	add_trait = winter_specialist
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50088 = {
+	name = "Han Liancheng"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50088
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+50089 = {
+	name = "Hao Menglin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50089
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50090 = {
+	name = "He Jifeng"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50090
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50091 = {
+	name = "He Zhuguo"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50091
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50092 = {
+	name = "He Guoguang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50092
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50093 = {
+	name = "He Shaozhou"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50093
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50094 = {
+	name = "He Weizhen"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50094
+	history = {
+		1939.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+50095 = {
+	name = "He Wending"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50095
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50096 = {
+	name = "He Yaozu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50096
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+50097 = {
+	name = "He Yingqin"
+	country = CHI
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50097
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 4 }
+	}
+}
+50098 = {
+	name = "Hou Jingru"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50098
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50099 = {
+	name = "Xia Chuzhong"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50099
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50100 = {
+	name = "Xia Guozhang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50100
+	add_trait = fortress_buster
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+50101 = {
+	name = "Xia Wei"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50101
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50102 = {
+	name = "Xiang Fengwu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50102
+	add_trait = winter_specialist
+	add_trait = trickster
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50103 = {
+	name = "Xiao Jimian"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50103
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50104 = {
+	name = "Xiao Zhichu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50104
+	add_trait = logistics_wizard
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50105 = {
+	name = "Xiao Yisu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50105
+	add_trait = offensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+50106 = {
+	name = "Xu Jizhang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50106
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50107 = {
+	name = "Xu Jingtang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50107
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50108 = {
+	name = "Xu Rucheng"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50108
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50109 = {
+	name = "Xu Guozhang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50109
+	add_trait = panzer_leader
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50110 = {
+	name = "Xu Tingyao"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50110
+	add_trait = engineer
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50111 = {
+	name = "Xu Zuyi"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50111
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50112 = {
+	name = "Xu Yuanquan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50112
+	add_trait = commando
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+50113 = {
+	name = "Xu Yongchang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50113
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+	}
+}
+50114 = {
+	name = "Xuan Tiewu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50114
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+50115 = {
+	name = "Xue Yue"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50115
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+50116 = {
+	name = "Hu Changqing"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50116
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+50117 = {
+	name = "Hu Xianmei"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50117
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50118 = {
+	name = "Hu Yibin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50118
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50119 = {
+	name = "Hu Ruoyu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50119
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+50120 = {
+	name = "Hu Lian"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50120
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+50121 = {
+	name = "Hu Su"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50121
+	history = {
+		1930.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+50122 = {
+	name = "Hu Zongnan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50122
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50123 = {
+	name = "Hu Ying"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50123
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50124 = {
+	name = "Huang Zhenwu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50124
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50125 = {
+	name = "Huang Jie"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50125
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50126 = {
+	name = "Huang Qixiang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50126
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+50127 = {
+	name = "Huang Xiansheng"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50127
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50128 = {
+	name = "Huang Guoliang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50128
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50129 = {
+	name = "Huang Meixing"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50129
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+50130 = {
+	name = "Huang Bamei"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50130
+	add_trait = trickster
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+50131 = {
+	name = "Huang Botao"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50131
+	add_trait = defensive_doctrine
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+50132 = {
+	name = "Huang Shaohong"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50132
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50133 = {
+	name = "Huang Tao"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50133
+	add_trait = engineer
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+50134 = {
+	name = "Huang Qiaosong"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50134
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50135 = {
+	name = "Huang Wei"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50135
+	add_trait = defensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+50136 = {
+	name = "Huang Yongan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50136
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50137 = {
+	name = "Huo Kuizhang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50137
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+50138 = {
+	name = "Rao Guohua"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50138
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50139 = {
+	name = "Ji Chong Chon"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50139
+	add_trait = trickster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50140 = {
+	name = "Rong Xiang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50140
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50141 = {
+	name = "Rong Youlüe"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50141
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50142 = {
+	name = "Gan Lichu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50142
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50143 = {
+	name = "Kan Weiyong"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50143
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50144 = {
+	name = "Gao Zhisong"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50144
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50145 = {
+	name = "Gao Guizi"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50145
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50146 = {
+	name = "Gao Kuiyuan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50146
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+50147 = {
+	name = "Gao Shuxun"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50147
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50148 = {
+	name = "Gao Shuangcheng"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50148
+	add_trait = winter_specialist
+	history = {
+		1939.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50149 = {
+	name = "Ge Xiancai"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50149
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+50150 = {
+	name = "Kim Hak-Keu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50150
+	add_trait = trickster
+	history = {
+		1940.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50151 = {
+	name = "Gu Zhenglun"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50151
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50152 = {
+	name = "Gu Zhutong"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50152
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+50153 = {
+	name = "Gu Dinghua"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50153
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50154 = {
+	name = "Guan Linzheng"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50154
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50155 = {
+	name = "Gui Zezhun"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L50155
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50156 = {
+	name = "Gui Yongqing"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50156
+	add_trait = commando
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50157 = {
+	name = "Kong Zongzhou"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50157
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+50158 = {
+	name = "Guo Chan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50158
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50159 = {
+	name = "Guo Jijiao"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50159
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50160 = {
+	name = "Guo Jingyun"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50160
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50161 = {
+	name = "Guo Xunqi"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50161
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50162 = {
+	name = "Guo Rudong"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50162
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50163 = {
+	name = "Guo Lüzhou"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50163
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50164 = {
+	name = "Guo Zongfen"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50164
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50165 = {
+	name = "Lai Chuanxiang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50165
+	history = {
+		1937.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50166 = {
+	name = "Lee Beom Seok"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50166
+	add_trait = trickster
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50167 = {
+	name = "Lei Zhong"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50167
+	add_trait = panzer_leader
+	history = {
+		1938.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+50168 = {
+	name = "Leng Xin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50168
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+50169 = {
+	name = "Li Zhen"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50169
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+50170 = {
+	name = "Li Zhenqiu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50170
+	history = {
+		1944.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+	}
+}
+50171 = {
+	name = "Li Jiayu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50171
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50172 = {
+	name = "Li Jue"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50172
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50173 = {
+	name = "Li Chunnong"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50173
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50174 = {
+	name = "Li Fuying"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50174
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+50175 = {
+	name = "Li Hanhun"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50175
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50176 = {
+	name = "Li Xianzhou"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50176
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50177 = {
+	name = "Li Yikuang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50177
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+50178 = {
+	name = "Li Mi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50178
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50179 = {
+	name = "Li Minghao"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50179
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+50180 = {
+	name = "Li Mo'an"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50180
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50181 = {
+	name = "Li Bifan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50181
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50182 = {
+	name = "Li Pinxian"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50182
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50183 = {
+	name = "Li Tao"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50183
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50184 = {
+	name = "Li Tianxia"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50184
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50185 = {
+	name = "Li Zefen"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50185
+	add_trait = logistics_wizard
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+50186 = {
+	name = "Li Zongren"
+	country = CHI
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50186
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+	}
+}
+50187 = {
+	name = "Li Wen"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50187
+	history = {
+		1938.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50188 = {
+	name = "Li Wentian"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50188
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+50189 = {
+	name = "Li Yannian"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50189
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50190 = {
+	name = "Li Yutang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50190
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50191 = {
+	name = "Liang Jingzhai"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50191
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50192 = {
+	name = "Liang Xixian"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50192
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+50193 = {
+	name = "Liao Lei"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50193
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50194 = {
+	name = "Liao Lingqi"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50194
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+50195 = {
+	name = "Liao Yaoxiang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50195
+	add_trait = defensive_doctrine
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+50196 = {
+	name = "Liao Yunzhou"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50196
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50197 = {
+	name = "Liao Yunze"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50197
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+50198 = {
+	name = "Lin Wei"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50198
+	add_trait = defensive_doctrine
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50199 = {
+	name = "Liu Anqi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50199
+	add_trait = offensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+50200 = {
+	name = "Liu Zhaoli"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50200
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50201 = {
+	name = "Liu Zhendong"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50201
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+50202 = {
+	name = "Liu Jiaqi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50202
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+50203 = {
+	name = "Liu Jiashu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50203
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50204 = {
+	name = "Liu Jianxu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50204
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+50205 = {
+	name = "Liu Zhi"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50205
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50206 = {
+	name = "Liu Heding"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50206
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50207 = {
+	name = "Liu Xiang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50207
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+50208 = {
+	name = "Liu Xing"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50208
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+50209 = {
+	name = "Liu Ruming"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50209
+	add_trait = winter_specialist
+	history = {
+		1938.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+50210 = {
+	name = "Liu Kan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50210
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50211 = {
+	name = "Liu Guangji"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50211
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50212 = {
+	name = "Liu Guiwu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50212
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+50213 = {
+	name = "Liu Lianyi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50213
+	history = {
+		1938.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50214 = {
+	name = "Liu Mao'en"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50214
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50215 = {
+	name = "Liu Shiyi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50215
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50216 = {
+	name = "Liu Duoquan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50216
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50217 = {
+	name = "Liu Wei"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50217
+	add_trait = commando
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+50218 = {
+	name = "Liu Wenhui"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50218
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+50219 = {
+	name = "Luo Zhuoying"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50219
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+50220 = {
+	name = "Luo Guangwen"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50220
+	add_trait = defensive_doctrine
+	add_trait = winter_specialist
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50221 = {
+	name = "Luo Lie"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50221
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+50222 = {
+	name = "Luo Lirong"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50222
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50223 = {
+	name = "Luo Shuren"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50223
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50224 = {
+	name = "Lobsang Tsewang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50224
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+50225 = {
+	name = "Lü Zhanmeng"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50225
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+50226 = {
+	name = "Lu Junquan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50226
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50227 = {
+	name = "Lu Zhonglin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50227
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+	}
+}
+50228 = {
+	name = "Lu Han"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50228
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50229 = {
+	name = "Lu Guangwei"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50229
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50230 = {
+	name = "Lu Daoyuan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50230
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+50231 = {
+	name = "Long Tianwu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50231
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50232 = {
+	name = "Long Yun"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50232
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+50233 = {
+	name = "Ma Zhanshan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50233
+	add_trait = winter_specialist
+	add_trait = trickster
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+50234 = {
+	name = "Ma Chongliu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50234
+	add_trait = engineer
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50235 = {
+	name = "Ma Hongkui"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50235
+	add_trait = logistics_wizard
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+	}
+}
+50236 = {
+	name = "Ma Hongbin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50236
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50237 = {
+	name = "Ma Bufang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50237
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+50238 = {
+	name = "Ma Shigong"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50238
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50239 = {
+	name = "Ma Ying"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50239
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50240 = {
+	name = "Ma Yuren"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50240
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50241 = {
+	name = "Mao Bingwen"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50241
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50242 = {
+	name = "Miao Peinan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50242
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50243 = {
+	name = "Mou Zhongheng"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50243
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+50244 = {
+	name = "Ou Zhen"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50244
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50245 = {
+	name = "Ou Shounian"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50245
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+50246 = {
+	name = "Ba Yunying"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50246
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50248 = {
+	name = "Pan Wenhua"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50248
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50249 = {
+	name = "Pang Hanzhen"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50249
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50250 = {
+	name = "Pang Bingxun"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50250
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+50251 = {
+	name = "Pei Changhui"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50251
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50252 = {
+	name = "Peng Shiliang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50252
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50253 = {
+	name = "Shang Zhen"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50253
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+50254 = {
+	name = "Shangguan Yunxiang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50254
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50255 = {
+	name = "Shao Baichang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50255
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50256 = {
+	name = "Sheng Zhicai"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L50256
+	add_trait = defensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+	}
+}
+50257 = {
+	name = "Sheng Wen"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50257
+	add_trait = trickster
+	history = {
+		1937.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50258 = {
+	name = "Shi Jingting"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50258
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50259 = {
+	name = "Shi Zude"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50259
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50260 = {
+	name = "Shi Yousan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50260
+	add_trait = trickster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+50261 = {
+	name = "Su Bingwen"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50261
+	add_trait = winter_specialist
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1962.1.1 = { rank = 0 }
+	}
+}
+50262 = {
+	name = "Su Zuxin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50262
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50263 = {
+	name = "Sun Zhen"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50263
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50264 = {
+	name = "Sun Chu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50264
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50265 = {
+	name = "Sun Liren"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50265
+	add_trait = panzer_leader
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+50266 = {
+	name = "Sun Lianzhong"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50266
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+50267 = {
+	name = "Sun Mingjin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50267
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50268 = {
+	name = "Sun Du"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50268
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50269 = {
+	name = "Sun Tongxuan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50269
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50270 = {
+	name = "Sun Weiru"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50270
+	history = {
+		1937.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50271 = {
+	name = "Sun Yuanliang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50271
+	add_trait = defensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50272 = {
+	name = "Sung Zheyuan"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50272
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+50273 = {
+	name = "Sung Xilian"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50273
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50274 = {
+	name = "Tai Anlan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50274
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50275 = {
+	name = "Tai Zhi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50275
+	history = {
+		1937.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50276 = {
+	name = "Tai Li"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50276
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50277 = {
+	name = "Tang Juwu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50277
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+50278 = {
+	name = "Tang Enbo"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50278
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50279 = {
+	name = "Tang Huaiyuan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50279
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50280 = {
+	name = "Tang Shengzhi"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50280
+	add_trait = trickster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50281 = {
+	name = "Tang Shizun"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50281
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50282 = {
+	name = "Tao Zhiyue"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50282
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50283 = {
+	name = "Tao Guang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50283
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50284 = {
+	name = "Deng Xihou"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50284
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50285 = {
+	name = "Deng Baoshan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50285
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50286 = {
+	name = "Deng Dingyuan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50286
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50287 = {
+	name = "Tian Zhennan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50287
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50288 = {
+	name = "Ding Zhipan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50288
+	add_trait = offensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+50289 = {
+	name = "Cai Mengjian"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50289
+	add_trait = trickster
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+50290 = {
+	name = "Cai Tingkai"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50290
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50291 = {
+	name = "Zeng Zesheng"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50291
+	add_trait = defensive_doctrine
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+50292 = {
+	name = "Qin Lin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50292
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+50293 = {
+	name = "Qin Dechun"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50293
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+50294 = {
+	name = "Zou Shaomeng"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50294
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50295 = {
+	name = "Zou Zuohua"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50295
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50296 = {
+	name = "Xu Yongchang"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50296
+	add_trait = defensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+50297 = {
+	name = "Cun Xingqi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50297
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50298 = {
+	name = "Du Yuming"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50298
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50299 = {
+	name = "Duan Yun"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50299
+	add_trait = offensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+50300 = {
+	name = "Dong Qiwu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50300
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+50301 = {
+	name = "Tong Linge"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50301
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50302 = {
+	name = "Dong Zongshan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50302
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50303 = {
+	name = "Wu Jingbin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50303
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50304 = {
+	name = "von Falkenhausen"
+	country = CHI
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 0.00
+	picture = L50304
+	add_trait = offensive_doctrine
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+50305 = {
+	name = "Wan Fulin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50305
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+50306 = {
+	name = "Wan Shitong"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50306
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50307 = {
+	name = "Wan Yaohuang"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50307
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50308 = {
+	name = "Wang Zhaozhi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50308
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50309 = {
+	name = "Wang Jiaben"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50309
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+50310 = {
+	name = "Wang Jianyue"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50310
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50311 = {
+	name = "Wang Zhixi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50311
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+50312 = {
+	name = "Wang Jingjiu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50312
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50313 = {
+	name = "Wang Jingzhi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50313
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+50314 = {
+	name = "Wang Jingguo"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50314
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50315 = {
+	name = "Wang Jingwei"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L50315
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+50316 = {
+	name = "Wang Jun"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50316
+	add_trait = logistics_wizard
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50317 = {
+	name = "Wang Chunhui"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50317
+	add_trait = commando
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+50318 = {
+	name = "Wang Fengshan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50318
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50319 = {
+	name = "Wang Yizhe"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50319
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50320 = {
+	name = "Wang Lingji"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50320
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+	}
+}
+50321 = {
+	name = "Wang Lingyun"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50321
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+50322 = {
+	name = "Wang Mingzhang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50322
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50323 = {
+	name = "Wang Zuanxu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50323
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50324 = {
+	name = "Wang Dongyuan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50324
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50325 = {
+	name = "Wang Wanling"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50325
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50326 = {
+	name = "Wang Yaowu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50326
+	add_trait = defensive_doctrine
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50327 = {
+	name = "Wang Yi"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50327
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+50328 = {
+	name = "Wei Zhen"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50328
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+50329 = {
+	name = "Wei Lihuang"
+	country = CHI
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50329
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+	}
+}
+50330 = {
+	name = "Wen Qiang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50330
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+50331 = {
+	name = "Wu Jiguang"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50331
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50332 = {
+	name = "Wu Qiwei"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50332
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50333 = {
+	name = "Wu Chuikun"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50333
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+50334 = {
+	name = "Wu Peifu"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50334
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+50335 = {
+	name = "Wu Shaozhou"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50335
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50336 = {
+	name = "Wu Shimin"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50336
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+50337 = {
+	name = "Yang Aiyuan"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50337
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+	}
+}
+50338 = {
+	name = "Yang Jie"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50338
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+50339 = {
+	name = "Yang Hu"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50339
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+50340 = {
+	name = "Yang Hucheng"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50340
+	history = {
+		1938.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+	}
+}
+50341 = {
+	name = "Yang Botao"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50341
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+50342 = {
+	name = "Yang Bufei"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50342
+	add_trait = panzer_leader
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50343 = {
+	name = "Yang Sen"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50343
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+50344 = {
+	name = "Yang Wei"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50344
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50345 = {
+	name = "Yao Zhongying"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50345
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50346 = {
+	name = "Ye Cheng"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50346
+	history = {
+		1930.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50347 = {
+	name = "Ye Peigao"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50347
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+50348 = {
+	name = "Yan Xishan"
+	country = CHI
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50348
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1940.1.1 = { rank = 4 }
+	}
+}
+50349 = {
+	name = "Yi Anhua"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50349
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50350 = {
+	name = "Yol Bars"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50350
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+50351 = {
+	name = "Yu Chengwan"
+	country = CHI
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50351
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50352 = {
+	name = "Yu Jishi"
+	country = CHI
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50352
+	add_trait = offensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50353 = {
+	name = "Yuzhi Fenggang"
+	country = CHI
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50353
+	add_trait = trickster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+	}
+}
+50354 = {
+	name = "Chen Ce"
+	country = CHI
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50354
+	add_trait = blockade_runner
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50355 = {
+	name = "Chen Jiliang"
+	country = CHI
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50355
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50356 = {
+	name = "Chen Shaokuan"
+	country = CHI
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50356
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+	}
+}
+50357 = {
+	name = "Ji Zhangjian"
+	country = CHI
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50357
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+50358 = {
+	name = "Xu Zushan"
+	country = CHI
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50358
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50359 = {
+	name = "Gao Xianshen"
+	country = CHI
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50359
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+50360 = {
+	name = "Gui Yongqing"
+	country = CHI
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50360
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50361 = {
+	name = "Liu Yonggao"
+	country = CHI
+	type = sea
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L50361
+	add_trait = old_guard
+	add_trait = seawolf
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+50362 = {
+	name = "Ouyang Ge"
+	country = CHI
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50362
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+50363 = {
+	name = "Sa Shijun"
+	country = CHI
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50363
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50364 = {
+	name = "Shen Honglie"
+	country = CHI
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50364
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+50365 = {
+	name = "Zeng Yiding"
+	country = CHI
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50365
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+50366 = {
+	name = "Wang Shouting"
+	country = CHI
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50366
+	add_trait = old_guard
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50367 = {
+	name = "Zhang Tingmeng"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50367
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+50368 = {
+	name = "Chen Qixia"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50368
+	add_trait = night_flyer
+	history = {
+		1941.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50369 = {
+	name = "Chen Qingyun"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50369
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50370 = {
+	name = "Chennault"
+	country = CHI
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50370
+	add_trait = spotter
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50371 = {
+	name = "Chen Ruitian"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50371
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+50372 = {
+	name = "Zhou Zhirou"
+	country = CHI
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50372
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50373 = {
+	name = "Xu Huansheng"
+	country = CHI
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50373
+	add_trait = carpet_bomber
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+50374 = {
+	name = "Huang Guangrui"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50374
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+50375 = {
+	name = "Huang Bingheng"
+	country = CHI
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50375
+	history = {
+		1939.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+50376 = {
+	name = "Gao Zhihang"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L50376
+	add_trait = superior_air_tactician
+	history = {
+		1937.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+50377 = {
+	name = "Khryukin"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50377
+	add_trait = tank_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+50378 = {
+	name = "Li Guidan"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50378
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+50379 = {
+	name = "Liang Tiancheng"
+	country = CHI
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50379
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+50380 = {
+	name = "Liu Guoyun"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50380
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+50381 = {
+	name = "Liu Muqun"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50381
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+50382 = {
+	name = "Liu Zhesheng"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50382
+	add_trait = superior_air_tactician
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+50383 = {
+	name = "Liu Cuigang"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50383
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50384 = {
+	name = "Mao Pangchu"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50384
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+50385 = {
+	name = "Qian Dajun"
+	country = CHI
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50385
+	history = {
+		1937.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+	}
+}
+50386 = {
+	name = "Wang Guangfu"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L50386
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+50387 = {
+	name = "Wang Tianxiang"
+	country = CHI
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L50387
+	add_trait = spotter
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+50388 = {
+	name = "Yue Yiqin"
+	country = CHI
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L50388
+	add_trait = fleet_destroyer
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+50389 = {
+	name = "Li Shijia"
+	country = CHI
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L50389
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}

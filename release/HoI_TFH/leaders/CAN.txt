@@ -1,0 +1,1830 @@
+52000 = {
+	name = "Alexander"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52000
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+52001 = {
+	name = "Allard"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L52001
+	add_trait = offensive_doctrine
+	history = {
+		1948.1.1 = { rank = 1 }
+		1958.1.1 = { rank = 2 }
+		1966.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52002 = {
+	name = "Anderson  J.F.V."
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52002
+	add_trait = engineer
+	history = {
+		1940.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52003 = {
+	name = "Anderson  T.V."
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52003
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+52004 = {
+	name = "Ashton"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52004
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+52005 = {
+	name = "Bernatchez"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52005
+	add_trait = offensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52006 = {
+	name = "Bevan"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52006
+	history = {
+		1945.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52007 = {
+	name = "Bingham"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L52007
+	add_trait = panzer_leader
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52008 = {
+	name = "Boutet"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52008
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+52009 = {
+	name = "Buell"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52009
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+52010 = {
+	name = "Burns"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52010
+	add_trait = panzer_leader
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52011 = {
+	name = "Cabeldu"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52011
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52012 = {
+	name = "Calkin"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52012
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+52013 = {
+	name = "Crerar"
+	country = CAN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L52013
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1948.1.1 = { rank = 0 }
+	}
+}
+52014 = {
+	name = "Currie"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52014
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+52015 = {
+	name = "Ethell"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52015
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52016 = {
+	name = "Farndale"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52016
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52017 = {
+	name = "Forbes"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52017
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+52018 = {
+	name = "Foster"
+	country = CAN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L52018
+	add_trait = defensive_doctrine
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52019 = {
+	name = "Foulkes"
+	country = CAN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L52019
+	add_trait = commando
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52020 = {
+	name = "Gammon"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52020
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+52021 = {
+	name = "Gardner"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52021
+	add_trait = panzer_leader
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52022 = {
+	name = "Gianelli"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L52022
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52023 = {
+	name = "Gordon"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52023
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+52024 = {
+	name = "Harvey"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52024
+	add_trait = engineer
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+52025 = {
+	name = "Hertzberg"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52025
+	add_trait = engineer
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+52026 = {
+	name = "Hoffmeister"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52026
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52027 = {
+	name = "Hughes"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52027
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+52028 = {
+	name = "Hyde"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52028
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52029 = {
+	name = "Jefferson"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52029
+	add_trait = offensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52030 = {
+	name = "Keefler"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52030
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52031 = {
+	name = "Keller"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52031
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52032 = {
+	name = "Kitching"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52032
+	add_trait = panzer_leader
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52033 = {
+	name = "Lafferty"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52033
+	add_trait = winter_specialist
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+52034 = {
+	name = "Lawson"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52034
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+52035 = {
+	name = "Leclerc"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52035
+	add_trait = defensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52036 = {
+	name = "Legér"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52036
+	add_trait = defensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52037 = {
+	name = "MacKay"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52037
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+52038 = {
+	name = "MacLean"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52038
+	add_trait = engineer
+	history = {
+		1943.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+52039 = {
+	name = "Matthews"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52039
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52040 = {
+	name = "McAvity"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52040
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52041 = {
+	name = "McGowan"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52041
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+52042 = {
+	name = "McKelvey"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52042
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52043 = {
+	name = "McKenzie"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52043
+	add_trait = engineer
+	history = {
+		1937.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52044 = {
+	name = "McNaughton"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L52044
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+52045 = {
+	name = "Melville"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52045
+	add_trait = engineer
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52046 = {
+	name = "Morton"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52046
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52047 = {
+	name = "Munroe"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52047
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+52048 = {
+	name = "Murchie"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52048
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52049 = {
+	name = "Neatby"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52049
+	add_trait = offensive_doctrine
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52050 = {
+	name = "Nicklin"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52050
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52051 = {
+	name = "Norton"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52051
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52052 = {
+	name = "Oulton"
+	country = CAN
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52052
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52053 = {
+	name = "Pearkes"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52053
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52054 = {
+	name = "Plow"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52054
+	add_trait = fortress_buster
+	history = {
+		1950.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52055 = {
+	name = "Price"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52055
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52056 = {
+	name = "Roaf"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52056
+	add_trait = engineer
+	history = {
+		1943.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+52057 = {
+	name = "Roberts"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52057
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52058 = {
+	name = "Rockingham"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52058
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52059 = {
+	name = "Rowley"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52059
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+52060 = {
+	name = "Russell"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52060
+	add_trait = offensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+52061 = {
+	name = "Salmon"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52061
+	add_trait = logistics_wizard
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+52062 = {
+	name = "Sansom"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52062
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52063 = {
+	name = "Sharp"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52063
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+52064 = {
+	name = "Shields"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52064
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+52065 = {
+	name = "Simonds"
+	country = CAN
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L52065
+	add_trait = offensive_doctrine
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1949.1.1 = { rank = 3 } 
+		1951.1.1 = { rank = 4 }
+		1955.1.1 = { rank = 0 }
+	}
+}
+52066 = {
+	name = "Spragee"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52066
+	add_trait = commando
+	history = {
+		1942.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+52067 = {
+	name = "Spry"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52067
+	history = {
+		1944.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52068 = {
+	name = "Stanley George"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52068
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+52069 = {
+	name = "Stothart"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52069
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52070 = {
+	name = "Stuart"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52070
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+52071 = {
+	name = "Turnbill"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52071
+	add_trait = defensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+52072 = {
+	name = "Vanier"
+	country = CAN
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52072
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52073 = {
+	name = "Vokes"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52073
+	add_trait = panzer_leader
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52074 = {
+	name = "Walker"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52074
+	add_trait = commando
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52075 = {
+	name = "Ware"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52075
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+52076 = {
+	name = "Watson"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52076
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+52077 = {
+	name = "White"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52077
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+52078 = {
+	name = "Worthington"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52078
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52079 = {
+	name = "Barber"
+	country = CAN
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52079
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52080 = {
+	name = "Baillie-Grohman"
+	country = CAN
+	type = sea
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L52080
+	add_trait = spotter
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52081 = {
+	name = "Bishop"
+	country = CAN
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52081
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52082 = {
+	name = "Brodeur"
+	country = CAN
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52082
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52083 = {
+	name = "Desmond"
+	country = CAN
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52083
+	history = {
+		1945.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52084 = {
+	name = "DeWolf"
+	country = CAN
+	type = sea
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52084
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+52085 = {
+	name = "Jones"
+	country = CAN
+	type = sea
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52085
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52086 = {
+	name = "Law"
+	country = CAN
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52086
+	add_trait = seawolf
+	history = {
+		1939.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52087 = {
+	name = "Murray"
+	country = CAN
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52087
+	add_trait = old_guard
+	add_trait = blockade_runner
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+52088 = {
+	name = "Murray-Adam"
+	country = CAN
+	type = sea
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52088
+	add_trait = spotter
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52089 = {
+	name = "Nelles"
+	country = CAN
+	type = sea
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52089
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+52090 = {
+	name = "Palutchin"
+	country = CAN
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52090
+	history = {
+		1945.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52091 = {
+	name = "Petitpas"
+	country = CAN
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52091
+	add_trait = seawolf
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52092 = {
+	name = "Piers"
+	country = CAN
+	type = sea
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52092
+	history = {
+		1943.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52093 = {
+	name = "Reid"
+	country = CAN
+	type = sea
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52093
+	add_trait = superior_tactician
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52094 = {
+	name = "Richardson"
+	country = CAN
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52094
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52095 = {
+	name = "Sonderstrom"
+	country = CAN
+	type = sea
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52095
+	add_trait = superior_tactician
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52096 = {
+	name = "Welland"
+	country = CAN
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52096
+	add_trait = spotter
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+52097 = {
+	name = "Akitt"
+	country = CAN
+	type = air
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52097
+	add_trait = old_guard
+	add_trait = carpet_bomber
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52098 = {
+	name = "Beurling"
+	country = CAN
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52098
+	add_trait = night_flyer
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52099 = {
+	name = "Bishop"
+	country = CAN
+	type = air
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L52099
+	add_trait = tank_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+52100 = {
+	name = "Brookes"
+	country = CAN
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52100
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+52101 = {
+	name = "Croil"
+	country = CAN
+	type = air
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52101
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+52102 = {
+	name = "Cuffe"
+	country = CAN
+	type = air
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L52102
+	add_trait = old_guard
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52103 = {
+	name = "Fultz"
+	country = CAN
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52103
+	add_trait = old_guard
+	add_trait = fleet_destroyer
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52104 = {
+	name = "Glazier"
+	country = CAN
+	type = air
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52104
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52105 = {
+	name = "Gower"
+	country = CAN
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52105
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+52106 = {
+	name = "Hurley"
+	country = CAN
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52106
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52107 = {
+	name = "Kerr"
+	country = CAN
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52107
+	add_trait = night_flyer
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52108 = {
+	name = "Langlois"
+	country = CAN
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52108
+	history = {
+		1945.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52109 = {
+	name = "MacBurney"
+	country = CAN
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52109
+	add_trait = carpet_bomber
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52110 = {
+	name = "Mackay-McEwan"
+	country = CAN
+	type = air
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52110
+	add_trait = superior_air_tactician
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52111 = {
+	name = "Miller"
+	country = CAN
+	type = air
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52111
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52112 = {
+	name = "Milroy"
+	country = CAN
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52112
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+52113 = {
+	name = "Oland"
+	country = CAN
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52113
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52114 = {
+	name = "Phemgstad"
+	country = CAN
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52114
+	add_trait = carpet_bomber
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+52115 = {
+	name = "Timmermann"
+	country = CAN
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L52115
+	history = {
+		1944.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52116 = {
+	name = "Watt"
+	country = CAN
+	type = air
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52116
+	add_trait = fleet_destroyer
+	history = {
+		1939.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52117 = {
+	name = "Moncel"
+	country = CAN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L52117
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52118 = {
+	name = "Graham"
+	country = CAN
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = M45162
+	add_trait = fortress_buster
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1955.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52119 = {
+	name = "Walsh"
+	country = CAN
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = M45163
+	add_trait = offensive_doctrine
+	history = {
+		1951.1.1 = { rank = 1 }
+		1954.1.1 = { rank = 2 }
+		1960.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52120 = {
+	name = "Harpell"
+	country = CAN
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = M45166
+	add_trait = logistics_wizard
+	history = {
+		1950.1.1 = { rank = 1 }
+		1955.1.1 = { rank = 2 }
+		1960.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52121 = {
+	name = "Hanington"
+	country = CAN
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = M45167
+	history = {
+		1956.1.1 = { rank = 1 }
+		1961.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52122 = {
+	name = "Breadner"
+	country = CAN
+	type = air
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = M45168
+	add_trait = tank_buster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1956.1.1 = { rank = 0 }
+	}
+}
+52123 = {
+	name = "Leckie"
+	country = CAN
+	type = air
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = M45169
+	add_trait = fleet_destroyer
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1953.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52124 = {
+	name = "Blackader"
+	country = CAN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L52124
+	add_trait = offensive_doctrine
+	add_trait = fortress_buster
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+52125 = {
+	name = "Clark"
+	country = CAN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L52125
+	history = {
+		1945.1.1 = { rank = 1 }
+		1955.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
