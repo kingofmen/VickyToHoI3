@@ -1,0 +1,3245 @@
+24000 = {
+	name = "Ardant du Picq"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24000
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		#1938.1.1 = { rank = 2 }
+	}
+}
+24001 = {
+	name = "Arlabosse"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24001
+	history = {
+		1930.1.1 = { rank = 1 }
+		#1939.1.1 = { rank = 2 }
+	}
+}
+24002 = {
+	name = "Armand"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24002
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24003 = {
+	name = "Armingeat"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24003
+	history = {
+		1936.1.1 = { rank = 1 }
+		#1939.1.1 = { rank = 2 }
+	}
+}
+24004 = {
+	name = "Arnaud"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24004
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+24005 = {
+	name = "Audet"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24005
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		#1943.1.1 = { rank = 3 }
+	}
+}
+24006 = {
+	name = "Aymé"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24006
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+	}
+}
+24007 = {
+	name = "Barreau"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24007
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+24008 = {
+	name = "Bastien"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24008
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24009 = {
+	name = "Beaumont"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24009
+	add_trait = engineer
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+24010 = {
+	name = "Bertin-Boussus"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24010
+	add_trait = logistics_wizard
+	history = {
+		1936.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+24011 = {
+	name = "Bethouart"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24011
+	add_trait = offensive_doctrine
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+24012 = {
+	name = "Billotte"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24012
+	history = {
+		1939.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+	}
+}
+24013 = {
+	name = "Bingen"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24013
+	add_trait = fortress_buster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+24014 = {
+	name = "Blanc"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24014
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		#1938.1.1 = { rank = 3 }
+	}
+}
+24015 = {
+	name = "Blanchard"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24015
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+		1940.1.1 = { rank = 4 }
+	}
+}
+24016 = {
+	name = "Blanchet"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24016
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+	}
+}
+24017 = {
+	name = "Blaizot"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24017
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+	}
+}
+24018 = {
+	name = "Bondis"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24018
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+24019 = {
+	name = "Bourges-Maunory"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24019
+	add_trait = engineer
+	history = {
+		1939.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+24020 = {
+	name = "Bridoux"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24020
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+24021 = {
+	name = "Brisac"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24021
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+24022 = {
+	name = "Brocard"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24022
+	add_trait = panzer_leader
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+24023 = {
+	name = "Brosset"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24023
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+24024 = {
+	name = "Bruneau"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24024
+	add_trait = panzer_leader
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+24025 = {
+	name = "Callies"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24025
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+24026 = {
+	name = "Camerini"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24026
+	add_trait = commando
+	history = {
+		1946.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+24027 = {
+	name = "Carlès"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24027
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+24028 = {
+	name = "Carpentier"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24028
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 3 }
+	}
+}
+24029 = {
+	name = "Catroux"
+	country = FRA
+	type = land
+	skill = 4
+	max_skill = 6
+	loyalty = 0.00
+	picture = L24029
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 4 }
+	}
+}
+24030 = {
+	name = "Chaban-Delmas"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24030
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24031 = {
+	name = "Chardigny"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24031
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+24032 = {
+	name = "Chevillon"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24032
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+	}
+}
+24033 = {
+	name = "Collet"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24033
+	add_trait = logistics_wizard
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+24034 = {
+	name = "Colson"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24034
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+24035 = {
+	name = "Condé"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24035
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1940.1.1 = { rank = 4 }
+	}
+}
+24036 = {
+	name = "Corap"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24036
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+24037 = {
+	name = "Cornille"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24037
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+24038 = {
+	name = "Crepin-Artu"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24038
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24039 = {
+	name = "d'Arras"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24039
+	history = {
+		1930.1.1 = { rank = 1 }
+		#1939.1.1 = { rank = 2 }
+	}
+}
+24040 = {
+	name = "d'Harcourt"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24040
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24041 = {
+	name = "de Bazelaire de Ruppiere"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24041
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		#1938.1.1 = { rank = 2 }
+	}
+}
+24042 = {
+	name = "de Benouville"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24042
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24043 = {
+	name = "de Boissieu de Lugne"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24043
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24044 = {
+	name = "de Corta"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24044
+	add_trait = logistics_wizard
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+24045 = {
+	name = "de Cugis"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24045
+	add_trait = engineer
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24046 = {
+	name = "de Cyvoct"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24046
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+24047 = {
+	name = "de Gaulle"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L24047
+	add_trait = offensive_doctrine
+	add_trait = panzer_leader
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+	}
+}
+24048 = {
+	name = "de Guillebon"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24048
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+24049 = {
+	name = "de Hesdin"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24049
+	add_trait = fortress_buster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+	}
+}
+24050 = {
+	name = "de la Porte du Theil"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24050
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		#1939.1.1 = { rank = 3 }
+	}
+}
+24051 = {
+	name = "de Larminat"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24051
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+24052 = {
+	name = "de Roux"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24052
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+24053 = {
+	name = "de Saint-Maurice"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24053
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+24054 = {
+	name = "de Verdillac"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24054
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+24055 = {
+	name = "Darde"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24055
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24056 = {
+	name = "Debeney"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24056
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1936.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+24057 = {
+	name = "Dejussieu-Pontcarel"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24057
+	add_trait = defensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+	}
+}
+24058 = {
+	name = "Delestraint"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24058
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		#1939.1.1 = { rank = 2 }
+	}
+}
+24059 = {
+	name = "Dentz"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24059
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+24060 = {
+	name = "Desmazes"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24060
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+24061 = {
+	name = "Dio"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24061
+	add_trait = logistics_wizard
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+24062 = {
+	name = "Doumenc"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24062
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+24063 = {
+	name = "Doyen"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24063
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+24064 = {
+	name = "Dronne"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24064
+	add_trait = offensive_doctrine
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+24065 = {
+	name = "Dubuisson"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24065
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		#1939.1.1 = { rank = 3 }
+	}
+}
+24066 = {
+	name = "Duclos"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24066
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+24067 = {
+	name = "Dufieux"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24067
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+24068 = {
+	name = "Dunoyer de Segonzac"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24068
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24069 = {
+	name = "Ely"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24069
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+	}
+}
+24070 = {
+	name = "Fagalde"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24070
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		#1938.1.1 = { rank = 3 }
+	}
+}
+24071 = {
+	name = "Falvy"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24071
+	add_trait = logistics_wizard
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+24072 = {
+	name = "Fayolle"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24072
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+24073 = {
+	name = "Fournier"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24073
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+24074 = {
+	name = "Francois  H.N."
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24074
+	add_trait = commando
+	history = {
+		1936.1.1 = { rank = 1 }
+	}
+}
+24075 = {
+	name = "Francois  M.J."
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24075
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+24076 = {
+	name = "Gain"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24076
+	add_trait = fortress_buster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+24077 = {
+	name = "Gamelin"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24077
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+	}
+}
+24078 = {
+	name = "Garbay"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L24078
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24079 = {
+	name = "Garchery"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24079
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+24080 = {
+	name = "Gentil"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24080
+	add_trait = trickster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+24081 = {
+	name = "Geoffroy"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24081
+	add_trait = engineer
+	add_trait = commando
+	history = {
+		1946.1.1 = { rank = 1 }
+	}
+}
+24082 = {
+	name = "Georges"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24082
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+	}
+}
+24083 = {
+	name = "Gillier"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24083
+	history = {
+		1936.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+24084 = {
+	name = "Giraud"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24084
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+	}
+}
+24085 = {
+	name = "Girot de Langlade"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24085
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24086 = {
+	name = "Glück"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24086
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		#1938.1.1 = { rank = 2 }
+	}
+}
+24087 = {
+	name = "Goislard de Monsabert"
+	country = FRA
+	type = land
+	skill = 4
+	max_skill = 6
+	loyalty = 0.00
+	picture = L24087
+	add_trait = offensive_doctrine
+	add_trait = engineer
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1945.1.1 = { rank = 4 }
+	}
+}
+24088 = {
+	name = "Gonzalez de Linares"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24088
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+24089 = {
+	name = "Gravier"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24089
+	add_trait = fortress_buster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+24090 = {
+	name = "Grandsard"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24090
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		#1939.1.1 = { rank = 3 }
+	}
+}
+24091 = {
+	name = "Guillaume"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24091
+	add_trait = offensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+	}
+}
+24092 = {
+	name = "Hanoteau"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24092
+	add_trait = engineer
+	history = {
+		1937.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+24093 = {
+	name = "Hettier de Boislambert"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24093
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+24094 = {
+	name = "Hubert"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24094
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		#1938.1.1 = { rank = 3 }
+	}
+}
+24095 = {
+	name = "Huntziger"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L24095
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1939.1.1 = { rank = 4 }
+	}
+}
+24096 = {
+	name = "Ihler"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24096
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+24097 = {
+	name = "Ingold"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24097
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24098 = {
+	name = "Jacob"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24098
+	add_trait = offensive_doctrine
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+24099 = {
+	name = "Jeannel"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24099
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+24100 = {
+	name = "Joussé"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24100
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+	}
+}
+24101 = {
+	name = "Juin"
+	country = FRA
+	type = land
+	skill = 4
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24101
+	add_trait = offensive_doctrine
+	add_trait = panzer_leader
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 4 }
+	}
+}
+24102 = {
+	name = "Karcher"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24102
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+24103 = {
+	name = "Keime"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24103
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24104 = {
+	name = "Kieffer"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24104
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+24105 = {
+	name = "Klopfenstein"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24105
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+24106 = {
+	name = "Koeltz"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24106
+	add_trait = offensive_doctrine
+	history = {
+		1936.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		#1943.1.1 = { rank = 3 }
+	}
+}
+24107 = {
+	name = "Koenig"
+	country = FRA
+	type = land
+	skill = 4
+	max_skill = 8
+	loyalty = 1.00
+	picture = L24107
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 4 }
+	}
+}
+24108 = {
+	name = "Le Gentilhomme"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L24108
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+24109 = {
+	name = "Lafont Chabert"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24109
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		#1930.1.1 = { rank = 3 }
+	}
+}
+24110 = {
+	name = "Lalande de la Motte"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24110
+	add_trait = offensive_doctrine
+	history = {
+		1946.1.1 = { rank = 1 }
+	}
+}
+24111 = {
+	name = "Lamson"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24111
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+24112 = {
+	name = "Lantenois"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24112
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+24113 = {
+	name = "Larbaletrier"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24113
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+24114 = {
+	name = "de Lattre de Tassigny"
+	country = FRA
+	type = land
+	skill = 4
+	max_skill = 8
+	loyalty = 1.00
+	picture = L24114
+	add_trait = trickster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1945.1.1 = { rank = 4 }
+	}
+}
+24115 = {
+	name = "Laure"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24115
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+24116 = {
+	name = "Leclerc de Hauteclocque"
+	country = FRA
+	type = land
+	skill = 4
+	max_skill = 8
+	loyalty = 1.00
+	picture = L24116
+	add_trait = logistics_wizard
+	add_trait = panzer_leader
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 4 }
+	}
+}
+24117 = {
+	name = "Lemonnier"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24117
+	add_trait = logistics_wizard
+	history = {
+		1936.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+24118 = {
+	name = "Magnan"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24118
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+	}
+}
+24119 = {
+	name = "Martin"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24119
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+	}
+}
+24120 = {
+	name = "Mer"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24120
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+24121 = {
+	name = "Mirambeau"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24121
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24122 = {
+	name = "Monnet"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24122
+	add_trait = fortress_buster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+24123 = {
+	name = "Moyrand"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24123
+	add_trait = fortress_buster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+24124 = {
+	name = "Nogues"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24124
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+	}
+}
+24125 = {
+	name = "Pagezy"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24125
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+24126 = {
+	name = "Pegur"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24126
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+24127 = {
+	name = "Pretelat"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24127
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+	}
+}
+24128 = {
+	name = "Priou"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24128
+	add_trait = trickster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+	}
+}
+24129 = {
+	name = "Ravanell"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24129
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+24130 = {
+	name = "Repiton-Preneuf"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24130
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24131 = {
+	name = "Réquin"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24131
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+24132 = {
+	name = "Revers"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24132
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+24133 = {
+	name = "Rodz"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24133
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24134 = {
+	name = "Rondenay"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24134
+	add_trait = trickster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+24135 = {
+	name = "Salan"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24135
+	add_trait = logistics_wizard
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+	}
+}
+24136 = {
+	name = "Sevez"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24136
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1948.1.1 = { rank = 0 }
+	}
+}
+24137 = {
+	name = "Simon"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24137
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+24138 = {
+	name = "Soulas"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24138
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24139 = {
+	name = "Theodore"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24139
+	add_trait = fortress_buster
+	history = {
+		1937.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+24140 = {
+	name = "Touchon"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24140
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+	}
+}
+24141 = {
+	name = "Touzet du Vigier"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24141
+	add_trait = panzer_leader
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+24142 = {
+	name = "Vauthier"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24142
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+24143 = {
+	name = "Verneau"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24143
+	add_trait = trickster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+24144 = {
+	name = "Weil"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24144
+	add_trait = logistics_wizard
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24145 = {
+	name = "Weygand"
+	country = FRA
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24145
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+	}
+}
+24146 = {
+	name = "Abrial"
+	country = FRA
+	type = sea
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24146
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+	}
+}
+24147 = {
+	name = "Auboyneau"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24147
+	add_trait = superior_tactician
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+24148 = {
+	name = "Barois"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24148
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24149 = {
+	name = "Collinet"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24149
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+24150 = {
+	name = "Colmay"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24150
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24151 = {
+	name = "Darlan"
+	country = FRA
+	type = sea
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24151
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 4 }
+	}
+}
+24152 = {
+	name = "d'Estienne d'Orves"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24152
+	add_trait = seawolf
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+24153 = {
+	name = "de Geffrier"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24153
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+24154 = {
+	name = "de Laborde"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24154
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+	}
+}
+24155 = {
+	name = "de la Noë"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24155
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+24156 = {
+	name = "de la Perrin"
+	country = FRA
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24156
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+	}
+}
+24157 = {
+	name = "Decoux"
+	country = FRA
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24157
+	add_trait = old_guard
+	add_trait = seawolf
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+24158 = {
+	name = "Escudier"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24158
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24159 = {
+	name = "Esteva"
+	country = FRA
+	type = sea
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24159
+	add_trait = seawolf
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+	}
+}
+24160 = {
+	name = "Gensoul"
+	country = FRA
+	type = sea
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24160
+	add_trait = spotter
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+24161 = {
+	name = "Godfroy"
+	country = FRA
+	type = sea
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24161
+	add_trait = old_guard
+	add_trait = spotter
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+24162 = {
+	name = "Graziani"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24162
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+24163 = {
+	name = "Kahn"
+	country = FRA
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24163
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+24164 = {
+	name = "Labord"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24164
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+24165 = {
+	name = "Leloup"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24165
+	history = {
+		1939.1.1 = { rank = 1 }
+	}
+}
+24166 = {
+	name = "Levasseur"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24166
+	add_trait = superior_tactician
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+24167 = {
+	name = "Luc"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24167
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+24168 = {
+	name = "Muselier"
+	country = FRA
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24168
+	add_trait = spotter
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+24169 = {
+	name = "Pequin"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24169
+	add_trait = seawolf
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+24170 = {
+	name = "Richard"
+	country = FRA
+	type = sea
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L24170
+	add_trait = old_guard
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+24171 = {
+	name = "Schlumberger"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24171
+	add_trait = spotter
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+24172 = {
+	name = "Stosskopf"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24172
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+24173 = {
+	name = "Thierry d'Argenlieu"
+	country = FRA
+	type = sea
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L24173
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+	}
+}
+24174 = {
+	name = "Astier de Vilatte"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24174
+	add_trait = tank_buster
+	history = {
+		1943.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+	}
+}
+24175 = {
+	name = "Ballet"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24175
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+24176 = {
+	name = "Baltus"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24176
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+24177 = {
+	name = "Basset"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24177
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+24178 = {
+	name = "Bergeret"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24178
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+24179 = {
+	name = "Bernard"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L24179
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+24180 = {
+	name = "Bissagnet"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24180
+	add_trait = carpet_bomber
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+24181 = {
+	name = "Bollier"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24181
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+24182 = {
+	name = "Bouscat"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24182
+	add_trait = tank_buster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+24183 = {
+	name = "Clostermann"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24183
+	add_trait = superior_air_tactician
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+24184 = {
+	name = "Cochet"
+	country = FRA
+	type = air
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24184
+	add_trait = carpet_bomber
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+	}
+}
+24185 = {
+	name = "Crozet"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24185
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+24186 = {
+	name = "d'Arnaud de Vitrolles"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24186
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+24187 = {
+	name = "d'Astier de la Vigerie"
+	country = FRA
+	type = air
+	skill = 4
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24187
+	add_trait = tank_buster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+24188 = {
+	name = "de Goys de Mezeyrac"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24188
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+24189 = {
+	name = "de Rancourt"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24189
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+24190 = {
+	name = "Davout d'Auerstadt"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24190
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+24191 = {
+	name = "Dumont"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24191
+	add_trait = fleet_destroyer
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+24192 = {
+	name = "Duseigneur"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24192
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+24193 = {
+	name = "Fourquet"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24193
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+24194 = {
+	name = "Furst"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24194
+	add_trait = fleet_destroyer
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+24195 = {
+	name = "Gary"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24195
+	add_trait = superior_air_tactician
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+24196 = {
+	name = "Gervais"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24196
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+24197 = {
+	name = "Hartemann"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24197
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24198 = {
+	name = "Jacob"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24198
+	add_trait = tank_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+24199 = {
+	name = "Jannekeyn"
+	country = FRA
+	type = air
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24199
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+24200 = {
+	name = "Jauneaud"
+	country = FRA
+	type = air
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24200
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+24201 = {
+	name = "Langer"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24201
+	add_trait = superior_air_tactician
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+24202 = {
+	name = "Lasserre"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24202
+	history = {
+		1944.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+24203 = {
+	name = "Laurens"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24203
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+	}
+}
+24204 = {
+	name = "Lecheres"
+	country = FRA
+	type = air
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24204
+	add_trait = tank_buster
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+	}
+}
+24205 = {
+	name = "Luguet"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24205
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+24206 = {
+	name = "Luizet"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24206
+	add_trait = night_flyer
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+24207 = {
+	name = "Palewski"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24207
+	add_trait = fleet_destroyer
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+24208 = {
+	name = "Paskewicz"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24208
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+24209 = {
+	name = "Pinsard"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24209
+	add_trait = old_guard
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+24210 = {
+	name = "Pouliquen"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24210
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+24211 = {
+	name = "Roques"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24211
+	add_trait = fleet_destroyer
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24212 = {
+	name = "Rossi"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24212
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+24213 = {
+	name = "Rousselot de Saint-Ceran"
+	country = FRA
+	type = air
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24213
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+24214 = {
+	name = "Roussy de Sales"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24214
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+24215 = {
+	name = "Royer de Marancour"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24215
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+24216 = {
+	name = "Savary"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24216
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+24217 = {
+	name = "Sicard"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24217
+	add_trait = fleet_destroyer
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24218 = {
+	name = "Valin"
+	country = FRA
+	type = air
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24218
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+24219 = {
+	name = "Vuillemin"
+	country = FRA
+	type = air
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24219
+	add_trait = old_guard
+	add_trait = carpet_bomber
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+	}
+}
+24220 = {
+	name = "Adeline"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24220
+	add_trait = engineer
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+24221 = {
+	name = "Cazaud"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24221
+	add_trait = logistics_wizard
+	add_trait = fortress_buster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+24222 = {
+	name = "Delange"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24222
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+24223 = {
+	name = "de Bricourt"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24223
+	add_trait = logistics_wizard
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+24224 = {
+	name = "Mast"
+	country = FRA
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24224
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+24225 = {
+	name = "Mirkin"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L24225
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+24226 = {
+	name = "Nollet"
+	country = FRA
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24226
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+24227 = {
+	name = "Cabanier"
+	country = FRA
+	type = sea
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L24227
+	add_trait = spotter
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+	}
+}
+24228 = {
+	name = "Ortoli"
+	country = FRA
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L24228
+	add_trait = superior_tactician
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+24229 = {
+	name = "Louveau"
+	country = FRA
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L24229
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+24230 = {
+	name = "Ginas"
+	country = FRA
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L24230
+	add_trait = fleet_destroyer
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}

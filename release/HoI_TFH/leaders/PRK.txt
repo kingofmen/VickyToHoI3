@@ -1,0 +1,470 @@
+579000 = {
+	name = "Du Ping"
+	country = PRK
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = M579000
+	add_trait = commando
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+579001 = {
+	name = "Gan Siqi"
+	country = PRK
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579001
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+	}
+}
+579002 = {
+	name = "Han Xianchu"
+	country = PRK
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579002
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+	}
+}
+579003 = {
+	name = "Hong Xuezhi"
+	country = PRK
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579003
+	add_trait = logistics_wizard
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+579004 = {
+	name = "Kim Il Sung"
+	country = PRK
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579004
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+	}
+}
+579005 = {
+	name = "Lai Chuanzhu"
+	country = PRK
+	type = land
+	skill = 0
+	max_skill = 2
+	loyalty = 1.00
+	picture = M579005
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+579006 = {
+	name = "Li Jukui"
+	country = PRK
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579006
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+579007 = {
+	name = "Liu Fei"
+	country = PRK
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579007
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+579008 = {
+	name = "Nie Fengzhi"
+	country = PRK
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = M579008
+	add_trait = panzer_leader
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+579009 = {
+	name = "Quin Jiwei"
+	country = PRK
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579009
+	add_trait = fortress_buster
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+579010 = {
+	name = "Ra Pilk Wan"
+	country = PRK
+	type = land
+	skill = 0
+	max_skill = 2
+	loyalty = 1.00
+	picture = M579010
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+579011 = {
+	name = "Song Shilun"
+	country = PRK
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579011
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+	}
+}
+579012 = {
+	name = "Su Yu"
+	country = PRK
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = M579012
+	add_trait = logistics_wizard
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 4 }
+	}
+}
+579013 = {
+	name = "Tao Yong"
+	country = PRK
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579013
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+579014 = {
+	name = "Wu Ruilin"
+	country = PRK
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579014
+	add_trait = engineer
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+579015 = {
+	name = "Xiao Jinguang"
+	country = PRK
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579015
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+579016 = {
+	name = "Xu Binzhou"
+	country = PRK
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = M579016
+	add_trait = trickster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+579017 = {
+	name = "Yang Dezhi"
+	country = PRK
+	type = land
+	skill = 0
+	max_skill = 2
+	loyalty = 1.00
+	picture = M579017
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+579018 = {
+	name = "Zhang Renchu"
+	country = PRK
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579018
+	add_trait = winter_specialist
+	history = {
+		1941.1.1 = { rank = 1 }
+	}
+}
+579019 = {
+	name = "Zheng Weishan"
+	country = PRK
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579019
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+579020 = {
+	name = "Zhoui Biao"
+	country = PRK
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = M579020
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+579021 = {
+	name = "Chen Xilian"
+	country = PRK
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579021
+	add_trait = blockade_runner
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+579022 = {
+	name = "Chen Yun"
+	country = PRK
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579022
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+579023 = {
+	name = "Deng Hua"
+	country = PRK
+	type = sea
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579023
+	add_trait = superior_tactician
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+579024 = {
+	name = "Kang Kon"
+	country = PRK
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579024
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+579025 = {
+	name = "Liu Xiyuan"
+	country = PRK
+	type = sea
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579025
+	add_trait = seawolf
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+	}
+}
+579026 = {
+	name = "Chen Geng"
+	country = PRK
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579026
+	add_trait = fleet_destroyer
+	history = {
+		1940.1.1 = { rank = 1 }
+	}
+}
+579027 = {
+	name = "Li Kenong"
+	country = PRK
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579027
+	add_trait = carpet_bomber
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+579028 = {
+	name = "Li Zhimin"
+	country = PRK
+	type = air
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579028
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+579029 = {
+	name = "Liang Xingchu"
+	country = PRK
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579029
+	add_trait = night_flyer
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+579030 = {
+	name = "Liu Yalou"
+	country = PRK
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579030
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+579031 = {
+	name = "Wang Daobang"
+	country = PRK
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579031
+	add_trait = superior_air_tactician
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+579032 = {
+	name = "Wang Yinshan"
+	country = PRK
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = M579032
+	add_trait = spotter
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+579033 = {
+	name = "Wu Xinquan"
+	country = PRK
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579033
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+579034 = {
+	name = "Yuan Shengping"
+	country = PRK
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = M579034
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}

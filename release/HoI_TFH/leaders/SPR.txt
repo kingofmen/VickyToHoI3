@@ -1,0 +1,1721 @@
+3000 = {
+	name = "Álvarez Alegría"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3000
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+3001 = {
+	name = "Álvarez Santiago"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3001
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+3002 = {
+	name = "Aranguren Roldán"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3002
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3003 = {
+	name = "Ascaso Abadía"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L3003
+	add_trait = trickster
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3004 = {
+	name = "Asensio Torrado"
+	country = SPR
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3004
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+	}
+}
+3005 = {
+	name = "Barceló Jover"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L3005
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3006 = {
+	name = "Batet Mestre"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3006
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1937.1.1 = { rank = 0 }
+	}
+}
+3007 = {
+	name = "Batov"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L3007
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+	}
+}
+3008 = {
+	name = "Beldarrain Olalde"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3008
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+3009 = {
+	name = "Beltran"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L3009
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3010 = {
+	name = "Burillo Sthole"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3010
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3011 = {
+	name = "Casado López"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3011
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+3012 = {
+	name = "Castelló Manzano"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3012
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+3013 = {
+	name = "Castelló Pantoja"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3013
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+	}
+}
+3014 = {
+	name = "Castro Delgado"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L3014
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+3015 = {
+	name = "Centaño de la Paz"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L3015
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+3016 = {
+	name = "Contreras"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L3016
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3017 = {
+	name = "Copic"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L3017
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3018 = {
+	name = "Cordón García"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3018
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+	}
+}
+3019 = {
+	name = "Coronel Hans"
+	country = SPR
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3019
+	add_trait = logistics_wizard
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3020 = {
+	name = "de Lezama"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3020
+	add_trait = offensive_doctrine
+	add_trait = commando
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+3021 = {
+	name = "del Barrio Navarra"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L3021
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3022 = {
+	name = "Doran"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3022
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3023 = {
+	name = "Durán Martínez"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3023
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+3024 = {
+	name = "Durruti Dumange"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3024
+	add_trait = trickster
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 0 }
+	}
+}
+3025 = {
+	name = "Eixea Vilar"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3025
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+3026 = {
+	name = "El Campesino"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3026
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+3027 = {
+	name = "Escobar Huertas"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3027
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+3028 = {
+	name = "Escofet Alsina"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L3028
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3029 = {
+	name = "Estrada Manchon"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3029
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1937.1.1 = { rank = 0 }
+	}
+}
+3030 = {
+	name = "Fernández de Villa"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3030
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+3031 = {
+	name = "Fernández Osorio y Tafall"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L3031
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3032 = {
+	name = "Galán Rodríguez  F."
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3032
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+3033 = {
+	name = "Galán Rodriguez  J.M."
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3033
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+3034 = {
+	name = "Gallo"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 0.00
+	picture = L3034
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3035 = {
+	name = "Gamir Ulibarri"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3035
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+	}
+}
+3036 = {
+	name = "García Gómez Caminero"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3036
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+3037 = {
+	name = "Garcia Vivancos"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L3037
+	history = {
+		1930.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+3038 = {
+	name = "Generale Goméz"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L3038
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3039 = {
+	name = "Gimenéz Orge"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3039
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+3040 = {
+	name = "Gómez Morato"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3040
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+	}
+}
+3041 = {
+	name = "Guarner Vivancos"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3041
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+	}
+}
+3042 = {
+	name = "Hernández Sarabia"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3042
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+	}
+}
+3043 = {
+	name = "Herrera Linares"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3043
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+	}
+}
+3044 = {
+	name = "Jover Cortés"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L3044
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+3045 = {
+	name = "Jurado Barrio"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3045
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+	}
+}
+3046 = {
+	name = "Kléber"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3046
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+3047 = {
+	name = "Law"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3047
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3048 = {
+	name = "Líster Forján"
+	country = SPR
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L3048
+	add_trait = offensive_doctrine
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+3049 = {
+	name = "Llano de la Encomienda"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3049
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+3050 = {
+	name = "Lukacz"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3050
+	add_trait = logistics_wizard
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+3051 = {
+	name = "Mangada Rosehorn"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3051
+	history = {
+		1930.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+3052 = {
+	name = "Martín Alonso"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3052
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+3053 = {
+	name = "Martínez Cabrera"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3053
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3054 = {
+	name = "Martínez Cartón"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3054
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+3055 = {
+	name = "Martínez de Aragón"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3055
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 0 }
+	}
+}
+3056 = {
+	name = "Martínez Monje"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3056
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+3057 = {
+	name = "Masquelet Lacaci"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3057
+	add_trait = engineer
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+3058 = {
+	name = "Matallana Gómez"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3058
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+3059 = {
+	name = "Mateo Merino"
+	country = SPR
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3059
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+	}
+}
+3060 = {
+	name = "Melero Blanco"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3060
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+3061 = {
+	name = "Mena Roig"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3061
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+3062 = {
+	name = "Menéndez Lopez"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3062
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+3063 = {
+	name = "Mera Sanz"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3063
+	add_trait = trickster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+3064 = {
+	name = "Merriman"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3064
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3065 = {
+	name = "Miaja Menant"
+	country = SPR
+	type = land
+	skill = 4
+	max_skill = 8
+	loyalty = 1.00
+	picture = L3065
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1938.1.1 = { rank = 4 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+3066 = {
+	name = "Mije"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3066
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+3067 = {
+	name = "Modesto Guilloto León"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3067
+	history = {
+		1938.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+	}
+}
+3068 = {
+	name = "Molero Lobo"
+	country = SPR
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3068
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+3069 = {
+	name = "Orge Jímenez"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3069
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+3070 = {
+	name = "Ortega Gutiérrez"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3070
+	add_trait = trickster
+	add_trait = commando
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3071 = {
+	name = "Ortíz Ramirez"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3071
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3072 = {
+	name = "Perea Capulino"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3072
+	add_trait = defensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3073 = {
+	name = "Pérez Farrás"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3073
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+3074 = {
+	name = "Pérez Salas"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3074
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+3075 = {
+	name = "Pozas Perea"
+	country = SPR
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3075
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+3076 = {
+	name = "Prada Vaquero"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3076
+	history = {
+		1937.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+	}
+}
+3077 = {
+	name = "Puigengolas y Poncé de Leon"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3077
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 0 }
+	}
+}
+3078 = {
+	name = "Riquelme y López Bago"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3078
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3079 = {
+	name = "Rojo Lluch"
+	country = SPR
+	type = land
+	skill = 2
+	max_skill = 8
+	loyalty = 1.00
+	picture = L3079
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1937.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+	}
+}
+3080 = {
+	name = "Rovira"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L3080
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3081 = {
+	name = "Ryan"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3081
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+3082 = {
+	name = "Sabio Dutoit"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3082
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+3083 = {
+	name = "Sanz García"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L3083
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+3084 = {
+	name = "Serrador Santés"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3084
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+3085 = {
+	name = "Tagüeña Lacorte"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3085
+	add_trait = trickster
+	add_trait = engineer
+	history = {
+		1937.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+3086 = {
+	name = "Trueba Mirones"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3086
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+3087 = {
+	name = "Urzaiz Cadaval"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3087
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+	}
+}
+3088 = {
+	name = "Vega Martinez"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3088
+	add_trait = panzer_leader
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3089 = {
+	name = "Villalba Rubio"
+	country = SPR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L3089
+	history = {
+		1937.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+3090 = {
+	name = "Walter"
+	country = SPR
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3090
+	add_trait = offensive_doctrine
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3091 = {
+	name = "Armida Sabau"
+	country = SPR
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3091
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+3092 = {
+	name = "Barbastro Jiménez"
+	country = SPR
+	type = sea
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3092
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3093 = {
+	name = "Bayo Giraud"
+	country = SPR
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3093
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+3094 = {
+	name = "Buiza Palacios"
+	country = SPR
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3094
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+	}
+}
+3095 = {
+	name = "Calderón Martínez"
+	country = SPR
+	type = sea
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3095
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3096 = {
+	name = "Davilá Martínez"
+	country = SPR
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3096
+	add_trait = spotter
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+3097 = {
+	name = "García Barreiro"
+	country = SPR
+	type = sea
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3097
+	history = {
+		1938.1.1 = { rank = 1 }
+	}
+}
+3098 = {
+	name = "Gomez Barredo"
+	country = SPR
+	type = sea
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3098
+	add_trait = seawolf
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 0 }
+	}
+}
+3099 = {
+	name = "Gonzalez Ubieta"
+	country = SPR
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3099
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+	}
+}
+3100 = {
+	name = "Hérnandez Chacon"
+	country = SPR
+	type = sea
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3100
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+3101 = {
+	name = "Núñez Iglesias"
+	country = SPR
+	type = sea
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3101
+	add_trait = spotter
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3102 = {
+	name = "Prado Mendizábal"
+	country = SPR
+	type = sea
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3102
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+3103 = {
+	name = "Ramírez de Togores"
+	country = SPR
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3103
+	add_trait = blockade_runner
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+3104 = {
+	name = "Ruíz Gonzaléz"
+	country = SPR
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3104
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+	}
+}
+3105 = {
+	name = "Urreta"
+	country = SPR
+	type = sea
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3105
+	history = {
+		1930.1.1 = { rank = 1 }
+	}
+}
+3106 = {
+	name = "Alorda Bujosa"
+	country = SPR
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3106
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+3107 = {
+	name = "Bayo Giraud"
+	country = SPR
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3107
+	add_trait = fleet_destroyer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+3108 = {
+	name = "Camacho Benítez"
+	country = SPR
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3108
+	add_trait = carpet_bomber
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+	}
+}
+3109 = {
+	name = "Castaneau"
+	country = SPR
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3109
+	add_trait = tank_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3110 = {
+	name = "Chato"
+	country = SPR
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L3110
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3111 = {
+	name = "Díaz Sandino"
+	country = SPR
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3111
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+3112 = {
+	name = "Gímenez"
+	country = SPR
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3112
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+	}
+}
+3113 = {
+	name = "Hérnandez Chacon"
+	country = SPR
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3113
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3114 = {
+	name = "Hidalgo de Cisneros"
+	country = SPR
+	type = air
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L3114
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1937.1.1 = { rank = 3 }
+	}
+}
+3115 = {
+	name = "Halil Ekrem"
+	country = SPR
+	type = air
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L3115
+	add_trait = carpet_bomber
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3116 = {
+	name = "Ibarreche Garategui"
+	country = SPR
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3116
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+3117 = {
+	name = "Malraux"
+	country = SPR
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L3117
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+3118 = {
+	name = "Mata Romeu"
+	country = SPR
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3118
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+3119 = {
+	name = "Morquillas Rubio"
+	country = SPR
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3119
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+3120 = {
+	name = "Núñez de Prado"
+	country = SPR
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3120
+	add_trait = fleet_destroyer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1937.1.1 = { rank = 0 }
+	}
+}
+3121 = {
+	name = "Pastor Velasco"
+	country = SPR
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3121
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+	}
+}
+3122 = {
+	name = "Rioja Garcia"
+	country = SPR
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3122
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+3123 = {
+	name = "Sayos Estivill"
+	country = SPR
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L3123
+	history = {
+		1937.1.1 = { rank = 1 }
+	}
+}
+3124 = {
+	name = "Zarauza"
+	country = SPR
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L3124
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}

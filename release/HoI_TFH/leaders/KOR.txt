@@ -1,0 +1,343 @@
+578000 = {
+	name = "Chae Byong Duk"
+	country = KOR
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = M578007
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+	}
+}
+578001 = {
+	name = "Chi Chun Chung"
+	country = KOR
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = M578017
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}
+578002 = {
+	name = "Choi Hong Hi"
+	country = KOR
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L578002
+	add_trait = commando
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+578003 = {
+	name = "Gu In Tak"
+	country = KOR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L578003
+	add_trait = fortress_buster
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+578004 = {
+	name = "Kim Shee Jen"
+	country = KOR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L578004
+	add_trait = offensive_doctrine
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+578005 = {
+	name = "Kim Won Bong"
+	country = KOR
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = M578018
+	add_trait = logistics_wizard
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 4 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+578006 = {
+	name = "Koo Han-yong"
+	country = KOR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L578006
+	add_trait = engineer
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+578007 = {
+	name = "Lee Chung Chun"
+	country = KOR
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = M578008
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+	}
+}
+578008 = {
+	name = "Lee Hung Koon"
+	country = KOR
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L578008
+	add_trait = trickster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+	}
+}
+578009 = {
+	name = "Mo Chang-hoi"
+	country = KOR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L578009
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+578010 = {
+	name = "Paik Sun Yup"
+	country = KOR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L578010
+	add_trait = logistics_wizard
+	add_trait = winter_specialist
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+578011 = {
+	name = "Park Chung Hee"
+	country = KOR
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L578011
+	add_trait = offensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+	}
+}
+578012 = {
+	name = "Wang Tang-woe"
+	country = KOR
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L578012
+	add_trait = commando
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+578013 = {
+	name = "Yu Hong-chul"
+	country = KOR
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L578013
+	add_trait = panzer_leader
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+578014 = {
+	name = "Han Gil Su"
+	country = KOR
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L578014
+	add_trait = seawolf
+	history = {
+		1944.1.1 = { rank = 1 }
+	}
+}
+578015 = {
+	name = "Jong Dong-ju"
+	country = KOR
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = M578019
+	add_trait = blockade_runner
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+578016 = {
+	name = "Kang Jong Pil"
+	country = KOR
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L578016
+	history = {
+		1942.1.1 = { rank = 1 }
+	}
+}
+578017 = {
+	name = "Seo Chae-ko"
+	country = KOR
+	type = sea
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L578017
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+578018 = {
+	name = "Soon Won-yil"
+	country = KOR
+	type = sea
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = M578009
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+578019 = {
+	name = "Choi Hong Hi"
+	country = KOR
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L578002
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}
+578020 = {
+	name = "Kang Hae Sup"
+	country = KOR
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L578020
+	add_trait = fleet_destroyer
+	history = {
+		1943.1.1 = { rank = 1 }
+	}
+}
+578021 = {
+	name = "Kim Tae Sun"
+	country = KOR
+	type = air
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L578021
+	add_trait = superior_air_tactician
+	history = {
+		1945.1.1 = { rank = 1 }
+	}
+}
+578022 = {
+	name = "Lee Bom Suk"
+	country = KOR
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = M578010
+	add_trait = tank_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+	}
+}
+578023 = {
+	name = "Ri Jae Sun"
+	country = KOR
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = M578020
+	add_trait = fleet_destroyer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+	}
+}
+578024 = {
+	name = "Sinn Do-keun"
+	country = KOR
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L578024
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+	}
+}

@@ -1,0 +1,10551 @@
+9800 = {
+	name = "Absaliamov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9800
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9801 = {
+	name = "Afanasiev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9801
+	history = {
+		1940.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+9802 = {
+	name = "Afrosimov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9802
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9803 = {
+	name = "Ahlyustin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9803
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9804 = {
+	name = "Ahmanov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9804
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9805 = {
+	name = "Alekhin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 8
+	loyalty = 1.00
+	picture = L9805
+	add_trait = offensive_doctrine
+	add_trait = winter_specialist
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9806 = {
+	name = "Alekseev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9806
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9807 = {
+	name = "Alekseenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9807
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9808 = {
+	name = "Alexandrov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9808
+	add_trait = fortress_buster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9809 = {
+	name = "Andreev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9809
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9810 = {
+	name = "Anisimov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9810
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9811 = {
+	name = "Anikushkin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9811
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9812 = {
+	name = "Antonov  A.I."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9812
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9813 = {
+	name = "Antonov  V.S."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9813
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9814 = {
+	name = "Apanasenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9814
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9815 = {
+	name = "Argunov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9815
+	add_trait = winter_specialist
+	add_trait = trickster
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9816 = {
+	name = "Artemenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9816
+	add_trait = defensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9817 = {
+	name = "Artijushenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9817
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9818 = {
+	name = "Aseichev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9818
+	add_trait = logistics_wizard
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9819 = {
+	name = "Aslanov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9819
+	add_trait = panzer_leader
+	history = {
+		1944.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+9820 = {
+	name = "Babadzhanian"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9820
+	add_trait = panzer_leader
+	history = {
+		1945.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9821 = {
+	name = "Babayan"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9821
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9822 = {
+	name = "Badanov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9822
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9823 = {
+	name = "Bagramian"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9823
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9824 = {
+	name = "Baharov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9824
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9825 = {
+	name = "Bahmetiev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9825
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9826 = {
+	name = "Bakunin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9826
+	add_trait = engineer
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9827 = {
+	name = "Baranov  S.V."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9827
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9828 = {
+	name = "Baranov  V.I."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 8
+	loyalty = 1.00
+	picture = L9828
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9829 = {
+	name = "Barinov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9829
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9830 = {
+	name = "Batitskij"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9830
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9831 = {
+	name = "Batiuk"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9831
+	add_trait = winter_specialist
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9832 = {
+	name = "Batiuna"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9832
+	add_trait = logistics_wizard
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9833 = {
+	name = "Batov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9833
+	add_trait = commando
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9834 = {
+	name = "Beletsko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9834
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9835 = {
+	name = "Belik"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9835
+	history = {
+		1944.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9836 = {
+	name = "Beloborodov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9836
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9837 = {
+	name = "Belous"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9837
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+9838 = {
+	name = "Belov  E.E."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9838
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9839 = {
+	name = "Belov  I.P."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9839
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9840 = {
+	name = "Belov  P.A."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9840
+	add_trait = logistics_wizard
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9841 = {
+	name = "Belov  S.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9841
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9842 = {
+	name = "Berezin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9842
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9843 = {
+	name = "Berman"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9843
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9844 = {
+	name = "Berzarin"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9844
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9845 = {
+	name = "Bikzhanov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9845
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9846 = {
+	name = "Biriuzov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9846
+	add_trait = defensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9847 = {
+	name = "Biryukov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9847
+	add_trait = logistics_wizard
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+9848 = {
+	name = "Blagodatov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9848
+	add_trait = logistics_wizard
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9849 = {
+	name = "Blücher"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L9849
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9850 = {
+	name = "Bochenkov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9850
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9851 = {
+	name = "Bogdanov  I.A."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9851
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9852 = {
+	name = "Bogdanov  S.I."
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	picture = L9852
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1945.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9853 = {
+	name = "Boldin"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9853
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9854 = {
+	name = "Bolotnikov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9854
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9855 = {
+	name = "Bondarev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9855
+	add_trait = trickster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9856 = {
+	name = "Borisov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9856
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9857 = {
+	name = "Borzikov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9857
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9858 = {
+	name = "Borzilov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9858
+	add_trait = panzer_leader
+	add_trait = old_guard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9859 = {
+	name = "Brezhnev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9859
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9860 = {
+	name = "Briukov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9860
+	add_trait = commando
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9861 = {
+	name = "Budennij"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9861
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9862 = {
+	name = "Budyho"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9862
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9863 = {
+	name = "Bulatov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L9863
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9864 = {
+	name = "Bulganin"
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9864
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9865 = {
+	name = "Bunjashin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9865
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9866 = {
+	name = "Burkov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9866
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9867 = {
+	name = "Butkov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9867
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9868 = {
+	name = "Chepurkin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9868
+	add_trait = logistics_wizard
+	history = {
+		1944.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9869 = {
+	name = "Cheremisov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9869
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9870 = {
+	name = "Cherepanov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9870
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9871 = {
+	name = "Cherevichenko"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9871
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9872 = {
+	name = "Cherniaev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9872
+	add_trait = defensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9873 = {
+	name = "Cherniakhovskij"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L9873
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9874 = {
+	name = "Chernoburov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9874
+	add_trait = engineer
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9875 = {
+	name = "Chernov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9875
+	history = {
+		1940.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9876 = {
+	name = "Chernyak"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9876
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9877 = {
+	name = "Cherokmanov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9877
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9878 = {
+	name = "Chibisov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9878
+	add_trait = trickster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9879 = {
+	name = "Chistyakov  M.N."
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 8
+	loyalty = 1.00
+	picture = L9879
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9880 = {
+	name = "Chistyakov  V.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9880
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9881 = {
+	name = "Chuikov"
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	picture = L9881
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	add_trait = winter_specialist
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9882 = {
+	name = "Dalmatov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9882
+	add_trait = commando
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9883 = {
+	name = "Dedaev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9883
+	add_trait = defensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9884 = {
+	name = "Deev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9884
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9885 = {
+	name = "Dement'ev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9885
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9886 = {
+	name = "Denisenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9886
+	add_trait = offensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9887 = {
+	name = "Denisov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9887
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9888 = {
+	name = "Devyatov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9888
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9889 = {
+	name = "Dobroserdov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9889
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9890 = {
+	name = "Dratvin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9890
+	add_trait = trickster
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9891 = {
+	name = "Dubovoy"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9891
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9892 = {
+	name = "Dudarev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9892
+	add_trait = commando
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9893 = {
+	name = "Dukhov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9893
+	add_trait = panzer_leader
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9894 = {
+	name = "Dybenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9894
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9895 = {
+	name = "Efremov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9895
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9896 = {
+	name = "Egorov  A.I."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 8
+	loyalty = 1.00
+	picture = L9896
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9897 = {
+	name = "Egorov  E.A."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9897
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9898 = {
+	name = "Egorov  D.G."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9898
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9899 = {
+	name = "Egorov  P.G."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9899
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9900 = {
+	name = "Eideman"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9900
+	add_trait = logistics_wizard
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9901 = {
+	name = "Eliseev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9901
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9902 = {
+	name = "Erastov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9902
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9903 = {
+	name = "Eremenko"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L9903
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9904 = {
+	name = "Eremin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9904
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9905 = {
+	name = "Ermakov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9905
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9906 = {
+	name = "Ershakov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9906
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9907 = {
+	name = "Fabricius"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9907
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9908 = {
+	name = "Fediuninski"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9908
+	add_trait = logistics_wizard
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9909 = {
+	name = "Fediunkin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9909
+	add_trait = offensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+9910 = {
+	name = "Fedko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9910
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9911 = {
+	name = "Fedorenko"
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9911
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+9912 = {
+	name = "Fedorov  I.E."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9912
+	add_trait = panzer_leader
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9913 = {
+	name = "Fedorov  J.M."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9913
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9914 = {
+	name = "Fedyun"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9914
+	add_trait = defensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9915 = {
+	name = "Feklenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9915
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9916 = {
+	name = "Fesin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9916
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9917 = {
+	name = "Fetisov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9917
+	add_trait = winter_specialist
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9918 = {
+	name = "Fiksel"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9918
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9919 = {
+	name = "Filatov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9919
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9920 = {
+	name = "Filippovsky"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9920
+	history = {
+		1940.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9921 = {
+	name = "Firin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9921
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9922 = {
+	name = "Fogel"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9922
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9923 = {
+	name = "Fokanov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9923
+	add_trait = commando
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+9924 = {
+	name = "Fomenko  N.M."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9924
+	add_trait = offensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9925 = {
+	name = "Fomenko  P.I."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9925
+	add_trait = winter_specialist
+	add_trait = trickster
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9926 = {
+	name = "Fomin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9926
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9927 = {
+	name = "Frenkel"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9927
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9928 = {
+	name = "Frolov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9928
+	add_trait = defensive_doctrine
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9929 = {
+	name = "Gagen"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9929
+	add_trait = winter_specialist
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9930 = {
+	name = "Gaj"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9930
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9931 = {
+	name = "Galanin  I.V."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9931
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9932 = {
+	name = "Galanin  T.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9932
+	add_trait = logistics_wizard
+	add_trait = winter_specialist
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9933 = {
+	name = "Galitski"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9933
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9934 = {
+	name = "Gamarnik"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L9934
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9935 = {
+	name = "Garnov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9935
+	add_trait = defensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9936 = {
+	name = "Garusski"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9936
+	add_trait = panzer_leader
+	history = {
+		1943.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9937 = {
+	name = "Gastilovich"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9937
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9938 = {
+	name = "Gerasimov  A.V."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9938
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9939 = {
+	name = "Gerasimov  I.A."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9939
+	add_trait = fortress_buster
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9940 = {
+	name = "Gerasimov  M.N."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9940
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9941 = {
+	name = "Gerasimov  V.A."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9941
+	add_trait = defensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+9942 = {
+	name = "Getman"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9942
+	add_trait = logistics_wizard
+	add_trait = winter_specialist
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9943 = {
+	name = "Gidov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9943
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9944 = {
+	name = "Glazunov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L9944
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9945 = {
+	name = "Glebov  A.S."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9945
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9946 = {
+	name = "Glebov  P.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9946
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9947 = {
+	name = "Gluzdovskij"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9947
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9948 = {
+	name = "Golikov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9948
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9949 = {
+	name = "Goltsev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L9949
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9950 = {
+	name = "Golubev  K.D."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9950
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9951 = {
+	name = "Golubev  M.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9951
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9952 = {
+	name = "Golubovskij"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L9952
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+9953 = {
+	name = "Gorbatov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9953
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9954 = {
+	name = "Gordeev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9954
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+9955 = {
+	name = "Gordon"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9955
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9956 = {
+	name = "Gordov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9956
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+9957 = {
+	name = "Gorelen"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9957
+	add_trait = offensive_doctrine
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9958 = {
+	name = "Gorodeckiy"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9958
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9959 = {
+	name = "Gorodnianskij"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9959
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9960 = {
+	name = "Gorodovikov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 8
+	loyalty = 1.00
+	picture = L9960
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+9961 = {
+	name = "Govorov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L9961
+	add_trait = defensive_doctrine
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+9962 = {
+	name = "Govorunenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9962
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9963 = {
+	name = "Grebionnek"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9963
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+9964 = {
+	name = "Grechko"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L9964
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9965 = {
+	name = "Gudymenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9965
+	add_trait = logistics_wizard
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9966 = {
+	name = "Gulyaev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9966
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9967 = {
+	name = "Gurev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9967
+	add_trait = logistics_wizard
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9968 = {
+	name = "Hadeev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9968
+	add_trait = fortress_buster
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9969 = {
+	name = "Hahanyan"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9969
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9970 = {
+	name = "Haritonov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9970
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9971 = {
+	name = "Hatckilevich"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9971
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9972 = {
+	name = "Homenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9972
+	add_trait = logistics_wizard
+	add_trait = winter_specialist
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9973 = {
+	name = "Horolenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9973
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+9974 = {
+	name = "Horoshin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9974
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9975 = {
+	name = "Horujenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9975
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+9976 = {
+	name = "Iakovlev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L9976
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9977 = {
+	name = "Iakubovskij"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9977
+	add_trait = defensive_doctrine
+	history = {
+		1945.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9978 = {
+	name = "Iakushev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9978
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+9979 = {
+	name = "Iovlev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9979
+	add_trait = logistics_wizard
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+9980 = {
+	name = "Iuchimchuk"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9980
+	history = {
+		1937.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+9981 = {
+	name = "Ivanov  I.I."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9981
+	add_trait = defensive_doctrine
+	add_trait = winter_specialist
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9982 = {
+	name = "Ivanov  M.M."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9982
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+9983 = {
+	name = "Ivanov  N.P."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9983
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9984 = {
+	name = "Ivanov  V.D."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L9984
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9985 = {
+	name = "Ivanov  V.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9985
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9986 = {
+	name = "Ivanyuk"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9986
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9987 = {
+	name = "Ivashenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9987
+	add_trait = offensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9988 = {
+	name = "Juravlev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9988
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9989 = {
+	name = "Kachalov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9989
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9990 = {
+	name = "Kachanov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9990
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9991 = {
+	name = "Kalinovski"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9991
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9992 = {
+	name = "Kamenev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9992
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+9993 = {
+	name = "Kaminski"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9993
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+9994 = {
+	name = "Kamkov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9994
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9995 = {
+	name = "Karamishev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9995
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9996 = {
+	name = "Kariofilli"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9996
+	add_trait = fortress_buster
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+9997 = {
+	name = "Karmanov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L9997
+	add_trait = defensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9998 = {
+	name = "Karpezo"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L9998
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+9999 = {
+	name = "Karpon"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L9999
+	add_trait = offensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10000 = {
+	name = "Kashuba"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10000
+	add_trait = logistics_wizard
+	add_trait = winter_specialist
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10001 = {
+	name = "Katkov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10001
+	add_trait = logistics_wizard
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10002 = {
+	name = "Katukov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10002
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10003 = {
+	name = "Kazakov  K.P."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10003
+	add_trait = offensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10004 = {
+	name = "Kazakov  M.I."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L10004
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10005 = {
+	name = "Kazakov  V.I."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10005
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10006 = {
+	name = "Kharitonov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10006
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10007 = {
+	name = "Khetagurov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10007
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10008 = {
+	name = "Kholostyakov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10008
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10009 = {
+	name = "Khorun"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10009
+	history = {
+		1940.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10010 = {
+	name = "Khrulev"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	picture = L10010
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10011 = {
+	name = "Khryashchev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10011
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10012 = {
+	name = "Kirichenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10012
+	add_trait = logistics_wizard
+	add_trait = winter_specialist
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10013 = {
+	name = "Kirillov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10013
+	add_trait = engineer
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10014 = {
+	name = "Kirponos"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10014
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10015 = {
+	name = "Kiselev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10015
+	history = {
+		1938.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10016 = {
+	name = "Klimovskih"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10016
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10017 = {
+	name = "Klyuchko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10017
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10018 = {
+	name = "Kniga"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10018
+	add_trait = offensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10019 = {
+	name = "Kolchik"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10019
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10020 = {
+	name = "Kolobov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10020
+	add_trait = defensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10021 = {
+	name = "Kolomiyets"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10021
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10022 = {
+	name = "Kolpakchi"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L10022
+	add_trait = offensive_doctrine
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10023 = {
+	name = "Komarovskij"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10023
+	add_trait = engineer
+	history = {
+		1941.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10024 = {
+	name = "Kondratchev"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10024
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10025 = {
+	name = "Kondrusev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10025
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10026 = {
+	name = "Konev"
+	country = SOV
+	type = land
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	picture = L10026
+	add_trait = offensive_doctrine
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10027 = {
+	name = "Konovov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10027
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10028 = {
+	name = "Kopec"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10028
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10029 = {
+	name = "Koptzov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10029
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10030 = {
+	name = "Korchagin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10030
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10031 = {
+	name = "Kork"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 0.00
+	picture = L10031
+	add_trait = trickster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10032 = {
+	name = "Korostelev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10032
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10033 = {
+	name = "Koroteev"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10033
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10034 = {
+	name = "Korothin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10034
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10035 = {
+	name = "Korovnikov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10035
+	add_trait = trickster
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10036 = {
+	name = "Korshilov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10036
+	add_trait = fortress_buster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10037 = {
+	name = "Korobkov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10037
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10038 = {
+	name = "Korzun"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10038
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10039 = {
+	name = "Koshevoi"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10039
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10040 = {
+	name = "Kostenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10040
+	history = {
+		1939.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10041 = {
+	name = "Kotlyarov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10041
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10042 = {
+	name = "Kotovski"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10042
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10043 = {
+	name = "Kozlov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10043
+	add_trait = winter_specialist
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 4 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10044 = {
+	name = "Kozukov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10044
+	add_trait = winter_specialist
+	history = {
+		1944.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10045 = {
+	name = "Krasnopevtsev"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10045
+	add_trait = defensive_doctrine
+	add_trait = fortress_buster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10046 = {
+	name = "Kravchenko"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10046
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10047 = {
+	name = "Kravtsov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10047
+	add_trait = offensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10048 = {
+	name = "Kreizer"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10048
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10049 = {
+	name = "Kriuchenkin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10049
+	add_trait = winter_specialist
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10050 = {
+	name = "Krivoshein"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10050
+	add_trait = logistics_wizard
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10051 = {
+	name = "Krutikov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10051
+	add_trait = winter_specialist
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10052 = {
+	name = "Krylov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10052
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10053 = {
+	name = "Kryukov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10053
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10054 = {
+	name = "Kuibyshev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10054
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1937.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10055 = {
+	name = "Kulik"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10055
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+		1940.1.1 = { rank = 4 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10056 = {
+	name = "Kulikov  G.S."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10056
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10057 = {
+	name = "Kulikov  K.E."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10057
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10058 = {
+	name = "Kurasov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10058
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10059 = {
+	name = "Kurkin"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10059
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10060 = {
+	name = "Kurochkin  A.D."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10060
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10061 = {
+	name = "Kurochkin  P.A."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10061
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10062 = {
+	name = "Kurochkin  P.S."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10062
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+10063 = {
+	name = "Kutlin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10063
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10064 = {
+	name = "Kutyakov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10064
+	add_trait = offensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10065 = {
+	name = "Kuzmin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10065
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10066 = {
+	name = "Kuzn"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10066
+	add_trait = defensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10067 = {
+	name = "Kuznec"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10067
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10068 = {
+	name = "Kuznetsov  A.I."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10068
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 4 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+10069 = {
+	name = "Kuznetsov  F.F."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L10069
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10070 = {
+	name = "Kuznetsov  V.V."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10070
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10071 = {
+	name = "Lapin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10071
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10072 = {
+	name = "Lapshov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10072
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10073 = {
+	name = "Larichev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10073
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10074 = {
+	name = "Larionov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10074
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10075 = {
+	name = "Laskin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10075
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10076 = {
+	name = "Lavrinovich"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10076
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10077 = {
+	name = "Lazarev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10077
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10078 = {
+	name = "Lebedenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10078
+	add_trait = logistics_wizard
+	add_trait = winter_specialist
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10079 = {
+	name = "Lelyushen"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10079
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10080 = {
+	name = "Leonov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10080
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10081 = {
+	name = "Leselidze"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10081
+	add_trait = fortress_buster
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10082 = {
+	name = "Levandovski"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10082
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10083 = {
+	name = "Levkin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10083
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10084 = {
+	name = "Lisinov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10084
+	add_trait = commando
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10085 = {
+	name = "Lisitzyn"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10085
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10086 = {
+	name = "Liudnikov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10086
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10087 = {
+	name = "Lizukov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10087
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10088 = {
+	name = "Lobachev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10088
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10089 = {
+	name = "Lopatin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10089
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10090 = {
+	name = "Lukin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10090
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10091 = {
+	name = "Lutchinski"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10091
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10092 = {
+	name = "Lvov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10092
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10093 = {
+	name = "Lyapin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10093
+	add_trait = logistics_wizard
+	history = {
+		1943.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10094 = {
+	name = "Lyudnikov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10094
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10095 = {
+	name = "Magon"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10095
+	add_trait = engineer
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10096 = {
+	name = "Makarov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10096
+	add_trait = fortress_buster
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10097 = {
+	name = "Makeev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10097
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10098 = {
+	name = "Malahov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10098
+	add_trait = trickster
+	add_trait = panzer_leader
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10099 = {
+	name = "Malandin"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10099
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10100 = {
+	name = "Malinin"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10100
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10101 = {
+	name = "Malinovsk"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10101
+	add_trait = defensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10102 = {
+	name = "Malinovskij"
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 8
+	loyalty = 1.00
+	picture = L10102
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10103 = {
+	name = "Malyshev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L10103
+	add_trait = panzer_leader
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10104 = {
+	name = "Mamsurov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10104
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10105 = {
+	name = "Marchenkov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10105
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10106 = {
+	name = "Marcinkevich"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10106
+	history = {
+		1938.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10107 = {
+	name = "Markov  A.M."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10107
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10108 = {
+	name = "Markov  G.M."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10108
+	add_trait = engineer
+	history = {
+		1944.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10109 = {
+	name = "Markov  S.T."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10109
+	add_trait = winter_specialist
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10110 = {
+	name = "Martirosyan"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10110
+	add_trait = engineer
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10111 = {
+	name = "Martsinkevich"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10111
+	add_trait = logistics_wizard
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10112 = {
+	name = "Maslennikov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10112
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10113 = {
+	name = "Matykin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10113
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10114 = {
+	name = "Medvedovski"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10114
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10115 = {
+	name = "Meklis"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10115
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10116 = {
+	name = "Melnik"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10116
+	add_trait = offensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10117 = {
+	name = "Melnikov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10117
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10118 = {
+	name = "Meretskov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10118
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10119 = {
+	name = "Merkulov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10119
+	history = {
+		1941.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10120 = {
+	name = "Mihajlov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10120
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10121 = {
+	name = "Mikeladze"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10121
+	add_trait = commando
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10122 = {
+	name = "Mirgorodsko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10122
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10123 = {
+	name = "Mironov  F.K."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10123
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+10124 = {
+	name = "Mironov  P.A."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10124
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10125 = {
+	name = "Mishanin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10125
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10126 = {
+	name = "Mishulin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10126
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10127 = {
+	name = "Missan"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10127
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10128 = {
+	name = "Mitrofanov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10128
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10129 = {
+	name = "Morgunov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10129
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10130 = {
+	name = "Morozov  S.I."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10130
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10131 = {
+	name = "Morozov  V.I."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10131
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10132 = {
+	name = "Moskalenko"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10132
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10133 = {
+	name = "Mostovenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10133
+	add_trait = logistics_wizard
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10134 = {
+	name = "Muzich"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10134
+	add_trait = defensive_doctrine
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10135 = {
+	name = "Naumenko  N.F."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10135
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10136 = {
+	name = "Naumenko  S.E."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10136
+	add_trait = panzer_leader
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10137 = {
+	name = "Navrocki"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10137
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10138 = {
+	name = "Nazarov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10138
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10139 = {
+	name = "Nedelin"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10139
+	add_trait = fortress_buster
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10140 = {
+	name = "Nedvigin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10140
+	add_trait = defensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10141 = {
+	name = "Netreba"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10141
+	add_trait = winter_specialist
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10142 = {
+	name = "Nikishin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10142
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10143 = {
+	name = "Nikitin  A.G."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10143
+	add_trait = winter_specialist
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10144 = {
+	name = "Nikitin  I.S."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10144
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10145 = {
+	name = "Nikitin  N.A."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 0.00
+	picture = L10145
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10146 = {
+	name = "Nikolaev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10146
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10147 = {
+	name = "Novikov  A.A."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10147
+	add_trait = trickster
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10148 = {
+	name = "Novikov  N.A."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10148
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10149 = {
+	name = "Novikov  V.V."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10149
+	add_trait = panzer_leader
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10150 = {
+	name = "Novoselski"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10150
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10151 = {
+	name = "Nozdrunov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10151
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10152 = {
+	name = "Oborin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10152
+	add_trait = fortress_buster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10153 = {
+	name = "Obukhov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10153
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10154 = {
+	name = "Odintsov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10154
+	add_trait = fortress_buster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10155 = {
+	name = "Ogurtsov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10155
+	add_trait = trickster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10156 = {
+	name = "Opadchy"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10156
+	add_trait = commando
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10157 = {
+	name = "Orlov  A.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10157
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10158 = {
+	name = "Orlov  I.A."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10158
+	add_trait = panzer_leader
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10159 = {
+	name = "Osade"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 8
+	loyalty = 1.00
+	picture = L10159
+	add_trait = offensive_doctrine
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10160 = {
+	name = "Osipenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10160
+	add_trait = defensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10161 = {
+	name = "Oskalenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10161
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10162 = {
+	name = "Osyka"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10162
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10163 = {
+	name = "Ozerov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10163
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10164 = {
+	name = "Ozeryakin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10164
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10165 = {
+	name = "Panchenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10165
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10166 = {
+	name = "Panfilov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10166
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10167 = {
+	name = "Panin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10167
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10168 = {
+	name = "Panov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10168
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10169 = {
+	name = "Parkhomenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10169
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10170 = {
+	name = "Parshikov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10170
+	add_trait = fortress_buster
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10171 = {
+	name = "Pavelkin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10171
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10172 = {
+	name = "Pavlov  A.V."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10172
+	add_trait = winter_specialist
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10173 = {
+	name = "Pavlov  D.G."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10173
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1937.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10174 = {
+	name = "Pavlov  P.P."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10174
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10175 = {
+	name = "Pern"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10175
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10176 = {
+	name = "Pervushkin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10176
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10177 = {
+	name = "Petin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10177
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10178 = {
+	name = "Petrakovski"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10178
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10179 = {
+	name = "Petrov  I.I."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10179
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10180 = {
+	name = "Petrov  M.P."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10180
+	add_trait = logistics_wizard
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10181 = {
+	name = "Petrovsk"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10181
+	history = {
+		1937.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10182 = {
+	name = "Petrushevskij"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10182
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10183 = {
+	name = "Pisarevskij"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10183
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10184 = {
+	name = "Platonov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10184
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10185 = {
+	name = "Pliev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10185
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10186 = {
+	name = "Podlas"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10186
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10187 = {
+	name = "Pogodin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10187
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10188 = {
+	name = "Pokrovski"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10188
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10189 = {
+	name = "Polozkov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10189
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10190 = {
+	name = "Ponedelin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10190
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10191 = {
+	name = "Poplavski"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10191
+	add_trait = logistics_wizard
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10192 = {
+	name = "Popov  A.F."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10192
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10193 = {
+	name = "Popov  M.M."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10193
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10194 = {
+	name = "Popov  V.S."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10194
+	add_trait = winter_specialist
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10195 = {
+	name = "Pokrovski"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10195
+	add_trait = commando
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10196 = {
+	name = "Polubojarov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10196
+	add_trait = panzer_leader
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10197 = {
+	name = "Poluektov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10197
+	add_trait = fortress_buster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10198 = {
+	name = "Potaturchev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10198
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10199 = {
+	name = "Povetkin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10199
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10200 = {
+	name = "Potapov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10200
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10201 = {
+	name = "Primakov  T.S."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10201
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10202 = {
+	name = "Primakov  V.M."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 8
+	loyalty = 1.00
+	picture = L10202
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10203 = {
+	name = "Prohorov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10203
+	add_trait = engineer
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10204 = {
+	name = "Prokhorov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10204
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10205 = {
+	name = "Proshkin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10205
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10206 = {
+	name = "Proskurov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10206
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10207 = {
+	name = "Provalov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10207
+	add_trait = winter_specialist
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10208 = {
+	name = "Pshenn"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10208
+	add_trait = logistics_wizard
+	history = {
+		1937.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10209 = {
+	name = "Ptuhin"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10209
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10210 = {
+	name = "Puganov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10210
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10211 = {
+	name = "Pukhov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10211
+	add_trait = winter_specialist
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10212 = {
+	name = "Pushkin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10212
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10213 = {
+	name = "Purkaev  M.A."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10213
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10214 = {
+	name = "Purkaev  S.F."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10214
+	add_trait = winter_specialist
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10215 = {
+	name = "Putna"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10215
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10216 = {
+	name = "Radus"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10216
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10217 = {
+	name = "Rafaelyants"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10217
+	add_trait = commando
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10218 = {
+	name = "Rakutin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10218
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10219 = {
+	name = "Rastorguev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10219
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10220 = {
+	name = "Ratnikov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10220
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10221 = {
+	name = "Rechkalov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10221
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10222 = {
+	name = "Reiter"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L10222
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10223 = {
+	name = "Remezov  F.M."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10223
+	add_trait = logistics_wizard
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 4 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10224 = {
+	name = "Remezov  F.N."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10224
+	history = {
+		1939.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10225 = {
+	name = "Remizov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10225
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10226 = {
+	name = "Renc"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10226
+	add_trait = logistics_wizard
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10227 = {
+	name = "Repnikov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10227
+	add_trait = commando
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10228 = {
+	name = "Reshetov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10228
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10229 = {
+	name = "Riabyzhev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10229
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10230 = {
+	name = "Rimsha"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10230
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10231 = {
+	name = "Rivkin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10231
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10232 = {
+	name = "Rodimtsev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10232
+	add_trait = commando
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10233 = {
+	name = "Rodin  A.G."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10233
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10234 = {
+	name = "Rodin  G.S."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10234
+	add_trait = defensive_doctrine
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10235 = {
+	name = "Rogachev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10235
+	add_trait = trickster
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10236 = {
+	name = "Rokossovsky"
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	picture = L10236
+	add_trait = offensive_doctrine
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10237 = {
+	name = "Romanenko  A.S."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L10237
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10238 = {
+	name = "Romanenko  I.G."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10238
+	add_trait = logistics_wizard
+	add_trait = defensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10239 = {
+	name = "Romanenko  P.L."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10239
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10240 = {
+	name = "Romanov  G.A."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10240
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10241 = {
+	name = "Romanov  M.T."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10241
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10242 = {
+	name = "Romanvoskij"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10242
+	add_trait = offensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10243 = {
+	name = "Rotmistrov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10243
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10244 = {
+	name = "Roze"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10244
+	add_trait = fortress_buster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+10245 = {
+	name = "Rubcov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10245
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10246 = {
+	name = "Rubtsov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10246
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10247 = {
+	name = "Ruckoy"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10247
+	add_trait = commando
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10248 = {
+	name = "Rudny"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10248
+	add_trait = winter_specialist
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10249 = {
+	name = "Russiyanov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10249
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10250 = {
+	name = "Ryabchev  B.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10250
+	add_trait = offensive_doctrine
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10251 = {
+	name = "Ryabchev  M.E."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10251
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10252 = {
+	name = "Ryabchev  P.S."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10252
+	history = {
+		1940.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10253 = {
+	name = "Ryabyshev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10253
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10254 = {
+	name = "Ryazanov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10254
+	add_trait = fortress_buster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10255 = {
+	name = "Rybak"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10255
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10256 = {
+	name = "Rybalchenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10256
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10257 = {
+	name = "Rybalko"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L10257
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10258 = {
+	name = "Rybko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10258
+	add_trait = offensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10259 = {
+	name = "Ryhlin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10259
+	add_trait = winter_specialist
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10260 = {
+	name = "Ryhlov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10260
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10261 = {
+	name = "Rykachyov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10261
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10262 = {
+	name = "Rykov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10262
+	add_trait = fortress_buster
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10263 = {
+	name = "Ryzhow"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10263
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10264 = {
+	name = "Safaryan"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10264
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10265 = {
+	name = "Sakhno"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10265
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10266 = {
+	name = "Saladze"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10266
+	add_trait = commando
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10267 = {
+	name = "Salminov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10267
+	add_trait = panzer_leader
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10268 = {
+	name = "Samarskiy"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10268
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10269 = {
+	name = "Sandalov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10269
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10270 = {
+	name = "Savkin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10270
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10271 = {
+	name = "Sedyakin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10271
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10272 = {
+	name = "Selivanov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10272
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10273 = {
+	name = "Semenchenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10273
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10274 = {
+	name = "Semenovskij"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10274
+	add_trait = commando
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10275 = {
+	name = "Semenyuk"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10275
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10276 = {
+	name = "Serdich"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10276
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10277 = {
+	name = "Sergatskov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10277
+	add_trait = winter_specialist
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10278 = {
+	name = "Shadunts"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10278
+	add_trait = winter_specialist
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10279 = {
+	name = "Shalin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10279
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10280 = {
+	name = "Shapkin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 8
+	loyalty = 1.00
+	picture = L10280
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10281 = {
+	name = "Shaposhnikov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10281
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1937.1.1 = { rank = 3 }
+		1940.1.1 = { rank = 4 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10282 = {
+	name = "Sharaburko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10282
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10283 = {
+	name = "Sharangovich"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10283
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10284 = {
+	name = "Sharokhin"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10284
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10285 = {
+	name = "Shebunin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10285
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10286 = {
+	name = "Sheklanov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10286
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10287 = {
+	name = "Shepetov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10287
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10288 = {
+	name = "Sherbakov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10288
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10289 = {
+	name = "Sherstiuk"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10289
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10290 = {
+	name = "Shestopalov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10290
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10291 = {
+	name = "Shevchenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10291
+	add_trait = engineer
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10292 = {
+	name = "Shirobokov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10292
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10293 = {
+	name = "Shishenin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10293
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10294 = {
+	name = "Shlemin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10294
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10295 = {
+	name = "Shlykov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L10295
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10296 = {
+	name = "Shtemenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10296
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10297 = {
+	name = "Shmidt"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10297
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10298 = {
+	name = "Shtern"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10298
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10299 = {
+	name = "Shtevnev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10299
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10300 = {
+	name = "Shumilov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10300
+	add_trait = fortress_buster
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10301 = {
+	name = "Shurov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L10301
+	add_trait = offensive_doctrine
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10302 = {
+	name = "Shvarev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10302
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10303 = {
+	name = "Shveshnikov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10303
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10304 = {
+	name = "Shvydkoi"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10304
+	add_trait = engineer
+	history = {
+		1930.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10305 = {
+	name = "Simoniak"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10305
+	add_trait = trickster
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10306 = {
+	name = "Sinenko"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10306
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10307 = {
+	name = "Sinilov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10307
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10308 = {
+	name = "Skugarev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10308
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10309 = {
+	name = "Skvirskij"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10309
+	add_trait = engineer
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10310 = {
+	name = "Skvortsov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10310
+	add_trait = logistics_wizard
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10311 = {
+	name = "Smirnov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10311
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10312 = {
+	name = "Sobennikov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10312
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10313 = {
+	name = "Sofronov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10313
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10314 = {
+	name = "Sokolov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10314
+	add_trait = logistics_wizard
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10315 = {
+	name = "Sokolovskij"
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10315
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10316 = {
+	name = "Solomatin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10316
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10317 = {
+	name = "Soloviev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10317
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10318 = {
+	name = "Solyankin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10318
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10319 = {
+	name = "Spiridonov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L10319
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10320 = {
+	name = "Starostin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10320
+	add_trait = fortress_buster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10321 = {
+	name = "Stepanov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10321
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10322 = {
+	name = "Strepuhov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10322
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1937.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10323 = {
+	name = "Sudec"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10323
+	add_trait = logistics_wizard
+	history = {
+		1937.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10324 = {
+	name = "Susaikov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10324
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10325 = {
+	name = "Tamruchi"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 0.00
+	picture = L10325
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10326 = {
+	name = "Tanaschishin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10326
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10327 = {
+	name = "Tarasov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10327
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10328 = {
+	name = "Terekhin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10328
+	add_trait = defensive_doctrine
+	add_trait = offensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10329 = {
+	name = "Teremov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10329
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10330 = {
+	name = "Ter Gasparian"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10330
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10331 = {
+	name = "Tikhonov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10331
+	add_trait = commando
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10332 = {
+	name = "Timoshenko  M.P."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10332
+	add_trait = offensive_doctrine
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10333 = {
+	name = "Timoshenko  S.K."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10333
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1940.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10334 = {
+	name = "Tiulenev"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10334
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10335 = {
+	name = "Tjernjakovskij"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 3
+	loyalty = 1.00
+	picture = L10335
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10336 = {
+	name = "Tolbukhin"
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 8
+	loyalty = 1.00
+	picture = L10336
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10337 = {
+	name = "Trifonov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10337
+	history = {
+		1930.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10338 = {
+	name = "Trofimenko"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10338
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10339 = {
+	name = "Trubnikov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10339
+	add_trait = offensive_doctrine
+	add_trait = winter_specialist
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10340 = {
+	name = "Trufanov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10340
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10341 = {
+	name = "Tsinchenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10341
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10342 = {
+	name = "Tukhachevsky"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10342
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10343 = {
+	name = "Turchinskij"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10343
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10344 = {
+	name = "Tutarinov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10344
+	add_trait = logistics_wizard
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10345 = {
+	name = "Tyulen"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10345
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10346 = {
+	name = "Uborevich"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L10346
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10347 = {
+	name = "Ugrimov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10347
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10348 = {
+	name = "Usenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10348
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10349 = {
+	name = "Uspenski"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L10349
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10350 = {
+	name = "Varennikov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10350
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10351 = {
+	name = "Vashugin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10351
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10352 = {
+	name = "Vasilev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10352
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10353 = {
+	name = "Vassilevskij"
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 9
+	loyalty = 1.00
+	picture = L10353
+	add_trait = logistics_wizard
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10354 = {
+	name = "Vatutin"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	picture = L10354
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10355 = {
+	name = "Vauphasov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10355
+	add_trait = winter_specialist
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10356 = {
+	name = "Velichko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10356
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10357 = {
+	name = "Verkholovich"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10357
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10358 = {
+	name = "Vershinin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10358
+	add_trait = winter_specialist
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10359 = {
+	name = "Vinogradov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10359
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10360 = {
+	name = "Vishnevskij"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10360
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10361 = {
+	name = "Vivtorov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10361
+	add_trait = trickster
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10362 = {
+	name = "Vladimirov"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10362
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10363 = {
+	name = "Vlassov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	picture = L10363
+	add_trait = defensive_doctrine
+	add_trait = offensive_doctrine
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10364 = {
+	name = "Volskiy"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10364
+	add_trait = logistics_wizard
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10365 = {
+	name = "Vorobiev  E.D."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10365
+	add_trait = defensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10366 = {
+	name = "Vorobiev  M.P."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10366
+	add_trait = engineer
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10367 = {
+	name = "Voronov"
+	country = SOV
+	type = land
+	skill = 4
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10367
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10368 = {
+	name = "Voroshilov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10368
+	add_trait = commando
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10369 = {
+	name = "Vorozhejkin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10369
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10370 = {
+	name = "Vostrechov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10370
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10371 = {
+	name = "Yakir"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10371
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10372 = {
+	name = "Yeremenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10372
+	add_trait = logistics_wizard
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10373 = {
+	name = "Yushkev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10373
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10374 = {
+	name = "Zaev"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10374
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10375 = {
+	name = "Zaitsev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10375
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10376 = {
+	name = "Zakharov  F.V."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10376
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10377 = {
+	name = "Zakharov  G.F."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10377
+	add_trait = trickster
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10378 = {
+	name = "Zakharov  M.V."
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10378
+	add_trait = fortress_buster
+	history = {
+		1937.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10379 = {
+	name = "Zarako-Zarakovsky"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10379
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10380 = {
+	name = "Zashibalov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10380
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10381 = {
+	name = "Zelencov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10381
+	add_trait = offensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10382 = {
+	name = "Zernov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10382
+	add_trait = defensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10383 = {
+	name = "Zhadov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10383
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10384 = {
+	name = "Zhatkov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10384
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10385 = {
+	name = "Zherdev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10385
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10386 = {
+	name = "Zherdiy"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10386
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10387 = {
+	name = "Zhidov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10387
+	add_trait = logistics_wizard
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10388 = {
+	name = "Zhirkov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 1.00
+	picture = L10388
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10389 = {
+	name = "Zhmachenko"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10389
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10390 = {
+	name = "Zholudev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10390
+	add_trait = offensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10391 = {
+	name = "Zhuckov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10391
+	add_trait = logistics_wizard
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10392 = {
+	name = "Zhukov A.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10392
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10393 = {
+	name = "Zhukov G.K."
+	country = SOV
+	type = land
+	skill = 5
+	max_skill = 9
+	loyalty = 1.00
+	picture = L10393
+	add_trait = offensive_doctrine
+	add_trait = winter_specialist
+	add_trait = panzer_leader
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10394 = {
+	name = "Zhukov M.P."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10394
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10395 = {
+	name = "Zhukov V.N."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10395
+	add_trait = offensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10396 = {
+	name = "Zhuravlev E.P."
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10396
+	add_trait = defensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10397 = {
+	name = "Zhuravlev K.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10397
+	add_trait = fortress_buster
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10398 = {
+	name = "Zhuravlev S.I."
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10398
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10399 = {
+	name = "Zhurkina-kiyok"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10399
+	add_trait = trickster
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10400 = {
+	name = "Zimin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10400
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10401 = {
+	name = "Zonberg"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10401
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10402 = {
+	name = "Zuev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10402
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10403 = {
+	name = "Zverev"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10403
+	add_trait = defensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10404 = {
+	name = "Zygin"
+	country = SOV
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10404
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10405 = {
+	name = "Zyrianov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10405
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10406 = {
+	name = "Abankin"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10406
+	history = {
+		1937.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10407 = {
+	name = "Alafouzov"
+	country = SOV
+	type = sea
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10407
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10408 = {
+	name = "Antolievich"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10408
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10409 = {
+	name = "Arapov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10409
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10410 = {
+	name = "Arushanyan"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10410
+	add_trait = seawolf
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10411 = {
+	name = "Belousov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10411
+	history = {
+		1938.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10412 = {
+	name = "Dolinin"
+	country = SOV
+	type = sea
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10412
+	add_trait = spotter
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10413 = {
+	name = "Drozd"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10413
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10414 = {
+	name = "Eliseev"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10414
+	add_trait = superior_tactician
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10415 = {
+	name = "Fedorov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10415
+	add_trait = seawolf
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10416 = {
+	name = "Fokin"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10416
+	add_trait = spotter
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10417 = {
+	name = "Galler"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10417
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10418 = {
+	name = "Golovko"
+	country = SOV
+	type = sea
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10418
+	add_trait = spotter
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10419 = {
+	name = "Gorshkov"
+	country = SOV
+	type = sea
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10419
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10420 = {
+	name = "Hlopov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10420
+	add_trait = seawolf
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10421 = {
+	name = "Isakov"
+	country = SOV
+	type = sea
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10421
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10422 = {
+	name = "Iumashev"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10422
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10423 = {
+	name = "Kolostyakov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10423
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10424 = {
+	name = "Kucherov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10424
+	add_trait = old_guard
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10425 = {
+	name = "Kuznetsov"
+	country = SOV
+	type = sea
+	skill = 3
+	max_skill = 8
+	loyalty = 1.00
+	picture = L10425
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10426 = {
+	name = "Marinesko"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10426
+	add_trait = seawolf
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10427 = {
+	name = "Mironov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10427
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10428 = {
+	name = "Nikolaev"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10428
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10429 = {
+	name = "Oktyabrskij"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10429
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10430 = {
+	name = "Panteleiev"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10430
+	add_trait = superior_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10431 = {
+	name = "Papanin"
+	country = SOV
+	type = sea
+	skill = 3
+	max_skill = 9
+	loyalty = 1.00
+	picture = L10431
+	add_trait = blockade_runner
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10432 = {
+	name = "Pavlovich"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10432
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10433 = {
+	name = "Petrov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10433
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10434 = {
+	name = "Pilipenko"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10434
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10435 = {
+	name = "Platonov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10435
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10436 = {
+	name = "Pukhov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10436
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10437 = {
+	name = "Rakov"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10437
+	add_trait = spotter
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10438 = {
+	name = "Rall"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10438
+	add_trait = superior_tactician
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10439 = {
+	name = "Rassadkin"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10439
+	history = {
+		1930.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10440 = {
+	name = "Rogachev"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10440
+	history = {
+		1938.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10441 = {
+	name = "Rybatchkov"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10441
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10442 = {
+	name = "Sedelnikov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10442
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10443 = {
+	name = "Shapurschenko"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10443
+	history = {
+		1938.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10444 = {
+	name = "Smirnov"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10444
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10445 = {
+	name = "Stepanov"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10445
+	add_trait = spotter
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10446 = {
+	name = "Träenine"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10446
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10447 = {
+	name = "Tributs"
+	country = SOV
+	type = sea
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10447
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10448 = {
+	name = "Vekman"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10448
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+10449 = {
+	name = "Viktorov"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10449
+	add_trait = spotter
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10450 = {
+	name = "Vinogradov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10450
+	add_trait = seawolf
+	history = {
+		1930.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10451 = {
+	name = "Vorobiev"
+	country = SOV
+	type = sea
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10451
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10452 = {
+	name = "Yeliseyev"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10452
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10453 = {
+	name = "Alksnis"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10453
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10454 = {
+	name = "Astakhov"
+	country = SOV
+	type = air
+	skill = 4
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10454
+	add_trait = night_flyer
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10455 = {
+	name = "Belov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10455
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10456 = {
+	name = "Berzarin"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10456
+	add_trait = carpet_bomber
+	history = {
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10457 = {
+	name = "Chuvakov"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10457
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10458 = {
+	name = "Danschin"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10458
+	add_trait = night_flyer
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10459 = {
+	name = "Ekatov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10459
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10460 = {
+	name = "Eremin"
+	country = SOV
+	type = air
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10460
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10461 = {
+	name = "Falaleev"
+	country = SOV
+	type = air
+	skill = 4
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10461
+	history = {
+		1938.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1947.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10462 = {
+	name = "Fedorov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10462
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10463 = {
+	name = "Gerasimov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10463
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10464 = {
+	name = "Golovanov"
+	country = SOV
+	type = air
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10464
+	add_trait = carpet_bomber
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10465 = {
+	name = "Golovko"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10465
+	history = {
+		1938.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10466 = {
+	name = "Goryunov"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10466
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10467 = {
+	name = "Gudkov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10467
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10468 = {
+	name = "Izotov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10468
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10469 = {
+	name = "Kalinin"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10469
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10470 = {
+	name = "Kapitochin"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10470
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10471 = {
+	name = "Kazachenko"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10471
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10472 = {
+	name = "Kharlamov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10472
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10473 = {
+	name = "Khudyakov"
+	country = SOV
+	type = air
+	skill = 4
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10473
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10474 = {
+	name = "Klubov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10474
+	add_trait = superior_air_tactician
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10475 = {
+	name = "Knriukni"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10475
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10476 = {
+	name = "Kopets"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10476
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10477 = {
+	name = "Krasovskij"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10477
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10478 = {
+	name = "Kutakhov"
+	country = SOV
+	type = air
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10478
+	add_trait = tank_buster
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10479 = {
+	name = "Lagutkin"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10479
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10480 = {
+	name = "Loktionov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10480
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10481 = {
+	name = "Machin"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10481
+	history = {
+		1939.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10482 = {
+	name = "Martynov"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10482
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10483 = {
+	name = "Maligin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10483
+	add_trait = offensive_doctrine
+	add_trait = winter_specialist
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10484 = {
+	name = "Mironov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10484
+	add_trait = fleet_destroyer
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10485 = {
+	name = "Novikov"
+	country = SOV
+	type = air
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10485
+	add_trait = tank_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10486 = {
+	name = "Oborin"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10486
+	add_trait = night_flyer
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10487 = {
+	name = "Osipenko"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10487
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10488 = {
+	name = "Ostapenko"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10488
+	add_trait = superior_air_tactician
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10489 = {
+	name = "Polynin"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10489
+	add_trait = superior_air_tactician
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10490 = {
+	name = "Radchikova"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10490
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+10491 = {
+	name = "Raskova"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10491
+	add_trait = night_flyer
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10492 = {
+	name = "Reshetnikov"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10492
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10493 = {
+	name = "Rog"
+	country = SOV
+	type = air
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10493
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10494 = {
+	name = "Romashkin"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10494
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+10495 = {
+	name = "Rudenko"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10495
+	add_trait = tank_buster
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10496 = {
+	name = "Rychagov"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 8
+	loyalty = 0.00
+	picture = L10496
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10497 = {
+	name = "Skripko"
+	country = SOV
+	type = air
+	skill = 4
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10497
+	history = {
+		1937.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10498 = {
+	name = "Smirnov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10498
+	add_trait = fleet_destroyer
+	history = {
+		1940.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+10499 = {
+	name = "Smuschkevich"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 9
+	loyalty = 0.00
+	picture = L10499
+	add_trait = tank_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10500 = {
+	name = "Sudets"
+	country = SOV
+	type = air
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10500
+	history = {
+		1940.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10501 = {
+	name = "Thor"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10501
+	add_trait = superior_air_tactician
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10502 = {
+	name = "Tususov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10502
+	history = {
+		1938.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10503 = {
+	name = "Vershinin"
+	country = SOV
+	type = air
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10503
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10504 = {
+	name = "Vladimiroch"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10504
+	add_trait = carpet_bomber
+	history = {
+		1944.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10505 = {
+	name = "Vorozheikin"
+	country = SOV
+	type = air
+	skill = 4
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10505
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1945.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10506 = {
+	name = "Yakovlev"
+	country = SOV
+	type = air
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10506
+	add_trait = tank_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10507 = {
+	name = "Yakushin"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10507
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10508 = {
+	name = "Yumashev"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10508
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10509 = {
+	name = "Zaharkin"
+	country = SOV
+	type = air
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10509
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10510 = {
+	name = "Zhavoronkov"
+	country = SOV
+	type = air
+	skill = 4
+	max_skill = 6
+	loyalty = 1.00
+	picture = L10510
+	add_trait = fleet_destroyer
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10511 = {
+	name = "Zhezlov"
+	country = SOV
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10511
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10512 = {
+	name = "Zhigarev"
+	country = SOV
+	type = air
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L10512
+	add_trait = tank_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10513 = {
+	name = "Filippenko"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10513
+	add_trait = winter_specialist
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+10514 = {
+	name = "Vazetis"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L10514
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10515 = {
+	name = "Unzherov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L10515
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10516 = {
+	name = "Kireev"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10516
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10517 = {
+	name = "Khalatov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10517
+	add_trait = winter_specialist
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10518 = {
+	name = "Kashirin"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10518
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10519 = {
+	name = "Goryahov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L10519
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+10520 = {
+	name = "Dushenov"
+	country = SOV
+	type = sea
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10520
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10521 = {
+	name = "Bidemann"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L10521
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+10522 = {
+	name = "Tupikov"
+	country = SOV
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L10522
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+10523 = {
+	name = "Dudorov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 1.00
+	picture = M4091
+	history = {
+		1946.1.1 = { rank = 1 }
+		1949.1.1 = { rank = 2 }
+		1953.1.1 = { rank = 3 }
+		1956.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+579 = {
+	name = "Vlassov"
+	country = SOV
+	type = land
+	skill = 3
+	max_skill = 8
+	loyalty = 0.00
+	picture = L579
+	add_trait = winter_specialist
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+	}
+}

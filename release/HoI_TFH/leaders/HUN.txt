@@ -1,0 +1,2851 @@
+31100 = {
+	name = "Andras"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31100
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31101 = {
+	name = "Algya-Pap"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31101
+	add_trait = offensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+31102 = {
+	name = "Babics"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31102
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31103 = {
+	name = "Bajnóczy"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31103
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31104 = {
+	name = "Bakay"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31104
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31105 = {
+	name = "Barankay"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31105
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+31106 = {
+	name = "Barthá von Dálnokfalva"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31106
+	add_trait = engineer
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+31107 = {
+	name = "Baumann"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31107
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31108 = {
+	name = "Beldy"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31108
+	history = {
+		1937.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+31109 = {
+	name = "Beregffy"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31109
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31110 = {
+	name = "Berzin"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31110
+	add_trait = offensive_doctrine
+	history = {
+		1945.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31111 = {
+	name = "Billinitzer"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31111
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+31112 = {
+	name = "Bor"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31112
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31113 = {
+	name = "Brunswik"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31113
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31114 = {
+	name = "Csatay von Csatai"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31114
+	add_trait = fortress_buster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31115 = {
+	name = "Csicserics von Bacsány"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31115
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+31116 = {
+	name = "Dalos"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31116
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+31117 = {
+	name = "Deák"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31117
+	add_trait = panzer_leader
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31118 = {
+	name = "Decleva"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31118
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1950.1.1 = { rank = 0 }
+	}
+}
+31119 = {
+	name = "Denk"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31119
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31120 = {
+	name = "Domaniczky"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31120
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+31121 = {
+	name = "Dömötör"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31121
+	add_trait = defensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31122 = {
+	name = "Duska"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 7
+	loyalty = 0.00
+	picture = L31122
+	add_trait = trickster
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31123 = {
+	name = "Fábry"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31123
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31124 = {
+	name = "Faragho"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31124
+	add_trait = defensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1953.1.1 = { rank = 0 }
+	}
+}
+31125 = {
+	name = "Farkas"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31125
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31126 = {
+	name = "Feketehalmy-Czeydner"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31126
+	add_trait = engineer
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31127 = {
+	name = "Ferjentsik"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31127
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+31128 = {
+	name = "Friedrich"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31128
+	history = {
+		1938.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+31129 = {
+	name = "Gálócsy"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31129
+	add_trait = engineer
+	history = {
+		1944.1.1 = { rank = 1 }
+		1958.1.1 = { rank = 0 }
+	}
+}
+31130 = {
+	name = "Gátmezei"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31130
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31131 = {
+	name = "Gorondy-Novák"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 0.00
+	picture = L31131
+	add_trait = offensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1954.1.1 = { rank = 0 }
+	}
+}
+31132 = {
+	name = "Grassy"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L31132
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31133 = {
+	name = "Gömbös"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31133
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+31134 = {
+	name = "Hardy"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31134
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31135 = {
+	name = "Hennyey"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L31135
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31136 = {
+	name = "Heszlényi"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31136
+	add_trait = logistics_wizard
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31137 = {
+	name = "Hollósy-Kuthy"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31137
+	add_trait = engineer
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31138 = {
+	name = "Honty"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31138
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+31139 = {
+	name = "Horváth F"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31139
+	add_trait = commando
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31140 = {
+	name = "Horváth S"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31140
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31141 = {
+	name = "Ibrányi"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31141
+	add_trait = offensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31142 = {
+	name = "Jány"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L31142
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31143 = {
+	name = "Kir"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31143
+	history = {
+		1945.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31144 = {
+	name = "Kolossváry"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31144
+	add_trait = logistics_wizard
+	history = {
+		1941.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+31145 = {
+	name = "Kolthay"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31145
+	add_trait = fortress_buster
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31146 = {
+	name = "Kozsard"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31146
+	add_trait = trickster
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+31147 = {
+	name = "Lakatos"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 0.00
+	picture = L31147
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31148 = {
+	name = "László"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31148
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31149 = {
+	name = "Lázár"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31149
+	add_trait = defensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31150 = {
+	name = "Lukachich"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31150
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+31151 = {
+	name = "Magyarosy"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31151
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31152 = {
+	name = "Massányi"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31152
+	add_trait = defensive_doctrine
+	history = {
+		1945.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31153 = {
+	name = "Merézs"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31153
+	add_trait = offensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31154 = {
+	name = "Mezö"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31154
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31155 = {
+	name = "Miklós"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31155
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31156 = {
+	name = "Náday"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 0.00
+	picture = L31156
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31157 = {
+	name = "Nagy V"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31157
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31158 = {
+	name = "Oszlányi"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 0.00
+	picture = L31158
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31159 = {
+	name = "Osztovics"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31159
+	add_trait = panzer_leader
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31160 = {
+	name = "Pataky"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31160
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+31161 = {
+	name = "Pokorny"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31161
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+31162 = {
+	name = "Revy"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31162
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+31163 = {
+	name = "Ruszkiczay-Rüdiger"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31163
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31164 = {
+	name = "Röder"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31164
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31165 = {
+	name = "Sáska"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31165
+	add_trait = panzer_leader
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31166 = {
+	name = "Selkey"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31166
+	add_trait = fortress_buster
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31167 = {
+	name = "Shvoy"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31167
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1935.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+31168 = {
+	name = "Sipos"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31168
+	add_trait = defensive_doctrine
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 0 }
+	}
+}
+31169 = {
+	name = "Siprák"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31169
+	add_trait = panzer_leader
+	history = {
+		1948.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31170 = {
+	name = "Sónyi"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31170
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1958.1.1 = { rank = 0 }
+	}
+}
+31171 = {
+	name = "Székely"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31171
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31172 = {
+	name = "Szombathelyi"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 0.00
+	picture = L31172
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 3 }
+		1943.1.1 = { rank = 4 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31173 = {
+	name = "Sztójay"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 3
+	loyalty = 1.00
+	picture = L31173
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31174 = {
+	name = "Szügyi"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L31174
+	add_trait = commando
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31175 = {
+	name = "Szurmay"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31175
+	add_trait = defensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31176 = {
+	name = "Tapody"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31176
+	add_trait = commando
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+31177 = {
+	name = "Tarnay"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31177
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31178 = {
+	name = "Ternegg K"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31178
+	add_trait = fortress_buster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31179 = {
+	name = "Tóth"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31179
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+31180 = {
+	name = "Ujvári"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31180
+	add_trait = trickster
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31181 = {
+	name = "Vastagh"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31181
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+31182 = {
+	name = "Vattay"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L31182
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31183 = {
+	name = "Veress"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L31183
+	add_trait = panzer_leader
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31184 = {
+	name = "Világhy"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31184
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+31185 = {
+	name = "Stomm"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 1.00
+	picture = L31185
+	add_trait = panzer_leader
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31186 = {
+	name = "Vörös"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 7
+	loyalty = 1.00
+	picture = L31186
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31187 = {
+	name = "Werth"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 7
+	loyalty = 0.00
+	picture = L31187
+	add_trait = logistics_wizard
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1938.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+31188 = {
+	name = "Hardy"
+	country = HUN
+	type = sea
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31188
+	history = {
+		1935.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31189 = {
+	name = "Horthy"
+	country = HUN
+	type = sea
+	skill = 2
+	max_skill = 7
+	loyalty = 1.00
+	picture = L31189
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31190 = {
+	name = "Werth"
+	country = HUN
+	type = sea
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31190
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+31191 = {
+	name = "András"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31191
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31192 = {
+	name = "Debrödy"
+	country = HUN
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31192
+	add_trait = superior_air_tactician
+	history = {
+		1944.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31193 = {
+	name = "Hellebronth"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31193
+	add_trait = superior_air_tactician
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31194 = {
+	name = "Justy"
+	country = HUN
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31194
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31195 = {
+	name = "Littay"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31195
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1936.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+31196 = {
+	name = "Pirity"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31196
+	add_trait = carpet_bomber
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31197 = {
+	name = "Pottyondy"
+	country = HUN
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31197
+	history = {
+		1945.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31198 = {
+	name = "Rákosi"
+	country = HUN
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31198
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+31199 = {
+	name = "Rapaich"
+	country = HUN
+	type = air
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31199
+	add_trait = tank_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31200 = {
+	name = "Szabados"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 0.00
+	picture = L31200
+	add_trait = superior_air_tactician
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31201 = {
+	name = "Szentgyörgyi"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31201
+	history = {
+		1945.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31202 = {
+	name = "Szobránci"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31202
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31203 = {
+	name = "Tomor"
+	country = HUN
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L31203
+	history = {
+		1940.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31204 = {
+	name = "Újszászy"
+	country = HUN
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31204
+	history = {
+		1939.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31212 = {
+	name = "Király B"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31212
+	history = {
+		1949.1.1 = { rank = 1 }
+		1956.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31213 = {
+	name = "Bangha"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31213
+	add_trait = engineer
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1936.1.1 = { rank = 2 }
+		1956.1.1 = { rank = 0 }
+	}
+}
+31214 = {
+	name = "Medvey"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31214
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1936.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31216 = {
+	name = "Falta"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31216
+	add_trait = old_guard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1937.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+31218 = {
+	name = "Barabás"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31218
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1948.1.1 = { rank = 0 }
+	}
+}
+31219 = {
+	name = "Mérey"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31219
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31220 = {
+	name = "Kiss J"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31220
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31232 = {
+	name = "Füleky"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31232
+	add_trait = logistics_wizard
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31233 = {
+	name = "Kiss L"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31233
+	add_trait = logistics_wizard
+	history = {
+		1937.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31234 = {
+	name = "Nagy Gy"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31234
+	history = {
+		1937.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+31236 = {
+	name = "Horváth L"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31236
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31239 = {
+	name = "Gyimesi E"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31239
+	add_trait = commando
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31240 = {
+	name = "Damasy"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31240
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31241 = {
+	name = "Nemerey"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31241
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1958.1.1 = { rank = 0 }
+	}
+}
+31245 = {
+	name = "Gyimesi F"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31245
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31246 = {
+	name = "Koós"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31246
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31247 = {
+	name = "Máthé"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31247
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31248 = {
+	name = "Németh J II"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31248
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31250 = {
+	name = "Aggteleky"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31250
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31254 = {
+	name = "Olgyay"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31254
+	add_trait = logistics_wizard
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1956.1.1 = { rank = 0 }
+	}
+}
+31255 = {
+	name = "Major J"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31255
+	add_trait = panzer_leader
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31256 = {
+	name = "Lánghy"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31256
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31257 = {
+	name = "Marschalkó"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31257
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31260 = {
+	name = "Kassay-Farkas"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31260
+	add_trait = engineer
+	history = {
+		1941.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1950.1.1 = { rank = 0 }
+	}
+}
+31262 = {
+	name = "Hindy"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31262
+	add_trait = defensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31263 = {
+	name = "Bisza"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31263
+	add_trait = panzer_leader
+	history = {
+		1941.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31266 = {
+	name = "Harmos"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31266
+	add_trait = engineer
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1958.1.1 = { rank = 0 }
+	}
+}
+31268 = {
+	name = "Kálmán"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31268
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31269 = {
+	name = "Kiss I"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31269
+	add_trait = defensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31270 = {
+	name = "Kovács Gy"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31270
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31271 = {
+	name = "Kozma I"
+	country = HUN
+	type = land
+	skill = 3
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31271
+	add_trait = defensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31274 = {
+	name = "Makay"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31274
+	add_trait = offensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31275 = {
+	name = "Markóczy"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31275
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1956.1.1 = { rank = 0 }
+	}
+}
+31280 = {
+	name = "Bardóczy"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31280
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31281 = {
+	name = "Nagyöszy"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31281
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31284 = {
+	name = "Futó"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31284
+	history = {
+		1942.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31285 = {
+	name = "Kudriczy"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31285
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31286 = {
+	name = "Finta"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31286
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31287 = {
+	name = "Árvay"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31287
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31289 = {
+	name = "Akay"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31289
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31293 = {
+	name = "Abt"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31293
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31297 = {
+	name = "Deseö-Rödl"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31297
+	add_trait = engineer
+	history = {
+		1938.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31298 = {
+	name = "Horváth J"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31298
+	add_trait = defensive_doctrine
+	history = {
+		1938.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31299 = {
+	name = "Horvay"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31299
+	history = {
+		1938.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31300 = {
+	name = "Nagy Gé"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31300
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31302 = {
+	name = "Bittó"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31302
+	history = {
+		1939.1.1 = { rank = 1 }
+		1956.1.1 = { rank = 0 }
+	}
+}
+31303 = {
+	name = "Hager"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31303
+	history = {
+		1939.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31304 = {
+	name = "Kuthy"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31304
+	history = {
+		1945.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 3 }
+		1958.1.1 = { rank = 0 }
+	}
+}
+31307 = {
+	name = "Paksy"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31307
+	history = {
+		1939.1.1 = { rank = 1 }
+		1956.1.1 = { rank = 0 }
+	}
+}
+31319 = {
+	name = "Beleznay"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31319
+	history = {
+		1940.1.1 = { rank = 1 }
+		1947.1.1 = { rank = 0 }
+	}
+}
+31322 = {
+	name = "Heim"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31322
+	history = {
+		1940.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+31324 = {
+	name = "Hunfalvay"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31324
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31325 = {
+	name = "Kiskéry"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31325
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31329 = {
+	name = "Legeza"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31329
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31331 = {
+	name = "Madaras"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31331
+	history = {
+		1940.1.1 = { rank = 1 }
+		1950.1.1 = { rank = 0 }
+	}
+}
+31333 = {
+	name = "Móricz"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31333
+	history = {
+		1947.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31334 = {
+	name = "Németh I"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31334
+	history = {
+		1940.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31341 = {
+	name = "Makay-Hollósy"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31341
+	history = {
+		1946.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31342 = {
+	name = "Pacor"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31342
+	add_trait = fortress_buster
+	history = {
+		1945.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31351 = {
+	name = "Oláh"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31351
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31365 = {
+	name = "Gerlóczy L"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31365
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31368 = {
+	name = "Kesseö"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31368
+	add_trait = logistics_wizard
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31370 = {
+	name = "Mindszenty"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31370
+	history = {
+		1942.1.1 = { rank = 1 }
+		1956.1.1 = { rank = 0 }
+	}
+}
+31371 = {
+	name = "Murahidy"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31371
+	add_trait = engineer
+	history = {
+		1942.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31374 = {
+	name = "Perey"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31374
+	add_trait = defensive_doctrine
+	history = {
+		1942.1.1 = { rank = 1 }
+		1957.1.1 = { rank = 0 }
+	}
+}
+31391 = {
+	name = "Budaházy"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31391
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31392 = {
+	name = "Cseke"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31392
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31393 = {
+	name = "Gergely"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31393
+	add_trait = fortress_buster
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31394 = {
+	name = "Gerlóczy G"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31394
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31396 = {
+	name = "Hankovzsky"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31396
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31397 = {
+	name = "Istóka"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31397
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31398 = {
+	name = "Jordán"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31398
+	add_trait = offensive_doctrine
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31399 = {
+	name = "Kanotay"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31399
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31405 = {
+	name = "Mészöly"
+	country = HUN
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31405
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31421 = {
+	name = "Nádas"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31421
+	history = {
+		1946.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31426 = {
+	name = "Haynal"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31426
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31427 = {
+	name = "Hódosy"
+	country = HUN
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31427
+	add_trait = defensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31430 = {
+	name = "Kisfaludy"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31430
+	add_trait = logistics_wizard
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31431 = {
+	name = "Lajtay"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31431
+	add_trait = offensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31436 = {
+	name = "Molnár LA"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31436
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31437 = {
+	name = "Németh B"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31437
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31438 = {
+	name = "Olchváry-Milviusz"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 3
+	loyalty = 1.00
+	picture = L31438
+	add_trait = defensive_doctrine
+	history = {
+		1944.1.1 = { rank = 1 }
+		1954.1.1 = { rank = 0 }
+	}
+}
+31440 = {
+	name = "Rumy"
+	country = HUN
+	type = land
+	skill = 0
+	max_skill = 6
+	loyalty = 1.00
+	picture = L31440
+	add_trait = offensive_doctrine
+	add_trait = commando
+	history = {
+		1945.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31456 = {
+	name = "Bánfalvy"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31456
+	history = {
+		1943.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31458 = {
+	name = "Fráter"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31458
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31459 = {
+	name = "Háry"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31459
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1953.1.1 = { rank = 0 }
+	}
+}
+31461 = {
+	name = "Kenese"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31461
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+31463 = {
+	name = "Németh J"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31463
+	history = {
+		1944.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31464 = {
+	name = "Orosz"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31464
+	add_trait = tank_buster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31465 = {
+	name = "Szentnémedy"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31465
+	history = {
+		1930.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31466 = {
+	name = "Szirmay"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31466
+	history = {
+		1939.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31468 = {
+	name = "Grassy"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31132
+	history = {
+		1941.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31471 = {
+	name = "Magyarosy"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 4
+	loyalty = 1.00
+	picture = L31151
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1944.1.1 = { rank = 3 }
+		1990.1.1 = { rank = 0 }
+	}
+}
+31474 = {
+	name = "Heppes"
+	country = HUN
+	type = air
+	skill = 0
+	max_skill = 5
+	loyalty = 1.00
+	picture = L31474
+	history = {
+		1939.1.1 = { rank = 1 }
+		1990.1.1 = { rank = 0 }
+	}
+}

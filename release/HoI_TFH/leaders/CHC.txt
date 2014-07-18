@@ -1,0 +1,1036 @@
+76300 = {
+	name = "Braun"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76300
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+76301 = {
+	name = "Zhang Qinqiu"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76301
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+76302 = {
+	name = "Zhang Guotao"
+	country = CHC
+	type = land
+	skill = 4
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76302
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1944.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76303 = {
+	name = "Chang Dingcheng"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76303
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76304 = {
+	name = "Chang Yunyi"
+	country = CHC
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76304
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76305 = {
+	name = "Zhao Shangzhi"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76305
+	history = {
+		1930.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+76306 = {
+	name = "Zhao Yiman"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L76306
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76307 = {
+	name = "Chen Changhao"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L76307
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1939.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76308 = {
+	name = "Chen Geng"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76308
+	history = {
+		1941.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76309 = {
+	name = "Chen Guang"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76309
+	add_trait = offensive_doctrine
+	history = {
+		1940.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76310 = {
+	name = "Chen Yi"
+	country = CHC
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 0.00
+	picture = L76310
+	add_trait = offensive_doctrine
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76311 = {
+	name = "Zhou Enlai"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76311
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76312 = {
+	name = "Zhu De"
+	country = CHC
+	type = land
+	skill = 4
+	max_skill = 8
+	loyalty = 0.00
+	picture = L76312
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1946.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76313 = {
+	name = "He Long"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L76313
+	history = {
+		1942.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76314 = {
+	name = "Xiang Ying"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76314
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+76315 = {
+	name = "Xu Haidong"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76315
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76316 = {
+	name = "Xu Xiangqian"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76316
+	history = {
+		1940.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76317 = {
+	name = "Xu Guangda"
+	country = CHC
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L76317
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76318 = {
+	name = "Huang Kecheng"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76318
+	history = {
+		1940.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76319 = {
+	name = "Gao Gang"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76319
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+76320 = {
+	name = "Kim Weon-bong"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76320
+	history = {
+		1940.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+76321 = {
+	name = "Li Chen"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76321
+	add_trait = trickster
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76322 = {
+	name = "Li Xiannian"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76322
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1940.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76323 = {
+	name = "Li Youbang"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76323
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+76324 = {
+	name = "Lin Biao"
+	country = CHC
+	type = land
+	skill = 5
+	max_skill = 8
+	loyalty = 0.00
+	picture = L76324
+	add_trait = defensive_doctrine
+	add_trait = trickster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1955.1.1 = { rank = 3 }
+		1957.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76325 = {
+	name = "Liu Zhidan"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76325
+	add_trait = logistics_wizard
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+76326 = {
+	name = "Liu Bocheng"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76326
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76327 = {
+	name = "Luo Ruijing"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76327
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76328 = {
+	name = "Luo Ronghuan"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76328
+	history = {
+		1938.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76329 = {
+	name = "Luo Binghui"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L76329
+	history = {
+		1930.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76330 = {
+	name = "Ma Benzhai"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76330
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 0 }
+	}
+}
+76331 = {
+	name = "Mao Zedong"
+	country = CHC
+	type = land
+	skill = 3
+	max_skill = 5
+	loyalty = 1.00
+	picture = L76331
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1930.1.1 = { rank = 4 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76332 = {
+	name = "Mu Jong"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 1.00
+	picture = L76332
+	add_trait = fortress_buster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76333 = {
+	name = "Nie Rongzhen"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L76333
+	add_trait = logistics_wizard
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76334 = {
+	name = "Nguyen Ai Quoc"
+	country = CHC
+	type = land
+	skill = 3
+	max_skill = 7
+	loyalty = 0.00
+	picture = L76334
+	add_trait = trickster
+	history = {
+		1930.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 0 }
+	}
+}
+76335 = {
+	name = "Peng Xuefeng"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76335
+	add_trait = defensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 0 }
+	}
+}
+76336 = {
+	name = "Peng Dehuai"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 6
+	loyalty = 0.00
+	picture = L76336
+	add_trait = commando
+	history = {
+		1939.1.1 = { rank = 1 }
+		1942.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76337 = {
+	name = "Su Yu"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76337
+	add_trait = offensive_doctrine
+	history = {
+		1941.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76338 = {
+	name = "Sun Yup Paik"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 5
+	loyalty = 1.00
+	picture = L76338
+	add_trait = trickster
+	history = {
+		1939.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+76339 = {
+	name = "Tan Zheng"
+	country = CHC
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76339
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1947.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76340 = {
+	name = "Deng Xiaoping"
+	country = CHC
+	type = land
+	skill = 3
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76340
+	add_trait = trickster
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76341 = {
+	name = "Teng Daiyuan"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76341
+	add_trait = logistics_wizard
+	history = {
+		1938.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 0 }
+	}
+}
+76342 = {
+	name = "Ding Ling"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76342
+	history = {
+		1939.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76343 = {
+	name = "Zuo Quan"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76343
+	history = {
+		1930.1.1 = { rank = 1 }
+		1938.1.1 = { rank = 2 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+76344 = {
+	name = "Wulanfu"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76344
+	add_trait = offensive_doctrine
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+76345 = {
+	name = "Wang Jiaxiang"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76345
+	history = {
+		1930.1.1 = { rank = 1 }
+		1930.1.1 = { rank = 2 }
+		1930.1.1 = { rank = 3 }
+		1940.1.1 = { rank = 0 }
+	}
+}
+76346 = {
+	name = "Wang Shusheng"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76346
+	history = {
+		1942.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76347 = {
+	name = "Wei Guoqing"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76347
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76348 = {
+	name = "Yang Jingyu"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76348
+	history = {
+		1930.1.1 = { rank = 1 }
+		1939.1.1 = { rank = 0 }
+	}
+}
+76349 = {
+	name = "Yang Shangkun"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76349
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76350 = {
+	name = "Ye Jianying"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76350
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76351 = {
+	name = "Ye Ting"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76351
+	history = {
+		1930.1.1 = { rank = 1 }
+		1943.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76352 = {
+	name = "Zhang Aiping"
+	country = CHC
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76352
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76353 = {
+	name = "Zhang Xuesi"
+	country = CHC
+	type = sea
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76353
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76354 = {
+	name = "Zheng Daoji"
+	country = CHC
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76354
+	add_trait = seawolf
+	history = {
+		1930.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 0 }
+	}
+}
+76355 = {
+	name = "Xiao Jinguang"
+	country = CHC
+	type = sea
+	skill = 3
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76355
+	history = {
+		1938.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76356 = {
+	name = "Luo Xiangtao"
+	country = CHC
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76356
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76357 = {
+	name = "Tao Yong"
+	country = CHC
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76357
+	history = {
+		1930.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76358 = {
+	name = "Tan Zhenlin"
+	country = CHC
+	type = sea
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76358
+	history = {
+		1937.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 0 }
+	}
+}
+76359 = {
+	name = "Deng Zihui"
+	country = CHC
+	type = sea
+	skill = 3
+	max_skill = 5
+	loyalty = 0.00
+	picture = L76359
+	add_trait = superior_tactician
+	history = {
+		1943.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1945.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76360 = {
+	name = "Ye Fei"
+	country = CHC
+	type = sea
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76360
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76361 = {
+	name = "An Zhimin"
+	country = CHC
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76361
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76362 = {
+	name = "Chang Qiankun"
+	country = CHC
+	type = air
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76362
+	history = {
+		1937.1.1 = { rank = 1 }
+		1944.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76363 = {
+	name = "Chen Xi"
+	country = CHC
+	type = air
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76363
+	history = {
+		1942.1.1 = { rank = 1 }
+		1945.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76364 = {
+	name = "Fang Huai"
+	country = CHC
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76364
+	history = {
+		1943.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76365 = {
+	name = "Fang Ziyi"
+	country = CHC
+	type = air
+	skill = 2
+	max_skill = 4
+	loyalty = 0.00
+	picture = L76365
+	history = {
+		1930.1.1 = { rank = 1 }
+		1940.1.1 = { rank = 2 }
+		1942.1.1 = { rank = 3 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76366 = {
+	name = "Xia Boxun"
+	country = CHC
+	type = air
+	skill = 2
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76366
+	history = {
+		1930.1.1 = { rank = 1 }
+		1941.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76367 = {
+	name = "Liu Zhen"
+	country = CHC
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76367
+	history = {
+		1944.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76368 = {
+	name = "Liu Yalou"
+	country = CHC
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76368
+	history = {
+		1946.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76369 = {
+	name = "Lü Liping"
+	country = CHC
+	type = air
+	skill = 1
+	max_skill = 5
+	loyalty = 0.00
+	picture = L76369
+	add_trait = superior_air_tactician
+	history = {
+		1930.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76370 = {
+	name = "Yuan Bin"
+	country = CHC
+	type = air
+	skill = 1
+	max_skill = 3
+	loyalty = 0.00
+	picture = L76370
+	history = {
+		1942.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76371 = {
+	name = "Tsu Yue"
+	country = CHC
+	type = land
+	skill = 1
+	max_skill = 4
+	loyalty = 1.00
+	picture = L76371
+	add_trait = trickster
+	history = {
+		1945.1.1 = { rank = 1 }
+		1970.1.1 = { rank = 0 }
+	}
+}
+76372 = {
+	name = "Li Chong-ren"
+	country = CHC
+	type = land
+	skill = 2
+	max_skill = 5
+	loyalty = 1.00
+	picture = L76372
+	add_trait = winter_specialist
+	history = {
+		1943.1.1 = { rank = 1 }
+		1946.1.1 = { rank = 2 }
+		1970.1.1 = { rank = 0 }
+	}
+}
