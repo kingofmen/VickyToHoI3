@@ -2748,7 +2748,9 @@ bool WorkerThread::moveResources () {
   }
   
   map<string, map<string, double> > overflows;
-  map<string, map<string, double> > countryTotals; 
+  map<string, map<string, double> > countryTotals;
+  map<string, map<string, double> > hoiTotals;
+  map<string, map<string, double> > debugTotals;
   for (objiter vp = vicProvinces.begin(); vp != vicProvinces.end(); ++vp) {
     string vicTag = (*vp)->safeGetString("owner", NO_OWNER);
     if (NO_OWNER == vicTag) continue;
@@ -2759,37 +2761,58 @@ bool WorkerThread::moveResources () {
       double curr = calculateVicProduction((*vp), resName, goodClasses);
       if (0 >= curr) continue;
       curr /= vicWorldTotals[resName];
-      curr *= hoiWorldTotals[resName]; 
-      
+      curr *= (*r).second;
+
+      debugTotals[vicTag][resName] += curr;
+      debugTotals["total"][resName] += curr;
       if (!hoiProv) {
-	overflows[vicTag][resName] += curr;
+	overflows[hoiTag][resName] += curr;
 	continue;
       }
       Object* target = 0;
       if ((resName == "manpower") || (resName == "leadership")) target = hoiProv;
       else target = hoiProv->getNeededObject("max_producing");
       
-      curr += overflows[vicTag][resName];
+      curr += overflows[hoiTag][resName];
       curr += target->safeGetFloat(resName);
-      overflows[vicTag][resName] = curr - floor(curr);
-      curr = floor(curr);
+      double rounded = floor(curr + 0.5);
+      overflows[hoiTag][resName] = curr - rounded;
+      curr = rounded;
       if (0.5 > curr) continue; 
 
       target->resetLeaf(resName, curr);
-      countryTotals[vicTag][resName] += curr; 
+      countryTotals[vicTag][resName] += curr;
+      countryTotals["total"][resName] += curr;
+      hoiTotals[hoiTag][resName] += curr;
+      hoiTotals["total"][resName] += curr;
+    }
+  }
+
+  for (map<string, map<string, double> >::iterator v = overflows.begin(); v != overflows.end(); ++v) {
+    if ((*v).first == "total") continue; 
+    for (map<string, double>::iterator r = (*v).second.begin(); r != (*v).second.end(); ++r) {
+      overflows["total"][(*r).first] += (*r).second;
     }
   }
 
   Logger::logStream(DebugResources) << "Country totals:\n"; 
   for (map<string, map<string, double> >::iterator v = countryTotals.begin(); v != countryTotals.end(); ++v) {
     setPointersFromVicTag(remQuotes((*v).first));
+    if (!vicCountry) {
+      vicTag = "total";
+      hoiTag = "total";
+    }
     Logger::logStream(DebugResources) << currentTags() << ":\n";
     for (map<string, double>::iterator r = (*v).second.begin(); r != (*v).second.end(); ++r) {
       string resName = (*r).first;
-      Logger::logStream(DebugResources) << "  " << resName << ": " << (*r).second << "\n"; 
+      Logger::logStream(DebugResources) << "  " << resName << ": " 
+					<< (*r).second << " "
+					<< overflows[hoiTag][resName] << " "
+					<< debugTotals[(*v).first][resName] << " "
+					<< hoiTotals[hoiTag][resName] << " "
+					<< "\n";
     }
   }
-  
   
   for (objiter hp = hoiProvinces.begin(); hp != hoiProvinces.end(); ++hp) {
     Object* production = (*hp)->safeGetObject("max_producing");
