@@ -1540,6 +1540,10 @@ bool WorkerThread::convertDiplomacy () {
 
 bool WorkerThread::convertGovernments () {
   Logger::logStream(Logger::Game) << "Beginning government conversion.\n";
+  if (configObject->safeGetString("historicalGovs", "no") == "yes") {
+    Logger::logStream(Logger::Game) << "...Leaving historical governments in place.\n";
+    return true;
+  }
   objvec resemblances;
 
   map<string, Object*> govMap; 

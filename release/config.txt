@@ -110,6 +110,7 @@ minimumArmyWeight = 75
 minimumNavyWeight = 1000
 minimumWingWeight = 30
 
+historicalGovs = no
 
 govResemblance = {
   humanFactor = 0.1 
