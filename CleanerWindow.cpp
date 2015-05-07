@@ -284,7 +284,10 @@ void WorkerThread::cleanUp () {
     (*hc)->unsetValue("convoy"); 
     (*hc)->unsetValue("military_construction"); 
     (*hc)->unsetValue("cap_pool"); 
-    (*hc)->resetLeaf("nukes", "0.000"); 
+    (*hc)->resetLeaf("nukes", "0.000");
+    (*hc)->unsetValue("navyOfficerWeight");
+    (*hc)->unsetValue("landOfficerWeight");
+    (*hc)->unsetValue("wingOfficerWeight");
     
     Object* spy_mission    = (*hc)->getNeededObject("spy_mission");
     Object* spy_date       = (*hc)->getNeededObject("spy_date");
@@ -731,32 +734,41 @@ void WorkerThread::initialiseHoiSummaries () {
     }
     (*leaf)->resetLeaf("convoys", (*leaf)->safeGetInt("convoys") + usedConvoys);
     (*leaf)->resetLeaf("escorts", (*leaf)->safeGetInt("escorts") + usedEscorts);
-    objvec armies = (*leaf)->getValue("theatre");
+    objvec armies    = (*leaf)->getValue("theatre");
+    objvec allNavies = (*leaf)->getValue("navy");
+    objvec allAirs   = (*leaf)->getValue("air");
     for (objiter army = armies.begin(); army != armies.end(); ++army) {
       extractStrength(*army, reserveObject);
       objvec navies = (*army)->getValue("navy");
       for (objiter navy = navies.begin(); navy != navies.end(); ++navy) {
-	objvec ships = (*navy)->getValue("ship");
-	for (objiter ship = ships.begin(); ship != ships.end(); ++ship) {
-	  double weight = -1;
-	  string shiptype = remQuotes((*ship)->safeGetString("type"));
-	  weight = hoiShipWeights->safeGetFloat(shiptype, -1);
-	  if (-1 == weight) {
-	    weight = 1;
-	    if (!printed[shiptype]) {
-	      Logger::logStream(Logger::Warning) << "Warning: Unknown HoI ship type " << shiptype << ", assigning weight 1.\n";
-	      printed[shiptype] = true;
-	    }
-	  }
-	  hoiShipList.push_back(*ship); 
-	}
+	allNavies.push_back(*navy);
       }
       objvec airs = (*army)->getValue("air");
       for (objiter air = airs.begin(); air != airs.end(); ++air) {
-	objvec wings = (*air)->getValue("wing");
-	for (objiter wing = wings.begin(); wing != wings.end(); ++wing) {
-	  hoiUnitTypes[remQuotes((*wing)->safeGetString("type"))]++;
+	allAirs.push_back(*air);
+      }
+    }
+
+    for (objiter navy = allNavies.begin(); navy != allNavies.end(); ++navy) {
+      objvec ships = (*navy)->getValue("ship");
+      for (objiter ship = ships.begin(); ship != ships.end(); ++ship) {
+	double weight = -1;
+	string shiptype = remQuotes((*ship)->safeGetString("type"));
+	weight = hoiShipWeights->safeGetFloat(shiptype, -1);
+	if (-1 == weight) {
+	  weight = 1;
+	  if (!printed[shiptype]) {
+	    Logger::logStream(Logger::Warning) << "Warning: Unknown HoI ship type " << shiptype << ", assigning weight 1.\n";
+	    printed[shiptype] = true;
+	  }
 	}
+	hoiShipList.push_back(*ship);
+      }
+    }
+    for (objiter air = allAirs.begin(); air != allAirs.end(); ++air) {
+      objvec wings = (*air)->getValue("wing");
+      for (objiter wing = wings.begin(); wing != wings.end(); ++wing) {
+	hoiUnitTypes[remQuotes((*wing)->safeGetString("type"))]++;
       }
     }
   }
@@ -1017,7 +1029,6 @@ void WorkerThread::loadFiles () {
   
   string customFile = configObject->safeGetString("custom", "NOCUSTOM");
   if (customFile != "NOCUSTOM") customObject = loadTextFile(sourceVersion + customFile);
-
 }
 
 void WorkerThread::setupDebugLog () {
@@ -1989,7 +2000,8 @@ string WorkerThread::selectHoiProvince (string vicLocation, Object* hoiCountry) 
 bool WorkerThread::convertOoBs () {
   for (objiter hc = allHoiCountries.begin(); hc != allHoiCountries.end(); ++hc) {
     (*hc)->unsetValue("theatre");
-    (*hc)->unsetValue("navy"); 
+    (*hc)->unsetValue("navy");
+    (*hc)->unsetValue("air");
   }
 
   Object* unitConversions = configObject->safeGetObject("unitTypes");
@@ -2272,7 +2284,6 @@ bool WorkerThread::convertProvinceOwners () {
       Logger::logStream(Logger::Error) << "Error: No Vic province for HoI province " << (*hp)->getKey() << "\n";
       return false; 
     }
-    
     map<string, int> popOwnerMap;
     map<string, int> popControllerMap;    
     string bestOwnerTag = NO_OWNER;
@@ -2286,8 +2297,7 @@ bool WorkerThread::convertProvinceOwners () {
       
       vicTag = remQuotes((*vp)->safeGetString("owner", NO_OWNER));
       if (vicTag == NONE) continue;
-      int currVicPop = (*vp)->safeGetInt("totalPop");
-      if (0 == currVicPop) continue;
+      int currVicPop = 1 + (*vp)->safeGetInt("totalPop");
       popOwnerMap[vicTag] += currVicPop;
       if (popOwnerMap[vicTag] > popOwnerMap[bestOwnerTag]) bestOwnerTag = vicTag;
 
@@ -2321,7 +2331,6 @@ bool WorkerThread::convertProvinceOwners () {
       (*hp)->setLeaf("core", addQuotes(hoiTag)); 
     }
 
-    
     if (NO_OWNER == bestOwnerTag) {
       Logger::logStream(Logger::Warning) << "Warning: Unable to assign ownership of HoI province "
 					 << (*hp)->getKey() << ", converting from Vic";
@@ -3429,7 +3438,7 @@ void WorkerThread::convert () {
   if (!moveCapitals()) return; // Must precede OOBs or the capitals won't be placed right.
   
   if (!convertBuildings()) return; // Must precede OOBs or there won't be naval bases. Must be after ownership conversion. Must be after capitals for urbanity.
-  if (!convertLaws()) return; // Must be before OOBs or mob laws won't be set.   
+  if (!convertLaws()) return; // Must be before OOBs or mob laws won't be set.
   if (!convertOoBs()) return;
   if (!moveIndustry()) return;
   if (!calculateRanks()) return; // Must come after moveIndustry or industry totals will not be set. 
@@ -3442,7 +3451,7 @@ void WorkerThread::convert () {
   if (!convertMisc()) return; // Uses casualties, must be after diplomacy.
   if (!listUrbanProvinces()) return;
   if (!moveStrategicResources()) return;
-  cleanUp(); 
+  cleanUp();
   
   Logger::logStream(Logger::Game) << "Done with conversion, writing to Output/converted.hoi3.\n";
  
@@ -3554,8 +3563,6 @@ void WorkerThread::distributeLeaders () {
     writer << (*leaderFile);
     writer.close(); 
   }
-
-  
 }
 
 void WorkerThread::moveProvinces () {

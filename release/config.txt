@@ -33,7 +33,7 @@ hoidir = .\HoI_TFH\
 custom = custom_overrides.txt
 
 urbanProvinces = 100
-debugInt = 780
+debugInt = 50000
 # Acceptable values are remove, random, historical, redistribute. 
 strategicResources = remove 
 minimumProfitRate = 0.0005
