@@ -37,11 +37,63 @@
 
 \section{Troubleshooting}
 
-Upload your Victoria savegame somewhere, then send me (``King of Men'') a PM on Paradox, Ederon, or
-(``King\_of\_Men'') reddit with a link to the upload. I'll run the
+These are the most common issues people have had:
+\begin{itemize}
+\item HoI crashes on loading the converted save. This is very often a
+  bug, which I'll try to fix (see below). However, there are two
+  causes that you can fix yourself: One, your Victoria savegame
+  has army or navy names containing a hashtag, `\#'. This confuses the
+  parser. In that case just remove the hashtag. (Removing other
+  unusual characters may also be worth a try.) Two, do note that the
+  converted savegame is meant for HoI3 with all three expansions, and
+  that if you don't have all three the game will choke.
+\item No converted save file. This is often caused by
+  impatience. Don't click ``convert'' immediately after ``load file'',
+  it takes some time to parse forty megabytes of savegame.
+\item Borders look weird. Yes, sorry. The province conversion file is
+  not that good. You can fix the most egregious offenders by editing
+  HoI\_TFH/province\_mappings.txt. If you do, please send me your
+  edits (ideally as a GitHub pull request, but if you don't know how
+  to do that, send me the edited file) so others can benefit.
+\item Ahistorical governments. This is by design. The converter is
+  intended for MP games that started in Crusader Kings; the world
+  history is going to look extremely different. Historical governments
+  would make very little sense in this case. If your game started in
+  Vicky (for some reason, multiplayer games that last two years seem
+  to be a minority taste) you can try changing 'historicalGovs' in the
+  config file to 'yes'.
+\item Weird tag conversions, eg Bavaria ends up as Manchukuo. This
+  happens because HoI doesn't have enough tags; ahistorical survivals
+  have to make do with the few unused tags that exist in the 1936
+  scenario. Personally I just ignore this kind of thing, but if having
+  the wrong flag bothers you, there are two options:
+\begin{itemize}
+\item Edit HoI so the tag 'MCH' (Manchukuo) has the flag and text
+  belonging to 'BAV' (Bavaria).
+\item Change V2\_HoD/country\_mappings.txt so
+\begin{verbatim}
+link = { vic = GER hoi = GER }
+\end{verbatim}
+becomes instead
+\begin{verbatim}
+link = { vic = BAV hoi = GER }
+\end{verbatim}
+This means that Victoria Germany will likely become Manchukuo instead,
+but if Bavaria has survived and you care about it, Germany is perhaps
+not so important.
+\end{itemize}
+\end{itemize}
+
+If none of the above is your problem: Upload your (zipped) Victoria
+savegame somewhere, then send me (``King of Men'') a PM on Paradox,
+Ederon, or (``King\_of\_Men'') reddit with a link to the upload. Try to be as
+specific as possible about what the problem is - I cannot debug
+``things look weird''. Screenshots and province IDs are often
+helpful. I'll run the
 debugging version of the converter and try to fix the
 problem. If you are skilled at C++ development in Windows you can also
 try to compile in debug mode and run gdb on it. 
+
 
 \section{Resources}
 

@@ -245,6 +245,7 @@ void WorkerThread::loadFile (string fname) {
       break;
     }
   }
+  Logger::logStream(Logger::Game) << "Ready to convert.\n";
 }
 
 void WorkerThread::assignCountries (Object* vicCountry, Object* hoiCountry) {
