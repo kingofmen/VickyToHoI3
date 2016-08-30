@@ -27,7 +27,7 @@ Logger& Logger::operator<< (std::string dat) {
   if (std::string::npos == linebreak) buffer.append(dat.c_str());
   else {
     buffer.append(dat.substr(0, linebreak).c_str());
-    flush();
+    clearBuffer();
     (*this) << dat.substr(linebreak+1); 
   }
   return *this; 
@@ -82,7 +82,7 @@ Logger& Logger::operator<< (QString dat) {
   if (-1 == linebreak) buffer.append(dat);
   else {
     buffer.append(dat.mid(0, linebreak));
-    flush();
+    clearBuffer();
     (*this) << dat.mid(linebreak+1); 
   }
   
@@ -90,12 +90,6 @@ Logger& Logger::operator<< (QString dat) {
 }
 
 Logger& Logger::operator<< (int dat) {
-  if (!active) return *this;
-  buffer.append(QString("%1").arg(dat)); 
-  return *this; 
-}
-
-Logger& Logger::operator<< (unsigned int dat) {
   if (!active) return *this;
   buffer.append(QString("%1").arg(dat)); 
   return *this; 
@@ -110,7 +104,7 @@ Logger& Logger::operator<< (double dat) {
 
 Logger& Logger::operator<< (char dat) {
   if (!active) return *this;
-  if ('\n' == dat) flush();
+  if ('\n' == dat) clearBuffer();
   else buffer.append(dat);
   return *this; 
 }
@@ -124,8 +118,7 @@ Logger& Logger::logStream (int idx) {
   return *(logs[idx]); 
 }
 
-std::ostream& Logger::flush () {
+void Logger::clearBuffer () {
   emit message(buffer); 
   buffer.clear();
-  return *this; 
 }

@@ -5,34 +5,23 @@
 #include <string> 
 #include <map> 
 #include "Parser.hh"
-#include <ostream> 
 
 enum Debugs {DebugLeaders = 30,
 	     DebugProvinces,
 	     DebugMinisters,
 	     DebugTechTeams,
-	     DebugStratResources,
-	     DebugTechs,
+	     DebugResources,
+	     DebugTech,
 	     DebugBuildings,
 	     DebugUnits,
 	     DebugStockpiles,
-	     DebugLaws,
-	     DebugMisc,
+	     DebugSliders,
+	     DebugIdeas,
 	     DebugRevolters,
-	     DebugCores,
-	     DebugCountries,
-	     DebugBasetax,
-	     DebugManpower,
-	     DebugCulture,
-	     DebugReligion,
-	     DebugGovernments,
-	     DebugIndustry,
-	     DebugCities,
-	     DebugDiplomacy,
-	     DebugResources, 
+	     DebugCores, 
 	     NumDebugs};
 
-class Logger : public QObject, public std::ostream {
+class Logger : public QObject {
   Q_OBJECT 
 public: 
   Logger (); 
@@ -44,7 +33,6 @@ public:
   Logger& operator<< (std::string dat);
   Logger& operator<< (QString dat);
   Logger& operator<< (int dat);
-  Logger& operator<< (unsigned int dat);
   Logger& operator<< (double dat);
   Logger& operator<< (char dat);
   Logger& operator<< (char* dat);
@@ -57,13 +45,11 @@ public:
   static void createStream (int idx); 
   static Logger& logStream (int idx); 
 
-  // Inherited from ostream. 
-  std::ostream& flush (); 
-  
 signals:
   void message (QString m);
   
 private:
+  void clearBuffer (); 
   
   bool active;
   QString buffer; 

@@ -2,24 +2,17 @@
 #define CLEANERWINDOW_HH
 
 #include <QtGui>
+#include <QMainWindow>
+#include <QPlainTextEdit>
 #include <QObject>
 #include <QThread> 
 #include "Object.hh"
 #include <map>
-#include <fstream>
 
 using namespace std;
 
 class WorkerThread; 
 class PopMerger; 
-
-enum TaskType {LoadFile = 0,
-	       Statistics,
-	       AutoMap, 
-	       Convert,
-	       MoveProvinces,
-	       DistributeLeaders, 
-	       NumTasks}; 
 
 class CleanerWindow : public QMainWindow {
   Q_OBJECT
@@ -30,21 +23,22 @@ public:
   
   QPlainTextEdit* textWindow; 
   WorkerThread* worker;
-  void openDebugLog (string fname);
-  void closeDebugLog (); 
-  void loadFile (string fname, TaskType autoTask = NumTasks);
-  void specialAction (string hoiFile, string moveFile, TaskType t = MoveProvinces); 					 
-						 
-						 
+  
+  void loadFile (string fname, int autoTask = -1);
+						      
 public slots:
 
   void loadFile (); 
+  void cleanFile ();
   void getStats ();
-  void autoMap (); 
   void convert ();
+  void findTeams ();
+  void colourMap (); 
   void message (QString m); 
+  void mergePops (); 
   
 private:
+
 };
 
 struct ObjectSorter {
@@ -64,14 +58,57 @@ public:
 private:
 };
 
-double calcAvg (Object* ofthis); 
+struct VoterInfo {
+  void addPop (Object* pop, Object* voterConfig);
+  double getIssuePercentage (int issue) {if (issue > (int) issues.size()) return 0; if (0 > issue) return 0; return issues[issue]/weightedTotal;}
+  double getIdeologyPercentage (int ideology) {if (ideology > (int) ideologies.size()) return 0; if (0 > ideology) return 0; return ideologies[ideology]/weightedTotal;}
+  double calculateDiversity () const;
+  double getDissent () const {return dissent / total;} 
+  vector<double> issues;
+  vector<double> ideologies;
+  map<string, double> cultures;
+  map<string, double> religion; 
+  double total;
+  double weightedTotal;
+  double dissent; 
+};
+
+struct ClassInfo {
+  // POP type to total weighted and unweighted, then accepted culture. 
+  map<string, pair<pair<double, double>, pair<double, double> > > classNumbers;
+  void addTotal           (string c, double n) {classNumbers[c].first.first += n; classNumbers["total"].first.first += n; total += n;}
+  void addWeightedTotal   (string c, double n) {classNumbers[c].first.second += n; classNumbers["total"].first.second += n;}
+  void addCulture         (string c, double n) {classNumbers[c].second.first += n; classNumbers["total"].second.first += n;}
+  void addWeightedCulture (string c, double n) {classNumbers[c].second.second += n; classNumbers["total"].second.second += n;}
+
+  double getTotal           (string c) {return classNumbers[c].first.first;}
+  double getWeightedTotal   (string c) {return classNumbers[c].first.second;}
+  double getCulture         (string c) {return classNumbers[c].second.first;}
+  double getWeightedCulture (string c) {return classNumbers[c].second.second;}
+
+  double getPercentage (string c) {return getTotal(c) / total;}
+  
+private:
+  double total; 
+};
+
+struct MapInfo {
+  double vicWidth;
+  double vicHeight;
+  double hoiWidth;
+  double hoiHeight;
+
+  double distanceHoiToHoi (Object* hpi1, Object* hpi2);
+  double distanceHoiToVic (Object* hpi, Object* vpi); 
+};
 
 class WorkerThread : public QThread {
   Q_OBJECT
 public:
-  WorkerThread (string fname, TaskType aTask = NumTasks);
-  WorkerThread (string hoiFile, string moveFile, TaskType t = MoveProvinces); 
+  WorkerThread (string fname, int aTask = -1); 
   ~WorkerThread ();
+
+  enum TaskType {LoadFile = 0, CleanFile, Statistics, Convert, MergePops, FindTeams, ColourMap, NumTasks}; 
   void setTask(TaskType t) {task = t;} 
 
 protected:
@@ -82,109 +119,133 @@ private:
   string targetVersion;
   string sourceVersion; 
   string fname; 
-  Object* vicGame;
   Object* hoiGame;
+  Object* vicGame;
   TaskType task; 
   Object* configObject;
-  TaskType autoTask;
-
-  // Conversion processes
-  bool convertBuildings (); 
-  bool convertDiplomacy ();
-  bool convertGovernments ();
-  bool convertLaws (); 
-  bool convertLeaders ();
-  bool convertMisc (); 
-  bool convertOoBs (); 
-  bool convertProvinceOwners ();
-  bool convertTechs ();
-  bool listUrbanProvinces (); 
-  bool moveCapitals ();
-  bool moveIndustry ();
-  bool moveResources ();
-  bool moveStockpiles ();
-  bool moveStrategicResources (); 
+  Object* customObject; 
+  int autoTask;
+  MapInfo* mapInfo; 
+  PopMerger* popMerger; 
   
   // Infrastructure 
   void loadFile (string fname); 
+  void cleanFile ();
   void getStatistics ();
-  void autoMap (); 
-  void convert ();   
+  void convert (); 
   void configure ();
-  void moveProvinces ();
-  void distributeLeaders ();
+  void mergePops ();
+  void findTeams ();
+  void colourHoiMap (); 
 
-  // Initialisers
-  bool createCountryMap ();
-  bool createOutputDir ();
-  bool createProvinceMap ();
-  void initialiseHoiSummaries ();
-  void initialiseVicSummaries ();   
-  void loadFiles (); 
-  void setupDebugLog ();
-  
-  // Helpers:
-  void assignCountries (Object* vicCountry, Object* hoiCountry);
-  void calcCasualties (Object* war);
-  double calcCasualtiesInBattle (Object* battle, double decay);   
-  double calcForceLimit (Object* navalBase); 
-  double calculateGovResemblance (Object* vicCountry, Object* hoiCountry);
-  bool   calculateRanks (); 
-  double calculateVicProduction (Object* vicProvince, string resource, const objvec& goodClasses); 
+  // Helper methods
+  void addCultureCores(); 
+  void addProvinceToHoiNation (Object* hoiProv, Object* hoiNation);    
+  void addProvinceToVicNation (Object* hoiProv, Object* vicNation);
+  void assignCountries (Object* hoi, Object* vic);
+  void calculateCountryQualities ();
+  void calculateGovTypes ();
+  void calculateProvinceWeight (Object* vic, const vector<string>& goods, const vector<string>& bonusTypes, Object* weightObject, map<string, double>& totalWeights); 
+  void checkForExtra (Object* extraUnits, map<string, int>& totalVicRegiments, map<string, int>& existing); 
   void cleanUp ();
-  Object* createRegiment (int id, string type, string name, string keyword);
-  string currentTags () const; 
-  double extractStrength (Object* unit, Object* reserves);
-  void getOfficers (objvec& candidates, string keyword, double total, unsigned int original);
+  void countPops ();
+  void createKeyList (Object* provNames); 
+  void createUtilityMaps ();
+  double days (string datestring);
+  void fillVicVectors (); 
+  void findBestIdea (objvec& ideas, Object* vicCountry, vector<string>& qualia); 
+  Object* findHoiCountryByHoiTag (string tag);
+  Object* findVicCountryByVicTag (string tag);
+  Object* findVicCountryByHoiCountry (Object* hoi);
+  Object* findHoiCountryByVicCountry (Object* vic);
+  string findVicTagFromHoiTag (string hoitag, bool quotes = false);
+  Object* findHoiCapitalFromVicCountry (Object* vic);
+  Object* findHoiProvInfoFromHoiProvince (Object* hoi);
+  Object* findHoiProvinceFromHoiId (string id);
+  Object* findHoiProvInfoFromHoiId (string id);  
+  Object* findHoiProvinceFromHoiProvInfo (Object* hpi);
+  Object* findNavyLocation(Object* vicProv, vector<pair<Object*, string> >& fail, Object* hoiCountry);
+  void generateEvents (Object* evtObject, Object* vicCountry); 
+  int issueToNumber (string issue) const; 
   Object* loadTextFile (string fname);
-  void makeHigher (objvec& lowHolder, int& numUnits, string name, string location, string keyword, objvec& highHolder);
-  Object* selectHoiProvince (Object* vicProv);
-  string selectHoiProvince (string vicLocation, Object* hoiCountry);
-  void setPointersFromHoiCountry (Object* hc);
-  void setPointersFromHoiTag (string tag);  
-  void setPointersFromVicCountry (Object* vc);
-  void setPointersFromVicProvince (Object* vp);
-  void setPointersFromVicTag (string tag);
-  bool swap (Object* one, Object* two, string key); 
+  void mergeBuilding (Object* building, objvec& provs, string keyword);   
+  void moveAnyLeaders (objvec& officerRanks, string keyword, int index, vector<objvec>& theOfficers);
+  void prepareCountries ();
+  void recalculateProvinceMap ();
+  void recalculateProvinceMapNew ();
+  void recalculateProvinceMapTriangulate ();
+  bool recursiveBuy (string techid, Object* hoiCountry, double& points, map<string, bool>& gotTechs, Object* vicCountry); 
+  void setAcceptedStatus ();  
+  void setKeys (Object* hpi, Object* vicKey); 
   
-  // Maps
-  map<Object*, Object*> vicCountryToHoiCountryMap;
-  map<Object*, Object*> hoiCountryToVicCountryMap;
-  map<string, string> vicTagToHoiTagMap;
-  map<string, string> hoiTagToVicTagMap;
+  // Inputs 
+  void createProvinceMappings ();
+  void createCountryMappings (); 
+
+  // Conversion processes
+  void calculateKustomPoints ();
+  void desperationMoveCapitals (); 
+  void diplomacy ();
+  void dissent (); 
+  void fixHeader ();
+  void fixGlobals ();
+  void ideas ();
+  void mobEvents (); 
+  void moveCapitals ();
+  void moveCores ();
+  void moveControls ();    
+  void moveProvinces ();
+  void moveResources (); 
+  void moveTechTeams ();
+  void moveLeaders ();
+  void moveMinisters ();
+  void provinceStructures ();
+  void revolters (); 
+  void sliders ();
+  void stockpiles (); 
+  void techs ();
+  void units (); 
+  
+  // Storage and maps
+  map<string, Object*> vicTagToVicCountryMap;
   map<string, Object*> hoiTagToHoiCountryMap;
-  map<string, Object*> vicProvIdToVicProvMap;
-  map<string, Object*> hoiProvIdToHoiProvMap; 
-  map<Object*, objvec> vicCountryToHoiProvsMap;
-  map<Object*, objvec> hoiCountryToHoiProvsMap;
-  map<Object*, objvec> vicProvToHoiProvsMap;
-  map<Object*, objvec> hoiProvToVicProvsMap; 
-  map<string, Object*> popIdMap; 
-  map<string, int> hoiUnitTypes;
-  map<string, int> vicUnitTypes;
-  map<string, int> vicUnitsThatConvertToHoIUnits; 
-  map<Object*, map<string, objvec> > vicCountryToUnitsMap; 
-  map<string, int> vicTagToCoresMap;
+  map<Object*, objvec> hoiProvinceToVicProvincesMap;
+  map<Object*, objvec> vicProvinceToHoiProvincesMap;
+  map<Object*, Object*> vicProvinceToVicStateMap;
+  map<Object*, ClassInfo*> vicCountryToClassInfoMap;
+  map<Object*, VoterInfo*> vicCountryToVoterInfoMap;   
   
-  // Lists
-  objvec vicProvinces;
-  objvec vicCountries;  
+  objvec hoiProvInfos; 
   objvec hoiProvinces;
   objvec hoiCountries;
-  objvec allHoiCountries; // Includes the ones with no provinces after conversion. 
-  objvec hoiShipList; 
-  
-  // Input info
-  Object* provinceMapObject;
-  Object* countryMapObject;
-  Object* provinceNamesObject; 
-  Object* customObject;
-  Object* vicTechObject;
-  map<string, Object*> hoiProvincePositions; 
+  objvec vicProvinces;
+  objvec vicCountries;
+  objvec techTeams;
+  objvec vicStates; 
+  map<string, map<string, objvec> > ministers; // Category -> position -> ministers
+  map<string, map<string, int> > personalities; // Position -> personality -> number 
+  objvec generalRanks;
+  objvec admiralRanks;
+  objvec commderRanks;  
+  vector<objvec> generals;
+  vector<objvec> admirals;
+  vector<objvec> commders;
+  objvec vicParties;
+  map<string, int> landdivs;
+  map<string, int> navaldivs;
+  map<string, int> airdivs;  
+  map<string, int> landbrigs;
+  map<string, int> navalbrigs;
+  map<string, int> airbrigs;
+  map<Object*, map<Object*, int> > hoiCountriesRelations;
+  map<string, map<string, bool> > brigadeAcceptable;
+  map<string, int> tagToSizeMap;
+  map<string, Object*> idToPopMap;
+  vector<string> hoiProducts;
+  map<Object*, map<string, double> > incomeMap;
+  map<string, map<string, pair<double, double> > > unitTypeToMaxSuppliesMap;
+  map<Object*, Object*> hoiRegionsMap; 
 }; 
-
-void calculateCentroid (Object* province, bool vic);
-double calculateDistance (Object* one, Object* two); 
 
 #endif
 
